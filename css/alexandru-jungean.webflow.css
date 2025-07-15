@@ -4281,3 +4281,19 @@ blockquote {
   font-style: normal;
   font-display: swap;
 }
+
+/* Client Logo Link Styles */
+.client-logo-link {
+  display: block;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+
+.client-logo-link:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.client-logo-link:active {
+  transform: scale(0.98);
+}
