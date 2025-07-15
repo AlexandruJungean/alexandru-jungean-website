@@ -1015,8 +1015,8 @@ blockquote {
   flex: none;
   justify-content: space-around;
   align-items: stretch;
-  min-width: 180%;
-  max-width: 180%;
+  min-width: 220%;
+  max-width: 220%;
   display: flex;
   position: static;
 }
@@ -3317,8 +3317,8 @@ blockquote {
   .marquee-item, .marquee-item.marquee-1-phone {
     grid-column-gap: 0rem;
     grid-row-gap: 0rem;
-    min-width: 340%;
-    max-width: 340%;
+    min-width: 400%;
+    max-width: 400%;
   }
 
   .marquee-track {
@@ -3848,8 +3848,8 @@ blockquote {
   .marquee-item.marquee-1-phone {
     grid-column-gap: 0rem;
     grid-row-gap: 0rem;
-    min-width: 400%;
-    max-width: 400%;
+    min-width: 480%;
+    max-width: 480%;
     margin-left: 0;
     margin-right: 0;
     padding-right: 0;
