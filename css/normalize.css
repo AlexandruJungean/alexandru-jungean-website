@@ -1,4 +1,3 @@
-/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS and IE text size adjust after device orientation change,
@@ -242,6 +241,7 @@ button,
 html input[type="button"],
 input[type="reset"] {
   -webkit-appearance: button;
+  appearance: button;
   /* 2 */
   cursor: pointer;
   /* 3 */
@@ -298,6 +298,7 @@ input[type='number']::-webkit-outer-spin-button {
  */
 input[type='search'] {
   -webkit-appearance: none;
+  appearance: none;
   /* 1 */
 }
 /**
