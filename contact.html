@@ -29,43 +29,18 @@
   <!-- hCaptcha -->
   <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
   
-  <!-- Custom Form Styling -->
+  <!-- Vertical Center Text in Form Fields -->
   <style>
-    /* Fix autofill background and center text vertically */
-    .contact-form-field-two {
+    .contact-form-field-two:not(.textarea) {
       display: flex !important;
       align-items: center !important;
-      box-sizing: border-box !important;
+      height: auto !important;
+      min-height: 50px !important;
     }
     
-    /* Override browser autofill styles */
-    .contact-form-field-two:-webkit-autofill,
-    .contact-form-field-two:-webkit-autofill:hover,
-    .contact-form-field-two:-webkit-autofill:focus,
-    .contact-form-field-two:-webkit-autofill:active {
-      -webkit-box-shadow: 0 0 0 30px transparent inset !important;
-      -webkit-text-fill-color: inherit !important;
-      background-color: transparent !important;
-      background-image: none !important;
-    }
-    
-    /* For other browsers */
-    .contact-form-field-two:autofill {
-      background-color: transparent !important;
-      background-image: none !important;
-    }
-    
-    /* Center text in textarea vertically */
     .contact-form-field-two.textarea {
-      display: block !important;
       padding-top: 15px !important;
-      resize: vertical !important;
-    }
-    
-    /* Ensure select dropdown also centers text */
-    .contact-form-field-two.is-select {
-      display: flex !important;
-      align-items: center !important;
+      padding-bottom: 15px !important;
     }
   </style>
 </head>
