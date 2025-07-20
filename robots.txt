@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://alexjungean.com/sitemap.xml
+
+# Disallow sensitive or duplicate pages
+Disallow: /401.html
+Disallow: /404.html 
