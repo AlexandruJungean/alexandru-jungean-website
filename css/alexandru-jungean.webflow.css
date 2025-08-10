@@ -1042,6 +1042,7 @@ blockquote {
   max-width: 100%;
   display: flex;
   overflow: hidden;
+  padding: 1rem 0;
 }
 
 .client-logos-title {
