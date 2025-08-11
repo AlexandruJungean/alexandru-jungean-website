@@ -2005,6 +2005,88 @@ blockquote {
   border-bottom-color: #7a9bb0;
 }
 
+.section-similar-projects {
+  background-color: var(--defatult--template-bg);
+}
+
+.similar-projects-header {
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+}
+
+.similar-projects-header .section-title {
+  margin-bottom: 1.5rem;
+}
+
+.similar-projects-grid {
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.project-card {
+  background-color: var(--color--primary-black);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px -8px rgba(103, 139, 158, 0.3);
+  border-color: var(--color--brand);
+}
+
+.project-card-image-wrap {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.project-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-card-image {
+  transform: scale(1.05);
+}
+
+.project-card-content {
+  padding: 1.5rem;
+}
+
+.project-card-title {
+  font-family: Clashdisplay, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--gray);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.project-card-description {
+  font-size: 0.9rem;
+  color: var(--color--body-font-2);
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.project-card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--color--brand);
+}
+
+.project-card-client,
+.project-card-duration {
+  font-weight: 500;
+}
+
 .service-slider {
   background-color: #ddd0;
   height: auto;
@@ -3732,6 +3814,11 @@ blockquote {
     line-height: 1.4rem;
   }
 
+  .similar-projects-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
   .service-slider {
     margin-top: 5rem;
   }
@@ -3916,6 +4003,19 @@ blockquote {
 
   .calendar-info {
     margin-top: 2rem;
+  }
+
+  .similar-projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .project-card-image-wrap {
+    height: 180px;
+  }
+
+  .project-card-content {
+    padding: 1rem;
   }
 
   h5 {
@@ -4539,6 +4639,24 @@ blockquote {
 
   .image-3 {
     margin-top: 2rem;
+  }
+
+  .similar-projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .similar-projects-header {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+  }
+
+  .project-card-image-wrap {
+    height: 180px;
+  }
+
+  .project-card-content {
+    padding: 1rem;
   }
 }
 
