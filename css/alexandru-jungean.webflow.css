@@ -102,9 +102,9 @@ h1 {
   margin-top: 0;
   margin-bottom: 0;
   font-family: Clashdisplay, sans-serif;
-  font-size: 6rem;
+  font-size: 4.5rem;
   font-weight: 500;
-  line-height: 6rem;
+  line-height: 1.1;
 }
 
 h2 {
@@ -112,9 +112,9 @@ h2 {
   margin-top: 0;
   margin-bottom: 0;
   font-family: Clashdisplay, sans-serif;
-  font-size: 4.5rem;
+  font-size: 3rem;
   font-weight: 500;
-  line-height: 5rem;
+  line-height: 1.2;
 }
 
 h3 {
@@ -122,9 +122,9 @@ h3 {
   margin-top: 0;
   margin-bottom: 0;
   font-family: Clashdisplay, sans-serif;
-  font-size: 3rem;
+  font-size: 2.25rem;
   font-weight: 500;
-  line-height: 3.5rem;
+  line-height: 1.3;
 }
 
 h4 {
@@ -132,9 +132,9 @@ h4 {
   margin-top: 0;
   margin-bottom: 0;
   font-family: Clashdisplay, sans-serif;
-  font-size: 2.25rem;
+  font-size: 1.875rem;
   font-weight: 500;
-  line-height: 2.75rem;
+  line-height: 1.4;
 }
 
 h5 {
@@ -142,9 +142,9 @@ h5 {
   margin-top: 0;
   margin-bottom: 0;
   font-family: Clashdisplay, sans-serif;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: 500;
-  line-height: 2.25rem;
+  line-height: 1.4;
 }
 
 h6 {
@@ -152,17 +152,17 @@ h6 {
   margin-top: 0;
   margin-bottom: 0;
   font-family: Clashdisplay, sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 500;
-  line-height: 2rem;
+  line-height: 1.4;
 }
 
 p {
   color: var(--color--body-font-2);
   margin-bottom: 0;
-  font-size: 1.5rem;
-  font-weight: 500;
-  line-height: 1.9rem;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.7;
 }
 
 ul {
@@ -455,8 +455,8 @@ blockquote {
 .paragraph-large {
   color: var(--gray);
   max-width: 45ch;
-  font-size: 1.125rem;
-  line-height: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 .paragraph-large.copyright {
@@ -735,8 +735,8 @@ blockquote {
 }
 
 .paragraph-large-two {
-  font-size: 1.125rem;
-  line-height: 1.625rem;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 .paragraph-large-two.paragraph-padding {
@@ -861,10 +861,18 @@ blockquote {
   z-index: 0;
   background-color: var(--color--brand);
   border-radius: .5rem;
-  padding: 1.125rem 2rem;
+  padding: 1.25rem 2.5rem;
   text-decoration: none;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 4px 14px 0 rgba(103, 139, 158, 0.3);
+  transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px 0 rgba(103, 139, 158, 0.4);
+  background-color: #7a9bb0;
 }
 
 .nav-button-text {
@@ -894,8 +902,20 @@ blockquote {
 .header-title {
   text-transform: capitalize;
   max-width: 11ch;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   font-weight: 600;
+  position: relative;
+}
+
+.header-title::after {
+  content: '';
+  position: absolute;
+  bottom: -1rem;
+  left: 0;
+  width: 4rem;
+  height: 3px;
+  background-color: var(--color--brand);
+  border-radius: 2px;
 }
 
 .header-thumb-wrap {
@@ -1058,7 +1078,8 @@ blockquote {
 }
 
 .about-us-component.section-padding-top.services-unic {
-  padding-top: 5rem;
+  padding-top: 6rem;
+  padding-bottom: 2rem;
 }
 
 .aout-us-content-wrapper {
@@ -1169,15 +1190,27 @@ blockquote {
   border-radius: .75rem;
   flex: none;
   padding: 3rem;
-  transition: border-color .4s;
+  transition: all .4s ease;
+  background: linear-gradient(135deg, rgba(103, 139, 158, 0.02), rgba(103, 139, 158, 0.08));
+  position: relative;
+  overflow: hidden;
 }
 
 .service-item:hover {
   border-color: var(--color--brand);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px -8px rgba(103, 139, 158, 0.3);
+  background: linear-gradient(135deg, rgba(103, 139, 158, 0.05), rgba(103, 139, 158, 0.12));
 }
 
 .service-item-icon-wrap {
-  margin-bottom: 8.4375rem;
+  margin-bottom: 2.5rem;
+  padding: 1.5rem;
+  background: rgba(103, 139, 158, 0.1);
+  border-radius: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .service-item-icon {
@@ -1756,6 +1789,10 @@ blockquote {
 
 .blog-body h3 {
   margin-bottom: 1.5625rem;
+  font-family: Clashdisplay, sans-serif;
+  font-size: 2.25rem;
+  font-weight: 500;
+  line-height: 1.3;
 }
 
 .blog-body blockquote {
@@ -1796,6 +1833,164 @@ blockquote {
 
 .blog-body strong {
   color: var(--gray);
+}
+
+.blog-body p {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--color--body-font-2);
+}
+
+.faq-wrapper {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+#faq {
+  background-color: var(--defatult--template-bg);
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.faq-question-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.faq-question {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--gray);
+}
+
+.faq-toggle {
+  font-size: 1.5rem;
+  color: var(--color--brand);
+  font-weight: 300;
+  transition: transform 0.3s ease;
+}
+
+.faq-answer-wrapper {
+  margin-top: 1rem;
+  padding-left: 0;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.faq-answer {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color--body-font-2);
+}
+
+.faq-cta {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.faq-cta p {
+  margin-bottom: 1.5rem;
+  font-size: 1.125rem;
+}
+
+.google-calendar-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.calendar-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.calendar-button {
+  flex: 1;
+  min-width: 200px;
+  max-width: 250px;
+}
+
+.secondary-button {
+  background-color: transparent;
+  border: 2px solid var(--color--brand);
+  color: var(--color--brand);
+}
+
+.secondary-button:hover {
+  background-color: var(--color--brand);
+  color: var(--color--primary-black);
+}
+
+.secondary-button .button-text {
+  color: var(--color--brand);
+}
+
+.secondary-button:hover .button-text {
+  color: var(--color--primary-black);
+}
+
+.calendar-info {
+  margin-top: 3rem;
+  text-align: left;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.calendar-info h4 {
+  margin-bottom: 1rem;
+  color: var(--gray);
+}
+
+.calendar-benefits {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 2rem 0;
+}
+
+.calendar-benefits li {
+  padding: 0.5rem 0;
+  position: relative;
+  padding-left: 1.5rem;
+  color: var(--color--body-font-2);
+}
+
+.calendar-benefits li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color--brand);
+  font-weight: bold;
+}
+
+.calendar-note {
+  font-size: 0.9rem;
+  color: var(--color--body-font-2);
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.email-link, .phone-link {
+  color: var(--color--brand);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.email-link:hover, .phone-link:hover {
+  color: #7a9bb0;
 }
 
 .service-slider {
@@ -2060,24 +2255,37 @@ blockquote {
 }
 
 .table_cell {
-  padding: .5rem;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: background-color 0.2s ease;
 }
 
 .table_cell.offer {
   padding-top: 1rem;
 }
 
+.table_cell:last-child {
+  font-weight: 600;
+  color: var(--color--brand);
+}
+
 .table_row {
-  border-top: 0 #000;
-  border-bottom: 1px solid #fff;
-  border-left: 0 #fff;
-  border-right: 0 #000;
+  border: none;
+  transition: background-color 0.2s ease;
+}
+
+.table_row:hover {
+  background-color: rgba(103, 139, 158, 0.05);
 }
 
 .table_header {
-  padding-left: .5rem;
-  font-size: 1.4rem;
-  line-height: 3rem;
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  background-color: rgba(103, 139, 158, 0.1);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .table_header.unic {
@@ -2097,11 +2305,20 @@ blockquote {
   max-width: none;
   margin-top: 4rem;
   margin-bottom: 4rem;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .unic {
   margin-top: 9rem;
   margin-bottom: 2rem;
+  font-family: Clashdisplay, sans-serif;
+  font-size: 2.25rem;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--gray);
 }
 
 .project-unic {
@@ -2969,8 +3186,10 @@ blockquote {
   }
 
   .blog-body h3 {
-    font-size: 2.8rem;
-    line-height: 3.2rem;
+    font-size: 2.25rem;
+    line-height: 1.3;
+    font-family: Clashdisplay, sans-serif;
+    font-weight: 500;
   }
 
   .blog-body blockquote {
@@ -3477,8 +3696,10 @@ blockquote {
   }
 
   .blog-body h3 {
-    font-size: 2.6rem;
-    line-height: 3rem;
+    font-size: 2rem;
+    line-height: 1.3;
+    font-family: Clashdisplay, sans-serif;
+    font-weight: 500;
   }
 
   .blog-body blockquote {
@@ -3644,6 +3865,45 @@ blockquote {
   h2 {
     font-size: 2rem;
     line-height: 2.5rem;
+  }
+
+  .section-home-header {
+    padding-top: 12rem;
+    padding-bottom: 8rem;
+  }
+
+  .service-item {
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .service-item-icon-wrap {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+  }
+
+  .container-medium {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .nav-button {
+    padding: 1rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .calendar-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .calendar-button {
+    width: 100%;
+    max-width: none;
+  }
+
+  .calendar-info {
+    margin-top: 2rem;
   }
 
   h5 {
@@ -4069,8 +4329,10 @@ blockquote {
 
   .blog-body h3 {
     margin-bottom: 1rem;
-    font-size: 1.6rem;
-    line-height: 2.2rem;
+    font-size: 1.8rem;
+    line-height: 1.3;
+    font-family: Clashdisplay, sans-serif;
+    font-weight: 500;
   }
 
   .blog-body blockquote {
@@ -4196,8 +4458,30 @@ blockquote {
   }
 
   .table_component {
-    margin-top: 5rem;
-    margin-bottom: 0;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+  }
+
+  .table_header {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+  }
+
+  .table_cell {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .table_component {
+    overflow-x: auto;
+    display: block;
+    white-space: nowrap;
+  }
+
+  .table_component table {
+    width: 100%;
+    min-width: 600px;
   }
 
   .unic {
