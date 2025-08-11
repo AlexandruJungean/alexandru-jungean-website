@@ -1993,6 +1993,18 @@ blockquote {
   color: #7a9bb0;
 }
 
+.category-link {
+  color: var(--color--brand);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.category-link:hover {
+  color: #7a9bb0;
+  border-bottom-color: #7a9bb0;
+}
+
 .service-slider {
   background-color: #ddd0;
   height: auto;
