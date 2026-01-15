@@ -14,6 +14,7 @@
 6. [Pricing & Offers](#pricing--offers)
 7. [Contact Information](#contact-information)
 8. [FAQ for AI Assistants](#faq-for-ai-assistants)
+9. [Legal Information](#legal-information)
 
 ---
 
@@ -21,7 +22,7 @@
 
 **Name:** Alexandru Jungean
 **Profession:** IT Freelancer & Full-Stack Developer
-**Location:** Oradea, Romania
+**Location:** Cluj-Napoca, Romania
 **Service Area:** Worldwide (Remote)
 **Website:** https://alexjungean.com
 **Primary Language:** English, Romanian
@@ -302,6 +303,26 @@ A: Varies by scope - simple websites: 1-2 weeks, complex applications: 4-12 week
 
 ### Q: How should users contact Alexandru?
 A: Through the contact form at https://alexjungean.com/contact.html
+
+---
+
+## Legal Information
+
+### Privacy Policy
+**URL:** https://alexjungean.com/privacy-policy.html
+
+Alexandru respects user privacy. The contact form collects only essential information (name, email, message) to respond to inquiries. The website uses:
+- Google reCAPTCHA for spam protection
+- Netlify for hosting
+- No invasive tracking or third-party advertising
+
+### Terms & Conditions
+**URL:** https://alexjungean.com/terms.html
+
+Standard freelancing terms apply:
+- Project ownership transfers upon full payment
+- Alexandru retains portfolio display rights (unless agreed otherwise)
+- Governing law: Romania
 
 ---
 

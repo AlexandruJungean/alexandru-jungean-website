@@ -35,6 +35,11 @@ Featured projects demonstrating expertise:
 - LinkedIn: https://www.linkedin.com/in/alexandru-jungean-5604b7268/
 - GitHub: https://github.com/AlexandruJungean
 
+## Legal
+
+- [Privacy Policy](https://alexjungean.com/privacy-policy.html)
+- [Terms & Conditions](https://alexjungean.com/terms.html)
+
 ## Technical Stack
 
 Proficient in modern technologies including:

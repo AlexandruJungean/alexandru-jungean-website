@@ -56,6 +56,21 @@
     <priority>0.8</priority>
   </url>
   
+  <!-- Legal Pages -->
+  <url>
+    <loc>https://alexjungean.com/privacy-policy.html</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <url>
+    <loc>https://alexjungean.com/terms.html</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
   <!-- Service Pages -->
   <url>
     <loc>https://alexjungean.com/services/website-creation.html</loc>
