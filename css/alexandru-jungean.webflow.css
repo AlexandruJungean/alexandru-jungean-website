@@ -507,7 +507,6 @@ blockquote {
   color: var(--color--body-font-2);
   font-size: 1rem;
   text-decoration: none;
-  display: none;
 }
 
 .footer-bottom {
