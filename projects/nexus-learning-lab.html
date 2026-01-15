@@ -6,13 +6,14 @@
   <meta content="Learn about the Nexus Learning Lab project, a complete database solution. Alexandru Jungean delivered robust data management tools for a high-performance learning environment." name="description">
   <meta content="Nexus Learning Lab | Project" property="og:title">
   <meta content="Learn about the Nexus Learning Lab project, a complete database solution. Alexandru Jungean delivered robust data management tools for a high-performance learning environment." property="og:description">
-  <meta content="https://alexjungean.com/images/Thumbnail---Nexus-Learning-Lab.png" property="og:image">
+  <meta content="https://alexjungean.com/images/Thumbnail---Nexus-Learning-Lab.webp" property="og:image">
   <meta content="Nexus Learning Lab | Project" property="twitter:title">
   <meta content="Learn about the Nexus Learning Lab project, a complete database solution. Alexandru Jungean delivered robust data management tools for a high-performance learning environment." property="twitter:description">
-  <meta content="https://alexjungean.com/images/Thumbnail---Nexus-Learning-Lab.png" property="twitter:image">
+  <meta content="https://alexjungean.com/images/Thumbnail---Nexus-Learning-Lab.webp" property="twitter:image">
   <meta property="og:type" content="website">
   <meta content="summary_large_image" name="twitter:card">
   <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta content="Webflow" name="generator">
   <link rel="canonical" href="https://alexjungean.com/projects/nexus-learning-lab.html">
   <link href="../css/normalize.css" rel="stylesheet" type="text/css">
@@ -32,7 +33,7 @@
     <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="nav-component w-nav">
       <div class="padding-global">
         <div class="nav-container">
-          <a href="../index.html" class="brand-logo-link w-nav-brand"><img src="../images/Logo.png" loading="lazy" sizes="(max-width: 767px) 128px, 160px" srcset="../images/Logo-p-500.png 500w, ../images/Logo-p-800.png 800w, ../images/Logo-p-1080.png 1080w, ../images/Logo-p-1600.png 1600w, ../images/Logo-p-2000.png 2000w, ../images/Logo-p-2600.png 2600w, ../images/Logo.png 3210w" alt="Alexandru Jungean Logo" class="brand-logo"></a>
+          <a href="../index.html" class="brand-logo-link w-nav-brand"><img src="../images/Logo.webp" loading="lazy" sizes="(max-width: 767px) 128px, 160px" srcset="../images/Logo-p-500.webp 500w, ../images/Logo-p-800.webp 800w, ../images/Logo-p-1080.webp 1080w, ../images/Logo-p-1600.webp 1600w, ../images/Logo-p-2000.webp 2000w, ../images/Logo-p-2600.webp 2600w, ../images/Logo.webp 3210w" alt="Alexandru Jungean Logo" class="brand-logo"></a>
           <nav role="navigation" class="nav-menu-wrapper w-nav-menu">
             <div class="nav-link-wrapper">
               <a href="../index.html" class="nav-link w-nav-link">Home</a>
@@ -60,7 +61,7 @@
         </div>
       </div>
     </div>
-    <main class="main-wrapper">
+    <main id="main-content" class="main-wrapper">
       <section class="section-template-header">
         <div class="padding-global">
           <div class="container-medium">
@@ -107,7 +108,7 @@
               <h3 class="project-title">Project Overview</h3>
               <p class="project-body hide">Nexus Learning Lab Project was planned for multiple services: Database Solutions, Data Analytics and ETL Processes. This was an unpaid internship. The price that was quoted was for reference purposes only.</p>
               <p class="project-body hide">This project involved the creation of a suite of database and data analytics solutions at Nexus Learning Lab. These solutions were designed to enhance the data management, reporting, and decision-making capabilities. The project encompassed the development of 1 normalized database, 1 snowflake-type database, the implementation of ETL (Extract, Transform, Load) processes, and the creation of 5 dashboards in Power BI.</p>
-              <div class="project-figure"><img src="../images/Nexus---Database-Solutions.png" loading="lazy" sizes="(max-width: 479px) 93vw, (max-width: 767px) 96vw, (max-width: 991px) 94vw, 92vw" srcset="../images/Nexus---Database-Solutions-p-500.png 500w, ../images/Nexus---Database-Solutions-p-800.png 800w, ../images/Nexus---Database-Solutions-p-1080.png 1080w, ../images/Nexus---Database-Solutions.png 1386w" alt="Snowflake Database Environment"></div>
+              <div class="project-figure"><img src="../images/Nexus---Database-Solutions.webp" loading="lazy" sizes="(max-width: 479px) 93vw, (max-width: 767px) 96vw, (max-width: 991px) 94vw, 92vw" srcset="../images/Nexus---Database-Solutions-p-500.webp 500w, ../images/Nexus---Database-Solutions-p-800.webp 800w, ../images/Nexus---Database-Solutions-p-1080.webp 1080w, ../images/Nexus---Database-Solutions.webp 1386w" alt="Snowflake Database Environment"></div>
               <h3 class="project-title">Technical Details</h3>
               <p class="project-body hide">The normalized database was created from several non-normalized Excel tables that exceeded the limit of 1,048,576 rows. After designing the normalized architecture, I deployed constraints (PK, FK, Defaults, Identity, Checks) to ensure data accuracy, as I needed to start the ETL process (using an SSIS package in Visual Studio) to load data into this SQL Server database. Once the database was populated, I implemented security measures (TDE and SQL Symmetric Key for private data), longevity solutions (jobs for shrinking, updating statistics, and daily backups), and usability enhancements for HR and Sales personnel. This included creating user accounts, granting appropriate permissions, providing documentation, and creating views and procedures to simplify their work.</p>
               <p class="project-body hide">This normalized database was specifically built for efficient querying. From this database, I created another ETL process to transfer the data to a Snowflake-type database, designed for real-time and fast Power BI analysis. The Snowflake-type database followed its base architecture with fact and dimension tables, which help Power BI&#x27;s filter and row contexts. Using this database, I built five dashboards for business insights related to Sales by Category &amp; Year, Product Sales &amp; Quantities Sold, revenue, and the number of products sold for each product category.</p>
@@ -127,7 +128,7 @@
               <a href="sql-issues.html" class="link-block-2 w-inline-block">
                 <div class="project-card">
                   <div class="project-card-image-wrap">
-                    <img src="../images/Thumbnail---SQL-Issues.png" loading="lazy" sizes="(max-width: 479px) 93vw, (max-width: 767px) 46vw, (max-width: 991px) 31vw, 32vw" srcset="../images/Thumbnail---SQL-Issues-p-500.png 500w, ../images/Thumbnail---SQL-Issues-p-800.png 800w, ../images/Thumbnail---SQL-Issues-p-1080.png 1080w, ../images/Thumbnail---SQL-Issues.png 1200w" alt="SQL Issues Project" class="project-card-image">
+                    <img src="../images/Thumbnail---SQL-Issues.webp" loading="lazy" sizes="(max-width: 479px) 93vw, (max-width: 767px) 46vw, (max-width: 991px) 31vw, 32vw" srcset="../images/Thumbnail---SQL-Issues.webp 1200w" alt="SQL Issues Project" class="project-card-image">
                   </div>
                   <div class="project-card-content">
                     <h3 class="project-card-title">SQL Issues</h3>
@@ -142,7 +143,7 @@
               <a href="tool.html" class="link-block-2 w-inline-block">
                 <div class="project-card">
                   <div class="project-card-image-wrap">
-                    <img src="../images/Thumbnail---Tool.png" loading="lazy" sizes="(max-width: 479px) 93vw, (max-width: 767px) 46vw, (max-width: 991px) 31vw, 32vw" srcset="../images/Thumbnail---Tool-p-500.png 500w, ../images/Thumbnail---Tool-p-800.png 800w, ../images/Thumbnail---Tool-p-1080.png 1080w, ../images/Thumbnail---Tool.png 1200w" alt="TOOL Project" class="project-card-image">
+                    <img src="../images/Thumbnail---Tool.webp" loading="lazy" sizes="(max-width: 479px) 93vw, (max-width: 767px) 46vw, (max-width: 991px) 31vw, 32vw" srcset="../images/Thumbnail---Tool.webp 1200w" alt="TOOL Project" class="project-card-image">
                   </div>
                   <div class="project-card-content">
                     <h3 class="project-card-title">TOOL</h3>
@@ -157,7 +158,7 @@
               <a href="edu-events.html" class="link-block-2 w-inline-block">
                 <div class="project-card">
                   <div class="project-card-image-wrap">
-                    <img src="../images/Thumbnail---EDU-Events.png" loading="lazy" sizes="(max-width: 479px) 93vw, (max-width: 767px) 46vw, (max-width: 991px) 31vw, 32vw" srcset="../images/Thumbnail---EDU-Events-p-500.png 500w, ../images/Thumbnail---EDU-Events-p-800.png 800w, ../images/Thumbnail---EDU-Events-p-1080.png 1080w, ../images/Thumbnail---EDU-Events.png 1200w" alt="EDU Events Project" class="project-card-image">
+                    <img src="../images/Thumbnail---EDU-Events.webp" loading="lazy" sizes="(max-width: 479px) 93vw, (max-width: 767px) 46vw, (max-width: 991px) 31vw, 32vw" srcset="../images/Thumbnail---EDU-Events.webp 1200w" alt="EDU Events Project" class="project-card-image">
                   </div>
                   <div class="project-card-content">
                     <h3 class="project-card-title">EDU Events</h3>
@@ -243,7 +244,7 @@
             </div>
           </div>
         </div>
-      </div><img src="../images/Vector_1Vector.webp" loading="lazy" sizes="100vw" srcset="../images/Vector_1-p-500.png 500w, ../images/Vector_1-p-800.png 800w, ../images/Vector_1-p-1080.png 1080w, ../images/Vector_1-p-1600.png 1600w, ../images/Vector_1Vector.webp 1920w" alt="" class="footer-bg">
+      </div><img src="../images/Vector_1Vector.webp" loading="lazy" sizes="100vw" srcset="images/Vector_1Vector.webp 1920w" alt="" class="footer-bg">
     </footer>
   </div>
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6693940b7b7f91b87c6fd429" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>

@@ -57,10 +57,10 @@
   --black: black;
   --disable-color: #838383;
   --defatult--white: white;
-  --size24\<deleted\|variable-0e8b7636-c124-b4c7-ffa0-5005f97e02cb\>: 1.5rem;
-  --size16\<deleted\|variable-1f76e12d-9832-cf8a-01d2-2e969f9f8bc2\>: 1rem;
-  --size32\<deleted\|variable-1752c91f-6966-059e-278f-3013b1a4e873\>: 2rem;
-  --radius8\<deleted\|variable-22bfc1e0-337a-c5cd-2f60-92d3ef3131fd\>: .5rem;
+  --size24: 1.5rem;
+  --size16: 1rem;
+  --size32: 2rem;
+  --radius8: .5rem;
   --defatult--black: black;
 }
 
@@ -799,8 +799,8 @@ blockquote {
 }
 
 .nav-component {
-  padding-top: var(--size24\<deleted\|variable-0e8b7636-c124-b4c7-ffa0-5005f97e02cb\>);
-  padding-bottom: var(--size24\<deleted\|variable-0e8b7636-c124-b4c7-ffa0-5005f97e02cb\>);
+  padding-top: var(--size24);
+  padding-bottom: var(--size24);
   border-bottom: 1px solid var(--color--body-font-1);
   background-color: #ddd0;
   width: 100%;
@@ -3096,14 +3096,14 @@ blockquote {
   }
 
   .nav-menu-wrapper {
-    padding-top: var(--size32\<deleted\|variable-1752c91f-6966-059e-278f-3013b1a4e873\>);
-    padding-bottom: var(--size32\<deleted\|variable-1752c91f-6966-059e-278f-3013b1a4e873\>);
+    padding-top: var(--size32);
+    padding-bottom: var(--size32);
     background-color: var(--defatult--template-bg);
   }
 
   .nav-link-wrapper {
-    grid-column-gap: var(--size24\<deleted\|variable-0e8b7636-c124-b4c7-ffa0-5005f97e02cb\>);
-    grid-row-gap: var(--size24\<deleted\|variable-0e8b7636-c124-b4c7-ffa0-5005f97e02cb\>);
+    grid-column-gap: var(--size24);
+    grid-row-gap: var(--size24);
     flex-flow: column;
   }
 
@@ -3112,7 +3112,7 @@ blockquote {
   }
 
   .nav-button-wrapper.is-mobile {
-    padding-top: var(--size16\<deleted\|variable-1f76e12d-9832-cf8a-01d2-2e969f9f8bc2\>);
+    padding-top: var(--size16);
     display: block;
   }
 
@@ -3251,7 +3251,7 @@ blockquote {
   }
 
   .mobile-hamburger {
-    border-radius: var(--radius8\<deleted\|variable-22bfc1e0-337a-c5cd-2f60-92d3ef3131fd\>);
+    border-radius: var(--radius8);
     background-color: var(--color--body-font-1);
     justify-content: center;
     align-items: center;
@@ -3568,8 +3568,8 @@ blockquote {
   }
 
   .nav-component {
-    padding-top: var(--size16\<deleted\|variable-1f76e12d-9832-cf8a-01d2-2e969f9f8bc2\>);
-    padding-bottom: var(--size16\<deleted\|variable-1f76e12d-9832-cf8a-01d2-2e969f9f8bc2\>);
+    padding-top: var(--size16);
+    padding-bottom: var(--size16);
   }
 
   .brand-logo {
@@ -4718,4 +4718,30 @@ blockquote {
 
 .client-logo-link:active {
   transform: scale(0.98);
+}
+
+/* Skip to content link for accessibility */
+.skip-to-content {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 9999;
+  padding: 1rem 1.5rem;
+  background-color: var(--color--brand);
+  color: var(--color--primary-black);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 0 0 0.5rem 0;
+}
+
+.skip-to-content:focus {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: auto;
+  height: auto;
+  overflow: visible;
 }
