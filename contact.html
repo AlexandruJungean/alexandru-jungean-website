@@ -46,6 +46,23 @@
       min-height: 50px !important;
     }
     
+    /* Hide reCAPTCHA badge */
+    .grecaptcha-badge {
+      visibility: hidden !important;
+    }
+    
+    .recaptcha-notice {
+      font-size: 11px;
+      color: #888;
+      margin-top: 12px;
+      text-align: center;
+    }
+    
+    .recaptcha-notice a {
+      color: #888;
+      text-decoration: underline;
+    }
+    
     .contact-form-field-two.textarea {
       padding-top: 15px !important;
       padding-bottom: 15px !important;
@@ -241,6 +258,7 @@
                     <textarea class="contact-form-field-two textarea" name="message" placeholder="Message" rows="5" required=""></textarea>
                     
                     <input type="submit" data-wait="Please wait..." class="submit-button w-button" value="Submit Now" id="submit-btn">
+                    <p class="recaptcha-notice">Protected by reCAPTCHA. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy</a> · <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Terms</a></p>
                   </form>
                   <div class="success-message w-form-done" style="margin-top: 20px;">
                     <div class="success-message-text">Thank you! Your submission has been received!</div>
