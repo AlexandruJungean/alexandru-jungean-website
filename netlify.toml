@@ -1,0 +1,12 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+  
+# Redirect for cleaner function URLs (optional)
+# [[redirects]]
+#   from = "/api/contact"
+#   to = "/.netlify/functions/contact"
+#   status = 200

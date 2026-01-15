@@ -410,7 +410,8 @@
         <div class="container-medium">
           <div class="footer-bottom">
             <div class="footer-copyright-wrapper">
-              <div class="paragraph-large copyright">© 2025 Alex Jungean All Rights Reserved.</div>
+              <div class="paragraph-large copyright">© <span id="copyright-year">2026</span> Alex Jungean. All rights reserved.</div>
+            <script>document.getElementById('copyright-year').textContent = new Date().getFullYear();</script>
             </div>
             <div class="footer-link-wrap">
               <a href="resume.html" class="paragraph-large footer-link-wrap">Changelog</a>
