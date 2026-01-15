@@ -1,0 +1,21 @@
+# Alexandru Jungean - Security Contact Information
+# https://alexjungean.com
+
+# Security contact
+Contact: https://alexjungean.com/contact.html
+Contact: https://www.linkedin.com/in/alexandru-jungean-5604b7268/
+
+# Preferred contact language
+Preferred-Languages: en, ro
+
+# Security policy expiration (1 year from now)
+Expires: 2027-01-15T23:59:59.000Z
+
+# Canonical URL for this file
+Canonical: https://alexjungean.com/.well-known/security.txt
+
+# Acknowledgments page (if you create one in the future)
+# Acknowledgments: https://alexjungean.com/security-acknowledgments.html
+
+# Hiring security researchers
+# Hiring: https://alexjungean.com/careers.html

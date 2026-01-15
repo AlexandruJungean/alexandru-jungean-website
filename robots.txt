@@ -1,9 +1,49 @@
+# Alexandru Jungean - IT Freelancer
+# https://alexjungean.com
+
 User-agent: *
 Allow: /
 
 # Sitemap
 Sitemap: https://alexjungean.com/sitemap.xml
 
+# LLMs.txt - AI/LLM documentation
+# See https://llmstxt.org for more information
+# Primary (concise): https://alexjungean.com/llms.txt
+# Full (detailed): https://alexjungean.com/llms-full.txt
+
 # Disallow sensitive or duplicate pages
 Disallow: /401.html
-Disallow: /404.html 
+Disallow: /404.html
+
+# Allow all search engine crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# AI Crawlers - Allow access to understand the site
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Host
+Host: https://alexjungean.com

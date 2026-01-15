@@ -1,0 +1,25 @@
+/* TEAM */
+Developer & Designer: Alexandru Jungean
+Site: https://alexjungean.com
+Location: Cluj-Napoca, Romania
+LinkedIn: https://www.linkedin.com/in/alexandru-jungean-5604b7268/
+GitHub: https://github.com/AlexandruJungean
+
+/* THANKS */
+Fonts: Google Fonts, Fontshare (Clash Display)
+Icons: Custom SVG icons
+Hosting: Netlify
+
+/* SITE */
+Last update: 2026/01/15
+Language: English
+Doctype: HTML5
+IDE: Cursor, VS Code
+Standards: HTML5, CSS3, JavaScript ES6+
+Components: Webflow, Custom CSS
+Software: Figma, Adobe Creative Suite
+
+/* NOTE */
+This website was designed and developed by Alexandru Jungean.
+Looking for web development, mobile apps, or database solutions?
+Contact me at https://alexjungean.com/contact.html

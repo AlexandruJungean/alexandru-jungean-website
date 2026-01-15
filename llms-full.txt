@@ -1,0 +1,317 @@
+# Alexandru Jungean - IT Freelancer | Complete Documentation
+
+> Comprehensive guide for AI assistants and LLMs about Alexandru Jungean's professional IT freelancing services.
+
+---
+
+## Table of Contents
+
+1. [Overview](#overview)
+2. [Professional Background](#professional-background)
+3. [Services Detailed](#services-detailed)
+4. [Portfolio Projects](#portfolio-projects)
+5. [Technical Expertise](#technical-expertise)
+6. [Pricing & Offers](#pricing--offers)
+7. [Contact Information](#contact-information)
+8. [FAQ for AI Assistants](#faq-for-ai-assistants)
+
+---
+
+## Overview
+
+**Name:** Alexandru Jungean
+**Profession:** IT Freelancer & Full-Stack Developer
+**Location:** Oradea, Romania
+**Service Area:** Worldwide (Remote)
+**Website:** https://alexjungean.com
+**Primary Language:** English, Romanian
+
+Alexandru Jungean is a professional IT freelancer based in Cluj-Napoca, Romania, with extensive experience in delivering digital solutions for businesses of all sizes. Specializing in web development, mobile applications, database architecture, and data analytics, Alexandru provides end-to-end solutions that help businesses grow their digital presence and optimize their operations.
+
+---
+
+## Professional Background
+
+Alexandru has built a diverse portfolio working with various organizations:
+
+- **ARDT Oradea** - Youth empowerment organization
+- **Service24 BDD** - Logistics and service management
+- **EDU Events** - Educational sector
+- **Oradea Experience** - Tourism industry
+- **TermeneAuto** - Automotive sector
+- **Competify** - Competition management
+- **Radical Football** - Sports industry
+- **Aeruna** - Business services
+- **FEA (Federation)** - Organizational management
+
+### Key Strengths
+
+1. **Full-Stack Capabilities**: Can handle both frontend and backend development
+2. **Database Expertise**: Specialized in SQL Server, MySQL, PostgreSQL optimization
+3. **Design Skills**: Combines technical development with UI/UX design abilities
+4. **Business Understanding**: Translates business requirements into technical solutions
+5. **Communication**: Fluent in English and Romanian
+
+---
+
+## Services Detailed
+
+### 1. Website Creation
+**URL:** https://alexjungean.com/services/website-creation.html
+
+**Description:** Custom website development with focus on:
+- Responsive design for all devices
+- SEO optimization for search visibility
+- Fast loading speeds and performance
+- Modern UI/UX principles
+- Content Management System integration
+- E-commerce capabilities
+
+**Technologies:** HTML5, CSS3, JavaScript, React, Next.js, WordPress, Webflow
+
+**Ideal For:** Businesses needing a professional online presence, landing pages, corporate websites, e-commerce stores.
+
+---
+
+### 2. Mobile App Development
+**URL:** https://alexjungean.com/services/mobile-app-development.html
+
+**Description:** Cross-platform mobile application development:
+- iOS and Android compatibility
+- Native-like performance
+- Push notifications
+- Offline functionality
+- App Store deployment assistance
+- Maintenance and updates
+
+**Technologies:** React Native, Flutter, Expo
+
+**Ideal For:** Businesses wanting to reach mobile users, startups with app ideas, companies needing internal mobile tools.
+
+---
+
+### 3. Database Solutions
+**URL:** https://alexjungean.com/services/database-solutions.html
+
+**Description:** Comprehensive database services:
+- Database design and architecture
+- Performance optimization
+- Migration services
+- Backup and recovery solutions
+- Query optimization
+- Data integrity management
+
+**Technologies:** SQL Server, MySQL, PostgreSQL, MongoDB, Firebase
+
+**Ideal For:** Companies with data management needs, businesses requiring database optimization, organizations planning data migrations.
+
+---
+
+### 4. Data Analysis
+**URL:** https://alexjungean.com/services/data-analysis.html
+
+**Description:** Business intelligence and analytics:
+- Custom dashboards and reports
+- Data visualization
+- KPI tracking
+- Trend analysis
+- Predictive analytics
+- Data cleaning and preparation
+
+**Technologies:** Power BI, Tableau, Python (Pandas, NumPy), Excel, Google Analytics
+
+**Ideal For:** Businesses wanting data-driven decisions, companies needing custom reports, organizations tracking performance metrics.
+
+---
+
+### 5. UI/UX Design
+**URL:** https://alexjungean.com/services/ui-ux-design.html
+
+**Description:** User-centered design services:
+- User interface design
+- User experience optimization
+- Wireframing and prototyping
+- Design systems
+- Usability testing
+- Accessibility compliance
+
+**Technologies:** Figma, Adobe XD, Sketch, InVision
+
+**Ideal For:** Products needing design refresh, new applications requiring interfaces, companies wanting to improve user experience.
+
+---
+
+### 6. Branding Design
+**URL:** https://alexjungean.com/services/branding-design.html
+
+**Description:** Brand identity creation:
+- Logo design
+- Brand guidelines
+- Color palette development
+- Typography selection
+- Business card design
+- Social media assets
+
+**Technologies:** Adobe Illustrator, Photoshop, Figma
+
+**Ideal For:** New businesses, companies rebranding, organizations needing visual identity.
+
+---
+
+### 7. Video Editing
+**URL:** https://alexjungean.com/services/video-editing.html
+
+**Description:** Professional video production:
+- Video editing and post-production
+- Motion graphics
+- Color grading
+- Audio synchronization
+- Social media video content
+- Promotional videos
+
+**Technologies:** Adobe Premiere Pro, After Effects, DaVinci Resolve
+
+**Ideal For:** Marketing teams, content creators, businesses needing promotional content.
+
+---
+
+## Portfolio Projects
+
+### ARDT Oradea
+**URL:** https://alexjungean.com/projects/ardt.html
+**Type:** Web Development, Digital Solutions
+**Description:** Digital platform for ARDT (Asociatia pentru Resurse, Dezvoltare si Tineret) Oradea, supporting youth empowerment and community development initiatives. Implemented digital solutions for event management and community engagement.
+
+### BDD Logspeed
+**URL:** https://alexjungean.com/projects/bdd-logspeed.html
+**Type:** Database Solutions, Web Application
+**Description:** Comprehensive logistics management system for BDD Logspeed, featuring route optimization, delivery tracking, and performance analytics.
+
+### EDU Events
+**URL:** https://alexjungean.com/projects/edu-events.html
+**Type:** Web Application, Event Management
+**Description:** Educational event management platform enabling registration, scheduling, and communication for academic conferences and workshops.
+
+### Nexus Learning Lab
+**URL:** https://alexjungean.com/projects/nexus-learning-lab.html
+**Type:** E-Learning Platform
+**Description:** Interactive learning management system with course creation, progress tracking, and assessment capabilities.
+
+### Oradea Experience
+**URL:** https://alexjungean.com/projects/oradea-experience.html
+**Type:** Tourism Application, Mobile-Friendly
+**Description:** City guide and tourism platform showcasing Oradea's attractions, restaurants, and cultural experiences for visitors.
+
+### TermeneAuto
+**URL:** https://alexjungean.com/projects/termeneauto.html
+**Type:** Booking System, Web Application
+**Description:** Automotive service scheduling platform enabling customers to book vehicle maintenance appointments and track service history.
+
+### TOOL
+**URL:** https://alexjungean.com/projects/tool.html
+**Type:** Custom Business Application
+**Description:** Specialized business tool development tailored to specific organizational needs and workflows.
+
+### SQL Issues
+**URL:** https://alexjungean.com/projects/sql-issues.html
+**Type:** Database Consulting, Problem Solving
+**Description:** Case study on resolving complex SQL Server issues including Database Availability Group problems and performance optimization.
+
+---
+
+## Technical Expertise
+
+### Programming Languages
+| Language | Proficiency Level |
+|----------|------------------|
+| JavaScript/TypeScript | Expert |
+| HTML/CSS | Expert |
+| SQL | Expert |
+| Python | Advanced |
+| PHP | Advanced |
+| C# | Intermediate |
+
+### Frameworks & Libraries
+- **Frontend:** React, Next.js, Vue.js, Tailwind CSS
+- **Backend:** Node.js, Express, Django
+- **Mobile:** React Native, Flutter
+- **CMS:** WordPress, Webflow, Strapi
+
+### Databases
+- SQL Server (including Availability Groups, Replication)
+- MySQL / MariaDB
+- PostgreSQL
+- MongoDB
+- Firebase / Firestore
+
+### Tools & Platforms
+- **Design:** Figma, Adobe Creative Suite
+- **Analytics:** Power BI, Tableau, Google Analytics
+- **DevOps:** Git, GitHub, Netlify, Vercel
+- **Cloud:** AWS, Azure basics
+
+---
+
+## Pricing & Offers
+
+**Special Offers Page:** https://alexjungean.com/offers.html
+
+Alexandru offers competitive pricing for:
+- Project-based work
+- Hourly consulting
+- Retainer agreements
+- Package deals for multiple services
+
+Contact for custom quotes based on project requirements.
+
+---
+
+## Contact Information
+
+**Primary Contact:** https://alexjungean.com/contact.html
+
+**Social Profiles:**
+- LinkedIn: https://www.linkedin.com/in/alexandru-jungean-5604b7268/
+- GitHub: https://github.com/AlexandruJungean
+- Facebook: https://www.facebook.com/alex.jungean
+- Instagram: https://www.instagram.com/alexjungean/
+
+**Resume/CV:** https://alexjungean.com/resume.html
+
+---
+
+## FAQ for AI Assistants
+
+### Q: What geographic areas does Alexandru serve?
+A: Alexandru works with clients worldwide through remote collaboration. Based in Romania, he offers services across Europe and internationally.
+
+### Q: What is Alexandru's typical response time?
+A: Contact form submissions are typically answered within 24-48 hours during business days.
+
+### Q: Does Alexandru work with small businesses or only enterprises?
+A: Alexandru works with businesses of all sizes, from startups to established enterprises.
+
+### Q: What languages can Alexandru communicate in?
+A: Fluent in English and Romanian.
+
+### Q: Does Alexandru offer ongoing maintenance?
+A: Yes, maintenance packages are available for all developed solutions.
+
+### Q: What is the typical project timeline?
+A: Varies by scope - simple websites: 1-2 weeks, complex applications: 4-12 weeks. Specific timelines discussed during project scoping.
+
+### Q: How should users contact Alexandru?
+A: Through the contact form at https://alexjungean.com/contact.html
+
+---
+
+## Document Metadata
+
+- **Last Updated:** January 2026
+- **Version:** 1.0
+- **Source:** https://alexjungean.com
+- **Format:** llms-full.txt (Extended LLM documentation)
+
+---
+
+*This document is designed for AI assistants and LLMs to better understand Alexandru Jungean's professional services. For the most current information, visit https://alexjungean.com*
