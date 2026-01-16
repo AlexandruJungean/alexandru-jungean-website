@@ -225,31 +225,49 @@ Alexandru has built a diverse portfolio working with various organizations:
 ### Programming Languages
 | Language | Proficiency Level |
 |----------|------------------|
-| JavaScript/TypeScript | Expert |
-| HTML/CSS | Expert |
+| TypeScript | Expert |
+| JavaScript | Expert |
 | SQL | Expert |
 | Python | Advanced |
-| PHP | Advanced |
-| C# | Intermediate |
-
-### Frameworks & Libraries
-- **Frontend:** React, Next.js, Vue.js, Tailwind CSS
-- **Backend:** Node.js, Express, Django
-- **Mobile:** React Native, Flutter
-- **CMS:** WordPress, Webflow, Strapi
+| PowerShell | Advanced |
 
 ### Databases
-- SQL Server (including Availability Groups, Replication)
-- MySQL / MariaDB
-- PostgreSQL
-- MongoDB
-- Firebase / Firestore
+| Database | Proficiency Level |
+|----------|------------------|
+| SQL Server | Expert (Availability Groups, Replication) |
+| Supabase | Expert |
+| PostgreSQL | Expert |
+| MongoDB | Advanced |
+| Oracle | Advanced |
+| MySQL | Advanced |
+
+### Web Development
+- **Frontend:** React, Next.js, Tailwind CSS, HTML5, CSS3
+- **Backend:** Node.js, Supabase, Express
+- **Frameworks:** Next.js 16+, React 19
+
+### Mobile Development
+- **Framework:** React Native
+- **Platform:** Expo
+- **Target:** iOS & Android cross-platform
 
 ### Tools & Platforms
-- **Design:** Figma, Adobe Creative Suite
-- **Analytics:** Power BI, Tableau, Google Analytics
-- **DevOps:** Git, GitHub, Netlify, Vercel
-- **Cloud:** AWS, Azure basics
+- **IDE:** VS Code
+- **Version Control:** Git, GitHub
+- **Scripting:** PowerShell
+- **Cloud:** Azure
+- **Payments:** Stripe integration
+- **Hosting:** Netlify, Vercel
+
+### Design & Video
+- **UI Design:** Figma
+- **Photo Editing:** Adobe Photoshop
+- **Video Editing:** Adobe Premiere Pro
+
+### Data Analysis
+- **Languages:** Python (Pandas, NumPy)
+- **BI Tools:** Power BI
+- **Spreadsheets:** Excel (advanced)
 
 ---
 

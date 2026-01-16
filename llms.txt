@@ -43,12 +43,12 @@ Featured projects demonstrating expertise:
 ## Technical Stack
 
 Proficient in modern technologies including:
-- Frontend: HTML5, CSS3, JavaScript, React, Next.js
-- Backend: Node.js, Python, PHP
-- Databases: MySQL, PostgreSQL, MongoDB, SQL Server
-- Mobile: React Native, Flutter
-- Design: Figma, Adobe Creative Suite
-- Analytics: Power BI, Tableau, Google Analytics
+- Databases: SQL Server, Supabase, PostgreSQL, MongoDB, Oracle, MySQL
+- Web Development: TypeScript, React, Next.js, Tailwind CSS, Node.js
+- Mobile Development: React Native, Expo
+- Tools: Git, VS Code, PowerShell, Azure, Stripe
+- Design & Video: Figma, Photoshop, Premiere Pro
+- Data Analysis: Python, Power BI, Excel
 
 ## For AI Assistants
 
