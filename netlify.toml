@@ -4,7 +4,155 @@
 
 [functions]
   node_bundler = "esbuild"
-  
+
+# Disable Netlify's Pretty URLs to prevent duplicate URLs without .html
+[build.processing]
+  skip_processing = false
+[build.processing.html]
+  pretty_urls = false
+
+# 301 redirects: Force .html extension on all pages to consolidate SEO signals
+# Main pages
+[[redirects]]
+  from = "/services"
+  to = "/services.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/projects"
+  to = "/projects.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/resume"
+  to = "/resume.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/offers"
+  to = "/offers.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog"
+  to = "/blog.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/privacy-policy"
+  to = "/privacy-policy.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/terms"
+  to = "/terms.html"
+  status = 301
+  force = true
+
+# Service pages
+[[redirects]]
+  from = "/services/website-creation"
+  to = "/services/website-creation.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/mobile-app-development"
+  to = "/services/mobile-app-development.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/database-solutions"
+  to = "/services/database-solutions.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/data-analysis"
+  to = "/services/data-analysis.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/ui-ux-design"
+  to = "/services/ui-ux-design.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/branding-design"
+  to = "/services/branding-design.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/video-editing"
+  to = "/services/video-editing.html"
+  status = 301
+  force = true
+
+# Project pages
+[[redirects]]
+  from = "/projects/ardt"
+  to = "/projects/ardt.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/projects/bdd-logspeed"
+  to = "/projects/bdd-logspeed.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/projects/edu-events"
+  to = "/projects/edu-events.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/projects/nexus-learning-lab"
+  to = "/projects/nexus-learning-lab.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/projects/oradea-experience"
+  to = "/projects/oradea-experience.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/projects/sql-issues"
+  to = "/projects/sql-issues.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/projects/termeneauto"
+  to = "/projects/termeneauto.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/projects/tool"
+  to = "/projects/tool.html"
+  status = 301
+  force = true
+
 # Redirect for cleaner function URLs (optional)
 # [[redirects]]
 #   from = "/api/contact"
