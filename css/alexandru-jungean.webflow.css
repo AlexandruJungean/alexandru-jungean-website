@@ -443,13 +443,13 @@ blockquote {
   color: var(--gray);
   font-size: 1.125rem;
   font-weight: 500;
-  line-height: 1;
+  line-height: 1.2rem;
 }
 
 .button-text.is-black {
   color: var(--color--primary-black);
   text-align: center;
-  line-height: 1;
+  line-height: 1.2rem;
 }
 
 .paragraph-large {
@@ -543,6 +543,11 @@ blockquote {
   text-decoration: none;
   position: relative;
   overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+.primary-button:hover {
+  background-color: var(--white);
 }
 
 .primary-button.is-two {
@@ -871,14 +876,14 @@ blockquote {
 .nav-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px 0 rgba(103, 139, 158, 0.4);
-  background-color: #7a9bb0;
+  background-color: var(--white);
 }
 
 .nav-button-text {
   color: var(--color--primary-black);
   font-size: 1rem;
   font-weight: 500;
-  line-height: 1.1;
+  line-height: 1.2rem;
 }
 
 .section-home-header {
@@ -1235,7 +1240,7 @@ blockquote {
 }
 
 .section-technologies .section-title {
-  color: var(--color--primary-white);
+  color: var(--white);
 }
 
 .tech-grid {
@@ -1261,7 +1266,7 @@ blockquote {
 .tech-category-title {
   font-size: 1.1rem;
   font-weight: 600;
-  color: var(--color--primary-white);
+  color: var(--white);
   margin-bottom: 1rem;
   padding-bottom: 0.75rem;
   border-bottom: 2px solid var(--color--primary);
@@ -1594,15 +1599,31 @@ blockquote {
 .nav-button-text-wrapper {
   height: 1.2rem;
   overflow: hidden;
+  position: relative;
 }
 
-.button-overlay {
-  z-index: -1;
-  background-color: var(--gray);
-  position: absolute;
-  inset: 0%;
-  transform: translate(0, 100%);
+.button-text,
+.nav-button-text {
+  display: block;
+  position: relative;
+  transition: transform 0.3s ease;
 }
+
+.button-text::before,
+.nav-button-text::before {
+  content: attr(data-text);
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  color: inherit;
+}
+
+.primary-button:hover .button-text,
+.nav-button:hover .nav-button-text {
+  transform: translateY(1.2rem);
+}
+
 
 .footer-button-overlay {
   z-index: -1;
@@ -4445,7 +4466,7 @@ blockquote {
   }
 
   .nav-button-text-wrapper {
-    height: 1.1rem;
+    height: 1.2rem;
   }
 
   .mobile-hamburger {
