@@ -819,6 +819,7 @@ blockquote {
   background-color: #ddd0;
   width: 100%;
   position: absolute;
+  z-index: 100;
 }
 
 .mobile-hamburger {
@@ -848,6 +849,11 @@ blockquote {
   max-width: 10rem;
 }
 
+.nav-menu-wrapper {
+  display: flex;
+  align-items: center;
+}
+
 .nav-link-wrapper {
   grid-column-gap: 2.75rem;
   grid-row-gap: 2.75rem;
@@ -863,6 +869,7 @@ blockquote {
 .nav-link {
   color: var(--gray);
   text-transform: uppercase;
+  text-decoration: none;
   padding: 0;
   font-size: 1.125rem;
   font-weight: 500;
