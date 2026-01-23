@@ -1050,10 +1050,11 @@ blockquote {
   flex: none;
   justify-content: space-around;
   align-items: stretch;
-  min-width: 220%;
-  max-width: 220%;
   display: flex;
   position: static;
+  gap: 5rem;
+  padding-right: 5rem;
+  flex-shrink: 0;
 }
 
 .marquee-item.is-two {
@@ -1062,16 +1063,16 @@ blockquote {
 }
 
 .marquee-track {
+  --marquee-width: 50%;
   white-space: nowrap;
   will-change: transform;
-  flex: none;
   justify-content: flex-start;
-  align-items: flex-start;
-  max-width: 100%;
+  align-items: center;
   display: flex;
-  overflow: visible;
+  gap: 0;
   padding: 1rem 0;
-  animation: marquee-scroll 30s linear infinite;
+  width: max-content;
+  animation: marquee-scroll 40s linear infinite;
 }
 
 @keyframes marquee-scroll {
@@ -1079,7 +1080,7 @@ blockquote {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(calc(var(--marquee-width) * -1));
   }
 }
 
@@ -3291,8 +3292,8 @@ blockquote {
   }
 
   .marquee-item {
-    grid-column-gap: 5rem;
-    grid-row-gap: 5rem;
+    gap: 4rem;
+    padding-right: 4rem;
   }
 
   .about-us-component.section-padding-top.services-unic {
@@ -3766,15 +3767,12 @@ blockquote {
   }
 
   .marquee-item, .marquee-item.marquee-1-phone {
-    grid-column-gap: 0rem;
-    grid-row-gap: 0rem;
-    min-width: 400%;
-    max-width: 400%;
+    gap: 3rem;
+    padding-right: 3rem;
   }
 
   .marquee-track {
-    grid-column-gap: 0rem;
-    grid-row-gap: 0rem;
+    gap: 0;
   }
 
   .client-logos-title {
@@ -4344,31 +4342,22 @@ blockquote {
   }
 
   .marquee-item {
-    grid-column-gap: 0rem;
-    grid-row-gap: 0rem;
-    min-width: 400%;
-    max-width: 400%;
+    gap: 2rem;
+    padding-right: 2rem;
   }
 
   .marquee-item.is-two {
-    grid-column-gap: 2rem;
-    grid-row-gap: 2rem;
+    gap: 2rem;
+    padding-right: 2rem;
   }
 
   .marquee-item.marquee-1-phone {
-    grid-column-gap: 0rem;
-    grid-row-gap: 0rem;
-    min-width: 480%;
-    max-width: 480%;
-    margin-left: 0;
-    margin-right: 0;
-    padding-right: 0;
+    gap: 2rem;
+    padding-right: 2rem;
   }
 
   .marquee-track {
-    grid-column-gap: 0rem;
-    grid-row-gap: 0rem;
-    max-width: 100%;
+    gap: 0;
   }
 
   .client-logo-wrap {
