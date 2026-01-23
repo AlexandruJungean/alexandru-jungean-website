@@ -826,7 +826,11 @@ blockquote {
 }
 
 .hamburger-line {
-  display: none;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--white);
+  transition: transform 0.3s, opacity 0.3s;
 }
 
 .nav-container {
@@ -3494,13 +3498,6 @@ blockquote {
     cursor: pointer;
   }
 
-  .hamburger-line {
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: var(--white);
-    transition: transform 0.3s, opacity 0.3s;
-  }
 
   .mobile-hamburger.is-open .hamburger-line:nth-child(1) {
     transform: translateY(7px) rotate(45deg);
