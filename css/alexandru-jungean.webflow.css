@@ -2310,7 +2310,7 @@ blockquote {
 }
 
 .slider-arrow {
-  border: 1px solid var(--color--body-font-1);
+  border: 1px solid var(--white);
   border-radius: 50%;
   justify-content: center;
   align-items: center;
@@ -2319,7 +2319,7 @@ blockquote {
   transition: all .3s;
   display: flex;
   inset: -32% 0% auto auto;
-  color: var(--color--body-font-1);
+  color: var(--white);
 }
 
 .slider-arrow:hover {
