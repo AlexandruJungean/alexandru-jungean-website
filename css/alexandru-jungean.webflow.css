@@ -4329,8 +4329,11 @@ blockquote {
     line-height: 1.4rem;
   }
 
+  .header-title {
+    margin-bottom: 1rem;
+  }
+
   .heading-medium.header-sub-text {
-    margin-top: 1rem;
     margin-bottom: 0.75rem;
     font-size: .8rem;
   }
