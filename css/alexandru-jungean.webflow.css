@@ -3539,6 +3539,18 @@ blockquote {
     padding-bottom: var(--size32);
   }
 
+  .nav-link-wrapper {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .nav-button-wrapper.is-mobile {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
   .contact-card-component {
     grid-template-columns: 1fr 1fr;
   }
@@ -4318,8 +4330,8 @@ blockquote {
   }
 
   .heading-medium.header-sub-text {
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 0.75rem;
     font-size: .8rem;
   }
 
