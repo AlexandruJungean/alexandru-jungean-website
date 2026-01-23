@@ -1017,6 +1017,10 @@ blockquote {
   overflow: hidden;
 }
 
+.client-marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
 .client-logos-title-line {
   background-color: #d9d9d9;
   width: 40%;
@@ -1065,8 +1069,24 @@ blockquote {
   align-items: flex-start;
   max-width: 100%;
   display: flex;
-  overflow: hidden;
+  overflow: visible;
   padding: 1rem 0;
+  animation: marquee-scroll 30s linear infinite;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
 }
 
 .client-logos-title {
