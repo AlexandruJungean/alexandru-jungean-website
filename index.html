@@ -241,7 +241,7 @@
                     </a>
                   </div>
                 </div>
-                <div data-w-id="a7602b31-5a91-1d98-1133-f2714d62b5c0" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)" class="text-badge-wrapper"><img src="images/text-badge_1text-badge.webp" loading="lazy" alt="Experience badge showcasing expertise" class="text-badge"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewbox="0 0 36 36" fill="none" class="text-badge-icon">
+                <div class="text-badge-wrapper"><img src="images/text-badge_1text-badge.webp" loading="lazy" alt="Experience badge showcasing expertise" class="text-badge"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewbox="0 0 36 36" fill="none" class="text-badge-icon">
                     <path d="M30.555 18.7776L36 18L30.555 17.2224C24.4481 16.3502 19.6497 11.5519 18.7776 5.44498L18 0L17.2224 5.44498C16.3503 11.5519 11.5519 16.3502 5.44498 17.2224L0 18L5.44498 18.7776C11.5519 19.6497 16.3503 24.4481 17.2224 30.555L18 36L18.7776 30.555C19.6498 24.4481 24.4481 19.6497 30.555 18.7776Z" fill="currentColor"></path>
                   </svg></div>
                 <div class="blur-element"></div>
@@ -789,7 +789,7 @@
               <div class="footer-title-wrap">
                 <h2 class="footer-title color-white">Have a Project to Discuss?</h2>
               </div>
-              <a data-w-id="9d173fad-fbd1-69c5-ca2f-5965e815d575" href="contact.html" class="footer-button w-inline-block">
+              <a href="contact.html" class="footer-button w-inline-block">
                 <div class="footer-button-text">Let's Talk</div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none" class="footer-button-icon">
                   <path d="M4.63351 0V1.62372H13.2282L0 14.8519L1.14807 16L14.3762 2.77182V11.3665H16V0H4.63351Z" fill="currentColor"></path>
                 </svg>
@@ -927,6 +927,47 @@
           }
         });
       }
+    });
+  </script>
+  
+  <!-- Badge Star Rotation -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var badge = document.querySelector('.text-badge-wrapper');
+      var star = document.querySelector('.text-badge-icon');
+      if (!badge || !star) return;
+      
+      var baseAngle = 0;
+      var offset = 0;
+      var targetOffset = 0;
+      var baseSpeed = 36; // degrees per second (360/10s)
+      var lastTime = performance.now();
+      
+      function animate(now) {
+        var delta = (now - lastTime) / 1000;
+        lastTime = now;
+        
+        // Update base rotation
+        baseAngle += baseSpeed * delta;
+        baseAngle = baseAngle % 360;
+        
+        // Smooth offset transition (30% of full rotation = ~108 degrees)
+        var offsetDiff = targetOffset - offset;
+        offset += offsetDiff * 0.08;
+        
+        star.style.transform = 'rotate(' + (baseAngle + offset) + 'deg)';
+        requestAnimationFrame(animate);
+      }
+      
+      requestAnimationFrame(animate);
+      
+      badge.addEventListener('mouseenter', function() {
+        targetOffset = 72; // 20% of 360 degrees
+      });
+      
+      badge.addEventListener('mouseleave', function() {
+        targetOffset = 0;
+      });
     });
   </script>
   
