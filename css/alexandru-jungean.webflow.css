@@ -2198,16 +2198,18 @@ blockquote {
   background-color: #ddd0;
   height: auto;
   overflow: visible;
+  padding-top: 0.5rem;
 }
 
 .service-slider-mask {
   height: auto;
   overflow: visible;
+  padding-right: 5%;
 }
 
 .service-slide {
   width: 25rem;
-  margin-right: 1.5rem;
+  margin-right: 1rem;
 }
 
 .about-us-title-extra {
@@ -2308,7 +2310,7 @@ blockquote {
 }
 
 .slider-arrow {
-  border: 1px solid var(--gray);
+  border: 1px solid var(--color--body-font-1);
   border-radius: 50%;
   justify-content: center;
   align-items: center;
@@ -2317,6 +2319,7 @@ blockquote {
   transition: all .3s;
   display: flex;
   inset: -32% 0% auto auto;
+  color: var(--color--body-font-1);
 }
 
 .slider-arrow:hover {
@@ -4587,7 +4590,7 @@ blockquote {
   }
 
   .service-slide {
-    width: 100%;
+    width: 85%;
   }
 
   .utility-page-text {
