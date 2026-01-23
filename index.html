@@ -932,9 +932,12 @@
         if (slide) {
           var style = window.getComputedStyle(mask);
           var gap = parseInt(style.gap) || 16;
-          return (slide.offsetWidth + gap) * 2; // Scroll 2 cards
+          var cardWidth = slide.offsetWidth + gap;
+          // On mobile (< 768px), scroll 1 card; on desktop, scroll 2 cards
+          var cardsToScroll = window.innerWidth < 768 ? 1 : 2;
+          return cardWidth * cardsToScroll;
         }
-        return 800;
+        return 400;
       }
       
       leftArrow.addEventListener('click', function() {
