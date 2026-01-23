@@ -25,9 +25,16 @@
   status = 301
   force = true
 
+# Redirect old resume page to contact
+[[redirects]]
+  from = "/resume.html"
+  to = "/contact.html"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/resume"
-  to = "/resume.html"
+  to = "/contact.html"
   status = 301
   force = true
 
