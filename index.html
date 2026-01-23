@@ -251,7 +251,7 @@
           </div>
         </div><img src="images/header-shape_1header-shape.webp" loading="eager" sizes="100vw" srcset="images/header-shape_1header-shape.webp 1920w" alt="Abstract geometric background design for Alexandru Jungean portfolio header" class="header-bg-image">
         <div class="header-bg-overlay"></div>
-        <a data-w-id="a1d098fd-e0b6-fc4c-231e-03b43ba5fac4" href="#project" class="scroll-down w-inline-block"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="23" viewbox="0 0 10 23" fill="none" class="arrow-down-icon">
+        <a href="#project" class="scroll-down w-inline-block" aria-label="Scroll to projects"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="23" viewbox="0 0 10 23" fill="none" class="arrow-down-icon">
             <path d="M4.44226 0.55214L4.44226 21.1241L0.952575 17.642C0.735607 17.4255 0.383036 17.4244 0.164582 17.639C0.0546133 17.7469 -7.81952e-07 17.889 -7.88146e-07 18.0307C-7.94293e-07 18.1713 0.0542413 18.3119 0.161983 18.4198L4.58826 22.8369C4.80523 23.0533 5.1578 23.0544 5.37625 22.8398L9.83523 18.4551C10.0541 18.2405 10.0548 17.8908 9.8382 17.6744C9.6216 17.4579 9.26866 17.4565 9.05021 17.6714L5.55718 21.1065L5.55718 0.55214C5.55718 0.246991 5.30752 -2.05115e-07 4.99991 -2.18561e-07C4.69229 -2.32007e-07 4.44226 0.24699 4.44226 0.55214Z" fill="currentColor"></path>
           </svg></a>
       </header>
@@ -911,6 +911,22 @@
           mask.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
         }
       });
+    });
+  </script>
+  
+  <!-- Smooth Scroll for Anchor Links -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var scrollDown = document.querySelector('.scroll-down');
+      if (scrollDown) {
+        scrollDown.addEventListener('click', function(e) {
+          e.preventDefault();
+          var target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      }
     });
   </script>
   

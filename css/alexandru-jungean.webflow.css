@@ -983,6 +983,31 @@ blockquote {
   display: flex;
   position: absolute;
   inset: auto 21.25rem 4.125rem auto;
+  transition: border-color 0.3s, color 0.3s;
+}
+
+.scroll-down:hover {
+  border-color: var(--color--brand);
+  color: var(--color--brand);
+}
+
+.scroll-down .arrow-down-icon {
+  animation: scroll-bounce 2s ease-in-out infinite;
+}
+
+@keyframes scroll-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-down .arrow-down-icon {
+    animation: none;
+  }
 }
 
 .arrow-down-icon {
