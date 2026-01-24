@@ -5076,3 +5076,96 @@ blockquote {
   scrollbar-width: thin;
   scrollbar-color: var(--color--brand) var(--color--primary-black);
 }
+
+/* ============================================
+   SEO-Friendly Video Embed Styles
+   Replaces inline styles for better performance
+   ============================================ */
+
+/* YouTube video container - 16:9 aspect ratio */
+.youtube-video-container {
+  position: relative;
+  padding-top: 56.17%;
+  width: 100%;
+  background-color: #000;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.youtube-video-container iframe,
+.youtube-video-container .lite-youtube {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: auto;
+  border: none;
+}
+
+/* Lite YouTube facade for better performance */
+.lite-youtube {
+  background-color: #000;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lite-youtube::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2), transparent, rgba(0,0,0,0.3));
+  pointer-events: none;
+}
+
+.lite-youtube .play-button {
+  width: 68px;
+  height: 48px;
+  background-color: #cc0000;
+  border-radius: 12px;
+  position: relative;
+  z-index: 1;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.lite-youtube:hover .play-button {
+  background-color: #ff0000;
+  transform: scale(1.1);
+}
+
+.lite-youtube .play-button::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-35%, -50%);
+  border-style: solid;
+  border-width: 11px 0 11px 19px;
+  border-color: transparent transparent transparent #fff;
+}
+
+/* Form message styles - replaces inline margin-top */
+.success-message.w-form-done,
+.error-message.w-form-fail {
+  margin-top: 20px;
+}
+
+/* Calendly widget container */
+.calendly-inline-widget {
+  min-width: 320px;
+  height: 700px;
+}
+
+@media screen and (max-width: 767px) {
+  .calendly-inline-widget {
+    min-width: 280px;
+    height: 600px;
+  }
+}
