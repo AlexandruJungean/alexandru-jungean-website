@@ -5169,3 +5169,8 @@ blockquote {
     height: 600px;
   }
 }
+
+/* Blog fullwidth figure */
+.blog-figure-fullwidth {
+  max-width: 1056px;
+}

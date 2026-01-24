@@ -1149,5 +1149,42 @@
       });
     });
   </script>
+  
+  <!-- Lite YouTube Embed - Lazy load YouTube for better performance -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var liteYouTubes = document.querySelectorAll('.lite-youtube');
+      
+      liteYouTubes.forEach(function(lite) {
+        var videoId = lite.dataset.videoid;
+        var title = lite.dataset.title || 'Video';
+        
+        // Set thumbnail background
+        lite.style.backgroundImage = 'url(https://i.ytimg.com/vi/' + videoId + '/maxresdefault.jpg)';
+        
+        // Add ARIA attributes for accessibility
+        lite.setAttribute('role', 'button');
+        lite.setAttribute('aria-label', 'Play: ' + title);
+        lite.setAttribute('tabindex', '0');
+        
+        function loadVideo() {
+          var iframe = document.createElement('iframe');
+          iframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0';
+          iframe.title = title;
+          iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+          iframe.allowFullscreen = true;
+          lite.replaceWith(iframe);
+        }
+        
+        lite.addEventListener('click', loadVideo);
+        lite.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            loadVideo();
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
