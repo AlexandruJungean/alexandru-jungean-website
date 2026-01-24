@@ -44,9 +44,16 @@
   status = 301
   force = true
 
+# Redirect old offers page to services
+[[redirects]]
+  from = "/offers.html"
+  to = "/services.html"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/offers"
-  to = "/offers.html"
+  to = "/services.html"
   status = 301
   force = true
 

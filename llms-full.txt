@@ -11,7 +11,7 @@
 3. [Services Detailed](#services-detailed)
 4. [Portfolio Projects](#portfolio-projects)
 5. [Technical Expertise](#technical-expertise)
-6. [Pricing & Offers](#pricing--offers)
+6. [Pricing](#pricing)
 7. [Contact Information](#contact-information)
 8. [FAQ for AI Assistants](#faq-for-ai-assistants)
 9. [Legal Information](#legal-information)
@@ -271,9 +271,7 @@ Alexandru has built a diverse portfolio working with various organizations:
 
 ---
 
-## Pricing & Offers
-
-**Special Offers Page:** https://alexjungean.com/offers.html
+## Pricing
 
 Alexandru offers competitive pricing for:
 - Project-based work
