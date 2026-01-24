@@ -112,8 +112,8 @@ export async function handler(event) {
           
           <p>In the meantime, feel free to:</p>
           <ul>
-            <li>Check out my <a href="https://alexjungean.com/projects.html">projects</a></li>
-            <li>View my <a href="https://alexjungean.com/services.html">services</a></li>
+            <li>Check out my <a href="https://alexjungean.com/projects">projects</a></li>
+            <li>View my <a href="https://alexjungean.com/services">services</a></li>
             <li>Connect with me on <a href="https://www.linkedin.com/in/alexandru-jungean-5604b7268/">LinkedIn</a></li>
           </ul>
           
@@ -124,7 +124,7 @@ export async function handler(event) {
           <hr style="border: none; border-top: 1px solid #eee; margin: 30px 0;">
           <p style="color: #999; font-size: 12px;">
             This is an automated confirmation email. Please do not reply directly to this email.
-            If you need to reach me, send a new message through the <a href="https://alexjungean.com/contact.html">contact form</a>.
+            If you need to reach me, send a new message through the <a href="https://alexjungean.com/contact">contact form</a>.
           </p>
         </div>
       `

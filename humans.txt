@@ -22,4 +22,4 @@ Software: Figma, Adobe Creative Suite
 /* NOTE */
 This website was designed and developed by Alexandru Jungean.
 Looking for web development, mobile apps, or database solutions?
-Contact me at https://alexjungean.com/contact.html
+Contact me at https://alexjungean.com/contact

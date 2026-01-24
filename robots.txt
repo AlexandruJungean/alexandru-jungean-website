@@ -13,8 +13,8 @@ Sitemap: https://alexjungean.com/sitemap.xml
 # Full (detailed): https://alexjungean.com/llms-full.txt
 
 # Disallow sensitive or duplicate pages
-Disallow: /401.html
-Disallow: /404.html
+Disallow: /401
+Disallow: /404
 
 # Allow all search engine crawlers
 User-agent: Googlebot

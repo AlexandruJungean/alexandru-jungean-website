@@ -2,7 +2,7 @@
 # https://alexjungean.com
 
 # Security contact
-Contact: https://alexjungean.com/contact.html
+Contact: https://alexjungean.com/contact
 Contact: https://www.linkedin.com/in/alexandru-jungean-5604b7268/
 
 # Preferred contact language
@@ -15,7 +15,8 @@ Expires: 2027-01-15T23:59:59.000Z
 Canonical: https://alexjungean.com/.well-known/security.txt
 
 # Acknowledgments page (if you create one in the future)
-# Acknowledgments: https://alexjungean.com/security-acknowledgments.html
+# Acknowledgments page (if you create one in the future)
+# Acknowledgments: https://alexjungean.com/security-acknowledgments
 
 # Hiring security researchers
-# Hiring: https://alexjungean.com/careers.html
+# Hiring: https://alexjungean.com/careers

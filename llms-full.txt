@@ -58,8 +58,7 @@ Alexandru has built a diverse portfolio working with various organizations:
 ## Services Detailed
 
 ### 1. Website Creation
-**URL:** https://alexjungean.com/services/website-creation.html
-
+**URL:** https://alexjungean.com/services/website-creation
 **Description:** Custom website development with focus on:
 - Responsive design for all devices
 - SEO optimization for search visibility
@@ -75,8 +74,7 @@ Alexandru has built a diverse portfolio working with various organizations:
 ---
 
 ### 2. Mobile App Development
-**URL:** https://alexjungean.com/services/mobile-app-development.html
-
+**URL:** https://alexjungean.com/services/mobile-app-development
 **Description:** Cross-platform mobile application development:
 - iOS and Android compatibility
 - Native-like performance
@@ -92,8 +90,7 @@ Alexandru has built a diverse portfolio working with various organizations:
 ---
 
 ### 3. Database Solutions
-**URL:** https://alexjungean.com/services/database-solutions.html
-
+**URL:** https://alexjungean.com/services/database-solutions
 **Description:** Comprehensive database services:
 - Database design and architecture
 - Performance optimization
@@ -109,8 +106,7 @@ Alexandru has built a diverse portfolio working with various organizations:
 ---
 
 ### 4. Data Analysis
-**URL:** https://alexjungean.com/services/data-analysis.html
-
+**URL:** https://alexjungean.com/services/data-analysis
 **Description:** Business intelligence and analytics:
 - Custom dashboards and reports
 - Data visualization
@@ -126,8 +122,7 @@ Alexandru has built a diverse portfolio working with various organizations:
 ---
 
 ### 5. UI/UX Design
-**URL:** https://alexjungean.com/services/ui-ux-design.html
-
+**URL:** https://alexjungean.com/services/ui-ux-design
 **Description:** User-centered design services:
 - User interface design
 - User experience optimization
@@ -143,8 +138,7 @@ Alexandru has built a diverse portfolio working with various organizations:
 ---
 
 ### 6. Branding Design
-**URL:** https://alexjungean.com/services/branding-design.html
-
+**URL:** https://alexjungean.com/services/branding-design
 **Description:** Brand identity creation:
 - Logo design
 - Brand guidelines
@@ -160,8 +154,7 @@ Alexandru has built a diverse portfolio working with various organizations:
 ---
 
 ### 7. Video Editing
-**URL:** https://alexjungean.com/services/video-editing.html
-
+**URL:** https://alexjungean.com/services/video-editing
 **Description:** Professional video production:
 - Video editing and post-production
 - Motion graphics
@@ -179,43 +172,35 @@ Alexandru has built a diverse portfolio working with various organizations:
 ## Portfolio Projects
 
 ### ARDT Oradea
-**URL:** https://alexjungean.com/projects/ardt.html
-**Type:** Web Development, Digital Solutions
+**URL:** https://alexjungean.com/projects/ardt**Type:** Web Development, Digital Solutions
 **Description:** Digital platform for ARDT (Asociatia pentru Resurse, Dezvoltare si Tineret) Oradea, supporting youth empowerment and community development initiatives. Implemented digital solutions for event management and community engagement.
 
 ### BDD Logspeed
-**URL:** https://alexjungean.com/projects/bdd-logspeed.html
-**Type:** Database Solutions, Web Application
+**URL:** https://alexjungean.com/projects/bdd-logspeed**Type:** Database Solutions, Web Application
 **Description:** Comprehensive logistics management system for BDD Logspeed, featuring route optimization, delivery tracking, and performance analytics.
 
 ### EDU Events
-**URL:** https://alexjungean.com/projects/edu-events.html
-**Type:** Web Application, Event Management
+**URL:** https://alexjungean.com/projects/edu-events**Type:** Web Application, Event Management
 **Description:** Educational event management platform enabling registration, scheduling, and communication for academic conferences and workshops.
 
 ### Nexus Learning Lab
-**URL:** https://alexjungean.com/projects/nexus-learning-lab.html
-**Type:** E-Learning Platform
+**URL:** https://alexjungean.com/projects/nexus-learning-lab**Type:** E-Learning Platform
 **Description:** Interactive learning management system with course creation, progress tracking, and assessment capabilities.
 
 ### Oradea Experience
-**URL:** https://alexjungean.com/projects/oradea-experience.html
-**Type:** Tourism Application, Mobile-Friendly
+**URL:** https://alexjungean.com/projects/oradea-experience**Type:** Tourism Application, Mobile-Friendly
 **Description:** City guide and tourism platform showcasing Oradea's attractions, restaurants, and cultural experiences for visitors.
 
 ### TermeneAuto
-**URL:** https://alexjungean.com/projects/termeneauto.html
-**Type:** Booking System, Web Application
+**URL:** https://alexjungean.com/projects/termeneauto**Type:** Booking System, Web Application
 **Description:** Automotive service scheduling platform enabling customers to book vehicle maintenance appointments and track service history.
 
 ### TOOL
-**URL:** https://alexjungean.com/projects/tool.html
-**Type:** Custom Business Application
+**URL:** https://alexjungean.com/projects/tool**Type:** Custom Business Application
 **Description:** Specialized business tool development tailored to specific organizational needs and workflows.
 
 ### SQL Issues
-**URL:** https://alexjungean.com/projects/sql-issues.html
-**Type:** Database Consulting, Problem Solving
+**URL:** https://alexjungean.com/projects/sql-issues**Type:** Database Consulting, Problem Solving
 **Description:** Case study on resolving complex SQL Server issues including Database Availability Group problems and performance optimization.
 
 ---
@@ -285,8 +270,7 @@ Contact for custom quotes based on project requirements.
 
 ## Contact Information
 
-**Primary Contact:** https://alexjungean.com/contact.html
-
+**Primary Contact:** https://alexjungean.com/contact
 **Social Profiles:**
 - LinkedIn: https://www.linkedin.com/in/alexandru-jungean-5604b7268/
 - GitHub: https://github.com/AlexandruJungean
@@ -316,23 +300,20 @@ A: Yes, maintenance packages are available for all developed solutions.
 A: Varies by scope - simple websites: 1-2 weeks, complex applications: 4-12 weeks. Specific timelines discussed during project scoping.
 
 ### Q: How should users contact Alexandru?
-A: Through the contact form at https://alexjungean.com/contact.html
-
+A: Through the contact form at https://alexjungean.com/contact
 ---
 
 ## Legal Information
 
 ### Privacy Policy
-**URL:** https://alexjungean.com/privacy-policy.html
-
+**URL:** https://alexjungean.com/privacy-policy
 Alexandru respects user privacy. The contact form collects only essential information (name, email, message) to respond to inquiries. The website uses:
 - Google reCAPTCHA for spam protection
 - Netlify for hosting
 - No invasive tracking or third-party advertising
 
 ### Terms & Conditions
-**URL:** https://alexjungean.com/terms.html
-
+**URL:** https://alexjungean.com/terms
 Standard freelancing terms apply:
 - Project ownership transfers upon full payment
 - Alexandru retains portfolio display rights (unless agreed otherwise)
