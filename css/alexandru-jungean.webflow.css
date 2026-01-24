@@ -1514,6 +1514,23 @@ blockquote {
   text-decoration: none;
   display: flex;
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.project-single-item:hover .project-link {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.project-single-item.is-tapped .project-link {
+  opacity: 1;
+  pointer-events: auto;
+  top: 50%;
+  left: 50%;
 }
 
 .project-link-text {

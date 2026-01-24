@@ -673,7 +673,7 @@
               <h2 class="section-title">My Recent Projects</h2>
             </div>
             <div class="project-component hide">
-              <div data-w-id="9c8a2c29-9618-362b-7226-a11e6da3bcb4" class="project-single-item is-one">
+              <div class="project-single-item is-one">
                 <div class="project-thumb-wrap"><img src="images/Frame-153-2.webp" loading="lazy" width="1359" sizes="(max-width: 479px) 93vw, (max-width: 767px) 96vw, (max-width: 991px) 94vw, 92vw" alt="EDU Events Picture" srcset="images/Frame-153-2-p-500.webp 500w, images/Frame-153-2-p-800.webp 800w, images/Frame-153-2-p-1080.webp 1080w, images/Frame-153-2-p-1600.webp 1600w, images/Frame-153-2-p-2000.webp 2000w, images/Frame-153-2.webp 2300w" class="project-thumb">
                   <div class="project-thumb-overlay"></div>
                 </div>
@@ -685,7 +685,7 @@
                   <div class="project-link-text">View<br>Project</div>
                 </a>
               </div>
-              <div data-w-id="af630b40-75e8-e676-d6ea-755464dd2b48" class="project-single-item is-two">
+              <div class="project-single-item is-two">
                 <div class="project-thumb-wrap"><img src="images/TOOL-3.webp" loading="lazy" width="1280" sizes="(max-width: 479px) 93vw, (max-width: 767px) 96vw, (max-width: 991px) 94vw, 92vw" alt="TOOL Design" srcset="images/TOOL-3-p-500.webp 500w, images/TOOL-3-p-800.webp 800w, images/TOOL-3-p-1080.webp 1080w, images/TOOL-3-p-1600.webp 1600w, images/TOOL-3-p-2000.webp 2000w, images/TOOL-3.webp 2160w" class="project-thumb">
                   <div class="project-thumb-overlay"></div>
                 </div>
@@ -697,7 +697,7 @@
                   <div class="project-link-text">View<br>Project</div>
                 </a>
               </div>
-              <div data-w-id="42551742-c288-59a1-c30f-92485946e208" class="project-single-item is-three">
+              <div class="project-single-item is-three">
                 <div class="project-thumb-wrap"><img src="images/Nexus---Database-Solutions.webp" loading="lazy" width="1320" sizes="(max-width: 479px) 93vw, (max-width: 767px) 96vw, (max-width: 991px) 94vw, 92vw" alt="Snowflake Database Environment" srcset="images/Nexus---Database-Solutions-p-500.webp 500w, images/Nexus---Database-Solutions-p-800.webp 800w, images/Nexus---Database-Solutions-p-1080.webp 1080w, images/Nexus---Database-Solutions.webp 1386w" class="project-thumb">
                   <div class="project-thumb-overlay"></div>
                 </div>
@@ -971,6 +971,92 @@
           var target = document.querySelector(this.getAttribute('href'));
           if (target) {
             target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      }
+    });
+  </script>
+  
+  <!-- Project Card Mouse Follow -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var projectItems = document.querySelectorAll('.project-single-item');
+      var isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+      
+      projectItems.forEach(function(item) {
+        var link = item.querySelector('.project-link');
+        if (!link) return;
+        
+        var targetX = 0, targetY = 0;
+        var currentX = 0, currentY = 0;
+        var animating = false;
+        var buttonSize = 120; // 7.5rem = 120px
+        var halfSize = buttonSize / 2;
+        
+        function animate() {
+          var dx = targetX - currentX;
+          var dy = targetY - currentY;
+          
+          currentX += dx * 0.12;
+          currentY += dy * 0.12;
+          
+          link.style.left = (currentX - halfSize) + 'px';
+          link.style.top = (currentY - halfSize) + 'px';
+          link.style.transform = 'none';
+          
+          if (Math.abs(dx) > 0.5 || Math.abs(dy) > 0.5) {
+            requestAnimationFrame(animate);
+          } else {
+            animating = false;
+          }
+        }
+        
+        if (!isTouchDevice) {
+          // Desktop: follow mouse
+          item.addEventListener('mousemove', function(e) {
+            var rect = item.getBoundingClientRect();
+            targetX = e.clientX - rect.left;
+            targetY = e.clientY - rect.top;
+            
+            if (!animating) {
+              animating = true;
+              // Initialize position on first move
+              if (currentX === 0 && currentY === 0) {
+                currentX = targetX;
+                currentY = targetY;
+                link.style.left = (currentX - halfSize) + 'px';
+                link.style.top = (currentY - halfSize) + 'px';
+                link.style.transform = 'none';
+              }
+              requestAnimationFrame(animate);
+            }
+          });
+          
+          item.addEventListener('mouseleave', function() {
+            currentX = 0;
+            currentY = 0;
+            link.style.left = '';
+            link.style.top = '';
+            link.style.transform = '';
+          });
+        } else {
+          // Mobile: tap to show, tap again to navigate
+          item.addEventListener('click', function(e) {
+            if (!item.classList.contains('is-tapped')) {
+              e.preventDefault();
+              // Remove tapped from other items
+              projectItems.forEach(function(p) { p.classList.remove('is-tapped'); });
+              item.classList.add('is-tapped');
+            }
+          });
+        }
+      });
+      
+      // Close tapped state when clicking outside
+      if (isTouchDevice) {
+        document.addEventListener('click', function(e) {
+          if (!e.target.closest('.project-single-item')) {
+            projectItems.forEach(function(p) { p.classList.remove('is-tapped'); });
           }
         });
       }
