@@ -16,7 +16,7 @@ Language: English
 Doctype: HTML5
 IDE: Cursor, VS Code
 Standards: HTML5, CSS3, JavaScript ES6+
-Components: Webflow, Custom CSS
+Components: Custom CSS
 Software: Figma, Adobe Creative Suite
 
 /* NOTE */
