@@ -9,6 +9,7 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:b
    =========================================== */
 *{box-sizing:border-box}
 html{height:100%}
+img{max-width:100%;display:inline-block;vertical-align:middle}
 .w-inline-block{max-width:100%;display:inline-block}
 .w-list-unstyled{padding-left:0;list-style:none}
 .w-form{margin:0 0 15px}
@@ -1936,6 +1937,28 @@ blockquote {
 .submit-button:hover {
   background-color: var(--white);
   color: var(--black);
+}
+
+/* Hide reCAPTCHA badge (notice is shown in form) */
+.grecaptcha-badge {
+  visibility: hidden !important;
+}
+
+.recaptcha-notice {
+  font-size: 11px;
+  color: #888;
+  margin-top: 12px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.recaptcha-notice a {
+  color: #888;
+  text-decoration: underline;
+}
+
+.recaptcha-notice a:hover {
+  color: #aaa;
 }
 
 .contact-form-social-wrapper {

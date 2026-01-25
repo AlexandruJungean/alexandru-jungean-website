@@ -238,16 +238,23 @@
                 </div>
                 <div class="contact-form-wrapper">
                   <div class="contact-form-block w-form">
-                    <form id="contact-form" name="contact-form" method="get" class="contact-form"><input class="contact-form-field-two is-two w-input" maxlength="256" name="Full-Name-5" data-name="Full Name 5" placeholder="Full Name" type="text" id="Full-Name-5"><input class="contact-form-field-two is-two w-input" maxlength="256" name="Email-Address-2" data-name="Email Address 2" placeholder="Email Address" type="email" id="Email-Address-2" required=""><select id="Services-2" name="Services-2" data-name="Services 2" class="contact-form-field-two is-select w-select">
-                        <option value="Fifth">Video Editing</option>
-                        <option value="">Services</option>
-                        <option value="First">Mobile App Development</option>
-                        <option value="Second">Website Creation</option>
-                        <option value="Third">UI/UX Design</option>
-                        <option value="Fourth">Branding Design</option>
-                        <option value="sixth">Data Analysis</option>
-                        <option value="Seventh">Database Solutions</option>
-                      </select><textarea class="contact-form-field-two textarea">Message</textarea><input type="submit" data-wait="Please wait..." class="submit-button w-button" value="Submit Now"></form>
+                    <form id="contact-form" name="contact-form" class="contact-form">
+                      <input class="contact-form-field-two is-two w-input" maxlength="256" name="name" data-name="Full Name" placeholder="Full Name" type="text" id="Full-Name" required="">
+                      <input class="contact-form-field-two is-two w-input" maxlength="256" name="email" data-name="Email Address" placeholder="Email Address" type="email" id="Email-Address" required="">
+                      <select id="Services" name="service" data-name="Services" class="contact-form-field-two is-select w-select" required="">
+                        <option value="">Select a Service</option>
+                        <option value="Mobile App Development">Mobile App Development</option>
+                        <option value="Website Creation">Website Creation</option>
+                        <option value="UI/UX Design">UI/UX Design</option>
+                        <option value="Branding Design">Branding Design</option>
+                        <option value="Video Editing" selected>Video Editing</option>
+                        <option value="Data Analysis">Data Analysis</option>
+                        <option value="Database Solutions">Database Solutions</option>
+                      </select>
+                      <textarea class="contact-form-field-two textarea" name="message" placeholder="Message" rows="5" required=""></textarea>
+                      <input type="submit" data-wait="Please wait..." class="submit-button w-button" value="Submit Now" id="submit-btn">
+                      <p class="recaptcha-notice">Protected by reCAPTCHA. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy</a> · <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Terms</a></p>
+                    </form>
                     <div class="success-message w-form-done">
                       <div class="success-message-text">Thank you! Your submission has been received!</div>
                     </div>
@@ -337,6 +344,93 @@
       </div><img src="../images/Vector_1Vector.webp" loading="lazy" sizes="100vw" srcset="../images/Vector_1Vector.webp 1920w" alt="Decorative footer background" class="footer-bg">
     </footer>
   </div>
+  
+  <!-- reCAPTCHA v3 -->
+  <script src="https://www.google.com/recaptcha/api.js?render=6LdLBEwsAAAAAFNoPxIwGfSA-vYornPZmn5JC2OQ"></script>
+  
+  <!-- Contact Form with reCAPTCHA v3 -->
+  <script>
+    const RECAPTCHA_SITE_KEY = '6LdLBEwsAAAAAFNoPxIwGfSA-vYornPZmn5JC2OQ';
+    
+    function isValidEmail(email) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(email);
+    }
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('contact-form');
+      if (!form) return;
+      
+      const submitButton = document.getElementById('submit-btn');
+      const successMessage = document.querySelector('.success-message');
+      const errorMessage = document.querySelector('.error-message');
+      const emailInput = form.querySelector('[name="email"]');
+      
+      emailInput.addEventListener('blur', function() {
+        if (this.value && !isValidEmail(this.value)) {
+          this.style.borderColor = '#ff4444';
+        } else {
+          this.style.borderColor = '';
+        }
+      });
+      
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const email = form.querySelector('[name="email"]').value.trim();
+        
+        if (!isValidEmail(email)) {
+          errorMessage.querySelector('div').textContent = 'Please enter a valid email address.';
+          errorMessage.style.display = 'block';
+          emailInput.style.borderColor = '#ff4444';
+          emailInput.focus();
+          return;
+        }
+        
+        const originalText = submitButton.value;
+        submitButton.value = 'Sending...';
+        submitButton.disabled = true;
+        errorMessage.style.display = 'none';
+        
+        try {
+          const recaptchaToken = await grecaptcha.execute(RECAPTCHA_SITE_KEY, { action: 'contact' });
+          
+          const formData = {
+            name: form.querySelector('[name="name"]').value.trim(),
+            email: email,
+            subject: form.querySelector('[name="service"]').value,
+            message: form.querySelector('[name="message"]').value.trim(),
+            recaptchaToken: recaptchaToken
+          };
+          
+          const response = await fetch('/.netlify/functions/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(formData)
+          });
+          
+          const result = await response.json();
+          
+          if (response.ok) {
+            successMessage.querySelector('div').textContent = 'Thank you! Your message has been sent.';
+            successMessage.style.display = 'block';
+            errorMessage.style.display = 'none';
+            form.reset();
+          } else {
+            throw new Error(result.error || 'Failed to send message');
+          }
+        } catch (error) {
+          console.error('Form submission error:', error);
+          errorMessage.querySelector('div').textContent = error.message || 'Oops! Something went wrong. Please try again.';
+          errorMessage.style.display = 'block';
+          successMessage.style.display = 'none';
+        } finally {
+          submitButton.value = originalText;
+          submitButton.disabled = false;
+        }
+      });
+    });
+  </script>
   
   <!-- Mobile Navigation Toggle -->
   <script>
