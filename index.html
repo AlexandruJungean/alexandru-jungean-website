@@ -757,16 +757,57 @@
     });
   </script>
   
-  <!-- Marquee Animation -->
+  <!-- Marquee Animation with Hover Slowdown -->
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    (function() {
+      var marquee = document.querySelector('.client-marquee');
       var track = document.querySelector('.marquee-track');
       var firstItem = document.querySelector('.marquee-item');
-      if (track && firstItem) {
-        var itemWidth = firstItem.offsetWidth;
-        track.style.setProperty('--marquee-width', itemWidth + 'px');
-      }
-    });
+      
+      if (!track || !firstItem || !marquee) return;
+      
+      // Wait for images to load to get correct width
+      window.addEventListener('load', function() {
+        var scrollWidth = firstItem.offsetWidth;
+        var position = 0;
+        var baseSpeed = 0.8; // Base pixels per frame
+        var currentSpeed = baseSpeed;
+        var targetSpeed = baseSpeed;
+        
+        function animate() {
+          // Smooth speed transition
+          currentSpeed += (targetSpeed - currentSpeed) * 0.08;
+          
+          // Move position
+          position -= currentSpeed;
+          
+          // Seamless loop - reset when first item is fully scrolled
+          if (Math.abs(position) >= scrollWidth) {
+            position += scrollWidth;
+          }
+          
+          track.style.transform = 'translate3d(' + position + 'px, 0, 0)';
+          requestAnimationFrame(animate);
+        }
+        
+        // Hover handlers
+        marquee.addEventListener('mouseenter', function() {
+          targetSpeed = baseSpeed * 0.15; // Slow to 15%
+        });
+        
+        marquee.addEventListener('mouseleave', function() {
+          targetSpeed = baseSpeed; // Back to normal
+        });
+        
+        // Respect reduced motion preference
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          return;
+        }
+        
+        // Start animation
+        requestAnimationFrame(animate);
+      });
+    })();
   </script>
   
   <!-- Service Slider Navigation -->

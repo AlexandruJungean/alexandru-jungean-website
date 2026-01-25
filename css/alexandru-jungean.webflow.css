@@ -1127,9 +1127,7 @@ blockquote {
   overflow: hidden;
 }
 
-.client-marquee:hover .marquee-track {
-  animation-duration: 60s;
-}
+/* Marquee hover controlled via JavaScript */
 
 .client-logos-title-line {
   background-color: #d9d9d9;
@@ -1173,7 +1171,6 @@ blockquote {
 }
 
 .marquee-track {
-  --marquee-width: 50%;
   white-space: nowrap;
   will-change: transform;
   justify-content: flex-start;
@@ -1182,23 +1179,7 @@ blockquote {
   gap: 0;
   padding: 1rem 0;
   width: max-content;
-  animation: marquee-scroll 20s linear infinite;
-  transition: animation-duration 0.5s ease;
-}
-
-@keyframes marquee-scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(var(--marquee-width) * -1));
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .marquee-track {
-    animation: none;
-  }
+  /* Animation controlled via JavaScript */
 }
 
 .client-logos-title {
