@@ -382,6 +382,32 @@ blockquote {
   width: 2.5rem;
   height: 2.5rem;
   display: flex;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-social-link::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--color--brand);
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 0;
+}
+
+.footer-social-link:hover::before {
+  transform: scale(1);
+}
+
+.footer-social-link:hover {
+  transform: scale(1.1);
+}
+
+.footer-social-link:hover .footer-social-link-icon {
+  color: var(--black);
 }
 
 .footer-social-link.actual {
@@ -675,6 +701,9 @@ blockquote {
 
 .footer-social-link-icon {
   color: var(--white);
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
 }
 
 .footer-social-link-icon.actual {
@@ -876,7 +905,7 @@ blockquote {
   transition: color .4s;
 }
 
-.nav-link:hover, .nav-link.w--current {
+.nav-link:hover, .nav-link.w--current, .nav-link[aria-current="page"] {
   color: var(--color--brand);
 }
 
@@ -1099,7 +1128,7 @@ blockquote {
 }
 
 .client-marquee:hover .marquee-track {
-  animation-play-state: paused;
+  animation-duration: 60s;
 }
 
 .client-logos-title-line {
@@ -1153,7 +1182,8 @@ blockquote {
   gap: 0;
   padding: 1rem 0;
   width: max-content;
-  animation: marquee-scroll 40s linear infinite;
+  animation: marquee-scroll 20s linear infinite;
+  transition: animation-duration 0.5s ease;
 }
 
 @keyframes marquee-scroll {
