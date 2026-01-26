@@ -38,26 +38,38 @@
   <!-- Mobile overrides for edge-to-edge elements -->
   <style>
     @media screen and (max-width: 479px) {
+      /* Reduce global padding on mobile */
+      .padding-global {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+      }
+      
       /* Logo marquee - full width edge to edge on mobile */
       .section-home-about-us .client-logos-component {
-        margin-left: -1rem;
-        margin-right: -1rem;
-        width: calc(100% + 2rem);
+        margin-left: -0.75rem;
+        margin-right: -0.75rem;
+        width: calc(100% + 1.5rem);
       }
       
       /* Service slider - fix left side visibility on mobile */
       .service-ability-component {
-        margin-left: -1rem;
-        margin-right: -1rem;
-        width: calc(100% + 2rem);
-        padding-left: 1rem;
-        padding-right: 1rem;
+        margin-left: -0.75rem;
+        margin-right: -0.75rem;
+        width: calc(100% + 1.5rem);
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
       }
       .service-slider-mask {
-        margin-left: -1rem;
-        margin-right: -1rem;
-        padding-left: 1rem;
-        scroll-padding-left: 1rem;
+        margin-left: -0.75rem;
+        margin-right: -0.75rem;
+        padding-left: 0.75rem;
+        scroll-padding-left: 0.75rem;
+      }
+      
+      /* FAQ questions - fix line height on mobile */
+      .faq-question {
+        line-height: 1.4;
+        font-size: 1.1rem;
       }
     }
   </style>
