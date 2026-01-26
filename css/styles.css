@@ -5172,3 +5172,65 @@ blockquote {
 .blog-figure-fullwidth {
   max-width: 1056px;
 }
+
+/* ===========================================
+   Mobile Overrides (479px and below)
+   =========================================== */
+@media screen and (max-width: 767px) {
+  /* Consistent padding for tablet */
+  .padding-global {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  /* Reduce global padding on mobile */
+  .padding-global {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  
+  /* Logo marquee - full width edge to edge on mobile */
+  .section-home-about-us .client-logos-component {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+    width: calc(100% + 1.5rem);
+  }
+  
+  /* Service slider - fix left side visibility on mobile */
+  .service-ability-component {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+    width: calc(100% + 1.5rem);
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  .service-slider-mask {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+    padding-left: 0.75rem;
+    scroll-padding-left: 0.75rem;
+  }
+  
+  /* FAQ questions - fix line height on mobile */
+  .faq-question {
+    line-height: 1.4;
+    font-size: 1.1rem;
+  }
+  
+  /* Services page grid - 2 columns with less gap on mobile */
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+  
+  .grid.unique {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+  
+  .service-item.card-small {
+    padding: 1rem;
+  }
+}
