@@ -19,7 +19,10 @@ This document contains detailed technology information for each project. Use thi
 - Figma, Adobe Photoshop
 
 ### Data
-- Python, Power BI, Excel
+- PowerShell, Power BI, Excel
+
+### ETL
+- Azure Data Factory, SSIS (Visual Studio)
 
 ### Tools
 - Git, VS Code
