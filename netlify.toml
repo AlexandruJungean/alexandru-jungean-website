@@ -5,6 +5,10 @@
 [functions]
   node_bundler = "esbuild"
 
+# Install dependencies for Netlify Functions
+[[plugins]]
+  package = "@netlify/plugin-functions-install-core"
+
 # Enable Netlify's Pretty URLs - removes .html from URLs for SEO
 [build.processing]
   skip_processing = false
