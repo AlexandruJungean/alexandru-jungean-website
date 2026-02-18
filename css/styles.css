@@ -602,6 +602,14 @@ blockquote {
   height: 1px;
 }
 
+.footer-company-info {
+  text-align: center;
+  font-size: 0.6875rem;
+  color: rgba(191, 191, 191, 0.5);
+  margin-top: 1rem;
+  letter-spacing: 0.02em;
+}
+
 .typhography-title-wrap {
   margin-bottom: 1.5rem;
 }
