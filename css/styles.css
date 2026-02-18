@@ -5285,18 +5285,6 @@ blockquote {
   margin-top: 20px;
 }
 
-/* Calendly widget container */
-.calendly-inline-widget {
-  min-width: 320px;
-  height: 700px;
-}
-
-@media screen and (max-width: 767px) {
-  .calendly-inline-widget {
-    min-width: 280px;
-    height: 600px;
-  }
-}
 
 /* Blog fullwidth figure */
 .blog-figure-fullwidth {
