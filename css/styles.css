@@ -606,9 +606,14 @@ blockquote {
 .footer-company-info {
   text-align: center;
   font-size: 0.6875rem;
-  color: rgba(191, 191, 191, 0.5);
+  color: rgba(191, 191, 191, 0.4);
   margin-top: 1rem;
   letter-spacing: 0.02em;
+}
+
+.footer-company-info .footer-contact-line {
+  display: block;
+  margin-top: 0.35rem;
 }
 
 .typhography-title-wrap {
