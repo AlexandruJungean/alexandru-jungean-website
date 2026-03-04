@@ -137,90 +137,134 @@
   
   <!-- Project Pages -->
   <url>
-    <loc>https://alexjungean.com/projects/ardt</loc>
-    <lastmod>2026-01-24</lastmod>
+    <loc>https://alexjungean.com/projects/primaria-salonta</loc>
+    <lastmod>2026-03-04</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
     <image:image>
-      <image:loc>https://alexjungean.com/images/Thumbnail---ARDT.webp</image:loc>
-      <image:title>ARDT Oradea Project</image:title>
-    </image:image>
-  </url>
-  
-  <url>
-    <loc>https://alexjungean.com/projects/bdd-logspeed</loc>
-    <lastmod>2026-01-24</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://alexjungean.com/images/Thumbnail---BDD-Logspeed.webp</image:loc>
-      <image:title>BDD Logspeed Project</image:title>
-    </image:image>
-  </url>
-  
-  <url>
-    <loc>https://alexjungean.com/projects/edu-events</loc>
-    <lastmod>2026-01-24</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://alexjungean.com/images/Thumbnail---EDU-Events.webp</image:loc>
-      <image:title>EDU Events Project</image:title>
-    </image:image>
-  </url>
-  
-  <url>
-    <loc>https://alexjungean.com/projects/nexus-learning-lab</loc>
-    <lastmod>2026-01-24</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://alexjungean.com/images/Thumbnail---Nexus-Learning-Lab.webp</image:loc>
-      <image:title>Nexus Learning Lab Project</image:title>
+      <image:loc>https://alexjungean.com/images/Thumbnail---Primaria-Salonta.webp</image:loc>
+      <image:title>Primaria Municipiului Salonta - Government Website</image:title>
     </image:image>
   </url>
   
   <url>
     <loc>https://alexjungean.com/projects/oradea-experience</loc>
-    <lastmod>2026-01-24</lastmod>
+    <lastmod>2026-03-04</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
     <image:image>
       <image:loc>https://alexjungean.com/images/Thumbnail---Oradea-Experience.webp</image:loc>
-      <image:title>Oradea Experience Project</image:title>
-    </image:image>
-  </url>
-  
-  <url>
-    <loc>https://alexjungean.com/projects/sql-issues</loc>
-    <lastmod>2026-01-24</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://alexjungean.com/images/Thumbnail---SQL-Issues.webp</image:loc>
-      <image:title>SQL Issues Project</image:title>
-    </image:image>
-  </url>
-  
-  <url>
-    <loc>https://alexjungean.com/projects/termeneauto</loc>
-    <lastmod>2026-01-24</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://alexjungean.com/images/Thumbnail---TermeneAuto.webp</image:loc>
-      <image:title>TermeneAuto Project</image:title>
+      <image:title>Xperience - City Discovery Platform</image:title>
     </image:image>
   </url>
   
   <url>
     <loc>https://alexjungean.com/projects/tool</loc>
-    <lastmod>2026-01-24</lastmod>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://alexjungean.com/images/Thumbnail---Tool.webp</image:loc>
+      <image:title>Tool Connect - Service Provider Marketplace</image:title>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://alexjungean.com/projects/fleetkeeper</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://alexjungean.com/images/Thumbnail---FleetKeeper.webp</image:loc>
+      <image:title>FleetKeeper - B2B Fleet Management SaaS</image:title>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://alexjungean.com/projects/radical-football</loc>
+    <lastmod>2026-03-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://alexjungean.com/images/Thumbnail---Tool.webp</image:loc>
-      <image:title>TOOL Project</image:title>
+      <image:loc>https://alexjungean.com/images/Thumbnail---Radical-Football.webp</image:loc>
+      <image:title>Radical Football - Educational Platform</image:title>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://alexjungean.com/projects/amidamaru</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://alexjungean.com/images/Thumbnail---Amidamaru.webp</image:loc>
+      <image:title>Amidamaru - International Transport Website</image:title>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://alexjungean.com/projects/service-24-bdd</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://alexjungean.com/images/Thumbnail---Service-24-BDD.webp</image:loc>
+      <image:title>Service 24 BDD - Truck Repair Service Website</image:title>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://alexjungean.com/projects/nuestra</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://alexjungean.com/images/Thumbnail---Nuestra.webp</image:loc>
+      <image:title>Nuestra - Dual-Brand E-commerce Platform</image:title>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://alexjungean.com/projects/ardt</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://alexjungean.com/images/Thumbnail---ARDT.webp</image:loc>
+      <image:title>ARDT Oradea - Design and Project Collaboration</image:title>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://alexjungean.com/projects/edu-events</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://alexjungean.com/images/Thumbnail---EDU-Events.webp</image:loc>
+      <image:title>EDU Events - Educational Event Platform</image:title>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://alexjungean.com/projects/nexus-learning-lab</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://alexjungean.com/images/Thumbnail---Nexus-Learning-Lab.webp</image:loc>
+      <image:title>Nexus Learning Lab - Database Solutions</image:title>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://alexjungean.com/projects/bdd-logspeed</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://alexjungean.com/images/Thumbnail---BDD-Logspeed.webp</image:loc>
+      <image:title>BDD Logspeed - Transport Company Website</image:title>
     </image:image>
   </url>
   
