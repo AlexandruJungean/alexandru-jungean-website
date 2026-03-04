@@ -18,15 +18,20 @@ Alexandru Jungean is an experienced IT freelancer based in Cluj-Napoca, Romania,
 
 ## Portfolio
 
-Featured projects demonstrating expertise:
+Featured projects demonstrating expertise across web, mobile, and design:
 
-- [ARDT Oradea](https://alexjungean.com/projects/ardt): Youth empowerment and community development platform
-- [BDD Logspeed](https://alexjungean.com/projects/bdd-logspeed): Logistics management system
-- [EDU Events](https://alexjungean.com/projects/edu-events): Educational event management platform
-- [Nexus Learning Lab](https://alexjungean.com/projects/nexus-learning-lab): E-learning platform development
-- [Oradea Experience](https://alexjungean.com/projects/oradea-experience): Tourism and city guide application
-- [TermeneAuto](https://alexjungean.com/projects/termeneauto): Automotive service scheduling system
-- [TOOL](https://alexjungean.com/projects/tool): Custom business tool development
+- [Primaria Municipiului Salonta](https://alexjungean.com/projects/primaria-salonta): Trilingual government website with admin panel, Supabase, and public transparency features
+- [Xperience](https://alexjungean.com/projects/oradea-experience): Multi-city franchise platform (Oradea + Cluj) with 5,600+ users, independent websites, and shared mobile app
+- [Tool Connect](https://alexjungean.com/projects/tool): Service provider marketplace with native mobile apps (iOS + Android), website, and branding
+- [FleetKeeper](https://alexjungean.com/projects/fleetkeeper): B2B SaaS fleet management app with AI document scanning, 12 languages, and automated notifications
+- [Radical Football](https://alexjungean.com/projects/radical-football): Educational platform with Stripe payments, Konva diagram builder, and 14-tab admin dashboard
+- [Amidamaru](https://alexjungean.com/projects/amidamaru): Corporate transport website with 9 language translations and static site generation
+- [Service 24 BDD](https://alexjungean.com/projects/service-24-bdd): Multilingual truck service website with 8 languages, ECU pricing, and Schema.org structured data
+- [Nuestra](https://alexjungean.com/projects/nuestra): Dual-brand e-commerce platform for streetwear and sports equipment
+- [ARDT Oradea](https://alexjungean.com/projects/ardt): Five-year design, branding, and project collaboration with youth development NGO
+- [EDU Events](https://alexjungean.com/projects/edu-events): Educational event discovery and ticketing mobile app
+- [Nexus Learning Lab](https://alexjungean.com/projects/nexus-learning-lab): Database solutions and learning platform
+- [BDD Logspeed](https://alexjungean.com/projects/bdd-logspeed): Transport company website and digital infrastructure
 
 ## Contact
 
