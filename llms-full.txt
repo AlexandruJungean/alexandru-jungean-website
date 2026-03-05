@@ -38,8 +38,8 @@ Alexandru has built a diverse portfolio working with various organizations:
 - **ARDT Oradea** - Youth empowerment organization
 - **Service24 BDD** - Logistics and service management
 - **EDU Events** - Educational sector
-- **Oradea Experience** - Tourism industry
-- **TermeneAuto** - Automotive sector
+- **City Xperience** - Tourism and community platform
+- **FleetKeeper** - Fleet management SaaS
 - **Competify** - Competition management
 - **Radical Football** - Sports industry
 - **Aeruna** - Business services
@@ -187,21 +187,45 @@ Alexandru has built a diverse portfolio working with various organizations:
 **URL:** https://alexjungean.com/projects/nexus-learning-lab**Type:** E-Learning Platform
 **Description:** Interactive learning management system with course creation, progress tracking, and assessment capabilities.
 
-### Oradea Experience
-**URL:** https://alexjungean.com/projects/oradea-experience**Type:** Tourism Application, Mobile-Friendly
-**Description:** City guide and tourism platform showcasing Oradea's attractions, restaurants, and cultural experiences for visitors.
+### City Xperience
+**URL:** https://alexjungean.com/projects/oradea-experience
+**Type:** City Discovery Platform, Mobile App, Franchise
+**Description:** White-label city discovery platform operating as a multi-city franchise (Oradea Experience + Cluj Xperience) with 5,900+ users, 120+ businesses, 300+ events, and a shared mobile app on App Store and Google Play.
 
-### TermeneAuto
-**URL:** https://alexjungean.com/projects/termeneauto**Type:** Booking System, Web Application
-**Description:** Automotive service scheduling platform enabling customers to book vehicle maintenance appointments and track service history.
+### Tool Connect
+**URL:** https://alexjungean.com/projects/tool
+**Type:** Marketplace, Mobile App, Web Application
+**Description:** Service provider marketplace connecting clients with local professionals in Prague, Czech Republic. Native mobile apps (iOS + Android), marketing website, and complete branding package.
 
-### TOOL
-**URL:** https://alexjungean.com/projects/tool**Type:** Custom Business Application
-**Description:** Specialized business tool development tailored to specific organizational needs and workflows.
+### FleetKeeper
+**URL:** https://alexjungean.com/projects/fleetkeeper
+**Type:** B2B SaaS, Mobile App, Fleet Management
+**Description:** Fleet management mobile application for transport companies to track vehicle, driver, and document expiration dates with AI-powered scanning and automated notifications across 12 languages.
 
-### SQL Issues
-**URL:** https://alexjungean.com/projects/sql-issues**Type:** Database Consulting, Problem Solving
-**Description:** Case study on resolving complex SQL Server issues including Database Availability Group problems and performance optimization.
+### Primaria Municipiului Salonta
+**URL:** https://alexjungean.com/projects/primaria-salonta
+**Type:** Government Website, Multilingual Platform
+**Description:** Trilingual municipal government website (Romanian, Hungarian, English) with comprehensive admin panel, public transparency features, and online services for citizens, businesses, and tourists.
+
+### Radical Football
+**URL:** https://alexjungean.com/projects/radical-football
+**Type:** Educational Platform, Conference Management
+**Description:** Youth football education platform with conference ticketing via Stripe, resource library with custom training diagram builder, community forums, and 14-tab admin dashboard.
+
+### Amidamaru
+**URL:** https://alexjungean.com/projects/amidamaru
+**Type:** Corporate Website, Multilingual
+**Description:** Corporate website for international road freight transport company with 9 language translations, fleet gallery, and static site generation for optimal performance.
+
+### Service 24 BDD
+**URL:** https://alexjungean.com/projects/service-24-bdd
+**Type:** Service Website, Multilingual
+**Description:** Professional website for 24/7 mobile truck repair service with 8 languages, ECU pricing tables, device-aware interactions, and extensive Schema.org structured data.
+
+### Nuestra
+**URL:** https://alexjungean.com/projects/nuestra
+**Type:** E-commerce, Dual Brand
+**Description:** Dual-brand e-commerce platform combining streetwear fashion and youth football equipment with independent themes, product catalogs, and filtering systems.
 
 ---
 
