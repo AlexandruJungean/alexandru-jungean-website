@@ -28,6 +28,7 @@ This is a static website built with HTML5, CSS3, and vanilla JavaScript, hosted 
 ├── contact.html            # Contact page
 ├── privacy-policy.html     # Privacy policy
 ├── terms.html              # Terms & conditions
+├── cookie-policy.html      # Cookie policy
 ├── 401.html                # Unauthorized error page
 ├── 404.html                # Not found error page
 │
@@ -52,13 +53,17 @@ This is a static website built with HTML5, CSS3, and vanilla JavaScript, hosted 
 │   └── video-editing.html
 │
 ├── projects/               # Individual project case studies
+│   ├── amidamaru.html
 │   ├── ardt.html
 │   ├── bdd-logspeed.html
 │   ├── edu-events.html
-│   ├── nexus-learning-lab.html
-│   ├── oradea-experience.html
-│   ├── sql-issues.html
 │   ├── fleetkeeper.html
+│   ├── nexus-learning-lab.html
+│   ├── nuestra.html
+│   ├── oradea-experience.html
+│   ├── primaria-salonta.html
+│   ├── radical-football.html
+│   ├── service-24-bdd.html
 │   └── tool.html
 │
 ├── netlify/
