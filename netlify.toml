@@ -129,6 +129,12 @@
 
 # Project pages - redirect .html to clean URL
 [[redirects]]
+  from = "/projects/amidamaru.html"
+  to = "/projects/amidamaru"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/projects/ardt.html"
   to = "/projects/ardt"
   status = 301
@@ -147,14 +153,44 @@
   force = true
 
 [[redirects]]
+  from = "/projects/fleetkeeper.html"
+  to = "/projects/fleetkeeper"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/projects/nexus-learning-lab.html"
   to = "/projects/nexus-learning-lab"
   status = 301
   force = true
 
 [[redirects]]
+  from = "/projects/nuestra.html"
+  to = "/projects/nuestra"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/projects/oradea-experience.html"
   to = "/projects/oradea-experience"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/projects/primaria-salonta.html"
+  to = "/projects/primaria-salonta"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/projects/radical-football.html"
+  to = "/projects/radical-football"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/projects/service-24-bdd.html"
+  to = "/projects/service-24-bdd"
   status = 301
   force = true
 
