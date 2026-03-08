@@ -24,7 +24,6 @@ Featured projects demonstrating expertise across web, mobile, and design:
 - [City Xperience](https://alexjungean.com/projects/oradea-experience): Multi-city franchise platform (Oradea + Cluj) with 5,900+ users, 120+ businesses, 300+ events, independent websites, and shared mobile app
 - [Tool Connect](https://alexjungean.com/projects/tool): Service provider marketplace with native mobile apps (iOS + Android), website, and branding
 - [FleetKeeper](https://alexjungean.com/projects/fleetkeeper): B2B SaaS fleet management app with AI document scanning, 12 languages, and automated notifications
-- [Radical Football](https://alexjungean.com/projects/radical-football): Educational platform with Stripe payments, Konva diagram builder, and 14-tab admin dashboard
 - [Amidamaru](https://alexjungean.com/projects/amidamaru): Corporate transport website with 9 language translations and static site generation
 - [Service 24 BDD](https://alexjungean.com/projects/service-24-bdd): Multilingual truck service website with 8 languages, ECU pricing, and Schema.org structured data
 - [Nuestra](https://alexjungean.com/projects/nuestra): Dual-brand e-commerce platform for streetwear and sports equipment

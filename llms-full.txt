@@ -41,7 +41,6 @@ Alexandru has built a diverse portfolio working with various organizations:
 - **City Xperience** - Tourism and community platform
 - **FleetKeeper** - Fleet management SaaS
 - **Competify** - Competition management
-- **Radical Football** - Sports industry
 - **Aeruna** - Business services
 - **FEA (Federation)** - Organizational management
 
@@ -206,11 +205,6 @@ Alexandru has built a diverse portfolio working with various organizations:
 **URL:** https://alexjungean.com/projects/primaria-salonta
 **Type:** Government Website, Multilingual Platform
 **Description:** Trilingual municipal government website (Romanian, Hungarian, English) with comprehensive admin panel, public transparency features, and online services for citizens, businesses, and tourists.
-
-### Radical Football
-**URL:** https://alexjungean.com/projects/radical-football
-**Type:** Educational Platform, Conference Management
-**Description:** Youth football education platform with conference ticketing via Stripe, resource library with custom training diagram builder, community forums, and 14-tab admin dashboard.
 
 ### Amidamaru
 **URL:** https://alexjungean.com/projects/amidamaru

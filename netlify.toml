@@ -183,12 +183,6 @@
   force = true
 
 [[redirects]]
-  from = "/projects/radical-football.html"
-  to = "/projects/radical-football"
-  status = 301
-  force = true
-
-[[redirects]]
   from = "/projects/service-24-bdd.html"
   to = "/projects/service-24-bdd"
   status = 301
