@@ -5377,6 +5377,11 @@ blockquote {
     padding-left: 1rem;
     padding-right: 1rem;
   }
+
+  .project-card-client,
+  .project-card-duration {
+    line-height: 1.4;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -5423,6 +5428,11 @@ blockquote {
   .grid.unique {
     grid-template-columns: 1fr 1fr;
     gap: 0.5rem;
+  }
+
+  .grid.similar-projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
   
   .service-item.card-small {
