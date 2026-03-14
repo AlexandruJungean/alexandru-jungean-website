@@ -616,6 +616,11 @@ blockquote {
   margin-top: 0.35rem;
 }
 
+.footer-company-info .footer-contact-line a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .typhography-title-wrap {
   margin-bottom: 1.5rem;
 }
@@ -3958,12 +3963,12 @@ blockquote {
   }
 
   .footer-link-wrap {
-    grid-column-gap: .5rem;
+    grid-column-gap: 1.5rem;
     grid-row-gap: .5rem;
-    flex-flow: column;
+    flex-flow: row;
     justify-content: center;
     align-items: center;
-    width: 7rem;
+    width: auto;
   }
 
   .paragraph-large.copyright, .paragraph-large.footer-link, .paragraph-large.contact-card-subtitle {
@@ -4140,6 +4145,11 @@ blockquote {
     margin-bottom: 3.75rem;
   }
 
+  .about-us-title {
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+
   .about-us-title.resume-text {
     line-height: 1.8rem;
   }
@@ -4193,7 +4203,9 @@ blockquote {
   .project-link {
     width: 5.625rem;
     height: 5.625rem;
-    top: 2rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .project-link-text {
@@ -4300,7 +4312,7 @@ blockquote {
   }
 
   .similar-projects-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 
@@ -4737,28 +4749,40 @@ blockquote {
     margin-bottom: 3rem;
   }
 
+  .about-us-title {
+    font-size: 1.4rem;
+    line-height: 1.3;
+  }
+
   .about-us-title.resume-text {
     font-size: 1.3rem;
     line-height: 1.6rem;
   }
 
   .about-us-items-wrapper {
-    grid-column-gap: 1.9rem;
-    grid-row-gap: 1.9rem;
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
     justify-content: center;
     align-items: center;
   }
 
   .counter-number {
-    font-size: 5rem;
+    font-size: 3.5rem;
+    line-height: 3.5rem;
   }
 
   .counter-text {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
+    line-height: 1.3;
   }
 
   .about-us-item-divider {
-    height: 4rem;
+    height: 3rem;
+  }
+
+  .heading-five {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
   }
 
   .section-title.service {
@@ -4782,27 +4806,65 @@ blockquote {
   }
 
   .heading-five.text-small {
-    font-size: 1.4rem;
-    line-height: 1.8rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
   }
 
   .project-thumb {
     object-fit: cover;
-    height: 300px;
+    height: 220px;
+  }
+
+  .project-component {
+    grid-row-gap: 2rem;
+  }
+
+  .project-single-item {
+    border-radius: 0.5rem;
   }
 
   .project-item-title {
-    margin-bottom: .2rem;
-    font-size: 1.6rem;
+    margin-bottom: .1rem;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+
+  .heading-small.project-item-subtitle {
+    font-size: 0.8rem;
+    line-height: 1.1rem;
+  }
+
+  .project-content {
+    bottom: 0.5rem;
+    left: 0.5rem;
+  }
+
+  .project-link-text {
+    font-size: .75rem;
+    line-height: 1rem;
   }
 
   .project-link {
-    width: 5rem;
-    height: 5rem;
-    top: 40%;
+    width: 4.5rem;
+    height: 4.5rem;
+    top: 50%;
     right: auto;
     left: 50%;
     transform: translate(-50%, -50%);
+    opacity: 1;
+    pointer-events: auto;
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 0 0 rgba(103, 139, 158, 0.4);
+      transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+      box-shadow: 0 0 0 10px rgba(103, 139, 158, 0);
+      transform: translate(-50%, -50%) scale(1.05);
+    }
   }
 
   .section-home-testimonial {
