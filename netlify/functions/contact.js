@@ -119,9 +119,18 @@ export async function handler(event) {
           
           <p>Best regards,<br>
           <strong>Alexandru Jungean</strong><br>
-          IT Freelancer | Web & App Development</p>
-          
-          <hr style="border: none; border-top: 1px solid #eee; margin: 30px 0;">
+          IT Freelancer</p>
+
+          <div style="margin:24px 0;padding:16px 0;border-top:1px solid #eee;border-bottom:1px solid #eee">
+            <p style="margin:0 0 8px;font-size:13px;color:#666">Follow me on social media:</p>
+            <p style="margin:0;font-size:13px">
+              <a href="https://www.linkedin.com/in/alexandru-jungean-5604b7268/" style="color:#678b9e;text-decoration:none;margin-right:16px">LinkedIn</a>
+              <a href="https://www.instagram.com/alexjungean/" style="color:#678b9e;text-decoration:none;margin-right:16px">Instagram</a>
+              <a href="https://www.facebook.com/alex.jungean" style="color:#678b9e;text-decoration:none;margin-right:16px">Facebook</a>
+              <a href="https://github.com/AlexandruJungean" style="color:#678b9e;text-decoration:none">GitHub</a>
+            </p>
+          </div>
+
           <p style="color: #999; font-size: 12px;">
             This is an automated confirmation email. Please do not reply directly to this email.
             If you need to reach me, send a new message through the <a href="https://alexjungean.com/contact">contact form</a>.
