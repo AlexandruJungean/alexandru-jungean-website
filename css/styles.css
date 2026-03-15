@@ -6877,8 +6877,8 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
   .wizard-btn {
     justify-content: center;
     min-width: 0;
-    padding: 0.9rem 1rem;
-    font-size: 0.9rem;
+    padding: 1.1rem 1.5rem;
+    font-size: 1rem;
     white-space: nowrap;
   }
 

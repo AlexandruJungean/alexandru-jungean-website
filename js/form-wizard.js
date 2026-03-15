@@ -445,6 +445,7 @@
         cb.addEventListener('change', function () {
           if (cb.checked) {
             var field = cb.closest('.mtag-field');
+            if (!field) return;
             var noneOpt = field.querySelector('.mtag-opt-none input');
             if (noneOpt) noneOpt.checked = false;
           }
@@ -616,7 +617,7 @@
         var presignRes = await fetch('/.netlify/functions/upload-presign', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ filename: file.name, contentType: file.type || 'application/octet-stream', size: file.size, clientName: self.form.querySelector('[name="company"]').value || self.form.querySelector('[name="name"]').value || '' })
+          body: JSON.stringify({ filename: file.name, contentType: file.type || 'application/octet-stream', size: file.size, clientName: this.form.querySelector('[name="company"]').value || this.form.querySelector('[name="name"]').value || '' })
         });
         if (!presignRes.ok) throw new Error('Presign failed');
         var presignData = await presignRes.json();
