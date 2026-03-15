@@ -6553,6 +6553,43 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
   flex-wrap: wrap;
 }
 
+.wizard-success-social {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.wizard-success-social-label {
+  font-size: 0.88rem;
+  color: #888;
+  margin-bottom: 0.75rem;
+}
+
+.wizard-success-social-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.wizard-success-social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #999;
+  transition: all 0.25s;
+}
+
+.wizard-success-social-links a:hover {
+  background: rgba(103, 139, 158, 0.15);
+  border-color: var(--color--brand);
+  color: var(--color--brand);
+}
+
 /* --- Wizard Navigation --- */
 .wizard-nav {
   display: flex;

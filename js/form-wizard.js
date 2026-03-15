@@ -112,15 +112,16 @@
       }
 
       if (wrap) {
-        wrap.addEventListener('click', function (e) {
+        wrap.addEventListener('click', function () {
           if (self.submitBtn.disabled) {
-            e.stopPropagation();
             var consentField = consent.closest('.summary-consent');
             if (consentField) {
               consentField.classList.add('wz-shake');
               consentField.scrollIntoView({ behavior: 'smooth', block: 'center' });
               setTimeout(function () { consentField.classList.remove('wz-shake'); }, 600);
             }
+          } else {
+            self.submit();
           }
         });
       }
