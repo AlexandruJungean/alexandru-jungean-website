@@ -6364,6 +6364,13 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
   color: #ef4444;
 }
 
+.upload-file-error {
+  font-size: 0.72rem;
+  color: #ef4444;
+  margin-left: auto;
+  white-space: nowrap;
+}
+
 .upload-file-progress {
   width: 100%;
   height: 3px;
@@ -6833,7 +6840,22 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
   .wizard-btn {
     flex: 1;
     justify-content: center;
-    min-width: 120px;
+    min-width: 0;
+    padding: 1rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .wizard-btn svg {
+    display: none;
+  }
+
+  .wizard-nav {
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+  }
+
+  .wizard-submit-wrap {
+    flex: 1;
   }
 
   .summary-row {

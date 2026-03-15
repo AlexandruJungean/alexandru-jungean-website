@@ -644,7 +644,17 @@
       } catch (err) {
         console.error('File upload error:', err);
         if (entry) entry.status = 'error';
-        if (progressFill) { progressFill.style.background = '#ef4444'; progressFill.style.width = '100%'; }
+        if (item) {
+          var top = item.querySelector('.upload-file-top');
+          if (top) {
+            var errSpan = document.createElement('span');
+            errSpan.className = 'upload-file-error';
+            errSpan.textContent = 'Upload failed — file will not be attached';
+            top.appendChild(errSpan);
+          }
+          var prog = item.querySelector('.upload-file-progress');
+          if (prog) prog.style.display = 'none';
+        }
       }
     }
 
@@ -1130,8 +1140,9 @@
   }
 
   function isFieldHidden(el) {
-    var node = el;
+    var node = el.parentElement;
     while (node && node !== document.body) {
+      if (node.classList && node.classList.contains('wizard-step')) return false;
       if (node.hidden) return true;
       node = node.parentElement;
     }
