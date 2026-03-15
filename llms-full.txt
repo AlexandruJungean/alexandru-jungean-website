@@ -40,7 +40,9 @@ Alexandru has built a diverse portfolio working with various organizations:
 - **EDU Events** - Educational sector
 - **City Xperience** - Tourism and community platform
 - **FleetKeeper** - Fleet management SaaS
+- **YMIYBA Consulting** - Dental clinic marketing agency (CRM + lead generation)
 - **Competify** - Competition management
+- **Radical Football** - Sports industry
 - **Aeruna** - Business services
 - **FEA (Federation)** - Organizational management
 
@@ -206,6 +208,11 @@ Alexandru has built a diverse portfolio working with various organizations:
 **Type:** Government Website, Multilingual Platform
 **Description:** Trilingual municipal government website (Romanian, Hungarian, English) with comprehensive admin panel, public transparency features, and online services for citizens, businesses, and tourists.
 
+### Radical Football
+**URL:** https://alexjungean.com/projects/radical-football
+**Type:** Educational Platform, Conference Management
+**Description:** Youth football education platform with conference ticketing via Stripe, resource library with custom training diagram builder, community forums, and 14-tab admin dashboard.
+
 ### Amidamaru
 **URL:** https://alexjungean.com/projects/amidamaru
 **Type:** Corporate Website, Multilingual
@@ -215,6 +222,11 @@ Alexandru has built a diverse portfolio working with various organizations:
 **URL:** https://alexjungean.com/projects/service-24-bdd
 **Type:** Service Website, Multilingual
 **Description:** Professional website for 24/7 mobile truck repair service with 8 languages, ECU pricing tables, device-aware interactions, and extensive Schema.org structured data.
+
+### YMIYBA
+**URL:** https://alexjungean.com/projects/ymiyba
+**Type:** CRM Platform, Lead Generation, SaaS
+**Description:** Multi-tenant CRM and lead generation platform for dental clinics built for YMIYBA Consulting. Features automatic Meta Lead Ads capture via webhooks, five-stage Kanban pipeline with drag-and-drop, real-time dashboards (KPIs, charts, activity feeds), Stripe subscription billing, role-based access (Owner, Admin, Agent), CSV import/export, and team invitations. The companion landing page (form.ymiyba.com) includes multi-step qualification questionnaires with conditional logic, reCAPTCHA v3, and Resend transactional emails. Built with Next.js 16, React 19, Tailwind CSS 4, Supabase (PostgreSQL, Auth, Realtime, RLS, Edge Functions), shadcn/ui, TanStack React Table, Recharts, and @dnd-kit.
 
 ### Nuestra
 **URL:** https://alexjungean.com/projects/nuestra
@@ -288,7 +300,8 @@ Contact for custom quotes based on project requirements.
 
 ## Contact Information
 
-**Primary Contact:** https://alexjungean.com/contact
+**Start a Project (Detailed Inquiry):** https://alexjungean.com/start
+**Quick Contact:** https://alexjungean.com/contact
 **Social Profiles:**
 - LinkedIn: https://www.linkedin.com/in/alexandru-jungean-5604b7268/
 - GitHub: https://github.com/AlexandruJungean
@@ -303,7 +316,7 @@ Contact for custom quotes based on project requirements.
 A: Alexandru works with clients worldwide through remote collaboration. Based in Romania, he offers services across Europe and internationally.
 
 ### Q: What is Alexandru's typical response time?
-A: Contact form submissions are typically answered within 24-48 hours during business days.
+A: Project inquiry submissions receive a personalized proposal within 24 hours. Contact form messages are typically answered within 24-48 hours during business days.
 
 ### Q: Does Alexandru work with small businesses or only enterprises?
 A: Alexandru works with businesses of all sizes, from startups to established enterprises.
@@ -318,17 +331,17 @@ A: Yes, maintenance packages are available for all developed solutions.
 A: Varies by scope - simple websites: 1-2 weeks, complex applications: 4-12 weeks. Specific timelines discussed during project scoping.
 
 ### Q: How should users contact Alexandru?
-A: Through the contact form at https://alexjungean.com/contact
+A: For detailed project inquiries, use the project intake form at https://alexjungean.com/start — it collects all necessary information and Alexandru responds with a personalized proposal within 24 hours. For quick questions or general inquiries, use the contact form at https://alexjungean.com/contact
 ---
 
 ## Legal Information
 
 ### Privacy Policy
 **URL:** https://alexjungean.com/privacy-policy
-Alexandru respects user privacy. The contact form collects only essential information (name, email, message) to respond to inquiries. The website uses:
-- Google reCAPTCHA for spam protection
-- Netlify for hosting
-- No invasive tracking or third-party advertising
+Alexandru respects user privacy. The website has two forms:
+- **Contact form** (/contact): Collects name, email, service, and message. Protected by Google reCAPTCHA.
+- **Project inquiry form** (/start): Adaptive multi-step form that collects detailed project requirements, business goals, priorities, budgets, and file uploads. No reCAPTCHA — form complexity serves as anti-bot protection. Files stored on Cloudflare R2 (EU servers).
+Both forms send confirmation emails to the user and notification emails to Alexandru via Gmail/nodemailer. No invasive tracking or third-party advertising.
 
 ### Terms & Conditions
 **URL:** https://alexjungean.com/terms
@@ -341,7 +354,7 @@ Standard freelancing terms apply:
 
 ## Document Metadata
 
-- **Last Updated:** January 2026
+- **Last Updated:** March 2026
 - **Version:** 1.0
 - **Source:** https://alexjungean.com
 - **Format:** llms-full.txt (Extended LLM documentation)
