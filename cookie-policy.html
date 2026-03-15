@@ -42,14 +42,14 @@
               <a href="/projects" class="nav-link">Projects</a>
               <a href="/contact" class="nav-link">Contact</a>
               <div class="nav-button-wrapper is-mobile">
-                <a href="/contact" class="nav-button w-inline-block">
+                <a href="/start" class="nav-button w-inline-block">
                   <div class="nav-button-text">Start a Project</div>
                 </a>
               </div>
             </div>
           </nav>
           <div class="nav-button-wrapper">
-            <a href="/contact" class="nav-button w-inline-block">
+            <a href="/start" class="nav-button w-inline-block">
               <div class="nav-button-text-wrapper">
                 <div class="nav-button-text" data-text="Start a Project">Start a Project</div>
               </div>
@@ -83,16 +83,18 @@
         <div class="padding-global">
           <div class="container-medium">
             <div class="legal-content">
-              <p class="last-updated">Last updated: February 18, 2026</p>
+              <p class="last-updated">Last updated: March 15, 2026</p>
               
-              <h3>1. What Are Cookies</h3>
+              <h3>1. What Are Cookies &amp; Local Storage</h3>
               <p>Cookies are small text files that are stored on your device (computer, tablet, or mobile) when you visit a website. They are widely used to make websites work more efficiently and to provide information to website owners.</p>
+              <p>localStorage is a browser feature that allows websites to store data locally on your device. Unlike cookies, localStorage data is not sent to the server with every request.</p>
               
-              <h3>2. How We Use Cookies</h3>
-              <p>The website alexjungean.com, operated by EDU BOOST SRL (CUI: 50079362), uses cookies for the following purposes:</p>
+              <h3>2. How We Use Cookies &amp; Local Storage</h3>
+              <p>The website alexjungean.com, operated by EDU BOOST SRL (CUI: 50079362), uses cookies and local storage for the following purposes:</p>
               <ul>
                 <li><strong>Analytics:</strong> To understand how visitors interact with the Website and to improve the user experience</li>
                 <li><strong>Security:</strong> To protect the contact form from spam and abuse</li>
+                <li><strong>Form persistence:</strong> To save your progress on the project inquiry form so you can resume later</li>
               </ul>
               
               <h3>3. Cookies We Use</h3>
@@ -123,7 +125,7 @@
               </table>
               
               <h4>Security Cookies (Google reCAPTCHA)</h4>
-              <p>These cookies are used to protect the contact form from automated spam submissions.</p>
+              <p>These cookies are used to protect the contact form (/contact) from automated spam submissions. The project inquiry form (/start) does not use reCAPTCHA.</p>
               <table class="cookie-table">
                 <thead>
                   <tr>
@@ -135,8 +137,27 @@
                 <tbody>
                   <tr>
                     <td><strong>_GRECAPTCHA</strong></td>
-                    <td>Used by Google reCAPTCHA to distinguish humans from bots</td>
+                    <td>Used by Google reCAPTCHA to distinguish humans from bots (contact form only)</td>
                     <td>6 months</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <h4>Local Storage (Project Inquiry Form)</h4>
+              <p>The project inquiry form (/start) uses your browser's localStorage to save your form progress. This is not a cookie &mdash; the data stays on your device and is never sent to our servers until you explicitly submit the form.</p>
+              <table class="cookie-table">
+                <thead>
+                  <tr>
+                    <th>Key</th>
+                    <th>Purpose</th>
+                    <th>Duration</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>intake_form_draft</strong></td>
+                    <td>Saves your form answers so you can resume later if you close the browser</td>
+                    <td>Until cleared by user (via "Clear &amp; start over" button or browser settings)</td>
                   </tr>
                 </tbody>
               </table>
@@ -160,10 +181,11 @@
                 </tbody>
               </table>
               
-              <h3>4. Managing Cookies</h3>
-              <p>You can control and manage cookies in several ways:</p>
+              <h3>4. Managing Cookies &amp; Local Storage</h3>
+              <p>You can control and manage cookies and local storage in several ways:</p>
               <ul>
                 <li><strong>Browser settings:</strong> Most browsers allow you to view, manage, delete, and block cookies. Note that blocking all cookies may affect the functionality of some websites.</li>
+                <li><strong>Form data:</strong> To clear your saved project inquiry form data, use the "Clear &amp; start over" button on the form page, or clear your browser's site data for alexjungean.com.</li>
                 <li><strong>Google Analytics opt-out:</strong> You can opt out of Google Analytics by installing the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out Browser Add-on</a>.</li>
               </ul>
               <p>Instructions for managing cookies in popular browsers:</p>

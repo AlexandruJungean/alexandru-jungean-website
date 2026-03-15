@@ -42,14 +42,14 @@
               <a href="/projects" class="nav-link">Projects</a>
               <a href="/contact" class="nav-link">Contact</a>
               <div class="nav-button-wrapper is-mobile">
-                <a href="/contact" class="nav-button w-inline-block">
+                <a href="/start" class="nav-button w-inline-block">
                   <div class="nav-button-text">Start a Project</div>
                 </a>
               </div>
             </div>
           </nav>
           <div class="nav-button-wrapper">
-            <a href="/contact" class="nav-button w-inline-block">
+            <a href="/start" class="nav-button w-inline-block">
               <div class="nav-button-text-wrapper">
                 <div class="nav-button-text" data-text="Start a Project">Start a Project</div>
               </div>
@@ -83,7 +83,7 @@
         <div class="padding-global">
           <div class="container-medium">
             <div class="legal-content">
-              <p class="last-updated">Last updated: February 18, 2026</p>
+              <p class="last-updated">Last updated: March 15, 2026</p>
               
               <h3>1. Data Controller</h3>
               <p>The data controller for this website is:</p>
@@ -98,24 +98,43 @@
               
               <h3>2. Information I Collect</h3>
               <p>I may collect information about you in various ways:</p>
+              
+              <h4>a) Contact Form (/contact)</h4>
+              <p>When you use the contact form, I collect your name, email address, selected service, and any message content you provide.</p>
+              
+              <h4>b) Project Inquiry Form (/start)</h4>
+              <p>When you use the project inquiry form, I collect the following categories of data:</p>
               <ul>
-                <li><strong>Personal Data:</strong> When you use the contact form, I collect your name, email address, selected service, and any message content you provide.</li>
-                <li><strong>Usage Data:</strong> I automatically collect certain information when you visit the Website, including your IP address, browser type, operating system, access times, and pages viewed.</li>
-                <li><strong>Cookies:</strong> The Website uses cookies and similar tracking technologies. For detailed information, please see our <a href="/cookie-policy">Cookie Policy</a>.</li>
+                <li><strong>Contact information:</strong> Name, email, phone number, company name, role, and location</li>
+                <li><strong>Project details:</strong> Business description, project goals, priority metrics (including numeric targets such as lead targets or revenue goals), target audience, competitor URLs, reference URLs, and deadlines</li>
+                <li><strong>Service-specific details:</strong> Technical requirements, feature preferences, budget ranges, and timelines for each selected service (website, mobile app, branding, marketing, video, database, design, or consulting)</li>
+                <li><strong>Working preferences:</strong> Communication preferences, language, meeting availability, involvement level, and decision-making structure</li>
+                <li><strong>Uploaded files:</strong> Any documents you choose to upload (logos, mockups, briefs, etc.), which are stored on Cloudflare R2 cloud storage</li>
               </ul>
+              
+              <h4>c) Usage Data</h4>
+              <p>I automatically collect certain information when you visit the Website, including your IP address, browser type, operating system, access times, and pages viewed.</p>
+              
+              <h4>d) Local Storage</h4>
+              <p>The project inquiry form uses your browser's localStorage to save your progress as you fill out the form. This data is stored locally on your device, not on our servers, and allows you to resume the form if you close your browser. You can clear this data at any time using the "Clear &amp; start over" button on the form, or by clearing your browser's site data.</p>
+              
+              <h4>e) Cookies</h4>
+              <p>The Website uses cookies and similar tracking technologies. For detailed information, please see our <a href="/cookie-policy">Cookie Policy</a>.</p>
               
               <h3>3. Legal Basis for Processing</h3>
               <p>Under the GDPR, I process your personal data based on the following legal grounds:</p>
               <ul>
-                <li><strong>Consent (Art. 6(1)(a) GDPR):</strong> For analytics cookies and marketing communications. You may withdraw your consent at any time.</li>
-                <li><strong>Legitimate Interest (Art. 6(1)(f) GDPR):</strong> For website security, spam protection (reCAPTCHA), and improving the Website experience.</li>
-                <li><strong>Contract Performance (Art. 6(1)(b) GDPR):</strong> For processing inquiries through the contact form and delivering requested services.</li>
+                <li><strong>Consent (Art. 6(1)(a) GDPR):</strong> For analytics cookies, marketing communications, and project inquiry form submissions (explicit consent obtained via GDPR checkbox before submission). You may withdraw your consent at any time.</li>
+                <li><strong>Legitimate Interest (Art. 6(1)(f) GDPR):</strong> For website security, spam protection (reCAPTCHA on the contact form), and improving the Website experience.</li>
+                <li><strong>Contract Performance (Art. 6(1)(b) GDPR):</strong> For processing inquiries and preparing project proposals based on the information you provide.</li>
               </ul>
               
               <h3>4. How I Use Your Information</h3>
               <p>I use the collected information for the following purposes:</p>
               <ul>
                 <li>To respond to your inquiries and communicate with you</li>
+                <li>To prepare personalized project proposals based on the details you provide in the project inquiry form</li>
+                <li>To send you a confirmation email summarizing your submission</li>
                 <li>To improve and optimize the Website</li>
                 <li>To analyze usage patterns and trends</li>
                 <li>To protect against unauthorized access and abuse</li>
@@ -125,15 +144,21 @@
               <p>The Website uses the following third-party services:</p>
               <ul>
                 <li><strong>Google Analytics:</strong> Used to understand how visitors interact with the Website. Google Analytics collects data such as pages visited, time spent, and general location. Google's <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a> applies.</li>
-                <li><strong>Google reCAPTCHA:</strong> Used to protect the contact form from spam. Google's <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a> and <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Terms of Service</a> apply.</li>
-                <li><strong>Netlify:</strong> The Website is hosted on Netlify. Their <a href="https://www.netlify.com/privacy/" target="_blank" rel="noopener">Privacy Policy</a> applies.</li>
+                <li><strong>Google reCAPTCHA:</strong> Used to protect the contact form (/contact) from spam. Not used on the project inquiry form. Google's <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a> and <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Terms of Service</a> apply.</li>
+                <li><strong>Cloudflare R2:</strong> Used to store files uploaded through the project inquiry form. Files are stored in Cloudflare's European data centers. Cloudflare's <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Privacy Policy</a> applies.</li>
+                <li><strong>Netlify:</strong> The Website is hosted on Netlify. Contact form and project inquiry submissions are processed through Netlify serverless functions. Their <a href="https://www.netlify.com/privacy/" target="_blank" rel="noopener">Privacy Policy</a> applies.</li>
+                <li><strong>Gmail (Google Workspace):</strong> Used to send confirmation and notification emails when you submit the contact form or project inquiry form. Google's <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a> applies.</li>
               </ul>
               
               <h3>6. International Data Transfers</h3>
-              <p>Some of the third-party services listed above (Google, Netlify) may transfer your data to servers located outside the European Economic Area (EEA), including the United States. These transfers are safeguarded by the EU-U.S. Data Privacy Framework or Standard Contractual Clauses (SCCs) approved by the European Commission, ensuring an adequate level of data protection.</p>
+              <p>Some of the third-party services listed above (Google, Netlify, Cloudflare) may transfer your data to servers located outside the European Economic Area (EEA), including the United States. These transfers are safeguarded by the EU-U.S. Data Privacy Framework or Standard Contractual Clauses (SCCs) approved by the European Commission, ensuring an adequate level of data protection. Cloudflare R2 file storage is configured to use European data centers.</p>
               
               <h3>7. Data Retention</h3>
-              <p>I retain your personal information only for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required by law. Contact form submissions are retained for up to 12 months after the last communication.</p>
+              <ul>
+                <li><strong>Contact form submissions:</strong> Retained in email for up to 12 months after the last communication.</li>
+                <li><strong>Project inquiry submissions:</strong> Retained in email for up to 24 months. Uploaded files stored on Cloudflare R2 are retained for up to 24 months and then deleted.</li>
+                <li><strong>localStorage data:</strong> Stored on your device until you clear it manually or use the "Clear &amp; start over" button. This data is never transmitted to our servers until you explicitly submit the form.</li>
+              </ul>
               
               <h3>8. Your Rights Under GDPR</h3>
               <p>As a data subject, you have the following rights regarding your personal data:</p>
