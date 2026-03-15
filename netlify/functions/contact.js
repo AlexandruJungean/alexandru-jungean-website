@@ -113,7 +113,6 @@ export async function handler(event) {
           <p>In the meantime, feel free to:</p>
           <ul>
             <li>Check out my <a href="https://alexjungean.com/projects">projects</a></li>
-            <li>View my <a href="https://alexjungean.com/services">services</a></li>
             <li>Connect with me on <a href="https://www.linkedin.com/in/alexandru-jungean-5604b7268/">LinkedIn</a></li>
           </ul>
           

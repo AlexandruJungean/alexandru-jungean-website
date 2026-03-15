@@ -216,7 +216,6 @@ function buildClientEmail(d) {
 
   html += '<p>In the meantime, feel free to:</p><ul>';
   html += '<li>Check out my <a href="https://alexjungean.com/projects" style="color:#678b9e">projects</a></li>';
-  html += '<li>View my <a href="https://alexjungean.com/services" style="color:#678b9e">services</a></li>';
   html += '<li>Connect on <a href="https://www.linkedin.com/in/alexandru-jungean-5604b7268/" style="color:#678b9e">LinkedIn</a></li>';
   html += '</ul>';
 
