@@ -16,6 +16,9 @@ const ALLOWED_TYPES = [
 const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10MB per file
 
 export async function handler(event) {
+  if (event.httpMethod === 'OPTIONS') {
+    return { statusCode: 204, headers: { 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type' } };
+  }
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: JSON.stringify({ error: 'Method not allowed' }) };
   }
@@ -23,16 +26,18 @@ export async function handler(event) {
   try {
     const { filename, contentType, size, clientName } = JSON.parse(event.body);
 
+    var corsHeaders = { 'Access-Control-Allow-Origin': '*' };
+
     if (!filename || !contentType) {
-      return { statusCode: 400, body: JSON.stringify({ error: 'Missing filename or contentType' }) };
+      return { statusCode: 400, headers: corsHeaders, body: JSON.stringify({ error: 'Missing filename or contentType' }) };
     }
 
     if (size && size > MAX_FILE_SIZE) {
-      return { statusCode: 400, body: JSON.stringify({ error: 'File too large. Maximum 10MB per file.' }) };
+      return { statusCode: 400, headers: corsHeaders, body: JSON.stringify({ error: 'File too large. Maximum 10MB per file.' }) };
     }
 
     if (!ALLOWED_TYPES.includes(contentType) && contentType !== 'application/octet-stream') {
-      return { statusCode: 400, body: JSON.stringify({ error: 'File type not allowed.' }) };
+      return { statusCode: 400, headers: corsHeaders, body: JSON.stringify({ error: 'File type not allowed.' }) };
     }
 
     const s3 = new S3Client({
@@ -66,6 +71,6 @@ export async function handler(event) {
     };
   } catch (error) {
     console.error('Presign error:', error);
-    return { statusCode: 500, body: JSON.stringify({ error: 'Failed to generate upload URL.' }) };
+    return { statusCode: 500, headers: { 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({ error: 'Failed to generate upload URL.' }) };
   }
 }

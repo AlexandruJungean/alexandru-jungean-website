@@ -163,7 +163,6 @@
       var self = this;
       this.prevBtn.addEventListener('click', function () { self.prev(); });
       this.nextBtn.addEventListener('click', function () { self.next(); });
-      this.submitBtn.addEventListener('click', function () { self.submit(); });
       document.getElementById('wizard-clear').addEventListener('click', function () {
         if (confirm('Clear all data and start over?')) {
           localStorage.removeItem(STORAGE_KEY);

@@ -6875,11 +6875,11 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
   }
 
   .wizard-btn {
-    flex: 1;
     justify-content: center;
     min-width: 0;
-    padding: 1rem 1rem;
-    font-size: 0.95rem;
+    padding: 0.9rem 1rem;
+    font-size: 0.9rem;
+    white-space: nowrap;
   }
 
   .wizard-btn svg {
@@ -6891,8 +6891,12 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
     gap: 0.5rem;
   }
 
-  .wizard-submit-wrap {
+  .wizard-nav-spacer {
     flex: 1;
+  }
+
+  .wizard-submit-wrap {
+    display: inline-flex;
   }
 
   .summary-row {

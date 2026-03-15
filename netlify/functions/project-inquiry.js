@@ -40,8 +40,18 @@ function sectionHtml(title, rows) {
   return '<div style="margin-bottom:20px"><h3 style="font-size:14px;color:#8aacbb;margin:0 0 8px;border-bottom:1px solid #333;padding-bottom:6px">' + title + '</h3><table style="width:100%;border-collapse:collapse;font-size:13px">' + filtered.join('') + '</table></div>';
 }
 
+var SERVICE_LABELS = {
+  website: 'Website', mobile_app: 'Mobile App', branding: 'Branding & Identity',
+  marketing: 'Marketing & Ads', video: 'Video Production', database: 'Database & Backend',
+  design: 'UI/UX Design', consulting: 'Strategy & Consulting', other: 'Other'
+};
+
+function formatServices(raw) {
+  return arr(raw).map(function (s) { return SERVICE_LABELS[s] || s; });
+}
+
 function buildAdminEmail(d) {
-  var services = arr(d.services);
+  var services = formatServices(d.services);
   var files = arr(d.files);
 
   var html = '<div style="font-family:Arial,Helvetica,sans-serif;max-width:700px;margin:0 auto;background:#1a1a1a;color:#e0e0e0;padding:24px;border-radius:12px">';
@@ -201,7 +211,7 @@ function buildAdminEmail(d) {
 
 function buildClientEmail(d) {
   var name = (d.name || '').split(' ')[0] || 'there';
-  var services = arr(d.services);
+  var services = formatServices(d.services);
 
   var html = '<div style="font-family:Arial,Helvetica,sans-serif;max-width:600px;margin:0 auto">';
   html += '<h2 style="color:#678b9e">Thank you, ' + name + '!</h2>';
@@ -261,7 +271,7 @@ export async function handler(event) {
       auth: { user: process.env.GMAIL_USER, pass: process.env.GMAIL_APP_PASSWORD }
     });
 
-    var services = arr(data.services);
+    var services = formatServices(data.services);
     var subjectLine = 'New Project: ' + (data.company || data.name) + ' — ' + services.slice(0, 3).join(', ');
 
     await transporter.sendMail({
