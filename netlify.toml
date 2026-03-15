@@ -42,6 +42,12 @@
   force = true
 
 [[redirects]]
+  from = "/start.html"
+  to = "/start"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/blog.html"
   to = "/blog"
   status = 301
@@ -183,6 +189,12 @@
   force = true
 
 [[redirects]]
+  from = "/projects/radical-football.html"
+  to = "/projects/radical-football"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/projects/service-24-bdd.html"
   to = "/projects/service-24-bdd"
   status = 301
@@ -224,5 +236,10 @@
 
 [[headers]]
   for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, stale-while-revalidate=86400"
+
+[[headers]]
+  for = "/js/*"
   [headers.values]
     Cache-Control = "public, max-age=3600, stale-while-revalidate=86400"
