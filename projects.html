@@ -52,14 +52,14 @@
               <a href="/projects" aria-current="page" class="nav-link">Projects</a>
               <a href="/contact" class="nav-link">Contact</a>
               <div class="nav-button-wrapper is-mobile">
-                <a href="/contact" class="nav-button w-inline-block">
+                <a href="/start" class="nav-button w-inline-block">
                   <div class="nav-button-text">Start a Project</div>
                 </a>
               </div>
             </div>
           </nav>
           <div class="nav-button-wrapper">
-            <a href="/contact" class="nav-button w-inline-block">
+            <a href="/start" class="nav-button w-inline-block">
               <div class="nav-button-text-wrapper">
                 <div class="nav-button-text" data-text="Start a Project">Start a Project</div>
               </div>
@@ -141,9 +141,8 @@
                   <div class="project-link-text">View<br>Project</div>
                 </a>
               </div>
-              <!-- Radical Football – scos temporar (pagina publicată separat, imagini de adăugat)
               <div class="project-single-item all">
-                <div class="project-thumb-wrap"><img src="images/Radical-Football.webp" loading="lazy" sizes="(max-width: 479px) 93vw, (max-width: 767px) 96vw, (max-width: 991px) 94vw, 92vw" srcset="images/Radical-Football-p-500.webp 500w, images/Radical-Football-p-800.webp 800w, images/Radical-Football-p-1080.webp 1080w, images/Radical-Football-p-1600.webp 1600w, images/Radical-Football-p-2000.webp 2000w, images/Radical-Football.webp 2400w" alt="Radical Football Educational Platform" class="project-thumb">
+                <div class="project-thumb-wrap"><img src="images/Thumbnail---Radical-Football.webp" loading="lazy" sizes="(max-width: 479px) 93vw, (max-width: 767px) 96vw, (max-width: 991px) 94vw, 92vw" srcset="images/Thumbnail---Radical-Football.webp 1200w" alt="Radical Football Educational Platform" class="project-thumb">
                   <div class="project-thumb-overlay"></div>
                 </div>
                 <div class="project-content">
@@ -154,7 +153,18 @@
                   <div class="project-link-text">View<br>Project</div>
                 </a>
               </div>
-              -->
+              <div class="project-single-item all">
+                <div class="project-thumb-wrap"><img src="images/Thumbnail---YMIYBA.webp" loading="lazy" sizes="(max-width: 479px) 93vw, (max-width: 767px) 96vw, (max-width: 991px) 94vw, 92vw" srcset="images/Thumbnail---YMIYBA.webp 1200w" alt="YMIYBA — CRM and Forms" class="project-thumb">
+                  <div class="project-thumb-overlay"></div>
+                </div>
+                <div class="project-content">
+                  <div class="project-item-title">YMIYBA</div>
+                  <div class="heading-small project-item-subtitle">Website Creation + Database Solutions</div>
+                </div>
+                <a href="/projects/ymiyba" class="project-link w-inline-block">
+                  <div class="project-link-text">View<br>Project</div>
+                </a>
+              </div>
               <div class="project-single-item all">
                 <div class="project-thumb-wrap"><img src="images/TOOL-3.webp" loading="lazy" sizes="(max-width: 479px) 93vw, (max-width: 767px) 96vw, (max-width: 991px) 94vw, 92vw" srcset="images/TOOL-3-p-500.webp 500w, images/TOOL-3-p-800.webp 800w, images/TOOL-3-p-1080.webp 1080w, images/TOOL-3-p-1600.webp 1600w, images/TOOL-3-p-2000.webp 2000w, images/TOOL-3.webp 2160w" alt="Tool Connect Design" class="project-thumb">
                   <div class="project-thumb-overlay"></div>
@@ -316,7 +326,7 @@
               <a href="/terms" class="paragraph-large footer-link-wrap">Terms</a>
             </div>
           </div>
-          <div class="footer-company-info">EDU BOOST SRL &middot; CUI: 50079362 &middot; Nr. Reg. Com.: J2024001347052 &middot; EUID: ROONRC.J2024001347052<span class="footer-contact-line">Cluj-Napoca, Romania &middot; <a href="tel:+40757673677" style="color:inherit;text-decoration:none;">+40 757 673 677</a> &middot; alex.jungean@gmail.com</span></div>
+          <div class="footer-company-info">EDU BOOST SRL &middot; CUI: 50079362 &middot; Nr. Reg. Com.: J2024001347052 &middot; EUID: ROONRC.J2024001347052<span class="footer-contact-line">Cluj-Napoca, Romania &middot; <a href="tel:+40757673677">+40 757 673 677</a> &middot; alex.jungean@gmail.com</span></div>
         </div>
       </div><img src="images/Vector_1Vector.webp" loading="lazy" sizes="100vw" srcset="images/Vector_1Vector.webp 1920w" alt="Decorative footer background" class="footer-bg">
     </footer>
@@ -384,22 +394,12 @@
           });
         } else {
           item.addEventListener('click', function(e) {
-            if (!item.classList.contains('is-tapped')) {
-              e.preventDefault();
-              projectItems.forEach(function(p) { p.classList.remove('is-tapped'); });
-              item.classList.add('is-tapped');
-            }
+            if (e.target.closest('.project-link')) return;
+            var href = link.getAttribute('href');
+            if (href) window.location.href = href;
           });
         }
       });
-      
-      if (isTouchDevice) {
-        document.addEventListener('click', function(e) {
-          if (!e.target.closest('.project-single-item')) {
-            projectItems.forEach(function(p) { p.classList.remove('is-tapped'); });
-          }
-        });
-      }
     });
   </script>
   
