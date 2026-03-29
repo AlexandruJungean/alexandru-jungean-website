@@ -108,12 +108,6 @@
   status = 301
   force = true
 
-[[redirects]]
-  from = "/services/video-editing.html"
-  to = "/services/video-editing"
-  status = 301
-  force = true
-
 # Project pages - redirect .html to clean URL
 [[redirects]]
   from = "/projects/amidamaru.html"

@@ -49,8 +49,7 @@ This is a static website built with HTML5, CSS3, and vanilla JavaScript, hosted 
 │   ├── database-solutions.html
 │   ├── data-analysis.html
 │   ├── ui-ux-design.html
-│   ├── branding-design.html
-│   └── video-editing.html
+│   └── branding-design.html
 │
 ├── projects/               # Individual project case studies
 │   ├── amidamaru.html
@@ -91,7 +90,6 @@ This is a static website built with HTML5, CSS3, and vanilla JavaScript, hosted 
 | Data Analysis | Business intelligence and data visualization |
 | UI/UX Design | User interface and experience design |
 | Branding Design | Logo design and brand identity |
-| Video Editing | Professional video production and editing |
 
 ## Tech Stack
 

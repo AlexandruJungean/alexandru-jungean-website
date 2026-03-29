@@ -154,22 +154,6 @@ Alexandru has built a diverse portfolio working with various organizations:
 
 ---
 
-### 7. Video Editing
-**URL:** https://alexjungean.com/services/video-editing
-**Description:** Professional video production:
-- Video editing and post-production
-- Motion graphics
-- Color grading
-- Audio synchronization
-- Social media video content
-- Promotional videos
-
-**Technologies:** Adobe Premiere Pro, After Effects, DaVinci Resolve
-
-**Ideal For:** Marketing teams, content creators, businesses needing promotional content.
-
----
-
 ## Portfolio Projects
 
 ### ARDT Oradea
@@ -274,10 +258,9 @@ Alexandru has built a diverse portfolio working with various organizations:
 - **Payments:** Stripe integration
 - **Hosting:** Netlify, Vercel
 
-### Design & Video
+### Design
 - **UI Design:** Figma
 - **Photo Editing:** Adobe Photoshop
-- **Video Editing:** Adobe Premiere Pro
 
 ### Data Analysis
 - **Languages:** Python (Pandas, NumPy)

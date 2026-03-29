@@ -131,17 +131,6 @@
     </image:image>
   </url>
   
-  <url>
-    <loc>https://alexjungean.com/services/video-editing</loc>
-    <lastmod>2026-01-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://alexjungean.com/images/Thumbnail---Video-Editing.webp</image:loc>
-      <image:title>Video Editing Services</image:title>
-    </image:image>
-  </url>
-  
   <!-- Project Pages -->
   <url>
     <loc>https://alexjungean.com/projects/primaria-salonta</loc>

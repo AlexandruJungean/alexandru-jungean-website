@@ -4,7 +4,7 @@
 
 ## About
 
-Alexandru Jungean is an experienced IT freelancer based in Cluj-Napoca, Romania, offering comprehensive digital services to businesses worldwide. With expertise spanning web development, mobile application development, database management, UI/UX design, branding, and video editing, Alexandru helps businesses establish and grow their digital presence.
+Alexandru Jungean is an experienced IT freelancer based in Cluj-Napoca, Romania, offering comprehensive digital services to businesses worldwide. With expertise spanning web development, mobile application development, database management, UI/UX design, and branding, Alexandru helps businesses establish and grow their digital presence.
 
 ## Services
 
@@ -14,8 +14,6 @@ Alexandru Jungean is an experienced IT freelancer based in Cluj-Napoca, Romania,
 - [Data Analysis](https://alexjungean.com/services/data-analysis): Business intelligence and data visualization
 - [UI/UX Design](https://alexjungean.com/services/ui-ux-design): User interface and experience design
 - [Branding Design](https://alexjungean.com/services/branding-design): Logo design and brand identity
-- [Video Editing](https://alexjungean.com/services/video-editing): Professional video production and editing
-
 ## Portfolio
 
 Featured projects demonstrating expertise across web, mobile, and design:
