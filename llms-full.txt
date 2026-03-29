@@ -68,7 +68,7 @@ Alexandru has built a diverse portfolio working with various organizations:
 - Content Management System integration
 - E-commerce capabilities
 
-**Technologies:** HTML5, CSS3, JavaScript, React, Next.js, WordPress, Webflow
+**Technologies:** HTML5, CSS3, JavaScript, React, Next.js
 
 **Ideal For:** Businesses needing a professional online presence, landing pages, corporate websites, e-commerce stores.
 
