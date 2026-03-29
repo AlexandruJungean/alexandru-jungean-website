@@ -175,7 +175,7 @@ Alexandru has built a diverse portfolio working with various organizations:
 ### City Xperience
 **URL:** https://alexjungean.com/projects/oradea-experience
 **Type:** City Discovery Platform, Mobile App, Franchise
-**Description:** White-label city discovery platform operating as a multi-city franchise (Oradea Experience + Cluj Xperience) with 5,900+ users, 120+ businesses, 300+ events, and a shared mobile app on App Store and Google Play.
+**Description:** White-label city discovery platform operating as a multi-city franchise (Oradea Experience + Cluj Xperience) with 7,200+ users, 130+ businesses, 380+ events, and a shared mobile app on App Store and Google Play.
 
 ### Tool Connect
 **URL:** https://alexjungean.com/projects/tool
