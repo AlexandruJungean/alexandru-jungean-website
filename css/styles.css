@@ -891,6 +891,22 @@ blockquote {
   text-transform: capitalize;
 }
 
+.section-cards-heading {
+  font-family: Clashdisplay, sans-serif;
+  font-size: 3rem;
+  font-weight: 500;
+  color: var(--gray);
+  margin-bottom: 2.5rem;
+  text-align: center;
+  line-height: 0.9;
+}
+
+@media screen and (max-width: 767px) {
+  .section-cards-heading {
+    font-size: 2.25rem;
+  }
+}
+
 .breadcrumb-llink {
   color: var(--defatult--white);
   text-transform: capitalize;
@@ -6858,6 +6874,23 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
   .video-testimonial-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.75rem;
+  }
+}
+
+/* --- Services Section Headings --- */
+.services-section-heading {
+  font-family: Clashdisplay, sans-serif;
+  font-size: 2.25rem;
+  font-weight: 500;
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
+  color: var(--gray);
+}
+
+@media screen and (max-width: 767px) {
+  .services-section-heading {
+    font-size: 1.75rem;
+    margin-top: 3rem;
   }
 }
 
