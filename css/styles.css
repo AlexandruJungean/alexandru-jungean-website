@@ -6732,6 +6732,238 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
 }
 
 /* --- Info Tooltip --- */
+/* --- How I Work --- */
+.section-how-i-work {
+  background: rgba(255, 255, 255, 0.01);
+}
+
+.hiw-steps {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.hiw-step {
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  transition: all 0.3s;
+}
+
+.hiw-step:hover {
+  background: rgba(103, 139, 158, 0.06);
+  border-color: rgba(103, 139, 158, 0.2);
+}
+
+.hiw-step-number {
+  font-family: Clashdisplay, sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color--brand);
+  margin-bottom: 0.75rem;
+  line-height: 1;
+}
+
+.hiw-step-title {
+  font-family: Clashdisplay, sans-serif;
+  font-weight: 500;
+  font-size: 1.15rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.hiw-step-desc {
+  font-size: 0.88rem;
+  color: #999;
+  line-height: 1.6;
+}
+
+.hiw-cta {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+@media screen and (max-width: 991px) {
+  .hiw-steps {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hiw-steps {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .hiw-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .hiw-step {
+    padding: 1.25rem;
+  }
+}
+
+/* --- Video Testimonials --- */
+.section-video-testimonials {
+  background: #1a1a1a;
+}
+
+.video-testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+
+.video-testimonial-card {
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.3s;
+}
+
+.video-testimonial-card:hover {
+  border-color: rgba(103, 139, 158, 0.2);
+}
+
+.video-testimonial-embed {
+  position: relative;
+  width: 100%;
+  padding-bottom: 177.78%;
+  overflow: hidden;
+}
+
+.video-testimonial-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+@media screen and (max-width: 991px) {
+  .video-testimonial-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .video-testimonial-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+}
+
+/* --- Services CTA Card & Quote --- */
+.services-cta-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem 2.5rem;
+  margin-top: 2rem;
+  background: rgba(103, 139, 158, 0.06);
+  border: 1px solid rgba(103, 139, 158, 0.2);
+  border-radius: 16px;
+}
+
+.services-cta-content { flex: 1; }
+
+.services-cta-title {
+  font-family: Clashdisplay, sans-serif;
+  font-weight: 600;
+  font-size: 1.35rem;
+  color: #fff;
+  margin-bottom: 0.4rem;
+}
+
+.services-cta-text {
+  color: #bbb;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.services-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.2rem 2rem;
+  background: var(--color--brand);
+  color: var(--color--primary-black);
+  font-size: 1.125rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.25s;
+  flex-shrink: 0;
+}
+
+.services-cta-btn:hover {
+  background: var(--white);
+  color: var(--black);
+}
+
+.service-quote-cta {
+  margin: 1.5rem 0;
+  padding: 1.5rem 2rem;
+  background: rgba(103, 139, 158, 0.06);
+  border: 1px solid rgba(103, 139, 158, 0.15);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.service-quote-cta p {
+  color: #bbb;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 0 1rem;
+}
+
+.guarantee-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0 0;
+}
+
+.guarantee-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--gray);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.guarantee-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color--brand);
+  font-weight: 600;
+}
+
+@media screen and (max-width: 767px) {
+  .services-cta-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .services-cta-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 /* --- Contact Page: Start a Project CTA --- */
 .contact-start-cta {
   display: flex;
