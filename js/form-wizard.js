@@ -33,7 +33,7 @@
   const SMART_SUGGESTIONS = [
     { if: ['marketing'], not: ['website'], msg: 'Ad campaigns need a destination. Do you have a website, or should we build one?', add: 'website' },
     { if: ['branding'], not: ['website'], msg: 'A fresh brand looks best on a matching website. Add Website?', add: 'website' },
-    { if: ['website', 'branding'], not: [], msg: "Great combo — I'll design your website to match your brand identity perfectly.", positive: true },
+    { if: ['website', 'branding'], not: [], msg: "Great combo - I'll design your website to match your brand identity perfectly.", positive: true },
     { if: ['consulting'], only: true, msg: "I'll help you figure out the right direction. You can always add specific services later.", positive: true }
   ];
 
@@ -519,7 +519,7 @@
         pcard.querySelectorAll('.pcard-followup input').forEach(function (inp) {
           if (inp.value) targets.push(inp.value);
         });
-        this.priorityBadgeText.textContent = text + (targets.length ? ' — ' + targets.join(', ') : '');
+        this.priorityBadgeText.textContent = text + (targets.length ? ' - ' + targets.join(', ') : '');
         this.priorityBadge.hidden = false;
       } else {
         this.priorityBadge.hidden = true;
@@ -650,7 +650,7 @@
           if (top) {
             var errSpan = document.createElement('span');
             errSpan.className = 'upload-file-error';
-            errSpan.textContent = 'Upload failed — file will not be attached';
+            errSpan.textContent = 'Upload failed - file will not be attached';
             top.appendChild(errSpan);
           }
           var prog = item.querySelector('.upload-file-progress');

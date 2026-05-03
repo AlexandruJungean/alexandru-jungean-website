@@ -113,7 +113,7 @@ function buildAdminEmail(d) {
   var rUrls = arr(d['references_url[]']);
   var rLike = arr(d['references_like[]']);
   for (var j = 0; j < rUrls.length; j++) {
-    if (rUrls[j]) refs.push(rUrls[j] + (rLike[j] ? ' — ' + rLike[j] : ''));
+    if (rUrls[j]) refs.push(rUrls[j] + (rLike[j] ? ' - ' + rLike[j] : ''));
   }
   if (refs.length) html += sectionHtml('References', [row('List', refs.join('<br>'))]);
 
@@ -272,7 +272,7 @@ export async function handler(event) {
     });
 
     var services = formatServices(data.services);
-    var subjectLine = 'New Project: ' + (data.company || data.name) + ' — ' + services.slice(0, 3).join(', ');
+    var subjectLine = 'New Project: ' + (data.company || data.name) + ' - ' + services.slice(0, 3).join(', ');
 
     await transporter.sendMail({
       from: '"Project Inquiry" <' + process.env.GMAIL_USER + '>',
