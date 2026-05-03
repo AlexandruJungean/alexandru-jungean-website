@@ -2180,10 +2180,6 @@ blockquote {
 .blog-body blockquote {
   background-color: var(--color--primary-black);
   color: var(--gray);
-  background-image: url('../images/quote.svg');
-  background-position: 56px;
-  background-repeat: no-repeat;
-  background-size: auto;
   border-left-style: none;
   margin-top: 2.375rem;
   margin-bottom: 2.375rem;
