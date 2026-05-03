@@ -79,8 +79,10 @@ textarea.w-input,textarea.w-select{height:auto}
   --color-surface: #222222;
   --color-surface-elevated: #2a2a2a;
   --color-text-primary: #f1f4f4;
+  --color-text-bright: #e0e0e0;
   --color-text-secondary: #bfbfbf;
   --color-text-muted: #8f8f8f;
+  --color-text-disabled: #666;
   --color-brand-hover: #7da4b8;
   --color-border: #3a3a3a;
   --color-success: #7fbf9f;
@@ -153,65 +155,20 @@ select:-webkit-autofill:active,
   transition: background-color 5000s ease-in-out 0s;
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
   color: var(--gray);
   margin-top: 0;
   margin-bottom: 0;
   font-family: Clashdisplay, sans-serif;
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
   font-weight: 500;
-  line-height: 1.1;
 }
 
-h2 {
-  color: var(--gray);
-  margin-top: 0;
-  margin-bottom: 0;
-  font-family: Clashdisplay, sans-serif;
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 500;
-  line-height: 1.2;
-}
-
-h3 {
-  color: var(--gray);
-  margin-top: 0;
-  margin-bottom: 0;
-  font-family: Clashdisplay, sans-serif;
-  font-size: clamp(1.5rem, 3vw, 2.25rem);
-  font-weight: 500;
-  line-height: 1.3;
-}
-
-h4 {
-  color: var(--gray);
-  margin-top: 0;
-  margin-bottom: 0;
-  font-family: Clashdisplay, sans-serif;
-  font-size: clamp(1.25rem, 2.5vw, 1.875rem);
-  font-weight: 500;
-  line-height: 1.4;
-}
-
-h5 {
-  color: var(--gray);
-  margin-top: 0;
-  margin-bottom: 0;
-  font-family: Clashdisplay, sans-serif;
-  font-size: clamp(1.125rem, 2vw, 1.5rem);
-  font-weight: 500;
-  line-height: 1.4;
-}
-
-h6 {
-  color: var(--gray);
-  margin-top: 0;
-  margin-bottom: 0;
-  font-family: Clashdisplay, sans-serif;
-  font-size: 1.25rem;
-  font-weight: 500;
-  line-height: 1.4;
-}
+h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.1; }
+h2 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.2; }
+h3 { font-size: clamp(1.5rem, 3vw, 2.25rem); line-height: 1.3; }
+h4 { font-size: clamp(1.25rem, 2.5vw, 1.875rem); line-height: 1.4; }
+h5 { font-size: clamp(1.125rem, 2vw, 1.5rem); line-height: 1.4; }
+h6 { font-size: 1.25rem; line-height: 1.4; }
 
 p {
   color: var(--color--body-font-2);
@@ -434,7 +391,7 @@ blockquote {
 
 .paragraph-large.footer-link:hover {
   color: #678b93;
-  -webkit-text-stroke-color: #678b9e;
+  -webkit-text-stroke-color: var(--color--brand);
 }
 
 .paragraph-large.footer-link.w--current {
@@ -492,7 +449,7 @@ blockquote {
   background-color: var(--color--brand);
   border-radius: .5rem;
   margin-top: 2rem;
-  padding: 1.59375rem 2.25rem;
+  padding: 1.6rem 2.25rem;
   text-decoration: none;
   position: relative;
   overflow: hidden;
@@ -699,7 +656,7 @@ blockquote {
 }
 
 .breadcrumb-icon {
-  color: #fff;
+  color: var(--white);
 }
 
 .section-template-header {
@@ -951,7 +908,8 @@ blockquote {
 
 @media (prefers-reduced-motion: reduce) {
   .text-badge,
-  .text-badge-icon {
+  .text-badge-icon,
+  .scroll-down .arrow-down-icon {
     animation: none;
   }
 }
@@ -999,12 +957,6 @@ blockquote {
   }
   50% {
     transform: translateY(5px);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .scroll-down .arrow-down-icon {
-    animation: none;
   }
 }
 
@@ -1791,7 +1743,7 @@ blockquote {
   background-color: var(--color--brand);
   color: var(--color--primary-black);
   border-radius: .5rem;
-  padding: 1.59375rem 2.25rem;
+  padding: 1.6rem 2.25rem;
   font-size: 1.125rem;
   font-weight: 500;
   line-height: 1.125rem;
@@ -1810,14 +1762,14 @@ blockquote {
 
 .recaptcha-notice {
   font-size: 11px;
-  color: #888;
+  color: var(--color-text-muted);
   margin-top: 12px;
   margin-bottom: 0;
   text-align: center;
 }
 
 .recaptcha-notice a {
-  color: #888;
+  color: var(--color-text-muted);
   text-decoration: underline;
 }
 
@@ -2466,13 +2418,20 @@ blockquote {
   line-height: 1.625rem;
 }
 
-.bold-text {
+.bold-text,
+.bold-text-2,
+.bold-text-3,
+.bold-text-4,
+.link-block-2 {
   color: var(--white);
+}
+
+.bold-text {
   -webkit-text-stroke-color: var(--white);
 }
 
-.bold-text-2, .bold-text-3, .bold-text-4 {
-  color: var(--white);
+.link-block-2 {
+  text-decoration: none;
 }
 
 .project-figure {
@@ -2483,11 +2442,6 @@ blockquote {
 .link-block {
   pointer-events: auto;
   color: var(--gray);
-  text-decoration: none;
-}
-
-.link-block-2 {
-  color: var(--white);
   text-decoration: none;
 }
 
@@ -4106,7 +4060,7 @@ blockquote {
   transform: translate(-35%, -50%);
   border-style: solid;
   border-width: 11px 0 11px 19px;
-  border-color: transparent transparent transparent #fff;
+  border-color: transparent transparent transparent var(--white);
 }
 
 /* Form message styles - replaces inline margin-top */
@@ -4355,12 +4309,12 @@ blockquote {
   font-family: Clashdisplay, sans-serif;
   font-weight: 500;
   font-size: 0.95rem;
-  color: #fff;
+  color: var(--white);
 }
 
 .wizard-progress-count {
   font-size: 0.85rem;
-  color: #999;
+  color: var(--color-text-muted);
 }
 
 .wizard-progress-track {
@@ -4372,7 +4326,7 @@ blockquote {
 
 .wizard-progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, #3d5c6b, #678b9e, #8aacbb, #b0cdd9);
+  background: linear-gradient(90deg, #3d5c6b, var(--color--brand), #8aacbb, #b0cdd9);
   background-size: 300% 100%;
   animation: progressGradient 3s ease infinite;
   border-radius: 2px;
@@ -4416,12 +4370,12 @@ blockquote {
   font-family: Clashdisplay, sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
-  color: #fff;
+  color: var(--white);
   margin-bottom: 1.25rem;
 }
 
 .wizard-intro-text {
-  color: #bbb;
+  color: var(--color-text-secondary);
   line-height: 1.7;
   margin-bottom: 0.75rem;
   font-size: 0.95rem;
@@ -4431,7 +4385,7 @@ blockquote {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #999;
+  color: var(--color-text-muted);
   font-size: 0.88rem;
   margin-top: 1.5rem;
   padding-top: 1rem;
@@ -4447,12 +4401,12 @@ blockquote {
   font-family: Clashdisplay, sans-serif;
   font-weight: 600;
   font-size: 1.875rem;
-  color: #fff;
+  color: var(--white);
   margin-bottom: 0.5rem;
 }
 
 .wizard-step-desc {
-  color: #999;
+  color: var(--color-text-muted);
   font-size: 0.9rem;
 }
 
@@ -4465,13 +4419,13 @@ blockquote {
   display: block;
   font-size: 1.05rem;
   font-weight: 500;
-  color: #e0e0e0;
+  color: var(--color-text-bright);
   margin-bottom: 0.5rem;
 }
 
 .wz-label-sm {
   font-size: 0.82rem;
-  color: #bbb;
+  color: var(--color-text-secondary);
 }
 
 .wz-req {
@@ -4480,7 +4434,7 @@ blockquote {
 
 .wz-hint {
   font-size: 0.8rem;
-  color: #888;
+  color: var(--color-text-muted);
   margin-bottom: 0.5rem;
   margin-top: -0.2rem;
 }
@@ -4497,7 +4451,7 @@ blockquote {
   width: 100%;
   padding: 0.7rem 0.9rem;
   font-size: 0.9rem;
-  color: #fff;
+  color: var(--white);
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 8px;
@@ -4509,13 +4463,13 @@ blockquote {
 .wz-input:focus,
 .wz-select:focus,
 .wz-textarea:focus {
-  border-color: #678b9e;
+  border-color: var(--color--brand);
   background: rgba(103, 139, 158, 0.06);
 }
 
 .wz-input::placeholder,
 .wz-textarea::placeholder {
-  color: #666;
+  color: var(--color-text-disabled);
 }
 
 .wz-select {
@@ -4529,7 +4483,7 @@ blockquote {
 
 .wz-select option {
   background: #222;
-  color: #fff;
+  color: var(--white);
 }
 
 input[type="date"].wz-input::-webkit-calendar-picker-indicator {
@@ -4666,11 +4620,11 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
 
 .scard input:checked + .scard-inner {
   background: rgba(103, 139, 158, 0.1);
-  border-color: #678b9e;
+  border-color: var(--color--brand);
 }
 
 .scard-icon {
-  color: #999;
+  color: var(--color-text-muted);
   transition: color 0.2s;
 }
 
@@ -4683,13 +4637,13 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
   font-family: Clashdisplay, sans-serif;
   font-weight: 500;
   font-size: 0.9rem;
-  color: #e0e0e0;
+  color: var(--color-text-bright);
 }
 
 .scard-desc {
   display: block;
   font-size: 0.78rem;
-  color: #888;
+  color: var(--color-text-muted);
   line-height: 1.3;
 }
 
@@ -4698,7 +4652,7 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
   top: 0.5rem;
   right: 0.5rem;
   opacity: 0;
-  color: #678b9e;
+  color: var(--color--brand);
   transition: opacity 0.2s;
 }
 
@@ -4739,7 +4693,7 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
 
 .pcard input:checked + .pcard-inner {
   background: rgba(103, 139, 158, 0.1);
-  border-color: #678b9e;
+  border-color: var(--color--brand);
 }
 
 .pcard-head {
@@ -4758,13 +4712,13 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
   font-family: Clashdisplay, sans-serif;
   font-weight: 500;
   font-size: 0.95rem;
-  color: #e0e0e0;
+  color: var(--color-text-bright);
 }
 
 .pcard-desc {
   display: block;
   font-size: 0.82rem;
-  color: #888;
+  color: var(--color-text-muted);
 }
 
 .pcard-followup {
@@ -4800,7 +4754,7 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
   display: inline-block;
   padding: 0.35rem 0.75rem;
   font-size: 0.82rem;
-  color: #ccc;
+  color: var(--color-text-secondary);
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
@@ -4815,7 +4769,7 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
 
 .mtag-opt input:checked + span {
   background: rgba(103, 139, 158, 0.15);
-  border-color: #678b9e;
+  border-color: var(--color--brand);
   color: #b0cdd9;
 }
 
@@ -4837,7 +4791,7 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
   display: inline-block;
   padding: 0.3rem 0.7rem;
   font-size: 0.8rem;
-  color: #888;
+  color: var(--color-text-muted);
   background: none;
   border: 1px dashed rgba(255, 255, 255, 0.1);
   border-radius: 20px;
@@ -4896,7 +4850,7 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
   justify-content: center;
   background: none;
   border: none;
-  color: #666;
+  color: var(--color-text-disabled);
   font-size: 1.2rem;
   cursor: pointer;
   border-radius: 4px;
@@ -4913,7 +4867,7 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
   margin-top: 0.5rem;
   padding: 0.4rem 0.8rem;
   font-size: 0.82rem;
-  color: #888;
+  color: var(--color-text-muted);
   background: none;
   border: 1px dashed rgba(255, 255, 255, 0.1);
   border-radius: 6px;
@@ -4950,7 +4904,7 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
 .suggestion-card p {
   flex: 1;
   font-size: 0.82rem;
-  color: #bbb;
+  color: var(--color-text-secondary);
   line-height: 1.5;
   margin: 0;
 }
@@ -5006,13 +4960,13 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
 }
 
 .upload-zone-content svg {
-  color: #666;
+  color: var(--color-text-disabled);
   margin-bottom: 0.5rem;
 }
 
 .upload-zone-text {
   font-size: 0.9rem;
-  color: #bbb;
+  color: var(--color-text-secondary);
   margin-bottom: 0.25rem;
 }
 
@@ -5028,7 +4982,7 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
 
 .upload-zone-hint {
   font-size: 0.78rem;
-  color: #666;
+  color: var(--color-text-disabled);
 }
 
 .upload-file-list {
@@ -5042,7 +4996,7 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
   border-radius: 6px;
   margin-bottom: 0.35rem;
   font-size: 0.82rem;
-  color: #ccc;
+  color: var(--color-text-secondary);
 }
 
 .upload-file-top {
@@ -5059,7 +5013,7 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
 }
 
 .upload-file-size {
-  color: #888;
+  color: var(--color-text-muted);
   margin: 0 0.5rem;
   flex-shrink: 0;
 }
@@ -5067,7 +5021,7 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
 .upload-file-remove {
   background: none;
   border: none;
-  color: #888;
+  color: var(--color-text-muted);
   cursor: pointer;
   font-size: 1rem;
   padding: 0 0.2rem;
@@ -5096,7 +5050,7 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
 
 .upload-file-progress-fill {
   height: 100%;
-  background: #678b9e;
+  background: var(--color--brand);
   transition: width 0.3s;
 }
 
@@ -5131,7 +5085,7 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
   font-family: Clashdisplay, sans-serif;
   font-weight: 500;
   font-size: 0.92rem;
-  color: #e0e0e0;
+  color: var(--color-text-bright);
 }
 
 .summary-edit-btn {
@@ -5166,7 +5120,7 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
 
 .summary-row-label {
   width: 40%;
-  color: #888;
+  color: var(--color-text-muted);
   flex-shrink: 0;
 }
 
@@ -5223,12 +5177,12 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
   font-family: Clashdisplay, sans-serif;
   font-weight: 600;
   font-size: 1.5rem;
-  color: #fff;
+  color: var(--white);
   margin-bottom: 0.75rem;
 }
 
 .wizard-success-text {
-  color: #bbb;
+  color: var(--color-text-secondary);
   font-size: 0.95rem;
   line-height: 1.6;
   margin-bottom: 2rem;
@@ -5249,7 +5203,7 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
 
 .wizard-success-social-label {
   font-size: 0.88rem;
-  color: #888;
+  color: var(--color-text-muted);
   margin-bottom: 0.75rem;
 }
 
@@ -5268,7 +5222,7 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #999;
+  color: var(--color-text-muted);
   transition: all 0.25s;
 }
 
@@ -5320,7 +5274,7 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
 
 .wizard-btn-primary:disabled {
   background: #3d5c6b;
-  color: #999;
+  color: var(--color-text-muted);
   opacity: 0.6;
   cursor: not-allowed;
   pointer-events: none;
@@ -5328,13 +5282,13 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
 
 .wizard-btn-secondary {
   background: rgba(255, 255, 255, 0.06);
-  color: #ccc;
+  color: var(--color-text-secondary);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .wizard-btn-secondary:hover {
   background: rgba(255, 255, 255, 0.1);
-  color: #fff;
+  color: var(--white);
 }
 
 .wizard-submit-wrap {
@@ -5399,7 +5353,7 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
 .wizard-clear-btn {
   background: none;
   border: none;
-  color: #666;
+  color: var(--color-text-disabled);
   font-size: 0.78rem;
   cursor: pointer;
   padding: 0.3rem 0.5rem;
@@ -5509,12 +5463,12 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
   font-family: Clashdisplay, sans-serif;
   font-weight: 600;
   font-size: 1.35rem;
-  color: #fff;
+  color: var(--white);
   margin-bottom: 0.4rem;
 }
 
 .services-cta-text {
-  color: #bbb;
+  color: var(--color-text-secondary);
   font-size: 0.95rem;
   line-height: 1.6;
   margin: 0;
@@ -5551,7 +5505,7 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
 }
 
 .service-quote-cta p {
-  color: #bbb;
+  color: var(--color-text-secondary);
   font-size: 0.95rem;
   line-height: 1.6;
   margin: 0 0 1rem;
@@ -5613,12 +5567,12 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
   font-family: Clashdisplay, sans-serif;
   font-weight: 600;
   font-size: 1.5rem;
-  color: #fff;
+  color: var(--white);
   margin-bottom: 0.5rem;
 }
 
 .contact-start-cta-text {
-  color: #bbb;
+  color: var(--color-text-secondary);
   font-size: 0.95rem;
   line-height: 1.6;
   margin: 0;
@@ -5667,7 +5621,7 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
   display: inline-flex;
   align-items: center;
   vertical-align: middle;
-  color: #888;
+  color: var(--color-text-muted);
   cursor: help;
   margin-left: 0.2rem;
 }
@@ -5687,7 +5641,7 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
   font-size: 0.78rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #e0e0e0;
+  color: var(--color-text-bright);
   background: #2a2a2a;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
