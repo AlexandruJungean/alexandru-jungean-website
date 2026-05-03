@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -60,7 +60,7 @@
     <div role="banner" class="nav-component">
       <div class="padding-global">
         <div class="nav-container">
-          <a href="/" class="brand-logo-link"><img src="../images/Logo.webp" loading="lazy" sizes="(max-width: 767px) 128px, 160px" srcset="../images/Logo-p-500.webp 500w, ../images/Logo-p-800.webp 800w, ../images/Logo-p-1080.webp 1080w, ../images/Logo-p-1600.webp 1600w, ../images/Logo-p-2000.webp 2000w, ../images/Logo-p-2600.webp 2600w, ../images/Logo.webp 3210w" alt="Alexandru Jungean Logo" class="brand-logo"></a>
+          <a href="/" class="brand-logo-link"><img src="../images/Logo.webp" loading="lazy" decoding="async" sizes="(max-width: 767px) 128px, 160px" srcset="../images/Logo-p-500.webp 500w, ../images/Logo-p-800.webp 800w, ../images/Logo-p-1080.webp 1080w, ../images/Logo-p-1600.webp 1600w, ../images/Logo-p-2000.webp 2000w, ../images/Logo-p-2600.webp 2600w, ../images/Logo.webp 3210w" alt="Alexandru Jungean Logo" class="brand-logo"></a>
           <nav role="navigation" class="nav-menu-wrapper" aria-label="Main navigation">
             <div class="nav-link-wrapper">
               <a href="/" class="nav-link">Home</a>
@@ -111,7 +111,7 @@
       <section class="section-project-details section-padding-both">
         <div class="padding-global">
           <div class="container-medium">
-            <div class="project-details-header"><img src="../images/project-8_1project-8.webp" loading="lazy" width="1447" sizes="(max-width: 479px) 93vw, (max-width: 767px) 96vw, 94vw" alt="A person analyzing colorful data charts and graphs on a laptop screen, with a smartphone by their side on a busy office desk." srcset="../images/project-8_1project-8.webp 500w, ../images/project-8_1project-8.webp 800w, ../images/project-8_1project-8.webp 1080w, ../images/project-8_1project-8.webp 1272w" class="project-main-thumbnail">
+            <div class="project-details-header"><img src="../images/project-8_1project-8.webp" loading="lazy" decoding="async" width="1447" sizes="(max-width: 479px) 93vw, (max-width: 767px) 96vw, 94vw" alt="A person analyzing colorful data charts and graphs on a laptop screen, with a smartphone by their side on a busy office desk." srcset="../images/project-8_1project-8.webp 500w, ../images/project-8_1project-8.webp 800w, ../images/project-8_1project-8.webp 1080w, ../images/project-8_1project-8.webp 1272w" class="project-main-thumbnail">
               <div class="project-info-wrap">
                 <div class="project-info-item">
                   <div class="project-info-sub-title">Client :</div>
@@ -136,7 +136,7 @@
               <h3 class="project-title">Project Overview</h3>
               <p class="project-body hide">Nexus Learning Lab Project was planned for multiple services: Database Solutions, Data Analytics and ETL Processes. This was an unpaid internship. The price that was quoted was for reference purposes only.</p>
               <p class="project-body hide">This project involved the creation of a suite of database and data analytics solutions at Nexus Learning Lab. These solutions were designed to enhance the data management, reporting, and decision-making capabilities. The project encompassed the development of 1 normalized database, 1 snowflake-type database, the implementation of ETL (Extract, Transform, Load) processes, and the creation of 5 dashboards in Power BI.</p>
-              <div class="project-figure"><img src="../images/Nexus---Database-Solutions.webp" loading="lazy" sizes="(max-width: 479px) 93vw, (max-width: 767px) 96vw, (max-width: 991px) 94vw, 92vw" srcset="../images/Nexus---Database-Solutions-p-500.webp 500w, ../images/Nexus---Database-Solutions-p-800.webp 800w, ../images/Nexus---Database-Solutions-p-1080.webp 1080w, ../images/Nexus---Database-Solutions.webp 1386w" alt="Snowflake Database Environment"></div>
+              <div class="project-figure"><img src="../images/Nexus---Database-Solutions.webp" loading="lazy" decoding="async" sizes="(max-width: 479px) 93vw, (max-width: 767px) 96vw, (max-width: 991px) 94vw, 92vw" srcset="../images/Nexus---Database-Solutions-p-500.webp 500w, ../images/Nexus---Database-Solutions-p-800.webp 800w, ../images/Nexus---Database-Solutions-p-1080.webp 1080w, ../images/Nexus---Database-Solutions.webp 1386w" alt="Snowflake Database Environment"></div>
               <h3 class="project-title">Technical Details</h3>
               <p class="project-body hide">The normalized database was created from several non-normalized Excel tables that exceeded the limit of 1,048,576 rows. After designing the normalized architecture, I deployed constraints (PK, FK, Defaults, Identity, Checks) to ensure data accuracy, as I needed to start the ETL process (using an SSIS package in Visual Studio) to load data into this SQL Server database. Once the database was populated, I implemented security measures (TDE and SQL Symmetric Key for private data), longevity solutions (jobs for shrinking, updating statistics, and daily backups), and usability enhancements for HR and Sales personnel. This included creating user accounts, granting appropriate permissions, providing documentation, and creating views and procedures to simplify their work.</p>
               <p class="project-body hide">This normalized database was specifically built for efficient querying. From this database, I created another ETL process to transfer the data to a Snowflake-type database, designed for real-time and fast Power BI analysis. The Snowflake-type database followed its base architecture with fact and dimension tables, which help Power BI&#x27;s filter and row contexts. Using this database, I built five dashboards for business insights related to Sales by Category &amp; Year, Product Sales &amp; Quantities Sold, revenue, and the number of products sold for each product category.</p>
@@ -156,7 +156,7 @@
               <a href="/projects/oradea-experience" class="link-block-2 w-inline-block">
                 <div class="project-card">
                   <div class="project-card-image-wrap">
-                    <img src="../images/Thumbnail---City-Xperience.webp" loading="lazy" sizes="(max-width: 479px) 93vw, (max-width: 767px) 46vw, (max-width: 991px) 31vw, 32vw" srcset="../images/Thumbnail---City-Xperience.webp 1200w" alt="City Xperience Project" class="project-card-image">
+                    <img src="../images/Thumbnail---City-Xperience.webp" loading="lazy" decoding="async" sizes="(max-width: 479px) 93vw, (max-width: 767px) 46vw, (max-width: 991px) 31vw, 32vw" srcset="../images/Thumbnail---City-Xperience.webp 1200w" alt="City Xperience Project" class="project-card-image">
                   </div>
                   <div class="project-card-content">
                     <h3 class="project-card-title">City Xperience</h3>
@@ -171,7 +171,7 @@
               <a href="/projects/radical-football" class="link-block-2 w-inline-block">
                 <div class="project-card">
                   <div class="project-card-image-wrap">
-                    <img src="../images/Thumbnail---Radical-Football.webp" loading="lazy" sizes="(max-width: 479px) 93vw, (max-width: 767px) 46vw, (max-width: 991px) 31vw, 32vw" srcset="../images/Thumbnail---Radical-Football.webp 1200w" alt="Radical Football Project" class="project-card-image">
+                    <img src="../images/Thumbnail---Radical-Football.webp" loading="lazy" decoding="async" sizes="(max-width: 479px) 93vw, (max-width: 767px) 46vw, (max-width: 991px) 31vw, 32vw" srcset="../images/Thumbnail---Radical-Football.webp 1200w" alt="Radical Football Project" class="project-card-image">
                   </div>
                   <div class="project-card-content">
                     <h3 class="project-card-title">Radical Football</h3>
@@ -186,7 +186,7 @@
               <a href="/projects/nuestra" class="link-block-2 w-inline-block">
                 <div class="project-card">
                   <div class="project-card-image-wrap">
-                    <img src="../images/Thumbnail---Nuestra.webp" loading="lazy" sizes="(max-width: 479px) 93vw, (max-width: 767px) 46vw, (max-width: 991px) 31vw, 32vw" srcset="../images/Thumbnail---Nuestra.webp 1200w" alt="Nuestra Project" class="project-card-image">
+                    <img src="../images/Thumbnail---Nuestra.webp" loading="lazy" decoding="async" sizes="(max-width: 479px) 93vw, (max-width: 767px) 46vw, (max-width: 991px) 31vw, 32vw" srcset="../images/Thumbnail---Nuestra.webp 1200w" alt="Nuestra Project" class="project-card-image">
                   </div>
                   <div class="project-card-content">
                     <h3 class="project-card-title">NUESTRA</h3>
@@ -277,7 +277,7 @@
           </div>
           <div class="footer-company-info">EDU BOOST SRL &middot; CUI: 50079362 &middot; Nr. Reg. Com.: J2024001347052 &middot; EUID: ROONRC.J2024001347052<span class="footer-contact-line">Cluj-Napoca, Romania &middot; <a href="tel:+40757673677">+40 757 673 677</a> &middot; alex.jungean@gmail.com</span></div>
         </div>
-      </div><img src="../images/Vector_1Vector.webp" loading="lazy" sizes="100vw" srcset="../images/Vector_1Vector.webp 1920w" alt="Decorative footer background" class="footer-bg">
+      </div><img src="../images/Vector_1Vector.webp" loading="lazy" decoding="async" sizes="100vw" srcset="../images/Vector_1Vector.webp 1920w" alt="Decorative footer background" class="footer-bg">
     </footer>
   </div>
   

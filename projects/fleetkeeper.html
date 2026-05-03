@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -61,7 +61,7 @@
     <div role="banner" class="nav-component">
       <div class="padding-global">
         <div class="nav-container">
-          <a href="/" class="brand-logo-link"><img src="../images/Logo.webp" loading="lazy" sizes="(max-width: 767px) 128px, 160px" srcset="../images/Logo-p-500.webp 500w, ../images/Logo-p-800.webp 800w, ../images/Logo-p-1080.webp 1080w, ../images/Logo-p-1600.webp 1600w, ../images/Logo-p-2000.webp 2000w, ../images/Logo-p-2600.webp 2600w, ../images/Logo.webp 3210w" alt="Alexandru Jungean Logo" class="brand-logo"></a>
+          <a href="/" class="brand-logo-link"><img src="../images/Logo.webp" loading="lazy" decoding="async" sizes="(max-width: 767px) 128px, 160px" srcset="../images/Logo-p-500.webp 500w, ../images/Logo-p-800.webp 800w, ../images/Logo-p-1080.webp 1080w, ../images/Logo-p-1600.webp 1600w, ../images/Logo-p-2000.webp 2000w, ../images/Logo-p-2600.webp 2600w, ../images/Logo.webp 3210w" alt="Alexandru Jungean Logo" class="brand-logo"></a>
           <nav role="navigation" class="nav-menu-wrapper" aria-label="Main navigation">
             <div class="nav-link-wrapper">
               <a href="/" class="nav-link">Home</a>
@@ -112,7 +112,7 @@
       <section class="section-project-details section-padding-both">
         <div class="padding-global">
           <div class="container-medium">
-            <div class="project-details-header"><img src="../images/Web-FleetKeeper.webp" loading="lazy" width="1311" sizes="(max-width: 479px) 93vw, (max-width: 767px) 96vw, (max-width: 991px) 94vw, 92vw" alt="FleetKeeper Fleet Management Platform" srcset="../images/Web-FleetKeeper-p-500.webp 500w, ../images/Web-FleetKeeper-p-800.webp 800w, ../images/Web-FleetKeeper-p-1080.webp 1080w, ../images/Web-FleetKeeper-p-1600.webp 1600w, ../images/Web-FleetKeeper-p-2000.webp 2000w, ../images/Web-FleetKeeper.webp 2400w" class="project-main-thumbnail">
+            <div class="project-details-header"><img src="../images/Web-FleetKeeper.webp" loading="lazy" decoding="async" width="1311" sizes="(max-width: 479px) 93vw, (max-width: 767px) 96vw, (max-width: 991px) 94vw, 92vw" alt="FleetKeeper Fleet Management Platform" srcset="../images/Web-FleetKeeper-p-500.webp 500w, ../images/Web-FleetKeeper-p-800.webp 800w, ../images/Web-FleetKeeper-p-1080.webp 1080w, ../images/Web-FleetKeeper-p-1600.webp 1600w, ../images/Web-FleetKeeper-p-2000.webp 2000w, ../images/Web-FleetKeeper.webp 2400w" class="project-main-thumbnail">
               <div class="project-info-wrap">
                 <div class="project-info-item">
                   <div class="project-info-sub-title">Client :</div>
@@ -144,7 +144,7 @@
                 <li class="project-list-item"><strong class="bold-text-3">Notification System: </strong>Designed a multi-channel alert system combining Expo Push Notifications and Brevo email alerts with configurable reminder days (60, 30, 14, 7, 3, 1 days before expiration), powered by daily pg_cron jobs.</li>
                 <li class="project-list-item"><strong class="bold-text-4">Marketing Website: </strong>Created a responsive, SEO-optimized marketing website at fleetkeeper.app supporting 12 languages with JSON-based internationalization, Schema.org structured data, and modern design.</li>
               </ul>
-              <div class="project-figure"><img src="../images/App-FleetKeeper.webp" loading="lazy" sizes="(max-width: 479px) 93vw, (max-width: 767px) 96vw, (max-width: 991px) 94vw, 92vw" srcset="../images/App-FleetKeeper-p-500.webp 500w, ../images/App-FleetKeeper-p-800.webp 800w, ../images/App-FleetKeeper-p-1080.webp 1080w, ../images/App-FleetKeeper-p-1600.webp 1600w, ../images/App-FleetKeeper-p-2000.webp 2000w, ../images/App-FleetKeeper.webp 2400w" alt="FleetKeeper Fleet Management App"></div>
+              <div class="project-figure"><img src="../images/App-FleetKeeper.webp" loading="lazy" decoding="async" sizes="(max-width: 479px) 93vw, (max-width: 767px) 96vw, (max-width: 991px) 94vw, 92vw" srcset="../images/App-FleetKeeper-p-500.webp 500w, ../images/App-FleetKeeper-p-800.webp 800w, ../images/App-FleetKeeper-p-1080.webp 1080w, ../images/App-FleetKeeper-p-1600.webp 1600w, ../images/App-FleetKeeper-p-2000.webp 2000w, ../images/App-FleetKeeper.webp 2400w" alt="FleetKeeper Fleet Management App"></div>
               <h3 class="project-title">Technical Details</h3>
               <p class="project-body hide">The mobile application is built on React Native 0.81 with Expo SDK 54, using TypeScript for type safety throughout. State management combines Zustand for client state and TanStack React Query for server state synchronization. Navigation uses Expo Router with file-based routing, and the UI features color-coded status indicators (green for valid, amber for expiring soon, orange for expiring, red for expired) to provide instant visual feedback.<br></p>
               <p class="project-body hide">The backend leverages Supabase's full ecosystem: PostgreSQL with Row Level Security for multi-tenant data isolation, Supabase Auth with Google OAuth and Apple Sign-In, dual storage architecture (Supabase Storage for images with CDN transforms, Cloudflare R2 for cost-effective document storage accessed via Edge Function proxy), and Realtime subscriptions for live updates. Subscription management supports four tiers (Starter, Professional, Business, Enterprise) with usage-based limits enforced through database triggers.<br></p>
@@ -190,7 +190,7 @@
               <a href="/projects/primaria-salonta" class="link-block-2 w-inline-block">
                 <div class="project-card">
                   <div class="project-card-image-wrap">
-                    <img src="../images/Thumbnail---Primaria-Salonta.webp" loading="lazy" sizes="(max-width: 479px) 93vw, (max-width: 767px) 46vw, (max-width: 991px) 31vw, 32vw" srcset="../images/Thumbnail---Primaria-Salonta.webp 1200w" alt="Primaria Salonta Project" class="project-card-image">
+                    <img src="../images/Thumbnail---Primaria-Salonta.webp" loading="lazy" decoding="async" sizes="(max-width: 479px) 93vw, (max-width: 767px) 46vw, (max-width: 991px) 31vw, 32vw" srcset="../images/Thumbnail---Primaria-Salonta.webp 1200w" alt="Primaria Salonta Project" class="project-card-image">
                   </div>
                   <div class="project-card-content">
                     <h3 class="project-card-title">Primaria Salonta</h3>
@@ -205,7 +205,7 @@
               <a href="/projects/nuestra" class="link-block-2 w-inline-block">
                 <div class="project-card">
                   <div class="project-card-image-wrap">
-                    <img src="../images/Thumbnail---Nuestra.webp" loading="lazy" sizes="(max-width: 479px) 93vw, (max-width: 767px) 46vw, (max-width: 991px) 31vw, 32vw" srcset="../images/Thumbnail---Nuestra.webp 1200w" alt="Nuestra Project" class="project-card-image">
+                    <img src="../images/Thumbnail---Nuestra.webp" loading="lazy" decoding="async" sizes="(max-width: 479px) 93vw, (max-width: 767px) 46vw, (max-width: 991px) 31vw, 32vw" srcset="../images/Thumbnail---Nuestra.webp 1200w" alt="Nuestra Project" class="project-card-image">
                   </div>
                   <div class="project-card-content">
                     <h3 class="project-card-title">NUESTRA</h3>
@@ -220,7 +220,7 @@
               <a href="/projects/tool" class="link-block-2 w-inline-block">
                 <div class="project-card">
                   <div class="project-card-image-wrap">
-                    <img src="../images/Thumbnail---Tool.webp" loading="lazy" sizes="(max-width: 479px) 93vw, (max-width: 767px) 46vw, (max-width: 991px) 31vw, 32vw" srcset="../images/Thumbnail---Tool.webp 1200w" alt="Tool Connect Project" class="project-card-image">
+                    <img src="../images/Thumbnail---Tool.webp" loading="lazy" decoding="async" sizes="(max-width: 479px) 93vw, (max-width: 767px) 46vw, (max-width: 991px) 31vw, 32vw" srcset="../images/Thumbnail---Tool.webp 1200w" alt="Tool Connect Project" class="project-card-image">
                   </div>
                   <div class="project-card-content">
                     <h3 class="project-card-title">Tool Connect</h3>
@@ -311,7 +311,7 @@
           </div>
           <div class="footer-company-info">EDU BOOST SRL &middot; CUI: 50079362 &middot; Nr. Reg. Com.: J2024001347052 &middot; EUID: ROONRC.J2024001347052<span class="footer-contact-line">Cluj-Napoca, Romania &middot; <a href="tel:+40757673677">+40 757 673 677</a> &middot; alex.jungean@gmail.com</span></div>
         </div>
-      </div><img src="../images/Vector_1Vector.webp" loading="lazy" sizes="100vw" srcset="../images/Vector_1Vector.webp 1920w" alt="Decorative footer background" class="footer-bg">
+      </div><img src="../images/Vector_1Vector.webp" loading="lazy" decoding="async" sizes="100vw" srcset="../images/Vector_1Vector.webp 1920w" alt="Decorative footer background" class="footer-bg">
     </footer>
   </div>
   
