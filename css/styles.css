@@ -692,12 +692,6 @@ blockquote {
   line-height: 0.9;
 }
 
-@media screen and (max-width: 767px) {
-  .section-cards-heading {
-    font-size: 2.25rem;
-  }
-}
-
 .breadcrumb-llink {
   color: var(--defatult--white);
   text-transform: capitalize;
@@ -1280,23 +1274,6 @@ blockquote {
   font-size: 0.85rem;
   color: rgba(255, 255, 255, 0.7);
   text-align: center;
-}
-
-@media screen and (max-width: 991px) {
-  .tech-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media screen and (max-width: 479px) {
-  .tech-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  
-  .tech-items {
-    justify-content: center;
-  }
 }
 
 .section-home-project {
@@ -2265,30 +2242,6 @@ blockquote {
 .project-link-card:hover .project-link-arrow {
   opacity: 1;
   transform: translate(2px, -2px);
-}
-
-@media screen and (max-width: 767px) {
-  .project-links-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .project-link-card {
-    padding: 1rem 1.25rem;
-  }
-  
-  .project-link-icon {
-    width: 42px;
-    height: 42px;
-  }
-  
-  .project-link-icon svg {
-    width: 24px;
-    height: 24px;
-  }
-  
-  .project-link-name {
-    font-size: 1rem;
-  }
 }
 
 .slider-arrow {
@@ -4075,96 +4028,6 @@ blockquote {
   max-width: 1056px;
 }
 
-/* ===========================================
-   Mobile Overrides (479px and below)
-   =========================================== */
-@media screen and (max-width: 767px) {
-  /* Consistent padding for tablet */
-  .padding-global {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .project-card-client,
-  .project-card-duration {
-    line-height: 1.4;
-  }
-}
-
-@media screen and (max-width: 479px) {
-  /* Reduce global padding on mobile */
-  .padding-global {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-
-  .paragraph-large.copyright {
-    font-size: 0.8rem;
-  }
-  
-  /* Logo marquee - full width edge to edge on mobile */
-  .section-home-about-us .client-logos-component {
-    margin-left: -0.75rem;
-    margin-right: -0.75rem;
-    width: calc(100% + 1.5rem);
-  }
-  
-  /* Service slider - fix left side visibility on mobile */
-  .service-ability-component {
-    margin-left: -0.75rem;
-    margin-right: -0.75rem;
-    width: calc(100% + 1.5rem);
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-  }
-  .service-slider-mask {
-    margin-left: -0.75rem;
-    margin-right: -0.75rem;
-    padding-left: 0.75rem;
-    scroll-padding-left: 0.75rem;
-  }
-  
-  /* FAQ questions - fix line height on mobile */
-  .faq-question {
-    line-height: 1.4;
-    font-size: 1.1rem;
-  }
-  
-  /* Services page grid - 2 columns with less gap on mobile */
-  .grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5rem;
-  }
-  
-  .grid.unique {
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5rem;
-  }
-
-  .grid.similar-projects-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  
-  .service-item.card-small {
-    padding: 1rem;
-    line-height: 1.2rem;
-    text-align: center;
-    align-items: center;
-  }
-  
-  .service-item.card-small .service-item-icon-wrap {
-    margin: 0 auto;
-  }
-  
-  .service-item.card-small .heading-five {
-    text-align: center;
-    line-height: 1.3;
-    margin-top: 0.75rem;
-    font-size: 1rem;
-  }
-}
-
 /* Legal pages (Privacy, Terms, Cookies) */
 .legal-content {
   max-width: 800px;
@@ -4262,22 +4125,6 @@ blockquote {
   background: rgba(255, 255, 255, 0.06);
   padding: 0.15em 0.4em;
   border-radius: 3px;
-}
-
-@media screen and (max-width: 767px) {
-  .legal-content h3 {
-    font-size: 1.1rem;
-    margin-top: 2.5rem;
-  }
-
-  .cookie-table {
-    font-size: 0.85rem;
-  }
-
-  .cookie-table th,
-  .cookie-table td {
-    padding: 0.5rem 0.75rem;
-  }
 }
 
 /* ===========================================
@@ -5414,19 +5261,6 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
   border: none;
 }
 
-@media screen and (max-width: 991px) {
-  .video-testimonial-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media screen and (max-width: 479px) {
-  .video-testimonial-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem;
-  }
-}
-
 /* --- Services Section Headings --- */
 .services-section-heading {
   font-family: Clashdisplay, sans-serif;
@@ -5435,13 +5269,6 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
   margin-top: 4rem;
   margin-bottom: 1.5rem;
   color: var(--gray);
-}
-
-@media screen and (max-width: 767px) {
-  .services-section-heading {
-    font-size: 1.75rem;
-    margin-top: 3rem;
-  }
 }
 
 /* --- Services CTA Card & Quote --- */
@@ -5534,19 +5361,6 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
   font-weight: 600;
 }
 
-@media screen and (max-width: 767px) {
-  .services-cta-card {
-    flex-direction: column;
-    text-align: center;
-    padding: 1.5rem;
-  }
-
-  .services-cta-btn {
-    width: 100%;
-    justify-content: center;
-  }
-}
-
 /* --- Contact Page: Start a Project CTA --- */
 .contact-start-cta {
   display: flex;
@@ -5599,23 +5413,6 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
   color: var(--black);
 }
 
-@media screen and (max-width: 767px) {
-  .contact-start-cta {
-    flex-direction: column;
-    text-align: center;
-    padding: 1.5rem;
-  }
-
-  .contact-start-cta-title {
-    font-size: 1.25rem;
-  }
-
-  .contact-start-cta-btn {
-    width: 100%;
-    justify-content: center;
-  }
-}
-
 .wz-info-tooltip {
   position: relative;
   display: inline-flex;
@@ -5663,95 +5460,6 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
   margin-bottom: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 0.03em;
-}
-
-/* --- Responsive --- */
-@media screen and (max-width: 767px) {
-  .scard-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .wz-row {
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .wz-half {
-    flex: none;
-    width: 100%;
-  }
-
-  .wizard-intro-card {
-    padding: 1.5rem;
-  }
-
-  .wizard-nav {
-    flex-wrap: wrap;
-  }
-
-  .wizard-btn {
-    justify-content: center;
-    min-width: 0;
-    padding: 1.1rem 1.5rem;
-    font-size: 1rem;
-    white-space: nowrap;
-  }
-
-  .wizard-btn svg {
-    display: none;
-  }
-
-  .wizard-nav {
-    flex-wrap: nowrap;
-    gap: 0.5rem;
-  }
-
-  .wizard-nav-spacer {
-    flex: 1;
-  }
-
-  .wizard-submit-wrap {
-    display: inline-flex;
-  }
-
-  .summary-row {
-    flex-direction: column;
-    gap: 0.15rem;
-  }
-
-  .summary-row-label {
-    width: 100%;
-  }
-
-  .repeater-row {
-    flex-direction: column;
-    padding-right: 0.75rem;
-    padding-top: 2rem;
-  }
-
-  .repeater-row .wz-input {
-    min-width: unset;
-  }
-}
-
-@media screen and (max-width: 479px) {
-  .wizard-intro-title {
-    font-size: 1.25rem;
-  }
-
-  .wizard-step-title {
-    font-size: 1.15rem;
-  }
-
-  .pcard-head {
-    flex-direction: column;
-    text-align: center;
-    gap: 0.4rem;
-  }
-
-  .scard-inner {
-    padding: 1rem 0.5rem;
-  }
 }
 
 /* --- Accessibility: visible focus and screen-reader-only --- */
@@ -5876,16 +5584,278 @@ textarea:focus-visible,
   color: var(--black);
 }
 
+/* ===========================================
+   Consolidated Responsive Overrides
+   (small fragments merged for maintainability)
+   =========================================== */
+
+@media screen and (max-width: 991px) {
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .video-testimonial-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .section-cards-heading {
+    font-size: 2.25rem;
+  }
+
+  .project-links-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-link-card {
+    padding: 1rem 1.25rem;
+  }
+
+  .project-link-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .project-link-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .project-link-name {
+    font-size: 1rem;
+  }
+
+  .padding-global {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .project-card-client,
+  .project-card-duration {
+    line-height: 1.4;
+  }
+
+  .legal-content h3 {
+    font-size: 1.1rem;
+    margin-top: 2.5rem;
+  }
+
+  .cookie-table {
+    font-size: 0.85rem;
+  }
+
+  .cookie-table th,
+  .cookie-table td {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .services-section-heading {
+    font-size: 1.75rem;
+    margin-top: 3rem;
+  }
+
+  .services-cta-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .services-cta-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .contact-start-cta {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .contact-start-cta-title {
+    font-size: 1.25rem;
+  }
+
+  .contact-start-cta-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .scard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wz-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .wz-half {
+    flex: none;
+    width: 100%;
+  }
+
+  .wizard-intro-card {
+    padding: 1.5rem;
+  }
+
+  .wizard-btn {
+    justify-content: center;
+    min-width: 0;
+    padding: 1.1rem 1.5rem;
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+
+  .wizard-btn svg {
+    display: none;
+  }
+
+  .wizard-nav {
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+  }
+
+  .wizard-nav-spacer {
+    flex: 1;
+  }
+
+  .wizard-submit-wrap {
+    display: inline-flex;
+  }
+
+  .summary-row {
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .summary-row-label {
+    width: 100%;
+  }
+
+  .repeater-row {
+    flex-direction: column;
+    padding-right: 0.75rem;
+    padding-top: 2rem;
+  }
+
+  .repeater-row .wz-input {
+    min-width: unset;
+  }
+}
+
 @media screen and (max-width: 479px) {
+  .tech-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .tech-items {
+    justify-content: center;
+  }
+
+  .padding-global {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .paragraph-large.copyright {
+    font-size: 0.8rem;
+  }
+
+  .section-home-about-us .client-logos-component {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+    width: calc(100% + 1.5rem);
+  }
+
+  .service-ability-component {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+    width: calc(100% + 1.5rem);
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .service-slider-mask {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+    padding-left: 0.75rem;
+    scroll-padding-left: 0.75rem;
+  }
+
+  .faq-question {
+    line-height: 1.4;
+    font-size: 1.1rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+
+  .grid.unique {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+
+  .grid.similar-projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .service-item.card-small {
+    padding: 1rem;
+    line-height: 1.2rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  .service-item.card-small .service-item-icon-wrap {
+    margin: 0 auto;
+  }
+
+  .service-item.card-small .heading-five {
+    text-align: center;
+    line-height: 1.3;
+    margin-top: 0.75rem;
+    font-size: 1rem;
+  }
+
+  .video-testimonial-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .wizard-intro-title {
+    font-size: 1.25rem;
+  }
+
+  .wizard-step-title {
+    font-size: 1.15rem;
+  }
+
+  .pcard-head {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.4rem;
+  }
+
+  .scard-inner {
+    padding: 1rem 0.5rem;
+  }
+
   .cookie-banner {
     bottom: 0.5rem;
     left: 0.5rem;
     right: 0.5rem;
     padding: 1rem;
   }
+
   .cookie-banner-actions {
     flex-direction: column-reverse;
   }
+
   .cookie-btn {
     width: 100%;
   }
