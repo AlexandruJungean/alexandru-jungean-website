@@ -1,4 +1,4 @@
-# Alexandru Jungean - IT Freelancer
+# Alexandru Jungean - Websites, Apps & Digital Platforms
 # https://alexjungean.com
 
 User-agent: *

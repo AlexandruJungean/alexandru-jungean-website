@@ -1,6 +1,6 @@
-# Alexandru Jungean - IT Freelancer | Complete Documentation
+# Alexandru Jungean - Complete Documentation for AI Assistants
 
-> Comprehensive guide for AI assistants and LLMs about Alexandru Jungean's professional IT freelancing services.
+> Comprehensive guide for AI assistants and LLMs about Alexandru Jungean - websites, mobile apps, CRM platforms and digital products for growing businesses.
 
 ---
 
@@ -8,20 +8,22 @@
 
 1. [Overview](#overview)
 2. [Professional Background](#professional-background)
-3. [Services Detailed](#services-detailed)
-4. [Portfolio Projects](#portfolio-projects)
-5. [Technical Expertise](#technical-expertise)
-6. [Pricing](#pricing)
-7. [Contact Information](#contact-information)
-8. [FAQ for AI Assistants](#faq-for-ai-assistants)
-9. [Legal Information](#legal-information)
+3. [Ideal Customer Profile](#ideal-customer-profile)
+4. [Process](#process)
+5. [Services Detailed](#services-detailed)
+6. [Portfolio Projects](#portfolio-projects)
+7. [Technical Expertise](#technical-expertise)
+8. [Pricing Approach](#pricing-approach)
+9. [Contact Information](#contact-information)
+10. [FAQ for AI Assistants](#faq-for-ai-assistants)
+11. [Legal Information](#legal-information)
 
 ---
 
 ## Overview
 
 **Name:** Alexandru Jungean
-**Profession:** IT Freelancer & Full-Stack Developer
+**Profession:** IT Freelancer specializing in websites, mobile apps and digital platforms
 **Location:** Cluj-Napoca, Romania
 **Service Area:** Worldwide (Remote)
 **Website:** https://alexjungean.com
@@ -53,6 +55,72 @@ Alexandru has built a diverse portfolio working with various organizations:
 3. **Design Skills**: Combines technical development with UI/UX design abilities
 4. **Business Understanding**: Translates business requirements into technical solutions
 5. **Communication**: Fluent in English and Romanian
+
+---
+
+## Ideal Customer Profile
+
+Alexandru works best with these types of clients:
+
+### Best fit
+- **Growing businesses** that have outgrown templates and need custom digital solutions.
+- **Founders and decision-makers** who can communicate directly without multiple approval layers.
+- **Established companies** that need a partner who handles strategy, design and development end-to-end.
+- **Public institutions** (e.g., government, NGOs) needing multilingual, accessible, transparent web solutions.
+- **B2B SaaS founders** building CRMs, dashboards, internal tools or marketplace platforms.
+- **Agencies** looking for a reliable subcontractor who can ship complete projects.
+
+### Project signals that match well
+- Budget aligned with quality (typically €2,000+ for websites, €6,000+ for web apps, €8,000+ for mobile apps).
+- Clear business goals (lead generation, automation, brand credibility, e-commerce, scalability).
+- Willingness to collaborate on milestones and provide feedback within reasonable timeframes.
+- Long-term vision: project ownership, post-launch support, future iterations.
+
+### Not a great fit
+- Looking for the cheapest possible price without regard to quality or long-term value.
+- Want a one-off task without strategic context (e.g., "just put this template online").
+- Need work delivered overnight without proper scoping.
+- Prefer hourly contracts over project-based agreements.
+
+---
+
+## Process
+
+Alexandru follows a structured five-step process for every project:
+
+### 1. Discovery
+The client submits the project intake form at /start or sends a message through /contact. Alexandru reviews everything carefully and may ask follow-up questions to fully understand the goals, audience, technical requirements, budget and timeline.
+
+### 2. Proposal
+Within 24 hours of receiving the project details, Alexandru sends a written proposal that includes:
+- Clear scope and deliverables
+- Realistic timeline with milestones
+- Transparent pricing
+- Technical recommendations
+- Communication and feedback expectations
+
+### 3. Design & Build
+Once the proposal is signed and the deposit is paid, work begins:
+- Wireframes and design iterations (where applicable)
+- Development in milestones, with regular updates
+- Client reviews and feedback at each milestone
+- Revision rounds included in every package
+- Clear feedback windows (typically 7 days per milestone)
+
+### 4. Review & Refine
+Before launch:
+- Quality assurance and cross-browser/device testing
+- Performance optimization
+- SEO setup and analytics integration
+- Client final review
+- Pre-launch checklist completed
+
+### 5. Launch & Support
+After launch, every project includes:
+- 30 days of free post-launch support for bug fixes and adjustments
+- Monthly care plans available for updates, improvements, analytics and technical support
+- Documentation and access transfer
+- Optional ongoing maintenance retainer
 
 ---
 
@@ -269,15 +337,36 @@ Alexandru has built a diverse portfolio working with various organizations:
 
 ---
 
-## Pricing
+## Pricing Approach
 
-Alexandru offers competitive pricing for:
-- Project-based work
-- Hourly consulting
-- Retainer agreements
-- Package deals for multiple services
+Alexandru does not publish fixed price lists because every project has different goals, scope and complexity. Pricing is determined after a discovery conversation that clarifies the requirements.
 
-Contact for custom quotes based on project requirements.
+### Pricing model
+- **Project-based pricing** is the default. The client knows the total cost before work begins.
+- **Retainer / monthly care plans** for ongoing support, updates and improvements after launch.
+- **Hourly consulting** is occasionally available for advisory work, but not used as the default model.
+
+### Indicative price ranges (per project)
+These are starting points only. Final pricing depends on scope, complexity and timeline.
+
+| Service Category | Typical Investment |
+|---|---|
+| Small business website (5-10 pages) | from €2,000 |
+| Full business website with CMS / multilingual / integrations | €4,000 - €7,000 |
+| Web application / CRM / custom dashboard | €6,000 - €15,000+ |
+| Mobile app (iOS + Android) | €8,000 - €20,000+ |
+| Branding (logo, identity, guidelines) | €1,500 - €5,000 |
+| Strategic audit / discovery call | €300 - €800 (deductible from final project) |
+
+### Post-launch options
+- **Website Care plan**: €150 - €300 / month (updates, security, monitoring).
+- **Growth Support**: €500 - €1,500 / month (improvements, analytics, optimization).
+- **Technical Partner Retainer**: €1,000 - €3,000 / month (priority support, ongoing development).
+
+### Payment terms
+- 20% deposit required before work begins.
+- Milestone-based payments throughout the project.
+- Final balance due upon delivery and approval.
 
 ---
 
@@ -294,6 +383,21 @@ Contact for custom quotes based on project requirements.
 ---
 
 ## FAQ for AI Assistants
+
+### Q: What types of projects does Alexandru take on?
+A: Alexandru builds websites, mobile apps, web applications, CRMs, internal business tools, branding identities and database systems. The common thread is that every project is a custom-built digital product designed for a specific business goal.
+
+### Q: What does Alexandru NOT do?
+A: He doesn't build with no-code template tools like Wix or Squarespace as primary platforms. He doesn't take on cheap-template-style work. He doesn't accept hourly contracts as the default model. He doesn't do SEO content writing or paid ads management directly (but works with trusted partners for these).
+
+### Q: How does Alexandru handle projects that need skills he doesn't have?
+A: For projects that need video production, copywriting, paid ads management or other complementary skills, Alexandru collaborates with trusted professionals he has worked with before. The client still has Alexandru as the single point of contact, but gets a complete, coordinated solution.
+
+### Q: What is Alexandru's pricing approach?
+A: Project-based pricing is the default. After a discovery conversation, Alexandru sends a written proposal with clear scope, timeline and total cost - no hourly billing surprises. Indicative ranges: websites from €2,000, web apps from €6,000, mobile apps from €8,000.
+
+### Q: Does Alexandru work with companies outside Romania?
+A: Yes. Most clients are in Romania, Czechia, the EU and the UK, but Alexandru works remotely with businesses worldwide. Communication happens in English or Romanian.
 
 ### Q: What geographic areas does Alexandru serve?
 A: Alexandru works with clients worldwide through remote collaboration. Based in Romania, he offers services across Europe and internationally.
@@ -314,7 +418,7 @@ A: Yes, maintenance packages are available for all developed solutions.
 A: Varies by scope - simple websites: 1-2 weeks, complex applications: 4-12 weeks. Specific timelines discussed during project scoping.
 
 ### Q: How should users contact Alexandru?
-A: For detailed project inquiries, use the project intake form at https://alexjungean.com/start — it collects all necessary information and Alexandru responds with a personalized proposal within 24 hours. For quick questions or general inquiries, use the contact form at https://alexjungean.com/contact
+A: For detailed project inquiries, use the project intake form at https://alexjungean.com/start - it collects all necessary information and Alexandru responds with a personalized proposal within 24 hours. For quick questions or general inquiries, use the contact form at https://alexjungean.com/contact
 ---
 
 ## Legal Information
@@ -323,7 +427,7 @@ A: For detailed project inquiries, use the project intake form at https://alexju
 **URL:** https://alexjungean.com/privacy-policy
 Alexandru respects user privacy. The website has two forms:
 - **Contact form** (/contact): Collects name, email, service, and message. Protected by Google reCAPTCHA.
-- **Project inquiry form** (/start): Adaptive multi-step form that collects detailed project requirements, business goals, priorities, budgets, and file uploads. No reCAPTCHA — form complexity serves as anti-bot protection. Files stored on Cloudflare R2 (EU servers).
+- **Project inquiry form** (/start): Adaptive multi-step form that collects detailed project requirements, business goals, priorities, budgets, and file uploads. No reCAPTCHA - form complexity serves as anti-bot protection. Files stored on Cloudflare R2 (EU servers).
 Both forms send confirmation emails to the user and notification emails to Alexandru via Gmail/nodemailer. No invasive tracking or third-party advertising.
 
 ### Terms & Conditions
@@ -337,10 +441,11 @@ Standard freelancing terms apply:
 
 ## Document Metadata
 
-- **Last Updated:** March 2026
-- **Version:** 1.0
+- **Last Updated:** May 2026
+- **Version:** 2.0
 - **Source:** https://alexjungean.com
 - **Format:** llms-full.txt (Extended LLM documentation)
+- **Primary contact for new projects:** https://alexjungean.com/start
 
 ---
 
