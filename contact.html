@@ -254,8 +254,11 @@
               <div class="contact-form-wrapper">
                 <div class="contact-form-block w-form">
                   <form id="contact-form" name="contact-form" class="contact-form">
+                    <label class="sr-only" for="Full-Name-4">Full Name</label>
                     <input class="contact-form-field-two is-two w-input" maxlength="256" name="name" data-name="Full Name" placeholder="Full Name" type="text" id="Full-Name-4" required="">
+                    <label class="sr-only" for="Email-Address">Email Address</label>
                     <input class="contact-form-field-two is-two w-input" maxlength="256" name="email" data-name="Email Address" placeholder="Email Address" type="email" id="Email-Address" required="">
+                    <label class="sr-only" for="Services">Service</label>
                     <select id="Services" name="service" data-name="Services" class="contact-form-field-two is-select w-select" required="">
                       <option value="">Select a Service</option>
                       <option value="Mobile App Development">Mobile App Development</option>
@@ -265,15 +268,16 @@
                       <option value="Data Analysis">Data Analysis</option>
                       <option value="Database Solutions">Database Solutions</option>
                     </select>
-                    <textarea class="contact-form-field-two textarea" name="message" placeholder="Message" rows="5" required=""></textarea>
+                    <label class="sr-only" for="contact-message">Message</label>
+                    <textarea class="contact-form-field-two textarea" name="message" placeholder="Message" rows="5" required="" id="contact-message"></textarea>
                     
                     <input type="submit" data-wait="Please wait..." class="submit-button w-button" value="Submit Now" id="submit-btn">
                     <p class="recaptcha-notice">Protected by reCAPTCHA. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy</a> · <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Terms</a></p>
                   </form>
-                  <div class="success-message w-form-done">
+                  <div class="success-message w-form-done" role="status" aria-live="polite">
                     <div class="success-message-text">Thank you! Your submission has been received!</div>
                   </div>
-                  <div class="error-message w-form-fail">
+                  <div class="error-message w-form-fail" role="alert" aria-live="assertive">
                     <div>Oops! Something went wrong while submitting the form.</div>
                   </div>
                 </div>
@@ -496,8 +500,16 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
     gtag('js', new Date());
     gtag('config', 'G-XC8SSPPMLV');
   </script>
+  <script src="/js/cookie-consent.js" defer></script>
 </body>
 </html>

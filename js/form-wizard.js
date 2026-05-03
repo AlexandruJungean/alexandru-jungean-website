@@ -1105,10 +1105,26 @@
         this.showSuccess();
       } catch (error) {
         console.error('Submit error:', error);
-        alert('Something went wrong: ' + error.message + '. Please try again.');
+        this.showSubmitError(error.message);
         this.submitBtn.disabled = false;
         this.submitBtn.innerHTML = 'Send Request <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>';
       }
+    }
+
+    showSubmitError(message) {
+      var existing = document.getElementById('wizard-submit-error');
+      if (existing) existing.remove();
+      var errEl = document.createElement('div');
+      errEl.id = 'wizard-submit-error';
+      errEl.className = 'wizard-submit-error';
+      errEl.setAttribute('role', 'alert');
+      errEl.setAttribute('aria-live', 'assertive');
+      errEl.textContent = 'Something went wrong: ' + message + '. Please try again.';
+      var nav = document.getElementById('wizard-nav');
+      if (nav && nav.parentElement) {
+        nav.parentElement.insertBefore(errEl, nav);
+      }
+      errEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
 
     showSuccess() {
