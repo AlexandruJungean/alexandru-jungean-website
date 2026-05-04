@@ -27,8 +27,7 @@
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
   <link href="images/webclip.png" rel="apple-touch-icon">
-  <!-- reCAPTCHA v3 -->
-  <script src="https://www.google.com/recaptcha/api.js?render=6LdLBEwsAAAAAFNoPxIwGfSA-vYornPZmn5JC2OQ"></script>
+  <!-- reCAPTCHA v3: loaded lazily on first form interaction (see end of body) -->
   
   <!-- Vertical Center Text in Form Fields -->
   <style>
@@ -365,10 +364,32 @@
     </footer>
   </div>
   
-  <!-- Contact Form with reCAPTCHA v3 -->
+  <!-- Contact Form with reCAPTCHA v3 (lazy loaded) -->
   <script>
     const RECAPTCHA_SITE_KEY = '6LdLBEwsAAAAAFNoPxIwGfSA-vYornPZmn5JC2OQ';
-    
+
+    // Lazy load reCAPTCHA only when user interacts with the form (saves ~250KB on page load)
+    let recaptchaLoadPromise = null;
+    function loadRecaptcha() {
+      if (recaptchaLoadPromise) return recaptchaLoadPromise;
+      recaptchaLoadPromise = new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.src = 'https://www.google.com/recaptcha/api.js?render=' + RECAPTCHA_SITE_KEY;
+        script.async = true;
+        script.defer = true;
+        script.onload = function () {
+          if (typeof grecaptcha !== 'undefined') {
+            grecaptcha.ready(resolve);
+          } else {
+            reject(new Error('reCAPTCHA unavailable'));
+          }
+        };
+        script.onerror = function () { reject(new Error('Failed to load reCAPTCHA script')); };
+        document.head.appendChild(script);
+      });
+      return recaptchaLoadPromise;
+    }
+
     // Email validation function
     function isValidEmail(email) {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -381,6 +402,13 @@
       const successMessage = document.querySelector('.success-message');
       const errorMessage = document.querySelector('.error-message');
       const emailInput = form.querySelector('[name="email"]');
+
+      // Trigger reCAPTCHA lazy load on first interaction (focus or typing)
+      const triggerRecaptchaLazyLoad = function () {
+        loadRecaptcha().catch(function (err) { console.warn('reCAPTCHA load error:', err); });
+      };
+      form.addEventListener('focusin', triggerRecaptchaLazyLoad, { once: true });
+      form.addEventListener('input', triggerRecaptchaLazyLoad, { once: true });
       
       // Real-time email validation
       emailInput.addEventListener('blur', function() {
@@ -412,6 +440,8 @@
         errorMessage.style.display = 'none';
         
         try {
+          // Ensure reCAPTCHA is loaded (covers the "submit without interaction" edge case)
+          await loadRecaptcha();
           // Get reCAPTCHA v3 token
           const recaptchaToken = await grecaptcha.execute(RECAPTCHA_SITE_KEY, { action: 'contact' });
           

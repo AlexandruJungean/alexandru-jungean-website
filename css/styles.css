@@ -5207,6 +5207,10 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
   padding-top: 0.5rem;
 }
 
+.pricing-flow.has-4-steps {
+  grid-template-columns: repeat(4, 1fr);
+}
+
 /* Connecting line behind the numbers */
 .pricing-flow::before {
   content: '';
@@ -6133,6 +6137,76 @@ textarea:focus-visible,
 
   .cookie-btn {
     width: 100%;
+  }
+}
+
+/* ==========================================================================
+   Service detail pages - new restructured sections
+   ========================================================================== */
+
+/* Service-page: hero image (centered) */
+.service-hero-image {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+}
+.service-hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
+/* Service-page: who-this-is-for list */
+/* Service-page: who-is-this-for block (image-attached, smaller spacing than full section) */
+.service-who-block {
+  margin-top: 4rem;
+  text-align: center;
+}
+.service-who-block .section-title {
+  margin: 0 auto 1.25rem;
+  text-align: center;
+}
+.service-who-block .section-title.is-centered {
+  text-align: center;
+}
+.service-who-content {
+  max-width: 920px;
+  margin: 0 auto;
+  text-align: left;
+}
+.service-who-content .paragraph {
+  margin-bottom: 1.5rem;
+}
+.service-who-content .service-quote-cta {
+  margin-top: 2.5rem;
+}
+
+/* Project pages: services-used backlink box */
+.project-services-used {
+  margin: 1rem 0 1.5rem;
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+}
+.project-services-label {
+  font-weight: 500;
+  margin-right: 0.5rem;
+  color: var(--white);
+}
+.project-services-used a {
+  color: var(--color--brand);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  margin-right: 1rem;
+  transition: color 0.2s;
+}
+.project-services-used a:hover {
+  color: var(--color-brand-light);
+}
+
+/* Responsive: service-who-block tighter on mobile */
+@media screen and (max-width: 767px) {
+  .service-who-block {
+    margin-top: 2.5rem;
   }
 }
 

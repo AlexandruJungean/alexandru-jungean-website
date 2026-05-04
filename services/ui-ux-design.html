@@ -281,13 +281,34 @@
     </footer>
   </div>
   
-  <!-- reCAPTCHA v3 -->
-  <script src="https://www.google.com/recaptcha/api.js?render=6LdLBEwsAAAAAFNoPxIwGfSA-vYornPZmn5JC2OQ"></script>
+  <!-- reCAPTCHA v3: loaded lazily on first form interaction -->
   
   <!-- Contact Form with reCAPTCHA v3 -->
   <script>
     const RECAPTCHA_SITE_KEY = '6LdLBEwsAAAAAFNoPxIwGfSA-vYornPZmn5JC2OQ';
-    
+
+    // Lazy load reCAPTCHA only when user interacts with the form (saves ~250KB on page load)
+    let recaptchaLoadPromise = null;
+    function loadRecaptcha() {
+      if (recaptchaLoadPromise) return recaptchaLoadPromise;
+      recaptchaLoadPromise = new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.src = 'https://www.google.com/recaptcha/api.js?render=' + RECAPTCHA_SITE_KEY;
+        script.async = true;
+        script.defer = true;
+        script.onload = function () {
+          if (typeof grecaptcha !== 'undefined') {
+            grecaptcha.ready(resolve);
+          } else {
+            reject(new Error('reCAPTCHA unavailable'));
+          }
+        };
+        script.onerror = function () { reject(new Error('Failed to load reCAPTCHA script')); };
+        document.head.appendChild(script);
+      });
+      return recaptchaLoadPromise;
+    }
+
     function isValidEmail(email) {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       return emailRegex.test(email);
@@ -301,6 +322,13 @@
       const successMessage = document.querySelector('.success-message');
       const errorMessage = document.querySelector('.error-message');
       const emailInput = form.querySelector('[name="email"]');
+
+      // Trigger reCAPTCHA lazy load on first interaction (focus or typing)
+      const triggerRecaptchaLazyLoad = function () {
+        loadRecaptcha().catch(function (err) { console.warn('reCAPTCHA load error:', err); });
+      };
+      form.addEventListener('focusin', triggerRecaptchaLazyLoad, { once: true });
+      form.addEventListener('input', triggerRecaptchaLazyLoad, { once: true });
       
       emailInput.addEventListener('blur', function() {
         if (this.value && !isValidEmail(this.value)) {
@@ -329,6 +357,8 @@
         errorMessage.style.display = 'none';
         
         try {
+          // Ensure reCAPTCHA is loaded (covers the "submit without interacting" edge case)
+          await loadRecaptcha();
           const recaptchaToken = await grecaptcha.execute(RECAPTCHA_SITE_KEY, { action: 'contact' });
           
           const formData = {
