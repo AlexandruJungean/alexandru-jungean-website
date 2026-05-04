@@ -83,6 +83,8 @@ textarea.w-input,textarea.w-select{height:auto}
   --color-text-secondary: #bfbfbf;
   --color-text-muted: #8f8f8f;
   --color-text-disabled: #666;
+  --color-brand-rgb: 103, 139, 158;
+  --color-brand-light: #8aacbb;
   --color-brand-hover: #7da4b8;
   --color-border: #3a3a3a;
   --color-success: #7fbf9f;
@@ -377,7 +379,9 @@ blockquote {
   line-height: 1.6;
 }
 
-.paragraph-large.copyright {
+.paragraph-large.copyright,
+.paragraph-large.contact-card-subtitle,
+.paragraph-large.post-meta-subtitle {
   color: var(--color--body-font-2);
 }
 
@@ -398,10 +402,6 @@ blockquote {
   transition: color .4s;
 }
 
-.paragraph-large.contact-card-subtitle {
-  color: var(--color--body-font-2);
-}
-
 .paragraph-large.licence-name {
   text-decoration: none;
 }
@@ -417,7 +417,6 @@ blockquote {
 }
 
 .paragraph-large.post-meta-subtitle {
-  color: var(--color--body-font-2);
   margin-bottom: .625rem;
 }
 
@@ -791,13 +790,13 @@ blockquote {
   text-decoration: none;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 4px 14px 0 rgba(103, 139, 158, 0.3);
+  box-shadow: 0 4px 14px 0 rgba(var(--color-brand-rgb), 0.3);
   transition: all 0.3s ease;
 }
 
 .nav-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px 0 rgba(103, 139, 158, 0.4);
+  box-shadow: 0 6px 20px 0 rgba(var(--color-brand-rgb), 0.4);
   background-color: var(--white);
 }
 
@@ -1167,7 +1166,7 @@ blockquote {
   flex: none;
   padding: 3rem;
   transition: all .4s ease;
-  background: linear-gradient(135deg, rgba(103, 139, 158, 0.02), rgba(103, 139, 158, 0.08));
+  background: linear-gradient(135deg, rgba(var(--color-brand-rgb), 0.02), rgba(var(--color-brand-rgb), 0.08));
   position: relative;
   overflow: hidden;
 }
@@ -1175,14 +1174,14 @@ blockquote {
 .service-item:hover {
   border-color: var(--color--brand);
   transform: translateY(-4px);
-  box-shadow: 0 8px 25px -8px rgba(103, 139, 158, 0.3);
-  background: linear-gradient(135deg, rgba(103, 139, 158, 0.05), rgba(103, 139, 158, 0.12));
+  box-shadow: 0 8px 25px -8px rgba(var(--color-brand-rgb), 0.3);
+  background: linear-gradient(135deg, rgba(var(--color-brand-rgb), 0.05), rgba(var(--color-brand-rgb), 0.12));
 }
 
 .service-item-icon-wrap {
   margin-bottom: 2.5rem;
   padding: 1.5rem;
-  background: rgba(103, 139, 158, 0.1);
+  background: rgba(var(--color-brand-rgb), 0.1);
   border-radius: 1rem;
   display: inline-flex;
   align-items: center;
@@ -1439,7 +1438,8 @@ blockquote {
   margin-bottom: 2.5rem;
 }
 
-.testimonial-text {
+.testimonial-text,
+.author-name {
   font-family: Clashdisplay, sans-serif;
   font-size: 1.375rem;
   font-weight: 500;
@@ -1452,13 +1452,6 @@ blockquote {
   justify-content: flex-start;
   align-items: center;
   display: flex;
-}
-
-.author-name {
-  font-family: Clashdisplay, sans-serif;
-  font-size: 1.375rem;
-  font-weight: 500;
-  line-height: 2rem;
 }
 
 .author-designation {
@@ -1727,8 +1720,13 @@ blockquote {
   transition: color .4s, background-color .4s;
 }
 
-.submit-button:hover {
-  background-color: var(--white);
+.submit-button:hover,
+.wizard-btn-primary:hover,
+.wizard-btn-submit:hover:not(:disabled),
+.services-cta-btn:hover,
+.contact-start-cta-btn:hover,
+.cookie-btn-accept:hover {
+  background: var(--white);
   color: var(--black);
 }
 
@@ -1984,7 +1982,7 @@ blockquote {
 
 .project-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 25px -8px rgba(103, 139, 158, 0.3);
+  box-shadow: 0 8px 25px -8px rgba(var(--color-brand-rgb), 0.3);
   border-color: var(--color--brand);
 }
 
@@ -2187,15 +2185,15 @@ blockquote {
   align-items: center;
   gap: 1rem;
   padding: 1.25rem 1.5rem;
-  background: rgba(103, 139, 158, 0.08);
-  border: 1px solid rgba(103, 139, 158, 0.2);
+  background: rgba(var(--color-brand-rgb), 0.1);
+  border: 1px solid rgba(var(--color-brand-rgb), 0.15);
   border-radius: 12px;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .project-link-card:hover {
-  background: rgba(103, 139, 158, 0.15);
+  background: rgba(var(--color-brand-rgb), 0.15);
   border-color: var(--color--brand);
   transform: translateY(-2px);
 }
@@ -2206,7 +2204,7 @@ blockquote {
   justify-content: center;
   width: 48px;
   height: 48px;
-  background: rgba(103, 139, 158, 0.15);
+  background: rgba(var(--color-brand-rgb), 0.15);
   border-radius: 10px;
   color: var(--color--brand);
   flex-shrink: 0;
@@ -3607,11 +3605,11 @@ blockquote {
 
   @keyframes pulse-glow {
     0%, 100% {
-      box-shadow: 0 0 0 0 rgba(103, 139, 158, 0.4);
+      box-shadow: 0 0 0 0 rgba(var(--color-brand-rgb), 0.4);
       transform: translate(-50%, -50%) scale(1);
     }
     50% {
-      box-shadow: 0 0 0 10px rgba(103, 139, 158, 0);
+      box-shadow: 0 0 0 10px rgba(var(--color-brand-rgb), 0);
       transform: translate(-50%, -50%) scale(1.05);
     }
   }
@@ -4074,14 +4072,14 @@ blockquote {
 }
 
 .legal-content a {
-  color: #8aacbb;
+  color: var(--color-brand-light);
   text-decoration: none;
   border-bottom: 1px solid rgba(167, 139, 250, 0.3);
   transition: border-color 0.2s ease;
 }
 
 .legal-content a:hover {
-  border-bottom-color: #8aacbb;
+  border-bottom-color: var(--color-brand-light);
 }
 
 .legal-content strong {
@@ -4173,7 +4171,7 @@ blockquote {
 
 .wizard-progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, #3d5c6b, var(--color--brand), #8aacbb, #b0cdd9);
+  background: linear-gradient(90deg, #3d5c6b, var(--color--brand), var(--color-brand-light), #b0cdd9);
   background-size: 300% 100%;
   animation: progressGradient 3s ease infinite;
   border-radius: 2px;
@@ -4192,8 +4190,8 @@ blockquote {
   align-items: center;
   gap: 0.5rem;
   padding: 0.6rem 1rem;
-  background: rgba(103, 139, 158, 0.12);
-  border: 1px solid rgba(103, 139, 158, 0.3);
+  background: rgba(var(--color-brand-rgb), 0.1);
+  border: 1px solid rgba(var(--color-brand-rgb), 0.3);
   border-radius: 8px;
   margin-bottom: 1.5rem;
   font-size: 0.85rem;
@@ -4276,7 +4274,7 @@ blockquote {
 }
 
 .wz-req {
-  color: #8aacbb;
+  color: var(--color-brand-light);
 }
 
 .wz-hint {
@@ -4287,7 +4285,7 @@ blockquote {
 }
 
 .wz-hint-suggested {
-  color: #8aacbb;
+  color: var(--color-brand-light);
   font-style: italic;
 }
 
@@ -4311,7 +4309,7 @@ blockquote {
 .wz-select:focus,
 .wz-textarea:focus {
   border-color: var(--color--brand);
-  background: rgba(103, 139, 158, 0.06);
+  background: rgba(var(--color-brand-rgb), 0.06);
 }
 
 .wz-input::placeholder,
@@ -4400,7 +4398,7 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
   margin-top: 0.75rem;
   padding: 0.75rem;
   background: rgba(255, 255, 255, 0.02);
-  border-left: 2px solid rgba(103, 139, 158, 0.3);
+  border-left: 2px solid rgba(var(--color-brand-rgb), 0.3);
   border-radius: 0 8px 8px 0;
 }
 
@@ -4466,7 +4464,7 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
 }
 
 .scard input:checked + .scard-inner {
-  background: rgba(103, 139, 158, 0.1);
+  background: rgba(var(--color-brand-rgb), 0.1);
   border-color: var(--color--brand);
 }
 
@@ -4476,7 +4474,7 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
 }
 
 .scard input:checked + .scard-inner .scard-icon {
-  color: #8aacbb;
+  color: var(--color-brand-light);
 }
 
 .scard-title {
@@ -4539,7 +4537,7 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
 }
 
 .pcard input:checked + .pcard-inner {
-  background: rgba(103, 139, 158, 0.1);
+  background: rgba(var(--color-brand-rgb), 0.1);
   border-color: var(--color--brand);
 }
 
@@ -4615,7 +4613,7 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
 }
 
 .mtag-opt input:checked + span {
-  background: rgba(103, 139, 158, 0.15);
+  background: rgba(var(--color-brand-rgb), 0.15);
   border-color: var(--color--brand);
   color: #b0cdd9;
 }
@@ -4647,8 +4645,8 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
 }
 
 .mtag-add-btn:hover {
-  color: #8aacbb;
-  border-color: rgba(103, 139, 158, 0.3);
+  color: var(--color-brand-light);
+  border-color: rgba(var(--color-brand-rgb), 0.3);
 }
 
 .mtag-custom-input {
@@ -4723,8 +4721,8 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
 }
 
 .repeater-add-btn:hover {
-  color: #8aacbb;
-  border-color: rgba(103, 139, 158, 0.3);
+  color: var(--color-brand-light);
+  border-color: rgba(var(--color-brand-rgb), 0.3);
 }
 
 /* --- Smart Suggestions --- */
@@ -4737,8 +4735,8 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
   align-items: flex-start;
   gap: 0.75rem;
   padding: 0.75rem 1rem;
-  background: rgba(103, 139, 158, 0.06);
-  border: 1px solid rgba(103, 139, 158, 0.15);
+  background: rgba(var(--color-brand-rgb), 0.06);
+  border: 1px solid rgba(var(--color-brand-rgb), 0.15);
   border-radius: 8px;
   margin-bottom: 0.5rem;
 }
@@ -4760,16 +4758,16 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
   flex-shrink: 0;
   padding: 0.25rem 0.6rem;
   font-size: 0.78rem;
-  color: #8aacbb;
-  background: rgba(103, 139, 158, 0.1);
-  border: 1px solid rgba(103, 139, 158, 0.25);
+  color: var(--color-brand-light);
+  background: rgba(var(--color-brand-rgb), 0.1);
+  border: 1px solid rgba(var(--color-brand-rgb), 0.25);
   border-radius: 4px;
   cursor: pointer;
   transition: all 0.2s;
 }
 
 .suggestion-add-btn:hover {
-  background: rgba(103, 139, 158, 0.2);
+  background: rgba(var(--color-brand-rgb), 0.15);
 }
 
 /* --- Smart Warnings --- */
@@ -4802,8 +4800,8 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
 
 .upload-zone:hover,
 .upload-zone.is-dragover {
-  border-color: rgba(103, 139, 158, 0.4);
-  background: rgba(103, 139, 158, 0.04);
+  border-color: rgba(var(--color-brand-rgb), 0.4);
+  background: rgba(var(--color-brand-rgb), 0.06);
 }
 
 .upload-zone-content svg {
@@ -4820,7 +4818,7 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
 .upload-browse-btn {
   background: none;
   border: none;
-  color: #8aacbb;
+  color: var(--color-brand-light);
   cursor: pointer;
   text-decoration: underline;
   font-size: inherit;
@@ -4937,7 +4935,7 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
 
 .summary-edit-btn {
   font-size: 0.78rem;
-  color: #8aacbb;
+  color: var(--color-brand-light);
   background: none;
   border: none;
   cursor: pointer;
@@ -4947,7 +4945,7 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
 }
 
 .summary-edit-btn:hover {
-  background: rgba(103, 139, 158, 0.1);
+  background: rgba(var(--color-brand-rgb), 0.1);
 }
 
 .summary-section-body {
@@ -4986,7 +4984,7 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
 }
 
 .summary-consent a {
-  color: #8aacbb;
+  color: var(--color-brand-light);
 }
 
 /* --- Success Screen --- */
@@ -5074,7 +5072,7 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
 }
 
 .wizard-success-social-links a:hover {
-  background: rgba(103, 139, 158, 0.15);
+  background: rgba(var(--color-brand-rgb), 0.15);
   border-color: var(--color--brand);
   color: var(--color--brand);
 }
@@ -5114,11 +5112,6 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
   font-weight: 500;
 }
 
-.wizard-btn-primary:hover {
-  background: var(--white);
-  color: var(--black);
-}
-
 .wizard-btn-primary:disabled {
   background: #3d5c6b;
   color: var(--color-text-muted);
@@ -5146,11 +5139,6 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
 .wizard-btn-submit {
   background: var(--color--brand);
   color: var(--color--primary-black);
-}
-
-.wizard-btn-submit:hover:not(:disabled) {
-  background: var(--white);
-  color: var(--black);
 }
 
 .wizard-submit-tooltip {
@@ -5242,7 +5230,7 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
 }
 
 .video-testimonial-card:hover {
-  border-color: rgba(103, 139, 158, 0.2);
+  border-color: rgba(var(--color-brand-rgb), 0.15);
 }
 
 .video-testimonial-embed {
@@ -5279,8 +5267,8 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
   gap: 2rem;
   padding: 2rem 2.5rem;
   margin-top: 2rem;
-  background: rgba(103, 139, 158, 0.06);
-  border: 1px solid rgba(103, 139, 158, 0.2);
+  background: rgba(var(--color-brand-rgb), 0.06);
+  border: 1px solid rgba(var(--color-brand-rgb), 0.15);
   border-radius: 16px;
 }
 
@@ -5294,7 +5282,8 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
   margin-bottom: 0.4rem;
 }
 
-.services-cta-text {
+.services-cta-text,
+.contact-start-cta-text {
   color: var(--color-text-secondary);
   font-size: 0.95rem;
   line-height: 1.6;
@@ -5317,16 +5306,11 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
   flex-shrink: 0;
 }
 
-.services-cta-btn:hover {
-  background: var(--white);
-  color: var(--black);
-}
-
 .service-quote-cta {
   margin: 1.5rem 0;
   padding: 1.5rem 2rem;
-  background: rgba(103, 139, 158, 0.06);
-  border: 1px solid rgba(103, 139, 158, 0.15);
+  background: rgba(var(--color-brand-rgb), 0.06);
+  border: 1px solid rgba(var(--color-brand-rgb), 0.15);
   border-radius: 12px;
   text-align: center;
 }
@@ -5368,8 +5352,8 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
   justify-content: space-between;
   gap: 2rem;
   padding: 2rem 2.5rem;
-  background: rgba(103, 139, 158, 0.06);
-  border: 1px solid rgba(103, 139, 158, 0.2);
+  background: rgba(var(--color-brand-rgb), 0.06);
+  border: 1px solid rgba(var(--color-brand-rgb), 0.15);
   border-radius: 16px;
 }
 
@@ -5383,13 +5367,6 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
   font-size: 1.5rem;
   color: var(--white);
   margin-bottom: 0.5rem;
-}
-
-.contact-start-cta-text {
-  color: var(--color-text-secondary);
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin: 0;
 }
 
 .contact-start-cta-btn {
@@ -5406,11 +5383,6 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
   white-space: nowrap;
   transition: all 0.25s;
   flex-shrink: 0;
-}
-
-.contact-start-cta-btn:hover {
-  background: var(--white);
-  color: var(--black);
 }
 
 .wz-info-tooltip {
@@ -5512,7 +5484,7 @@ textarea:focus-visible,
   margin-right: auto;
   padding: 1.25rem 1.5rem;
   background: rgba(34, 34, 34, 0.98);
-  border: 1px solid rgba(103, 139, 158, 0.3);
+  border: 1px solid rgba(var(--color-brand-rgb), 0.3);
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(10px);
@@ -5577,11 +5549,6 @@ textarea:focus-visible,
 .cookie-btn-accept {
   background: var(--color--brand);
   color: var(--color--primary-black);
-}
-
-.cookie-btn-accept:hover {
-  background: var(--white);
-  color: var(--black);
 }
 
 /* ===========================================
