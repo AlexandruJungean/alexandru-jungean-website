@@ -779,15 +779,22 @@ blockquote {
 .nav-link {
   color: var(--gray);
   text-transform: uppercase;
-  text-decoration: none;
+  text-decoration: underline solid transparent;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
   padding: 0;
   font-size: 1.125rem;
   font-weight: 500;
-  transition: color .4s;
+  transition: color .3s, text-decoration-color .3s;
 }
 
 .nav-link:hover, .nav-link.w--current, .nav-link[aria-current="page"] {
   color: var(--color--brand);
+  text-decoration-color: var(--color--brand);
+}
+
+.nav-link:focus-visible {
+  text-decoration-color: var(--color--brand);
 }
 
 .nav-button-wrapper {
@@ -911,14 +918,6 @@ blockquote {
   }
   to {
     transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .text-badge,
-  .text-badge-icon,
-  .scroll-down .arrow-down-icon {
-    animation: none;
   }
 }
 
@@ -6134,5 +6133,23 @@ textarea:focus-visible,
 
   .cookie-btn {
     width: 100%;
+  }
+}
+
+/* ==========================================================================
+   A11y - prefers-reduced-motion (global)
+   Disables/reduces animations and transitions for users who request reduced
+   motion. Keeps minimal duration so functional state changes (dropdowns,
+   conditional fields) still apply instantly without breaking UI logic.
+   Placed at the end of the file for cascade priority over earlier rules.
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
