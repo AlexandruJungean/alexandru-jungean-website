@@ -5175,14 +5175,263 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
   border: none;
 }
 
-/* --- Services Section Headings --- */
+/* --- Services Section Headings (legacy, kept for backward compat) --- */
 .services-section-heading {
   font-family: Clashdisplay, sans-serif;
   font-size: 2.25rem;
   font-weight: 500;
-  margin-top: 4rem;
+  margin-top: 0;
   margin-bottom: 1.5rem;
   color: var(--gray);
+}
+
+/* --- Pricing 3-step process row --- */
+.pricing-process {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.pricing-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: var(--surface-subtle-bg);
+  border: var(--surface-subtle-border);
+  border-radius: 12px;
+  transition: all 0.25s ease;
+}
+
+.pricing-step:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.pricing-step-number {
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface-brand-bg);
+  border: var(--surface-brand-border);
+  border-radius: 50%;
+  font-family: Clashdisplay, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color--brand);
+}
+
+.pricing-step-content { flex: 1; }
+
+.pricing-step-title {
+  font-family: Clashdisplay, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--white);
+  margin: 0 0 0.4rem;
+}
+
+.pricing-step-desc {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* --- Process: 2-col layout (image + steps) --- */
+.process-2col {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 0;
+  align-items: start;
+  margin-top: 2.5rem;
+}
+
+.process-image-wrap {
+  position: relative;
+  z-index: 1;
+}
+
+.process-image-wrap img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+}
+
+.process-image-placeholder {
+  width: 100%;
+  aspect-ratio: 4/5;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(var(--color-brand-rgb), 0.1), rgba(var(--color-brand-rgb), 0.04));
+  border: 1px dashed rgba(var(--color-brand-rgb), 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  color: var(--color--brand);
+  font-family: Clashdisplay, sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.process-step-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-left: -3rem;
+  z-index: 2;
+  position: relative;
+}
+
+.process-step-compact {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 1.5rem 1.75rem;
+  background: var(--defatult--template-bg);
+  border: var(--surface-subtle-border);
+  border-left: 3px solid var(--color--brand);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.process-step-compact:hover {
+  transform: translateX(4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+
+.process-step-compact:nth-child(even) {
+  margin-left: 2.5rem;
+}
+
+.process-step-num {
+  flex-shrink: 0;
+  font-family: Clashdisplay, sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color--brand);
+  line-height: 1;
+  min-width: 3rem;
+}
+
+.process-step-body { flex: 1; }
+
+.process-step-title {
+  font-family: Clashdisplay, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--white);
+  margin: 0 0 0.4rem;
+}
+
+.process-step-desc {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* --- Trust Guarantees: vertical checklist --- */
+.trust-headline {
+  text-align: center;
+  font-family: Clashdisplay, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--color--brand);
+  margin: 1.5rem 0 2.5rem;
+  padding: 1.5rem 1rem;
+  background: var(--surface-brand-bg);
+  border: var(--surface-brand-border);
+  border-radius: 12px;
+  line-height: 1.4;
+}
+
+.trust-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 880px;
+}
+
+.trust-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.trust-list-item:last-child {
+  border-bottom: none;
+}
+
+.trust-list-check {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface-brand-bg);
+  border: 1px solid rgba(var(--color-brand-rgb), 0.3);
+  border-radius: 50%;
+  color: var(--color--brand);
+  margin-top: 0.1rem;
+}
+
+.trust-list-check svg {
+  width: 18px;
+  height: 18px;
+}
+
+.trust-list-text {
+  flex: 1;
+  color: var(--color-text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  padding-top: 0.15rem;
+}
+
+.trust-list-text strong {
+  color: var(--white);
+  font-weight: 500;
+}
+
+/* --- Services CTA secondary link --- */
+.services-cta-secondary {
+  text-align: center;
+  margin: 1.25rem 0 0;
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+}
+
+.services-cta-secondary a {
+  color: var(--color--brand);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color 0.2s;
+}
+
+.services-cta-secondary a:hover {
+  color: var(--color-brand-light);
 }
 
 /* --- Services CTA Card & Quote --- */
@@ -5608,6 +5857,33 @@ textarea:focus-visible,
   .repeater-row .wz-input {
     min-width: unset;
   }
+
+  /* Services page sections - tablet adjustments */
+  .process-2col {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .process-image-wrap {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .process-step-list {
+    margin-left: 0;
+  }
+
+  .process-step-compact:nth-child(even) {
+    margin-left: 0;
+  }
+
+  .pricing-process {
+    grid-template-columns: 1fr;
+  }
+
+  .trust-headline {
+    font-size: 1.25rem;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -5691,6 +5967,34 @@ textarea:focus-visible,
   .video-testimonial-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.75rem;
+  }
+
+  /* Services page sections - mobile adjustments */
+  .process-step-compact {
+    gap: 1rem;
+    padding: 1.25rem;
+  }
+
+  .process-step-num {
+    font-size: 1.6rem;
+    min-width: 2.5rem;
+  }
+
+  .trust-list-item {
+    padding: 1rem 0;
+  }
+
+  .trust-list-text {
+    font-size: 0.95rem;
+  }
+
+  .trust-headline {
+    font-size: 1.1rem;
+    padding: 1.25rem 1rem;
+  }
+
+  .pricing-step {
+    padding: 1.25rem;
   }
 
   .wizard-intro-title {

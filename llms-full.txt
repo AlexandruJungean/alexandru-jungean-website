@@ -243,7 +243,7 @@ After launch, every project includes:
 ### City Xperience
 **URL:** https://alexjungean.com/projects/oradea-experience
 **Type:** City Discovery Platform, Mobile App, Franchise
-**Description:** White-label city discovery platform operating as a multi-city franchise (Oradea Experience + Cluj Xperience) with 7,400+ users, 130+ businesses, 380+ events, and a shared mobile app on App Store and Google Play.
+**Description:** White-label city discovery platform operating as a multi-city franchise (Oradea Experience + Cluj Xperience) with 8,600+ users, 130+ businesses, 480+ events, and a shared mobile app on App Store and Google Play.
 
 ### Tool Connect
 **URL:** https://alexjungean.com/projects/tool
@@ -364,7 +364,7 @@ These are starting points only. Final pricing depends on scope, complexity and t
 - **Technical Partner Retainer**: €1,000 - €3,000 / month (priority support, ongoing development).
 
 ### Payment terms
-- 20% deposit required before work begins.
+- 35% deposit required before work begins.
 - Milestone-based payments throughout the project.
 - Final balance due upon delivery and approval.
 

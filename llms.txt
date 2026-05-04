@@ -19,7 +19,7 @@ Alexandru Jungean is an experienced IT freelancer based in Cluj-Napoca, Romania,
 Featured projects demonstrating expertise across web, mobile, and design:
 
 - [Primaria Municipiului Salonta](https://alexjungean.com/projects/primaria-salonta): Trilingual government website with admin panel, Supabase, and public transparency features
-- [City Xperience](https://alexjungean.com/projects/oradea-experience): Multi-city franchise platform (Oradea + Cluj) with 7,400+ users, 130+ businesses, 380+ events, independent websites, and shared mobile app
+- [City Xperience](https://alexjungean.com/projects/oradea-experience): Multi-city franchise platform (Oradea + Cluj) with 8,600+ users, 130+ businesses, 480+ events, independent websites, and shared mobile app
 - [Tool Connect](https://alexjungean.com/projects/tool): Service provider marketplace with native mobile apps (iOS + Android), website, and branding
 - [FleetKeeper](https://alexjungean.com/projects/fleetkeeper): B2B SaaS fleet management app with AI document scanning, 12 languages, and automated notifications
 - [Radical Football](https://alexjungean.com/projects/radical-football): Educational platform with Stripe payments, Konva diagram builder, and 14-tab admin dashboard
