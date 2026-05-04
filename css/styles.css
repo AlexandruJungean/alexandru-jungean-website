@@ -4458,12 +4458,14 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
   transition: all 0.25s ease;
 }
 
-.scard-inner:hover {
+.scard-inner:hover,
+.pcard-inner:hover {
   background: rgba(255, 255, 255, 0.06);
   border-color: rgba(255, 255, 255, 0.15);
 }
 
-.scard input:checked + .scard-inner {
+.scard input:checked + .scard-inner,
+.pcard input:checked + .pcard-inner {
   background: rgba(var(--color-brand-rgb), 0.1);
   border-color: var(--color--brand);
 }
@@ -4529,16 +4531,6 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 10px;
   transition: all 0.25s ease;
-}
-
-.pcard-inner:hover {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.15);
-}
-
-.pcard input:checked + .pcard-inner {
-  background: rgba(var(--color-brand-rgb), 0.1);
-  border-color: var(--color--brand);
 }
 
 .pcard-head {
@@ -5260,16 +5252,20 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
 }
 
 /* --- Services CTA Card & Quote --- */
-.services-cta-card {
+.services-cta-card,
+.contact-start-cta {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
   padding: 2rem 2.5rem;
-  margin-top: 2rem;
   background: rgba(var(--color-brand-rgb), 0.06);
   border: 1px solid rgba(var(--color-brand-rgb), 0.15);
   border-radius: 16px;
+}
+
+.services-cta-card {
+  margin-top: 2rem;
 }
 
 .services-cta-content { flex: 1; }
@@ -5290,7 +5286,8 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
   margin: 0;
 }
 
-.services-cta-btn {
+.services-cta-btn,
+.contact-start-cta-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -5346,17 +5343,6 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
 }
 
 /* --- Contact Page: Start a Project CTA --- */
-.contact-start-cta {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  padding: 2rem 2.5rem;
-  background: rgba(var(--color-brand-rgb), 0.06);
-  border: 1px solid rgba(var(--color-brand-rgb), 0.15);
-  border-radius: 16px;
-}
-
 .contact-start-cta-content {
   flex: 1;
 }
@@ -5367,22 +5353,6 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
   font-size: 1.5rem;
   color: var(--white);
   margin-bottom: 0.5rem;
-}
-
-.contact-start-cta-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 1.2rem 2rem;
-  background: var(--color--brand);
-  color: var(--color--primary-black);
-  font-size: 1.125rem;
-  font-weight: 500;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  white-space: nowrap;
-  transition: all 0.25s;
-  flex-shrink: 0;
 }
 
 .wz-info-tooltip {
