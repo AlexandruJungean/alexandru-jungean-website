@@ -226,7 +226,7 @@ function buildClientEmail(d) {
 
   html += '<p>In the meantime, feel free to:</p><ul>';
   html += '<li>Check out my <a href="https://alexjungean.com/projects" style="color:#678b9e">projects</a></li>';
-  html += '<li>Connect on <a href="https://www.linkedin.com/in/alexandru-jungean-5604b7268/" style="color:#678b9e">LinkedIn</a></li>';
+  html += '<li>Connect on <a href="https://www.linkedin.com/in/alexandru-jungean/" style="color:#678b9e">LinkedIn</a></li>';
   html += '</ul>';
 
   html += '<p>Best regards,<br><strong>Alexandru Jungean</strong><br>IT Freelancer</p>';
@@ -234,7 +234,7 @@ function buildClientEmail(d) {
   html += '<div style="margin:24px 0;padding:16px 0;border-top:1px solid #eee;border-bottom:1px solid #eee">';
   html += '<p style="margin:0 0 8px;font-size:13px;color:#666">Follow me on social media:</p>';
   html += '<p style="margin:0;font-size:13px">';
-  html += '<a href="https://www.linkedin.com/in/alexandru-jungean-5604b7268/" style="color:#678b9e;text-decoration:none;margin-right:16px">LinkedIn</a>';
+  html += '<a href="https://www.linkedin.com/in/alexandru-jungean/" style="color:#678b9e;text-decoration:none;margin-right:16px">LinkedIn</a>';
   html += '<a href="https://www.instagram.com/alexjungean/" style="color:#678b9e;text-decoration:none;margin-right:16px">Instagram</a>';
   html += '<a href="https://www.facebook.com/alex.jungean" style="color:#678b9e;text-decoration:none;margin-right:16px">Facebook</a>';
   html += '<a href="https://github.com/AlexandruJungean" style="color:#678b9e;text-decoration:none">GitHub</a>';

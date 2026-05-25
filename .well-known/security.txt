@@ -3,7 +3,7 @@
 
 # Security contact
 Contact: https://alexjungean.com/contact
-Contact: https://www.linkedin.com/in/alexandru-jungean-5604b7268/
+Contact: https://www.linkedin.com/in/alexandru-jungean/
 
 # Preferred contact language
 Preferred-Languages: en, ro

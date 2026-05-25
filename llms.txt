@@ -37,7 +37,7 @@ Featured projects demonstrating expertise across web, mobile, and design:
 - Website: https://alexjungean.com
 - Start a Project: https://alexjungean.com/start
 - Contact Page: https://alexjungean.com/contact
-- LinkedIn: https://www.linkedin.com/in/alexandru-jungean-5604b7268/
+- LinkedIn: https://www.linkedin.com/in/alexandru-jungean/
 - GitHub: https://github.com/AlexandruJungean
 
 ## Legal

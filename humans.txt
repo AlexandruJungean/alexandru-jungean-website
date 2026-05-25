@@ -2,7 +2,7 @@
 Developer & Designer: Alexandru Jungean
 Site: https://alexjungean.com
 Location: Cluj-Napoca, Romania
-LinkedIn: https://www.linkedin.com/in/alexandru-jungean-5604b7268/
+LinkedIn: https://www.linkedin.com/in/alexandru-jungean/
 GitHub: https://github.com/AlexandruJungean
 
 /* THANKS */

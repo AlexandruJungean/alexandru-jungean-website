@@ -175,7 +175,7 @@ For the contact form to work, set these environment variables in Netlify:
 
 - **Website:** [https://alexjungean.com](https://alexjungean.com)
 - **Contact Form:** [https://alexjungean.com/contact](https://alexjungean.com/contact)
-- **LinkedIn:** [Alexandru Jungean](https://www.linkedin.com/in/alexandru-jungean-5604b7268/)
+- **LinkedIn:** [Alexandru Jungean](https://www.linkedin.com/in/alexandru-jungean/)
 - **GitHub:** [AlexandruJungean](https://github.com/AlexandruJungean)
 
 ## License
