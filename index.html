@@ -30,6 +30,8 @@
   <link rel="canonical" href="https://alexjungean.com/">
   <!-- Preload critical hero image for LCP -->
   <link rel="preload" as="image" fetchpriority="high" imagesrcset="images/Frame-225-1-p-500.webp 500w, images/Frame-225-1-p-800.webp 800w, images/Frame-225-1-p-1080.webp 1080w, images/Frame-225-1-p-1600.webp 1600w, images/Frame-225-1.webp 1728w" imagesizes="(max-width: 991px) 100vw, 635px">
+  <!-- Preload small hero decorations to avoid late pop-in (hand icon is a CSS background) -->
+  <link rel="preload" as="image" href="images/Vector.png">
   <!-- Preload critical fonts -->
   <link rel="preload" href="fonts/ClashDisplay-Semibold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/ClashDisplay-Medium.woff2" as="font" type="font/woff2" crossorigin>
@@ -248,7 +250,7 @@
     <div role="banner" class="nav-component">
       <div class="padding-global">
         <div class="nav-container">
-          <a href="/" aria-current="page" class="brand-logo-link"><img src="images/Logo.webp" loading="lazy" decoding="async" width="3210" height="600" sizes="(max-width: 767px) 128px, 160px" srcset="images/Logo-p-500.webp 500w, images/Logo-p-800.webp 800w, images/Logo-p-1080.webp 1080w, images/Logo-p-1600.webp 1600w, images/Logo-p-2000.webp 2000w, images/Logo-p-2600.webp 2600w, images/Logo.webp 3210w" alt="Alexandru Jungean Logo" class="brand-logo"></a>
+          <a href="/" aria-current="page" class="brand-logo-link"><img src="images/Logo.webp" loading="eager" decoding="async" width="3210" height="600" sizes="(max-width: 767px) 128px, 160px" srcset="images/Logo-p-500.webp 500w, images/Logo-p-800.webp 800w, images/Logo-p-1080.webp 1080w, images/Logo-p-1600.webp 1600w, images/Logo-p-2000.webp 2000w, images/Logo-p-2600.webp 2600w, images/Logo.webp 3210w" alt="Alexandru Jungean Logo" class="brand-logo"></a>
           <nav role="navigation" class="nav-menu-wrapper" aria-label="Main navigation">
             <div class="nav-link-wrapper">
               <a href="/" aria-current="page" class="nav-link">Home</a>
@@ -295,7 +297,7 @@
                     </a>
                   </div>
                 </div>
-                <div class="text-badge-wrapper"><img src="images/text-badge_1text-badge.webp" loading="lazy" decoding="async" width="136" height="136" alt="Experience badge showcasing expertise" class="text-badge"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewbox="0 0 36 36" fill="none" class="text-badge-icon">
+                <div class="text-badge-wrapper"><img src="images/text-badge_1text-badge.webp" loading="eager" decoding="async" width="136" height="136" alt="Experience badge showcasing expertise" class="text-badge"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewbox="0 0 36 36" fill="none" class="text-badge-icon">
                     <path d="M30.555 18.7776L36 18L30.555 17.2224C24.4481 16.3502 19.6497 11.5519 18.7776 5.44498L18 0L17.2224 5.44498C16.3503 11.5519 11.5519 16.3502 5.44498 17.2224L0 18L5.44498 18.7776C11.5519 19.6497 16.3503 24.4481 17.2224 30.555L18 36L18.7776 30.555C19.6498 24.4481 24.4481 19.6497 30.555 18.7776Z" fill="currentColor"></path>
                   </svg></div>
                 <div class="blur-element"></div>
