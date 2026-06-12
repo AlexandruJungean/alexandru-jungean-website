@@ -2,20 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Protected page</title>
-  <meta content="Protected page" property="og:title">
-  <meta content="Protected page" property="twitter:title">
+  <title>Protected Page | Alexandru Jungean</title>
+  <meta content="Protected Page | Alexandru Jungean" property="og:title">
+  <meta content="Protected Page | Alexandru Jungean" property="twitter:title">
   <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta name="robots" content="noindex">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <link href="css/styles.css" rel="stylesheet" type="text/css">
-  <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
-  <link href="images/webclip.png" rel="apple-touch-icon">
+  <link href="/css/styles.css" rel="stylesheet" type="text/css">
+  <link href="/images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="/images/webclip.png" rel="apple-touch-icon">
+  <style>
+    .utility-brand {
+      display: inline-block;
+      color: var(--color-text-bright);
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      margin-bottom: 2.5rem;
+      transition: color 0.25s ease;
+    }
+    .utility-brand:hover {
+      color: var(--color-brand-light);
+    }
+    .utility-lock-icon {
+      display: block;
+      margin: 0 auto 2rem;
+      width: 3.5rem;
+      height: auto;
+      opacity: 0.85;
+    }
+    .utility-page-form h2 {
+      font-size: clamp(1.75rem, 3vw, 2.25rem);
+      margin-bottom: 0.75rem;
+    }
+    .utility-protected-text {
+      color: var(--color-text-secondary);
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+  </style>
 </head>
 <body>
   <div class="utility-page-wrap">
     <div class="utility-page-content w-password-page w-form">
-      <form action="/.wf_auth" method="post" id="password-form" name="password-form" class="utility-page-form w-password-page"><img src="https://d3e54v103j8qbb.cloudfront.net/static/utility-lock.ae54711958.svg" alt="">
-        <h2>Protected Page</h2><label for="pass" class="w-password-page">Password</label><input class="w-password-page w-input" autofocus="true" maxlength="256" name="pass" data-name="field" placeholder="Enter your password" type="password" id="pass"><input type="submit" data-wait="Please wait..." class="w-password-page w-button" value="Submit">
+      <a href="/" class="utility-brand">alexjungean.com</a>
+      <form action="/.wf_auth" method="post" id="password-form" name="password-form" class="utility-page-form w-password-page"><img src="https://d3e54v103j8qbb.cloudfront.net/static/utility-lock.ae54711958.svg" alt="" class="utility-lock-icon">
+        <h2>Protected Page</h2>
+        <div class="utility-protected-text">This page is private. Enter the password you received to continue.</div>
+        <label for="pass" class="w-password-page">Password</label><input class="w-password-page w-input" autofocus="true" maxlength="256" name="pass" data-name="field" placeholder="Enter your password" type="password" id="pass"><input type="submit" data-wait="Please wait..." class="w-password-page w-button" value="Submit">
         <div class="w-password-page w-form-fail">
           <div>Incorrect password. Please try again.</div>
         </div>

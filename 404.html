@@ -2,20 +2,79 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Not Found</title>
-  <meta content="Not Found" property="og:title">
-  <meta content="Not Found" property="twitter:title">
+  <title>404 – Page Not Found | Alexandru Jungean</title>
+  <meta content="404 – Page Not Found | Alexandru Jungean" property="og:title">
+  <meta content="404 – Page Not Found | Alexandru Jungean" property="twitter:title">
   <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta name="robots" content="noindex">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <link href="css/styles.css" rel="stylesheet" type="text/css">
-  <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
-  <link href="images/webclip.png" rel="apple-touch-icon">
+  <link href="/css/styles.css" rel="stylesheet" type="text/css">
+  <link href="/images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="/images/webclip.png" rel="apple-touch-icon">
+  <style>
+    .utility-brand {
+      display: inline-block;
+      color: var(--color-text-bright);
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      margin-bottom: 1.25rem;
+      transition: color 0.25s ease;
+    }
+    .utility-brand:hover {
+      color: var(--color-brand-light);
+    }
+    .utility-quick-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-bottom: 3rem;
+    }
+    .utility-quick-link {
+      color: var(--color-text-secondary);
+      background: var(--surface-subtle-bg);
+      border: var(--surface-subtle-border);
+      border-radius: 0.5rem;
+      padding: 0.7rem 1.3rem;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: color 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
+    }
+    .utility-quick-link:hover {
+      color: var(--color-text-bright);
+      background: var(--surface-brand-bg);
+      border: var(--surface-brand-border);
+    }
+    .utility-page-image {
+      max-width: 16rem;
+      margin-bottom: 2.5rem;
+    }
+    .utility-page-title {
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      line-height: 1.2;
+    }
+    .utility-page-hint {
+      color: var(--color-text-muted);
+      font-size: 0.9rem;
+      margin-top: 2.5rem;
+    }
+  </style>
 </head>
 <body>
   <div class="utility-page-wrap section-padding-both">
-    <div class="utility-page-content"><img src="images/404.svg" alt="Page not found illustration" class="utility-page-image">
-      <h3 class="utility-page-title">Page Not Found</h3>
-      <div class="utility-page-text">The page you are looking for doesn&#x27;t exist or has been moved</div>
+    <div class="utility-page-content">
+      <a href="/" class="utility-brand">alexjungean.com</a>
+      <div class="utility-quick-links">
+        <a href="/services" class="utility-quick-link">Services</a>
+        <a href="/projects" class="utility-quick-link">Projects</a>
+        <a href="/blog" class="utility-quick-link">Blog</a>
+        <a href="/contact" class="utility-quick-link">Contact</a>
+      </div>
+      <img src="/images/404.svg" alt="Page not found illustration" class="utility-page-image">
+      <h1 class="utility-page-title">This page took a day off</h1>
+      <div class="utility-page-text">The page you're looking for doesn't exist or has been moved. But since you're here &ndash; I build websites, apps and digital platforms. Have a look around.</div>
       <div class="button-wrapper">
         <a href="/" class="primary-button w-inline-block">
           <div class="nav-button-text-wrapper">
@@ -23,6 +82,7 @@
           </div>
         </a>
       </div>
+      <div class="utility-page-hint">Error 404</div>
     </div>
   </div>
 </body>

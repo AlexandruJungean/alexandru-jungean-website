@@ -2065,7 +2065,11 @@ blockquote {
 }
 
 .utility-page-image {
-  margin-bottom: 4.5rem;
+  display: block;
+  margin: 0 auto 3rem;
+  max-width: 20rem;
+  width: 100%;
+  height: auto;
 }
 
 .utility-page-text {
@@ -2073,7 +2077,7 @@ blockquote {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   font-size: 1.125rem;
-  line-height: 1;
+  line-height: 1.7;
 }
 
 .section-project-details {
@@ -3129,7 +3133,7 @@ blockquote {
 
   .utility-page-text {
     font-size: 1rem;
-    line-height: 1.4;
+    line-height: 1.6;
   }
 
   .project-details-header {
