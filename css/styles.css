@@ -757,6 +757,7 @@ blockquote {
 .brand-logo {
   width: auto;
   max-width: 10rem;
+  height: auto;
 }
 
 .nav-menu-wrapper {
@@ -877,6 +878,8 @@ blockquote {
 
 .header-thumb {
   text-align: center;
+  max-width: 100%;
+  height: auto;
 }
 
 .header-bg-overlay {
@@ -1017,6 +1020,7 @@ blockquote {
 .client-logo {
   min-width: auto;
   max-width: none;
+  width: auto;
   height: 50px;
 }
 

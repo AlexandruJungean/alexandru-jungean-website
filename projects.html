@@ -458,7 +458,22 @@
   </script>
   
   <!-- Google Analytics - loaded at end for performance -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XC8SSPPMLV"></script>
+  <script>
+    (function () {
+      var loaded = false;
+      function loadGtag() {
+        if (loaded) return;
+        loaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-XC8SSPPMLV';
+        document.head.appendChild(s);
+        ['scroll', 'pointerdown', 'keydown', 'touchstart'].forEach(function (e) { removeEventListener(e, loadGtag); });
+      }
+      ['scroll', 'pointerdown', 'keydown', 'touchstart'].forEach(function (e) { addEventListener(e, loadGtag, { passive: true }); });
+      setTimeout(loadGtag, 4000);
+    })();
+  </script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
