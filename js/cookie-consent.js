@@ -39,7 +39,7 @@
     banner.innerHTML = '<div class="cookie-banner-inner">' +
       '<div class="cookie-banner-text">' +
         '<strong>Cookies</strong>' +
-        '<p>I use Google Analytics to understand how visitors use this website. Your data stays anonymous and helps me improve the site. <a href="/cookie-policy">Learn more</a>.</p>' +
+        '<p>I use Google Analytics to understand how visitors use this website. Your data stays anonymous and helps me improve the site. <a href="/cookie-policy">Read the cookie policy</a>.</p>' +
       '</div>' +
       '<div class="cookie-banner-actions">' +
         '<button type="button" class="cookie-btn cookie-btn-decline" id="cookie-decline">Decline</button>' +
