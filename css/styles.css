@@ -9,7 +9,7 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:b
    =========================================== */
 *{box-sizing:border-box}
 html{height:100%}
-img{max-width:100%;display:inline-block;vertical-align:middle}
+img{max-width:100%;height:auto;display:inline-block;vertical-align:middle}
 .w-inline-block{max-width:100%;display:inline-block}
 .w-list-unstyled{padding-left:0;list-style:none}
 .w-form{margin:0 0 15px}
