@@ -6155,14 +6155,12 @@ textarea:focus-visible,
 
 /* Service-page: hero image (centered) */
 .service-hero-image {
-  margin-top: 2.5rem;
   display: flex;
   justify-content: center;
 }
 .service-hero-image img {
   max-width: 100%;
   height: auto;
-  border-radius: 16px;
 }
 
 /* Service-page: who-this-is-for list */
