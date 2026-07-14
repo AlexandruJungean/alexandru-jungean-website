@@ -737,6 +737,21 @@ blockquote {
 
 .mobile-hamburger {
   display: none;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+.mobile-hamburger:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.mobile-hamburger:focus-visible {
+  outline: 2px solid var(--color--brand-light);
+  outline-offset: 3px;
 }
 
 .hamburger-line {
@@ -745,6 +760,7 @@ blockquote {
   height: 2px;
   background-color: var(--color--brand);
   transition: transform 0.3s, opacity 0.3s;
+  pointer-events: none;
 }
 
 .nav-container {
