@@ -175,6 +175,15 @@ body {
   color-scheme: dark;
 }
 
+/* Remove the native blue tap flash while preserving keyboard focus styles. */
+a,
+button,
+summary,
+[role="button"] {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
 /* Override browser autofill background (prevents white/light bg on dark theme) */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
@@ -5871,6 +5880,14 @@ textarea:focus-visible,
   .video-testimonial-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .pricing-flow.has-4-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pricing-flow::before {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -6037,14 +6054,29 @@ textarea:focus-visible,
   }
 
   /* Pricing flow stacks vertically on tablet */
-  .pricing-flow {
+  .pricing-flow,
+  .pricing-flow.has-4-steps {
     grid-template-columns: 1fr;
     gap: 2rem;
     padding-top: 0;
   }
 
-  .pricing-flow::before {
-    display: none;
+  .pricing-flow-step {
+    grid-template-columns: 3.75rem minmax(0, 1fr);
+    column-gap: 1rem;
+    row-gap: 0.35rem;
+    align-items: center;
+    text-align: left;
+    display: grid;
+  }
+
+  .pricing-flow-num {
+    grid-row: 1 / span 2;
+  }
+
+  .pricing-flow-title,
+  .pricing-flow-desc {
+    grid-column: 2;
   }
 
   .pricing-flow-desc {
