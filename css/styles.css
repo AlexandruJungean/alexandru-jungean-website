@@ -759,7 +759,7 @@ blockquote {
   width: 100%;
   height: 2px;
   background-color: var(--color--brand);
-  transition: transform 0.3s, opacity 0.3s;
+  transition: transform 0.35s cubic-bezier(.22, 1, .36, 1), opacity 0.2s ease;
   pointer-events: none;
 }
 
@@ -2712,16 +2712,31 @@ blockquote {
     right: 0;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-0.5rem);
+    transition:
+      max-height 0.45s cubic-bezier(.22, 1, .36, 1),
+      padding 0.45s cubic-bezier(.22, 1, .36, 1),
+      opacity 0.25s ease,
+      transform 0.35s cubic-bezier(.22, 1, .36, 1),
+      visibility 0s linear 0.45s;
     padding-top: 0;
     padding-bottom: 0;
     background-color: var(--defatult--template-bg);
+    will-change: max-height, opacity, transform;
   }
 
   .nav-menu-wrapper.is-open {
     max-height: 400px;
     padding-top: var(--size32);
     padding-bottom: var(--size32);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+    transition-delay: 0s;
   }
 
   .nav-link-wrapper {
