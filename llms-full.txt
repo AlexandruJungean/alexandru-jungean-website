@@ -243,12 +243,12 @@ After launch, every project includes:
 ### City Xperience
 **URL:** https://alexjungean.com/projects/oradea-experience
 **Type:** City Discovery Platform, Mobile App, Franchise
-**Description:** White-label city discovery platform operating as a multi-city franchise (Oradea Experience + Cluj Xperience) with 8,600+ users, 130+ businesses, 480+ events, and a shared mobile app on App Store and Google Play.
+**Description:** White-label city discovery platform operating as a multi-city franchise (Oradea Experience + Cluj Xperience) with 9,700+ registered users, 200+ local businesses, 700+ listed events, and a shared mobile app on App Store and Google Play. Oradea includes 150+ businesses and 570+ events, while Cluj includes 50+ businesses and 130+ events.
 
 ### Tool Connect
 **URL:** https://alexjungean.com/projects/tool
 **Type:** Marketplace, Mobile App, Web Application
-**Description:** Service provider marketplace connecting clients with local professionals in Prague, Czech Republic. Native mobile apps (iOS + Android), marketing website, and complete branding package.
+**Description:** Service provider marketplace connecting 250+ registered users with 190+ service providers in Prague, Czech Republic. Includes native mobile apps (iOS + Android), a marketing website, and a complete branding package.
 
 ### FleetKeeper
 **URL:** https://alexjungean.com/projects/fleetkeeper
@@ -263,7 +263,7 @@ After launch, every project includes:
 ### Radical Football
 **URL:** https://alexjungean.com/projects/radical-football
 **Type:** Educational Platform, Conference Management
-**Description:** Youth football education platform with conference ticketing via Stripe, resource library with custom training diagram builder, community forums, and 14-tab admin dashboard.
+**Description:** Youth football education platform supporting 3 conference editions, 26 featured speakers, and 200+ participants. Includes conference ticketing via Stripe, a resource library with a custom training diagram builder, community forums, and a 14-tab admin dashboard.
 
 ### Amidamaru
 **URL:** https://alexjungean.com/projects/amidamaru
@@ -441,8 +441,8 @@ Standard freelancing terms apply:
 
 ## Document Metadata
 
-- **Last Updated:** May 2026
-- **Version:** 2.0
+- **Last Updated:** July 2026
+- **Version:** 2.1
 - **Source:** https://alexjungean.com
 - **Format:** llms-full.txt (Extended LLM documentation)
 - **Primary contact for new projects:** https://alexjungean.com/start

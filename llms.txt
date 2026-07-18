@@ -19,10 +19,10 @@ Alexandru Jungean is an experienced IT freelancer based in Cluj-Napoca, Romania,
 Featured projects demonstrating expertise across web, mobile, and design:
 
 - [Primaria Municipiului Salonta](https://alexjungean.com/projects/primaria-salonta): Trilingual government website with admin panel, Supabase, and public transparency features
-- [City Xperience](https://alexjungean.com/projects/oradea-experience): Multi-city franchise platform (Oradea + Cluj) with 8,600+ users, 130+ businesses, 480+ events, independent websites, and shared mobile app
-- [Tool Connect](https://alexjungean.com/projects/tool): Service provider marketplace with native mobile apps (iOS + Android), website, and branding
+- [City Xperience](https://alexjungean.com/projects/oradea-experience): Multi-city franchise platform (Oradea + Cluj) with 9,700+ registered users, 200+ local businesses, 700+ listed events, independent websites, and a shared mobile app
+- [Tool Connect](https://alexjungean.com/projects/tool): Service provider marketplace with 250+ registered users and 190+ service providers, native mobile apps (iOS + Android), website, and branding
 - [FleetKeeper](https://alexjungean.com/projects/fleetkeeper): B2B SaaS fleet management app with AI document scanning, 12 languages, and automated notifications
-- [Radical Football](https://alexjungean.com/projects/radical-football): Educational platform with Stripe payments, Konva diagram builder, and 14-tab admin dashboard
+- [Radical Football](https://alexjungean.com/projects/radical-football): Educational platform supporting 3 conference editions, 26 featured speakers, and 200+ participants, with Stripe payments, a Konva diagram builder, and a 14-tab admin dashboard
 - [Amidamaru](https://alexjungean.com/projects/amidamaru): Corporate transport website with 9 language translations and static site generation
 - [Service 24 BDD](https://alexjungean.com/projects/service-24-bdd): Multilingual truck service website with 8 languages, ECU pricing, and Schema.org structured data
 - [Nuestra](https://alexjungean.com/projects/nuestra): Dual-brand e-commerce platform for streetwear and sports equipment

@@ -2188,6 +2188,43 @@ blockquote {
   margin-bottom: 0;
 }
 
+/* Project impact metrics */
+.project-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+.project-metric-card {
+  padding: 1.5rem 1rem;
+  text-align: center;
+  background: rgba(var(--color-brand-rgb), 0.1);
+  border: 1px solid rgba(var(--color-brand-rgb), 0.15);
+  border-radius: 12px;
+}
+
+.project-metric-value {
+  color: var(--color--brand);
+  font-family: Clashdisplay, sans-serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.project-metric-label {
+  margin-top: 0.65rem;
+  color: var(--defatult--white);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.project-metrics-note {
+  margin-top: 0.75rem;
+  color: var(--color--body-font-2);
+  font-size: 0.75rem;
+  text-align: right;
+}
+
 /* Project Links Section - Cards for Website/App Links */
 .project-links-section {
   margin-top: 2.5rem;
