@@ -255,7 +255,7 @@ After launch, every project includes:
 **Type:** B2B SaaS, Mobile App, Fleet Management
 **Description:** Fleet management mobile application for transport companies to track vehicle, driver, and document expiration dates with AI-powered scanning and automated notifications across 12 languages.
 
-### Primaria Municipiului Salonta
+### Salonta City Hall
 **URL:** https://alexjungean.com/projects/primaria-salonta
 **Type:** Government Website, Multilingual Platform
 **Description:** Trilingual municipal government website (Romanian, Hungarian, English) with comprehensive admin panel, public transparency features, and online services for citizens, businesses, and tourists.
