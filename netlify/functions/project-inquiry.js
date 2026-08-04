@@ -5,6 +5,15 @@ function sanitize(str) {
   return str.replace(/[<>]/g, '').trim().substring(0, 10000);
 }
 
+function escapeHtml(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+
 function sanitizeObj(obj) {
   if (!obj || typeof obj !== 'object') return obj;
   if (Array.isArray(obj)) return obj.map(function (v) { return typeof v === 'string' ? sanitize(v) : sanitizeObj(v); });
@@ -40,6 +49,27 @@ function sectionHtml(title, rows) {
   return '<div style="margin-bottom:20px"><h3 style="font-size:14px;color:#8aacbb;margin:0 0 8px;border-bottom:1px solid #333;padding-bottom:6px">' + title + '</h3><table style="width:100%;border-collapse:collapse;font-size:13px">' + filtered.join('') + '</table></div>';
 }
 
+function brandedEmailShell(content, preheader, maxWidth) {
+  return '<!doctype html>' +
+    '<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>' +
+    '<body style="margin:0;padding:0;background-color:#f1f4f4;color:#181818;font-family:Arial,Helvetica,sans-serif">' +
+    '<div style="display:none;max-height:0;overflow:hidden;opacity:0;color:transparent">' + escapeHtml(preheader) + '</div>' +
+    '<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;background-color:#f1f4f4">' +
+    '<tr><td align="center" style="padding:24px 12px">' +
+    '<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;max-width:' + maxWidth + ';background-color:#fff;border-radius:14px;overflow:hidden">' +
+    '<tr><td style="background-color:#181818;padding:26px 32px">' +
+    '<a href="https://alexjungean.com" style="display:inline-block;text-decoration:none">' +
+    '<img src="https://alexjungean.com/images/email-logo.png" width="243" height="47" alt="Alexandru Jungean" style="display:block;width:243px;max-width:100%;height:auto;border:0">' +
+    '</a></td></tr>' +
+    '<tr><td>' + content + '</td></tr>' +
+    '<tr><td style="background-color:#181818;padding:24px 32px;color:#bfbfbf;font-size:12px;line-height:1.6">' +
+    '<p style="margin:0 0 10px"><a href="https://alexjungean.com/projects" style="color:#fff;text-decoration:none">Projects</a>' +
+    '<span style="color:#678b9e;padding:0 8px">•</span><a href="https://www.linkedin.com/in/alexandru-jungean/" style="color:#fff;text-decoration:none">LinkedIn</a>' +
+    '<span style="color:#678b9e;padding:0 8px">•</span><a href="https://github.com/AlexandruJungean" style="color:#fff;text-decoration:none">GitHub</a></p>' +
+    '<p style="margin:0">Alexandru Jungean · IT Freelancer</p></td></tr>' +
+    '</table></td></tr></table></body></html>';
+}
+
 var SERVICE_LABELS = {
   website: 'Website', mobile_app: 'Mobile App', branding: 'Branding & Identity',
   marketing: 'Marketing & Ads', video: 'Video Production', database: 'Database & Backend',
@@ -51,16 +81,17 @@ function formatServices(raw) {
 }
 
 function buildAdminEmail(d) {
+  var serviceIds = arr(d.services);
   var services = formatServices(d.services);
   var files = arr(d.files);
 
-  var html = '<div style="font-family:Arial,Helvetica,sans-serif;max-width:700px;margin:0 auto;background:#1a1a1a;color:#e0e0e0;padding:24px;border-radius:12px">';
+  var html = '<div style="background:#1a1a1a;color:#e0e0e0;padding:28px 32px">';
   html += '<h1 style="font-size:18px;color:#fff;margin:0 0 4px">New Project Inquiry</h1>';
   html += '<p style="font-size:12px;color:#888;margin:0 0 20px">Submitted ' + new Date().toLocaleString('en-GB', { dateStyle: 'medium', timeStyle: 'short' }) + '</p>';
 
-  html += '<div style="background:rgba(124,58,237,0.1);border:1px solid rgba(124,58,237,0.3);border-radius:8px;padding:12px 16px;margin-bottom:20px">';
-  html += '<p style="margin:0;font-size:13px;color:#c4b5fd"><strong>Priority:</strong> ' + (d.priority_metric || 'Not set') + '</p>';
-  html += '<p style="margin:4px 0 0;font-size:13px;color:#c4b5fd"><strong>Services:</strong> ' + services.join(', ') + '</p>';
+  html += '<div style="background:#223039;border:1px solid #678b9e;border-radius:8px;padding:12px 16px;margin-bottom:20px">';
+  html += '<p style="margin:0;font-size:13px;color:#d9e5ea"><strong>Priority:</strong> ' + (d.priority_metric || 'Not set') + '</p>';
+  html += '<p style="margin:4px 0 0;font-size:13px;color:#d9e5ea"><strong>Services:</strong> ' + services.join(', ') + '</p>';
   html += '</div>';
 
   html += sectionHtml('Contact', [
@@ -117,7 +148,7 @@ function buildAdminEmail(d) {
   }
   if (refs.length) html += sectionHtml('References', [row('List', refs.join('<br>'))]);
 
-  if (services.indexOf('website') !== -1) {
+  if (serviceIds.indexOf('website') !== -1) {
     html += sectionHtml('Website Details', [
       row('Type', d.ws_type === '__custom__' ? d.ws_type_custom : d.ws_type),
       row('Pages', d.ws_pages), row('Features', arr(d.ws_features)),
@@ -128,7 +159,7 @@ function buildAdminEmail(d) {
     ]);
   }
 
-  if (services.indexOf('mobile_app') !== -1) {
+  if (serviceIds.indexOf('mobile_app') !== -1) {
     html += sectionHtml('Mobile App Details', [
       row('Type', d.ma_type === '__custom__' ? d.ma_type_custom : d.ma_type),
       row('Platforms', arr(d.ma_platforms)), row('Pricing', d.ma_pricing),
@@ -140,7 +171,7 @@ function buildAdminEmail(d) {
     ]);
   }
 
-  if (services.indexOf('branding') !== -1) {
+  if (serviceIds.indexOf('branding') !== -1) {
     html += sectionHtml('Branding Details', [
       row('Needs', arr(d.br_needs)), row('Existing', d.br_existing),
       row('Personality', arr(d.br_personality)), row('Colors', d.br_colors),
@@ -149,7 +180,7 @@ function buildAdminEmail(d) {
     ]);
   }
 
-  if (services.indexOf('marketing') !== -1) {
+  if (serviceIds.indexOf('marketing') !== -1) {
     html += sectionHtml('Marketing Details', [
       row('Services', arr(d.mk_services)), row('Current', arr(d.mk_current)),
       row('Ad budget', d.mk_ad_budget), row('Mgmt budget', d.mk_mgmt_budget),
@@ -158,7 +189,7 @@ function buildAdminEmail(d) {
     ]);
   }
 
-  if (services.indexOf('video') !== -1) {
+  if (serviceIds.indexOf('video') !== -1) {
     html += sectionHtml('Video Details', [
       row('Types', arr(d.vd_types)), row('Count', d.vd_count), row('Length', d.vd_length),
       row('Footage', d.vd_footage), row('Usage', arr(d.vd_usage)),
@@ -166,7 +197,7 @@ function buildAdminEmail(d) {
     ]);
   }
 
-  if (services.indexOf('database') !== -1) {
+  if (serviceIds.indexOf('database') !== -1) {
     html += sectionHtml('Database & Backend Details', [
       row('Needs', arr(d.db_needs)), row('Existing', d.db_existing),
       row('Existing desc', d.db_existing_desc), row('Users', d.db_users),
@@ -175,7 +206,7 @@ function buildAdminEmail(d) {
     ]);
   }
 
-  if (services.indexOf('design') !== -1) {
+  if (serviceIds.indexOf('design') !== -1) {
     html += sectionHtml('UI/UX Design Details', [
       row('Needs', arr(d.dg_needs)),
       row('Style', d.dg_style === '__custom__' ? d.dg_style_custom : d.dg_style),
@@ -183,7 +214,7 @@ function buildAdminEmail(d) {
     ]);
   }
 
-  if (services.indexOf('consulting') !== -1) {
+  if (serviceIds.indexOf('consulting') !== -1) {
     html += sectionHtml('Consulting Details', [
       row('Needs', arr(d.co_needs)), row('Format', d.co_format), row('Budget', d.co_budget)
     ]);
@@ -206,43 +237,34 @@ function buildAdminEmail(d) {
   }
 
   html += '</div>';
-  return html;
+  return brandedEmailShell(html, 'A new project inquiry has been submitted.', '700px');
 }
 
 function buildClientEmail(d) {
   var name = (d.name || '').split(' ')[0] || 'there';
   var services = formatServices(d.services);
 
-  var html = '<div style="font-family:Arial,Helvetica,sans-serif;max-width:600px;margin:0 auto">';
-  html += '<h2 style="color:#678b9e">Thank you, ' + name + '!</h2>';
-  html += '<p>I\'ve received your project details and will get back to you with initial thoughts within <strong>24 hours</strong>.</p>';
+  var html = '<div style="padding:36px 32px 32px;background:#fff">';
+  html += '<p style="margin:0 0 10px;color:#678b9e;font-size:12px;font-weight:bold;letter-spacing:1.4px;text-transform:uppercase">Project inquiry received</p>';
+  html += '<h1 style="margin:0 0 14px;color:#181818;font-size:27px;line-height:1.25">Thank you, ' + escapeHtml(name) + '!</h1>';
+  html += '<p style="margin:0;color:#474644;font-size:16px;line-height:1.65">I\'ve received your project details and will get back to you with initial thoughts within <strong style="color:#181818">24 hours</strong>.</p>';
 
-  html += '<div style="background:#f5f5f5;padding:16px 20px;border-radius:8px;margin:20px 0">';
-  html += '<h3 style="margin:0 0 8px;font-size:14px;color:#333">Your submission summary:</h3>';
-  if (d.priority_metric) html += '<p style="margin:4px 0;font-size:13px"><strong>Priority:</strong> ' + d.priority_metric + '</p>';
-  html += '<p style="margin:4px 0;font-size:13px"><strong>Services:</strong> ' + services.join(', ') + '</p>';
-  if (d.project_goal) html += '<p style="margin:4px 0;font-size:13px"><strong>Goal:</strong> ' + d.project_goal + '</p>';
+  html += '<div style="margin-top:24px;padding:20px;background:#f8f9f9;border:1px solid #e3e8ea;border-radius:10px">';
+  html += '<p style="margin:0 0 12px;color:#678b9e;font-size:12px;font-weight:bold;letter-spacing:1px;text-transform:uppercase">Your submission summary</p>';
+  if (d.priority_metric) html += '<p style="margin:6px 0;color:#474644;font-size:14px"><strong style="color:#181818">Priority:</strong> ' + escapeHtml(d.priority_metric) + '</p>';
+  html += '<p style="margin:6px 0;color:#474644;font-size:14px"><strong style="color:#181818">Services:</strong> ' + escapeHtml(services.join(', ')) + '</p>';
+  if (d.project_goal) html += '<p style="margin:6px 0;color:#474644;font-size:14px;line-height:1.55"><strong style="color:#181818">Goal:</strong> ' + escapeHtml(d.project_goal) + '</p>';
   html += '</div>';
 
-  html += '<p>In the meantime, feel free to:</p><ul>';
-  html += '<li>Check out my <a href="https://alexjungean.com/projects" style="color:#678b9e">projects</a></li>';
-  html += '<li>Connect on <a href="https://www.linkedin.com/in/alexandru-jungean/" style="color:#678b9e">LinkedIn</a></li>';
-  html += '</ul>';
-
-  html += '<p>Best regards,<br><strong>Alexandru Jungean</strong><br>IT Freelancer</p>';
-
-  html += '<div style="margin:24px 0;padding:16px 0;border-top:1px solid #eee;border-bottom:1px solid #eee">';
-  html += '<p style="margin:0 0 8px;font-size:13px;color:#666">Follow me on social media:</p>';
-  html += '<p style="margin:0;font-size:13px">';
-  html += '<a href="https://www.linkedin.com/in/alexandru-jungean/" style="color:#678b9e;text-decoration:none;margin-right:16px">LinkedIn</a>';
-  html += '<a href="https://www.instagram.com/alexjungean/" style="color:#678b9e;text-decoration:none;margin-right:16px">Instagram</a>';
-  html += '<a href="https://www.facebook.com/alex.jungean" style="color:#678b9e;text-decoration:none;margin-right:16px">Facebook</a>';
-  html += '<a href="https://github.com/AlexandruJungean" style="color:#678b9e;text-decoration:none">GitHub</a>';
-  html += '</p></div>';
-
-  html += '<p style="color:#999;font-size:12px">This is an automated confirmation. If you need to reach me, reply to this email or visit <a href="https://alexjungean.com/contact" style="color:#999">alexjungean.com/contact</a>.</p>';
+  html += '<p style="margin:24px 0 0;color:#474644;font-size:15px;line-height:1.65">In the meantime, you can explore some of my recent work.</p>';
+  html += '<table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin-top:18px"><tr><td style="background:#678b9e;border-radius:7px">';
+  html += '<a href="https://alexjungean.com/projects" style="display:inline-block;padding:12px 20px;color:#fff;font-size:14px;font-weight:bold;text-decoration:none">View my projects</a>';
+  html += '</td></tr></table>';
+  html += '<p style="margin:28px 0 0;color:#474644;font-size:14px;line-height:1.6">Best regards,<br><strong style="color:#181818">Alexandru Jungean</strong><br>IT Freelancer</p>';
+  html += '<p style="margin:22px 0 0;color:#838383;font-size:11px;line-height:1.5">This is an automated confirmation. If you need to reach me, reply to this email or use the <a href="https://alexjungean.com/contact" style="color:#678b9e">contact form</a>.</p>';
   html += '</div>';
-  return html;
+
+  return brandedEmailShell(html, 'Your project inquiry has been received. I will reply within 24 hours.', '640px');
 }
 
 export async function handler(event) {
