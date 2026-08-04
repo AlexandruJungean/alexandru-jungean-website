@@ -33,37 +33,44 @@ function buildEmailLayout({ preheader, eyebrow, title, intro, content, cta }) {
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>${escapeHtml(title)}</title>
+        <style>
+          @media only screen and (max-width: 600px) {
+            .email-pad { padding-left: 20px !important; padding-right: 20px !important; }
+            .email-title { font-size: 24px !important; }
+            .email-logo { width: 180px !important; }
+          }
+        </style>
       </head>
-      <body style="margin:0;padding:0;background-color:#f1f4f4;color:#181818;font-family:Arial,Helvetica,sans-serif;">
+      <body style="margin:0;padding:0;color:#181818;font-family:Arial,Helvetica,sans-serif;">
         <div style="display:none;max-height:0;overflow:hidden;opacity:0;color:transparent;">
           ${escapeHtml(preheader)}
         </div>
-        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;background-color:#f1f4f4;">
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;">
           <tr>
-            <td align="center" style="padding:24px 12px;">
-              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;max-width:640px;background-color:#ffffff;border-radius:14px;overflow:hidden;">
+            <td align="center" style="padding:0;">
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;max-width:640px;">
                 <tr>
-                  <td style="background-color:#181818;padding:26px 32px;">
+                  <td class="email-pad" style="background-color:#181818;padding:20px 24px;">
                     <a href="https://alexjungean.com" style="display:inline-block;text-decoration:none;">
-                      <img src="https://alexjungean.com/images/email-logo.png" width="243" height="47" alt="Alexandru Jungean" style="display:block;width:243px;max-width:100%;height:auto;border:0;">
+                      <img class="email-logo" src="https://alexjungean.com/images/email-logo.png" width="180" height="35" alt="Alexandru Jungean" style="display:block;width:180px;max-width:100%;height:auto;border:0;">
                     </a>
                   </td>
                 </tr>
                 <tr>
-                  <td style="padding:36px 32px 16px;">
+                  <td class="email-pad" style="padding:30px 24px 12px;">
                     <p style="margin:0 0 10px;color:#678b9e;font-size:12px;font-weight:bold;letter-spacing:1.4px;text-transform:uppercase;">${escapeHtml(eyebrow)}</p>
-                    <h1 style="margin:0 0 14px;color:#181818;font-size:27px;line-height:1.25;">${escapeHtml(title)}</h1>
+                    <h1 class="email-title" style="margin:0 0 14px;color:#181818;font-size:27px;line-height:1.25;">${escapeHtml(title)}</h1>
                     <p style="margin:0;color:#474644;font-size:16px;line-height:1.65;">${escapeHtml(intro)}</p>
                   </td>
                 </tr>
                 <tr>
-                  <td style="padding:16px 32px 32px;">
+                  <td class="email-pad" style="padding:12px 24px 28px;">
                     ${content}
                     ${cta || ''}
                   </td>
                 </tr>
                 <tr>
-                  <td style="background-color:#181818;padding:24px 32px;color:#bfbfbf;font-size:12px;line-height:1.6;">
+                  <td class="email-pad" style="background-color:#181818;padding:20px 24px;color:#bfbfbf;font-size:12px;line-height:1.6;">
                     <p style="margin:0 0 10px;">
                       <a href="https://alexjungean.com/projects" style="color:#ffffff;text-decoration:none;">Projects</a>
                       <span style="color:#678b9e;padding:0 8px;">•</span>
@@ -156,13 +163,13 @@ export async function handler(event) {
         title: `New message from ${name}`,
         intro: 'A new contact form submission has arrived from alexjungean.com.',
         content: `
-          <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;background-color:#f8f9f9;border:1px solid #e3e8ea;border-radius:10px;">
-            <tr><td style="padding:18px 20px 8px;color:#678b9e;font-size:12px;font-weight:bold;text-transform:uppercase;">Contact details</td></tr>
-            <tr><td style="padding:0 20px 8px;color:#474644;font-size:14px;"><strong style="color:#181818;">Name:</strong> ${escapeHtml(name)}</td></tr>
-            <tr><td style="padding:0 20px 8px;color:#474644;font-size:14px;"><strong style="color:#181818;">Email:</strong> <a href="mailto:${escapeHtml(email)}" style="color:#678b9e;">${escapeHtml(email)}</a></td></tr>
-            <tr><td style="padding:0 20px 18px;color:#474644;font-size:14px;"><strong style="color:#181818;">Subject:</strong> ${escapeHtml(subject || 'Not specified')}</td></tr>
+          <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;">
+            <tr><td style="padding:0 0 10px;color:#678b9e;font-size:12px;font-weight:bold;text-transform:uppercase;">Contact details</td></tr>
+            <tr><td style="padding:0 0 8px;color:#474644;font-size:14px;"><strong style="color:#181818;">Name:</strong> ${escapeHtml(name)}</td></tr>
+            <tr><td style="padding:0 0 8px;color:#474644;font-size:14px;"><strong style="color:#181818;">Email:</strong> <a href="mailto:${escapeHtml(email)}" style="color:#678b9e;">${escapeHtml(email)}</a></td></tr>
+            <tr><td style="padding:0 0 8px;color:#474644;font-size:14px;"><strong style="color:#181818;">Subject:</strong> ${escapeHtml(subject || 'Not specified')}</td></tr>
           </table>
-          <div style="margin-top:16px;padding:20px;background-color:#ffffff;border-left:4px solid #678b9e;border-radius:4px;color:#474644;font-size:15px;line-height:1.65;">
+          <div style="margin-top:16px;color:#474644;font-size:15px;line-height:1.65;">
             ${formatMessage(message)}
           </div>
           <p style="margin:18px 0 0;color:#838383;font-size:12px;">reCAPTCHA score: ${escapeHtml(recaptchaResult.score)}</p>
@@ -187,7 +194,7 @@ export async function handler(event) {
         title: `Thank you for reaching out, ${name}!`,
         intro: "I've received your message and will get back to you as soon as possible, typically within 24-48 hours.",
         content: `
-          <div style="padding:20px;background-color:#f8f9f9;border:1px solid #e3e8ea;border-radius:10px;">
+          <div>
             <p style="margin:0 0 10px;color:#678b9e;font-size:12px;font-weight:bold;letter-spacing:1px;text-transform:uppercase;">Your message</p>
             <p style="margin:0 0 12px;color:#181818;font-size:14px;"><strong>Subject:</strong> ${escapeHtml(subject || 'Not specified')}</p>
             <p style="margin:0;color:#474644;font-size:15px;line-height:1.65;">${formatMessage(message)}</p>

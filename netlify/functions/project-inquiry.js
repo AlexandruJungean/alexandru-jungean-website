@@ -40,29 +40,30 @@ function arr(val) {
 function row(label, value) {
   if (!value || (Array.isArray(value) && value.length === 0)) return '';
   var display = Array.isArray(value) ? value.join(', ') : value;
-  return '<tr><td style="padding:6px 12px 6px 0;color:#888;vertical-align:top;white-space:nowrap;width:40%">' + label + '</td><td style="padding:6px 0;color:#ddd">' + display + '</td></tr>';
+  return '<tr><td class="detail-label" style="padding:6px 12px 6px 0;color:#666;vertical-align:top;width:34%">' + label + '</td><td style="padding:6px 0;color:#181818;word-break:break-word">' + display + '</td></tr>';
 }
 
 function sectionHtml(title, rows) {
   var filtered = rows.filter(Boolean);
   if (filtered.length === 0) return '';
-  return '<div style="margin-bottom:20px"><h3 style="font-size:14px;color:#8aacbb;margin:0 0 8px;border-bottom:1px solid #333;padding-bottom:6px">' + title + '</h3><table style="width:100%;border-collapse:collapse;font-size:13px">' + filtered.join('') + '</table></div>';
+  return '<div style="margin-bottom:22px"><h3 style="font-size:14px;color:#678b9e;margin:0 0 8px">' + title + '</h3><table style="width:100%;border-collapse:collapse;font-size:13px">' + filtered.join('') + '</table></div>';
 }
 
 function brandedEmailShell(content, preheader, maxWidth) {
   return '<!doctype html>' +
-    '<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>' +
-    '<body style="margin:0;padding:0;background-color:#f1f4f4;color:#181818;font-family:Arial,Helvetica,sans-serif">' +
+    '<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">' +
+    '<style>@media only screen and (max-width:600px){.email-pad{padding-left:20px!important;padding-right:20px!important}.email-title{font-size:24px!important}.email-logo{width:180px!important}.detail-label{width:32%!important}}</style></head>' +
+    '<body style="margin:0;padding:0;color:#181818;font-family:Arial,Helvetica,sans-serif">' +
     '<div style="display:none;max-height:0;overflow:hidden;opacity:0;color:transparent">' + escapeHtml(preheader) + '</div>' +
-    '<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;background-color:#f1f4f4">' +
-    '<tr><td align="center" style="padding:24px 12px">' +
-    '<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;max-width:' + maxWidth + ';background-color:#fff;border-radius:14px;overflow:hidden">' +
-    '<tr><td style="background-color:#181818;padding:26px 32px">' +
+    '<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%">' +
+    '<tr><td align="center" style="padding:0">' +
+    '<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;max-width:' + maxWidth + '">' +
+    '<tr><td class="email-pad" style="background-color:#181818;padding:20px 24px">' +
     '<a href="https://alexjungean.com" style="display:inline-block;text-decoration:none">' +
-    '<img src="https://alexjungean.com/images/email-logo.png" width="243" height="47" alt="Alexandru Jungean" style="display:block;width:243px;max-width:100%;height:auto;border:0">' +
+    '<img class="email-logo" src="https://alexjungean.com/images/email-logo.png" width="180" height="35" alt="Alexandru Jungean" style="display:block;width:180px;max-width:100%;height:auto;border:0">' +
     '</a></td></tr>' +
     '<tr><td>' + content + '</td></tr>' +
-    '<tr><td style="background-color:#181818;padding:24px 32px;color:#bfbfbf;font-size:12px;line-height:1.6">' +
+    '<tr><td class="email-pad" style="background-color:#181818;padding:20px 24px;color:#bfbfbf;font-size:12px;line-height:1.6">' +
     '<p style="margin:0 0 10px"><a href="https://alexjungean.com/projects" style="color:#fff;text-decoration:none">Projects</a>' +
     '<span style="color:#678b9e;padding:0 8px">•</span><a href="https://www.linkedin.com/in/alexandru-jungean/" style="color:#fff;text-decoration:none">LinkedIn</a>' +
     '<span style="color:#678b9e;padding:0 8px">•</span><a href="https://github.com/AlexandruJungean" style="color:#fff;text-decoration:none">GitHub</a></p>' +
@@ -85,13 +86,13 @@ function buildAdminEmail(d) {
   var services = formatServices(d.services);
   var files = arr(d.files);
 
-  var html = '<div style="background:#1a1a1a;color:#e0e0e0;padding:28px 32px">';
-  html += '<h1 style="font-size:18px;color:#fff;margin:0 0 4px">New Project Inquiry</h1>';
-  html += '<p style="font-size:12px;color:#888;margin:0 0 20px">Submitted ' + new Date().toLocaleString('en-GB', { dateStyle: 'medium', timeStyle: 'short' }) + '</p>';
+  var html = '<div class="email-pad" style="padding:28px 24px">';
+  html += '<h1 style="font-size:20px;color:#181818;margin:0 0 4px">New Project Inquiry</h1>';
+  html += '<p style="font-size:12px;color:#838383;margin:0 0 20px">Submitted ' + new Date().toLocaleString('en-GB', { dateStyle: 'medium', timeStyle: 'short' }) + '</p>';
 
-  html += '<div style="background:#223039;border:1px solid #678b9e;border-radius:8px;padding:12px 16px;margin-bottom:20px">';
-  html += '<p style="margin:0;font-size:13px;color:#d9e5ea"><strong>Priority:</strong> ' + (d.priority_metric || 'Not set') + '</p>';
-  html += '<p style="margin:4px 0 0;font-size:13px;color:#d9e5ea"><strong>Services:</strong> ' + services.join(', ') + '</p>';
+  html += '<div style="margin-bottom:22px">';
+  html += '<p style="margin:0;font-size:13px;color:#474644"><strong style="color:#181818">Priority:</strong> ' + (d.priority_metric || 'Not set') + '</p>';
+  html += '<p style="margin:6px 0 0;font-size:13px;color:#474644"><strong style="color:#181818">Services:</strong> ' + services.join(', ') + '</p>';
   html += '</div>';
 
   html += sectionHtml('Contact', [
@@ -244,12 +245,12 @@ function buildClientEmail(d) {
   var name = (d.name || '').split(' ')[0] || 'there';
   var services = formatServices(d.services);
 
-  var html = '<div style="padding:36px 32px 32px;background:#fff">';
+  var html = '<div class="email-pad" style="padding:30px 24px 28px">';
   html += '<p style="margin:0 0 10px;color:#678b9e;font-size:12px;font-weight:bold;letter-spacing:1.4px;text-transform:uppercase">Project inquiry received</p>';
-  html += '<h1 style="margin:0 0 14px;color:#181818;font-size:27px;line-height:1.25">Thank you, ' + escapeHtml(name) + '!</h1>';
+  html += '<h1 class="email-title" style="margin:0 0 14px;color:#181818;font-size:27px;line-height:1.25">Thank you, ' + escapeHtml(name) + '!</h1>';
   html += '<p style="margin:0;color:#474644;font-size:16px;line-height:1.65">I\'ve received your project details and will get back to you with initial thoughts within <strong style="color:#181818">24 hours</strong>.</p>';
 
-  html += '<div style="margin-top:24px;padding:20px;background:#f8f9f9;border:1px solid #e3e8ea;border-radius:10px">';
+  html += '<div style="margin-top:24px">';
   html += '<p style="margin:0 0 12px;color:#678b9e;font-size:12px;font-weight:bold;letter-spacing:1px;text-transform:uppercase">Your submission summary</p>';
   if (d.priority_metric) html += '<p style="margin:6px 0;color:#474644;font-size:14px"><strong style="color:#181818">Priority:</strong> ' + escapeHtml(d.priority_metric) + '</p>';
   html += '<p style="margin:6px 0;color:#474644;font-size:14px"><strong style="color:#181818">Services:</strong> ' + escapeHtml(services.join(', ')) + '</p>';
