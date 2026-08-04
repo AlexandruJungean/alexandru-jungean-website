@@ -52,18 +52,18 @@ function sectionHtml(title, rows) {
 function brandedEmailShell(content, preheader, maxWidth) {
   return '<!doctype html>' +
     '<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">' +
-    '<style>@media only screen and (max-width:600px){.email-pad{padding-left:20px!important;padding-right:20px!important}.email-title{font-size:24px!important}.email-logo{width:180px!important}.detail-label{width:32%!important}}</style></head>' +
+    '<style>@media only screen and (max-width:600px){.email-pad{padding-left:20px!important;padding-right:20px!important}.email-title{font-size:24px!important}.email-logo{width:150px!important}.detail-label{width:32%!important}}</style></head>' +
     '<body style="margin:0;padding:0;color:#181818;font-family:Arial,Helvetica,sans-serif">' +
     '<div style="display:none;max-height:0;overflow:hidden;opacity:0;color:transparent">' + escapeHtml(preheader) + '</div>' +
     '<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%">' +
     '<tr><td align="center" style="padding:0">' +
-    '<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;max-width:' + maxWidth + '">' +
-    '<tr><td class="email-pad" style="background-color:#181818;padding:20px 24px">' +
+    '<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;max-width:' + maxWidth + ';background-color:#f5f7f8;border-radius:12px;overflow:hidden">' +
+    '<tr><td class="email-pad" style="background-color:#181818;padding:20px 24px;border-radius:12px 12px 0 0">' +
     '<a href="https://alexjungean.com" style="display:inline-block;text-decoration:none">' +
     '<img class="email-logo" src="https://alexjungean.com/images/email-logo.png" width="180" height="35" alt="Alexandru Jungean" style="display:block;width:180px;max-width:100%;height:auto;border:0">' +
     '</a></td></tr>' +
-    '<tr><td>' + content + '</td></tr>' +
-    '<tr><td class="email-pad" style="background-color:#181818;padding:20px 24px;color:#bfbfbf;font-size:12px;line-height:1.6">' +
+    '<tr><td style="background-color:#f5f7f8">' + content + '</td></tr>' +
+    '<tr><td class="email-pad" style="background-color:#181818;padding:20px 24px;color:#bfbfbf;font-size:12px;line-height:1.6;border-radius:0 0 12px 12px">' +
     '<p style="margin:0 0 10px"><a href="https://alexjungean.com/projects" style="color:#fff;text-decoration:none">Projects</a>' +
     '<span style="color:#678b9e;padding:0 8px">•</span><a href="https://www.linkedin.com/in/alexandru-jungean/" style="color:#fff;text-decoration:none">LinkedIn</a>' +
     '<span style="color:#678b9e;padding:0 8px">•</span><a href="https://github.com/AlexandruJungean" style="color:#fff;text-decoration:none">GitHub</a></p>' +

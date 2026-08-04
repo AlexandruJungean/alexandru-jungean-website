@@ -37,7 +37,7 @@ function buildEmailLayout({ preheader, eyebrow, title, intro, content, cta }) {
           @media only screen and (max-width: 600px) {
             .email-pad { padding-left: 20px !important; padding-right: 20px !important; }
             .email-title { font-size: 24px !important; }
-            .email-logo { width: 180px !important; }
+            .email-logo { width: 150px !important; }
           }
         </style>
       </head>
@@ -48,29 +48,29 @@ function buildEmailLayout({ preheader, eyebrow, title, intro, content, cta }) {
         <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;">
           <tr>
             <td align="center" style="padding:0;">
-              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;max-width:640px;">
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;max-width:640px;background-color:#f5f7f8;border-radius:12px;overflow:hidden;">
                 <tr>
-                  <td class="email-pad" style="background-color:#181818;padding:20px 24px;">
+                  <td class="email-pad" style="background-color:#181818;padding:20px 24px;border-radius:12px 12px 0 0;">
                     <a href="https://alexjungean.com" style="display:inline-block;text-decoration:none;">
                       <img class="email-logo" src="https://alexjungean.com/images/email-logo.png" width="180" height="35" alt="Alexandru Jungean" style="display:block;width:180px;max-width:100%;height:auto;border:0;">
                     </a>
                   </td>
                 </tr>
                 <tr>
-                  <td class="email-pad" style="padding:30px 24px 12px;">
+                  <td class="email-pad" style="background-color:#f5f7f8;padding:30px 24px 12px;">
                     <p style="margin:0 0 10px;color:#678b9e;font-size:12px;font-weight:bold;letter-spacing:1.4px;text-transform:uppercase;">${escapeHtml(eyebrow)}</p>
                     <h1 class="email-title" style="margin:0 0 14px;color:#181818;font-size:27px;line-height:1.25;">${escapeHtml(title)}</h1>
                     <p style="margin:0;color:#474644;font-size:16px;line-height:1.65;">${escapeHtml(intro)}</p>
                   </td>
                 </tr>
                 <tr>
-                  <td class="email-pad" style="padding:12px 24px 28px;">
+                  <td class="email-pad" style="background-color:#f5f7f8;padding:12px 24px 28px;">
                     ${content}
                     ${cta || ''}
                   </td>
                 </tr>
                 <tr>
-                  <td class="email-pad" style="background-color:#181818;padding:20px 24px;color:#bfbfbf;font-size:12px;line-height:1.6;">
+                  <td class="email-pad" style="background-color:#181818;padding:20px 24px;color:#bfbfbf;font-size:12px;line-height:1.6;border-radius:0 0 12px 12px;">
                     <p style="margin:0 0 10px;">
                       <a href="https://alexjungean.com/projects" style="color:#ffffff;text-decoration:none;">Projects</a>
                       <span style="color:#678b9e;padding:0 8px;">•</span>
