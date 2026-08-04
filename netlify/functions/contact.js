@@ -43,9 +43,9 @@ function buildEmailLayout({ preheader, eyebrow, title, intro, content, cta }) {
             <td align="center" style="padding:24px 12px;">
               <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;max-width:640px;background-color:#ffffff;border-radius:14px;overflow:hidden;">
                 <tr>
-                  <td style="background-color:#181818;padding:24px 32px;">
+                  <td style="background-color:#181818;padding:26px 32px;">
                     <a href="https://alexjungean.com" style="display:inline-block;text-decoration:none;">
-                      <img src="https://alexjungean.com/images/Logo-p-500.webp" width="190" height="36" alt="Alexandru Jungean" style="display:block;width:190px;max-width:100%;height:auto;border:0;">
+                      <img src="https://alexjungean.com/images/email-logo.png" width="243" height="47" alt="Alexandru Jungean" style="display:block;width:243px;max-width:100%;height:auto;border:0;">
                     </a>
                   </td>
                 </tr>
