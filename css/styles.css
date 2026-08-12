@@ -5369,8 +5369,8 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
   height: 3.75rem;
   border-radius: 50%;
   background: var(--defatult--template-bg);
-  border: 2px solid var(--color--brand);
-  color: var(--color--brand);
+  border: 2px solid var(--color-brand-light);
+  color: var(--color-brand-light);
   font-family: Clashdisplay, sans-serif;
   font-size: 1.15rem;
   font-weight: 600;
@@ -5628,7 +5628,7 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
 }
 
 .services-cta-secondary a {
-  color: var(--color--brand);
+  color: var(--color-brand-light);
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
@@ -5636,7 +5636,7 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
 }
 
 .services-cta-secondary a:hover {
-  color: var(--color-brand-light);
+  color: var(--white);
 }
 
 /* --- Services CTA Card & Quote --- */
