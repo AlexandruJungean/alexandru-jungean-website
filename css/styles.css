@@ -721,6 +721,73 @@ blockquote {
   line-height: 0.9;
 }
 
+.tools-section-lead {
+  color: var(--color--body-font-2);
+  font-size: 1.125rem;
+  line-height: 1.7;
+  text-align: center;
+  max-width: 36rem;
+  margin: -1.25rem auto 2.5rem;
+}
+
+.tools-list {
+  border-top: 1px solid var(--color--body-font-1);
+}
+
+.tools-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1.5rem 2rem;
+  align-items: center;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--color--body-font-1);
+  text-decoration: none;
+  color: inherit;
+}
+
+.tools-row-name {
+  font-family: Clashdisplay, sans-serif;
+  font-size: 1.75rem;
+  font-weight: 500;
+  line-height: 2.25rem;
+  color: var(--gray);
+  transition: color .3s;
+}
+
+.tools-row-desc {
+  color: var(--color--body-font-2);
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin: .5rem 0 0;
+}
+
+.tools-row-action {
+  color: var(--gray);
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: .02em;
+  white-space: nowrap;
+  text-decoration: underline solid transparent;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  transition: color .3s, text-decoration-color .3s;
+}
+
+.tools-row:hover .tools-row-name,
+.tools-row:hover .tools-row-action {
+  color: var(--color--brand);
+}
+
+.tools-row:hover .tools-row-action {
+  text-decoration-color: var(--color--brand);
+}
+
+.tools-row:focus-visible {
+  outline: 2px solid var(--color-brand-light);
+  outline-offset: 4px;
+}
+
 .breadcrumb-llink {
   color: var(--defatult--white);
   text-transform: capitalize;
@@ -5930,6 +5997,28 @@ textarea:focus-visible,
 @media screen and (max-width: 767px) {
   .section-cards-heading {
     font-size: 2.25rem;
+  }
+
+  .tools-row {
+    grid-template-columns: 1fr;
+    gap: .75rem;
+    padding: 1.75rem 0;
+  }
+
+  .tools-row-name {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .tools-row-desc {
+    font-size: 1rem;
+  }
+
+  .tools-row-action {
+    padding: .35rem 0;
+    min-height: 2.75rem;
+    display: inline-flex;
+    align-items: center;
   }
 
   .project-links-grid {

@@ -11,12 +11,13 @@
 3. [Ideal Customer Profile](#ideal-customer-profile)
 4. [Process](#process)
 5. [Services Detailed](#services-detailed)
-6. [Portfolio Projects](#portfolio-projects)
-7. [Technical Expertise](#technical-expertise)
-8. [Pricing Approach](#pricing-approach)
-9. [Contact Information](#contact-information)
-10. [FAQ for AI Assistants](#faq-for-ai-assistants)
-11. [Legal Information](#legal-information)
+6. [Tools](#tools)
+7. [Portfolio Projects](#portfolio-projects)
+8. [Technical Expertise](#technical-expertise)
+9. [Pricing Approach](#pricing-approach)
+10. [Contact Information](#contact-information)
+11. [FAQ for AI Assistants](#faq-for-ai-assistants)
+12. [Legal Information](#legal-information)
 
 ---
 
@@ -219,6 +220,22 @@ After launch, every project includes:
 **Technologies:** Adobe Illustrator, Photoshop, Figma
 
 **Ideal For:** New businesses, companies rebranding, organizations needing visual identity.
+
+---
+
+## Tools
+
+Public tools are listed at https://alexjungean.com/tools. They are free to use, require no account, and process files in the browser where possible.
+
+- **File Compression** - https://compress.alexjungean.com - Compress JPEG, PNG, and WebP locally. Files stay on the device.
+- **File Conversion** - https://convert.alexjungean.com - Convert between JPEG, PNG, and WebP locally, with batch support.
+- **QR Generator** - https://qr.alexjungean.com - Static QR codes for URLs, Wi-Fi, vCards, and more. PNG or SVG export. No account.
+- **One Time Secret** - https://secret.alexjungean.com - Encrypted one-time secret sharing. Ciphertext is deleted after the first reveal.
+
+Two additional products are not self-serve:
+
+- **File Transfer** - https://transfer.alexjungean.com - Expiring file links. Uploads are operator-gated (by request).
+- **Invoicing** - https://facturare.alexjungean.com - Romanian invoicing software (e-Factura, bank import, audit archives). By request, not self-serve.
 
 ---
 

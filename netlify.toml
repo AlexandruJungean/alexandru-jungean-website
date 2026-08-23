@@ -60,6 +60,12 @@
   force = true
 
 [[redirects]]
+  from = "/tools.html"
+  to = "/tools"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/privacy-policy.html"
   to = "/privacy-policy"
   status = 301

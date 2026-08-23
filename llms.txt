@@ -14,6 +14,18 @@ Alexandru Jungean is an experienced IT freelancer based in Cluj-Napoca, Romania,
 - [Data Analysis](https://alexjungean.com/services/data-analysis): Business intelligence and data visualization
 - [UI/UX Design](https://alexjungean.com/services/ui-ux-design): User interface and experience design
 - [Branding Design](https://alexjungean.com/services/branding-design): Logo design and brand identity
+
+## Tools
+
+Public browser-local tools at [https://alexjungean.com/tools](https://alexjungean.com/tools):
+
+- [File Compression](https://compress.alexjungean.com): Compress JPEG, PNG, and WebP in the browser
+- [File Conversion](https://convert.alexjungean.com): Convert between JPEG, PNG, and WebP locally
+- [QR Generator](https://qr.alexjungean.com): Static QR codes with PNG/SVG export
+- [One Time Secret](https://secret.alexjungean.com): Encrypted one-time secret sharing
+
+File Transfer and Invoicing are private / by request, not self-serve.
+
 ## Portfolio
 
 Featured projects demonstrating expertise across web, mobile, and design:

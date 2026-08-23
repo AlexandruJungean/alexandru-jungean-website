@@ -18,3 +18,9 @@ test("@accessibility services page has no WCAG AA violations", async ({ page }) 
   await expect(page.locator("h1").first()).toBeVisible();
   await expectNoAxeViolations(page);
 });
+
+test("@accessibility tools page has no WCAG AA violations", async ({ page }) => {
+  await page.goto("/tools.html");
+  await expect(page.locator("h1").first()).toBeVisible();
+  await expectNoAxeViolations(page);
+});
