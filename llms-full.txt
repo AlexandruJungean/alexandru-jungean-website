@@ -231,7 +231,7 @@ Public tools are listed at https://alexjungean.com/tools. They are free to use, 
 - **File Conversion** - https://convert.alexjungean.com - Convert between JPEG, PNG, and WebP locally, with batch support.
 - **QR Generator** - https://qr.alexjungean.com - Static QR codes for URLs, Wi-Fi, vCards, and more. PNG or SVG export. No account.
 - **One Time Secret** - https://secret.alexjungean.com - Encrypted one-time secret sharing. Ciphertext is deleted after the first reveal.
-- **Password** - https://password.alexjungean.com - Generate a strong password in this browser and copy it. Nothing is uploaded.
+- **Password Generator** - https://password.alexjungean.com - Generate a strong password in this browser and copy it. Nothing is uploaded.
 
 Two additional products are not self-serve:
 
