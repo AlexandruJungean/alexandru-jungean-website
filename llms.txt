@@ -23,7 +23,7 @@ Public browser-local tools at [https://alexjungean.com/tools](https://alexjungea
 - [File Conversion](https://convert.alexjungean.com): Convert between JPEG, PNG, and WebP locally
 - [QR Generator](https://qr.alexjungean.com): Static QR codes with PNG/SVG export
 - [One Time Secret](https://secret.alexjungean.com): Encrypted one-time secret sharing
-- [Password](https://password.alexjungean.com): Generate a strong password in this browser and copy it
+- [Password Generator](https://password.alexjungean.com): Generate a strong password in this browser and copy it
 
 File Transfer and Invoicing are private / by request, not self-serve.
 
