@@ -22,9 +22,15 @@ Public browser-local tools at [https://alexjungean.com/tools](https://alexjungea
 - [File Compression](https://compress.alexjungean.com): Compress JPEG, PNG, and WebP in the browser
 - [File Conversion](https://convert.alexjungean.com): Convert between JPEG, PNG, and WebP locally
 - [QR Generator](https://qr.alexjungean.com): Static QR codes with PNG/SVG export
+- [Password Generator](https://password.alexjungean.com): Strong passwords and passphrases, generated locally
 - [One Time Secret](https://secret.alexjungean.com): Encrypted one-time secret sharing
 
 File Transfer and Invoicing are private / by request, not self-serve.
+
+Planned (documentation only, not on /tools yet):
+
+- Audit (audit.alexjungean.com): website diagnostic from a single URL
+- Extract (scrapper.alexjungean.com): page data extractor
 
 ## Portfolio
 

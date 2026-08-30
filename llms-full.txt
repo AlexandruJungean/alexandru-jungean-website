@@ -230,6 +230,7 @@ Public tools are listed at https://alexjungean.com/tools. They are free to use, 
 - **File Compression** - https://compress.alexjungean.com - Compress JPEG, PNG, and WebP locally. Files stay on the device.
 - **File Conversion** - https://convert.alexjungean.com - Convert between JPEG, PNG, and WebP locally, with batch support.
 - **QR Generator** - https://qr.alexjungean.com - Static QR codes for URLs, Wi-Fi, vCards, and more. PNG or SVG export. No account.
+- **Password Generator** - https://password.alexjungean.com - Strong passwords and passphrases generated locally. No account, nothing stored.
 - **One Time Secret** - https://secret.alexjungean.com - Encrypted one-time secret sharing. Ciphertext is deleted after the first reveal.
 
 Two additional products are not self-serve:
@@ -237,24 +238,33 @@ Two additional products are not self-serve:
 - **File Transfer** - https://transfer.alexjungean.com - Expiring file links. Uploads are operator-gated (by request).
 - **Invoicing** - https://facturare.alexjungean.com - Romanian invoicing software (e-Factura, bank import, audit archives). By request, not self-serve.
 
+Two more tools exist as planning repositories only (no application code yet; not listed on /tools):
+
+- **Audit** - https://audit.alexjungean.com - `tool-audit-web` - Website diagnostic from one URL (SEO, performance, visibility, security headers).
+- **Extract** - https://scrapper.alexjungean.com - `tool-scrapper` - Page-data extractor (tables, lists, cards) with CSV/JSON export.
+
 ---
 
 ## Portfolio Projects
 
 ### ARDT Oradea
-**URL:** https://alexjungean.com/projects/ardt**Type:** Web Development, Digital Solutions
+**URL:** https://alexjungean.com/projects/ardt
+**Type:** Web Development, Digital Solutions
 **Description:** Digital platform for ARDT (Asociatia pentru Resurse, Dezvoltare si Tineret) Oradea, supporting youth empowerment and community development initiatives. Implemented digital solutions for event management and community engagement.
 
 ### BDD Logspeed
-**URL:** https://alexjungean.com/projects/bdd-logspeed**Type:** Database Solutions, Web Application
+**URL:** https://alexjungean.com/projects/bdd-logspeed
+**Type:** Database Solutions, Web Application
 **Description:** Comprehensive logistics management system for BDD Logspeed, featuring route optimization, delivery tracking, and performance analytics.
 
 ### EDU Events
-**URL:** https://alexjungean.com/projects/edu-events**Type:** Web Application, Event Management
+**URL:** https://alexjungean.com/projects/edu-events
+**Type:** Web Application, Event Management
 **Description:** Educational event management platform enabling registration, scheduling, and communication for academic conferences and workshops.
 
 ### Nexus Learning Lab
-**URL:** https://alexjungean.com/projects/nexus-learning-lab**Type:** E-Learning Platform
+**URL:** https://alexjungean.com/projects/nexus-learning-lab
+**Type:** E-Learning Platform
 **Description:** Interactive learning management system with course creation, progress tracking, and assessment capabilities.
 
 ### City Xperience
