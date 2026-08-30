@@ -430,6 +430,16 @@ blockquote {
   color: var(--color--body-font-2);
 }
 
+.paragraph-large.contact-card-subtitle a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.paragraph-large.contact-card-subtitle a:hover {
+  color: var(--color--brand);
+  text-decoration: underline;
+}
+
 .paragraph-large.footer-link {
   color: var(--gray);
   text-transform: uppercase;
@@ -527,6 +537,11 @@ blockquote {
 .footer-company-info .footer-contact-line a {
   color: inherit;
   text-decoration: none;
+}
+
+.footer-company-info .footer-contact-line a:hover {
+  color: var(--color--brand);
+  text-decoration: underline;
 }
 
 .button-wrapper.text-center {
@@ -2406,7 +2421,7 @@ blockquote {
 }
 
 .header-subtitle-icon {
-  background-image: url('../images/Vector.png');
+  background-image: url('../images/Vector.webp');
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: 18px 21px;
