@@ -1064,10 +1064,16 @@
       try {
         var data = {};
         var allFields = this.form.querySelectorAll('input, select, textarea');
+        var activeSteps = this.steps;
         allFields.forEach(function (el) {
           var key = el.name;
           if (!key || key === 'website_url') return;
           if (isFieldHidden(el)) return;
+          var step = el.closest('.wizard-step');
+          if (step) {
+            var stepId = step.getAttribute('data-step');
+            if (!stepId || activeSteps.indexOf(stepId) === -1) return;
+          }
           var value;
           if (el.type === 'checkbox') {
             if (!el.checked) return;
@@ -1157,6 +1163,7 @@
   }
 
   function isFieldHidden(el) {
+    if (!el || el.hidden) return true;
     var node = el.parentElement;
     while (node && node !== document.body) {
       if (node.classList && node.classList.contains('wizard-step')) return false;

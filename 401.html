@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Protected Page | Alexandru Jungean</title>
-  <meta content="Protected Page | Alexandru Jungean" property="og:title">
-  <meta content="Protected Page | Alexandru Jungean" property="twitter:title">
+  <title>401 - Access Denied | Alexandru Jungean</title>
+  <meta content="401 - Access Denied | Alexandru Jungean" property="og:title">
+  <meta content="401 - Access Denied | Alexandru Jungean" property="twitter:title">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta name="robots" content="noindex">
   <meta name="referrer" content="strict-origin-when-cross-origin">
@@ -19,50 +19,64 @@
       font-weight: 600;
       letter-spacing: 0.04em;
       text-decoration: none;
-      margin-bottom: 2.5rem;
+      margin-bottom: 1.25rem;
       transition: color 0.25s ease;
     }
     .utility-brand:hover {
       color: var(--color-brand-light);
     }
-    .utility-lock-icon {
-      display: block;
-      margin: 0 auto 2rem;
-      width: 3.5rem;
-      height: auto;
-      opacity: 0.85;
+    .utility-quick-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-bottom: 3rem;
     }
-    .utility-page-form h2 {
-      font-size: clamp(1.75rem, 3vw, 2.25rem);
-      margin-bottom: 0.75rem;
-    }
-    .utility-protected-text {
+    .utility-quick-link {
       color: var(--color-text-secondary);
-      font-size: 1rem;
-      margin-bottom: 2rem;
+      background: var(--surface-subtle-bg);
+      border: var(--surface-subtle-border);
+      border-radius: 0.5rem;
+      padding: 0.7rem 1.3rem;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: color 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
+    }
+    .utility-quick-link:hover {
+      color: var(--color-text-bright);
+      background: var(--surface-brand-bg);
+      border: var(--surface-brand-border);
+    }
+    .utility-page-title {
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      line-height: 1.2;
+    }
+    .utility-page-hint {
+      color: var(--color-text-muted);
+      font-size: 0.9rem;
+      margin-top: 2.5rem;
     }
   </style>
 </head>
 <body>
-  <div class="utility-page-wrap">
-    <div class="utility-page-content w-password-page w-form">
+  <div class="utility-page-wrap section-padding-both">
+    <div class="utility-page-content">
       <a href="/" class="utility-brand">alexjungean.com</a>
-      <form action="/.wf_auth" method="post" id="password-form" name="password-form" class="utility-page-form w-password-page"><img src="https://d3e54v103j8qbb.cloudfront.net/static/utility-lock.ae54711958.svg" alt="" class="utility-lock-icon">
-        <h2>Protected Page</h2>
-        <div class="utility-protected-text">This page is private. Enter the password you received to continue.</div>
-        <label for="pass" class="w-password-page">Password</label><input class="w-password-page w-input" autofocus="true" maxlength="256" name="pass" data-name="field" placeholder="Enter your password" type="password" id="pass"><input type="submit" data-wait="Please wait..." class="w-password-page w-button" value="Submit">
-        <div class="w-password-page w-form-fail">
-          <div>Incorrect password. Please try again.</div>
-        </div>
-        <div style="display:none" class="w-password-page w-embed w-script"><input type="hidden" name="path" value="<%WF_FORM_VALUE_PATH%>"><input type="hidden" name="page" value="<%WF_FORM_VALUE_PAGE%>"></div>
-        <div style="display:none" class="w-password-page w-embed w-script">
-          <script type="application/javascript">(function _handlePasswordPageOnload() {
-	  if (/[?&]e=1(&|$)/.test(document.location.search)) {
-	    document.querySelector('.w-password-page.w-form-fail').style.display = 'block';
-	  }
-	})()</script>
-        </div>
-      </form>
+      <div class="utility-quick-links">
+        <a href="/services" class="utility-quick-link">Services</a>
+        <a href="/projects" class="utility-quick-link">Projects</a>
+        <a href="/contact" class="utility-quick-link">Contact</a>
+      </div>
+      <h1 class="utility-page-title">This page isn't available</h1>
+      <div class="utility-page-text">You don't have access to this page. Head back to the site or start a project instead.</div>
+      <div class="button-wrapper">
+        <a href="/" class="primary-button w-inline-block">
+          <div class="nav-button-text-wrapper">
+            <div class="button-text is-black" data-text="Back to Home">Back to Home</div>
+          </div>
+        </a>
+      </div>
+      <div class="utility-page-hint">Error 401</div>
     </div>
   </div>
 </body>
