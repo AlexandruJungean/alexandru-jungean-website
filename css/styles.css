@@ -5034,6 +5034,26 @@ input[type="date"].wz-input::-webkit-calendar-picker-indicator {
   white-space: nowrap;
 }
 
+.upload-file-status {
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+  margin-left: 0.5rem;
+}
+
+.upload-file-item.is-attached {
+  border-color: rgba(var(--color-brand-rgb), 0.25);
+}
+
+.upload-feedback {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  color: #f3a3a3;
+}
+
+.upload-feedback p {
+  margin: 0 0 0.25rem;
+}
+
 .upload-file-progress {
   width: 100%;
   height: 3px;

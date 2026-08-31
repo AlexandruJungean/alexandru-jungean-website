@@ -2,6 +2,10 @@
   'use strict';
 
   const STORAGE_KEY = 'intake_form_draft';
+  const UPLOAD_MAX_FILES = 20;
+  const UPLOAD_MAX_FILE_BYTES = 10 * 1024 * 1024;
+  const UPLOAD_MAX_TOTAL_BYTES = 100 * 1024 * 1024;
+  const UPLOAD_ALLOWED_EXTENSIONS = ['pdf', 'doc', 'docx', 'ppt', 'pptx', 'xls', 'xlsx', 'png', 'jpg', 'jpeg', 'webp', 'svg', 'fig', 'zip'];
   const SERVICE_STEP_MAP = {
     website: 'website-details',
     mobile_app: 'mobile-app-details',
@@ -37,12 +41,26 @@
     { if: ['consulting'], only: true, msg: "I'll help you figure out the right direction. You can always add specific services later.", positive: true }
   ];
 
+  const DETAIL_SUGGESTIONS = {
+    branding: [
+      { not: 'website', msg: 'A new identity lands better on a matching website. Add Website?', add: 'website' },
+      { not: 'design', msg: 'Need UI/UX so the brand carries into the product?', add: 'design' }
+    ],
+    marketing: [
+      { not: 'website', msg: 'Ads need a destination. Add a website or landing page?', add: 'website' }
+    ],
+    database: [
+      { not: 'website', msg: 'Need a site or admin UI in front of the backend? Add Website?', add: 'website' }
+    ]
+  };
+
   const PRESELECTIONS = {
     'Leads & Sales': { ws_features: ['Contact form', 'SEO optimization', 'Google Analytics', 'Newsletter signup'], ma_features: ['Push notifications', 'Analytics', 'User auth'], mk_services: ['Meta Ads', 'SEO', 'Marketing strategy'] },
     'Brand & Credibility': { ws_features: ['Image gallery / Portfolio', 'Social media integration', 'Blog / Articles', 'Responsive design'], br_needs: ['Full brand identity', 'Social media templates'] },
     'Conversions & Actions': { ws_features: ['User authentication', 'Payment / E-commerce', 'Google Analytics', 'Contact form'] },
     'Presentation & Information': { ws_features: ['SEO optimization', 'Blog / Articles', 'Responsive design'] },
     'Efficiency & Automation': { db_needs: ['CRM / Lead management', 'Admin dashboard', 'Automation / Integrations', 'Reporting / Analytics'] },
+    'Growth & Scale': { ws_features: ['User authentication', 'Admin panel / CMS', 'API integrations', 'Google Analytics'], ma_features: ['User auth', 'Push notifications', 'Analytics', 'Offline mode'], db_needs: ['Admin dashboard', 'API development', 'Performance optimization', 'Automation / Integrations'] },
     'Online Sales / E-commerce': { ws_features: ['Payment / E-commerce', 'User authentication', 'Search functionality', 'Google Analytics'], ma_features: ['Payments', 'Push notifications', 'User auth', 'Search with filters'] }
   };
 
@@ -169,6 +187,7 @@
           self.form.reset();
           self.uploadedFiles = [];
           document.getElementById('upload-file-list').innerHTML = '';
+          self.showUploadMessages([]);
           self.currentIndex = 0;
           self.clearAllConditionals();
           self.render();
@@ -248,6 +267,19 @@
         this.applySmartPreselections();
         this.checkWebsiteWarnings();
       }
+      if (current === 'branding-details') {
+        this.applyFieldPreselections('br_needs');
+        this.updateDetailSuggestions('br-suggestions', 'branding');
+      }
+      if (current === 'marketing-details') {
+        this.applyFieldPreselections('mk_services');
+        this.updateDetailSuggestions('mk-suggestions', 'marketing');
+      }
+      if (current === 'database-details') {
+        this.applyFieldPreselections('db_needs');
+        this.updateDetailSuggestions('db-suggestions', 'database');
+      }
+      if (current === 'mobile-app-details') this.applyFieldPreselections('ma_features');
     }
 
     /* --- Validation --- */
@@ -575,31 +607,73 @@
       });
     }
 
+    fileExtension(name) {
+      var i = String(name || '').lastIndexOf('.');
+      return i === -1 ? '' : String(name).slice(i + 1).toLowerCase();
+    }
+
+    showUploadMessages(messages, append) {
+      var el = document.getElementById('upload-feedback');
+      if (!el) return;
+      if (!append) el.innerHTML = '';
+      if (!messages || messages.length === 0) {
+        if (!append || !el.childElementCount) el.hidden = true;
+        return;
+      }
+      el.hidden = false;
+      messages.forEach(function (msg) {
+        var p = document.createElement('p');
+        p.textContent = msg;
+        el.appendChild(p);
+      });
+    }
+
     handleFiles(fileList) {
       var self = this;
-      var list = document.getElementById('upload-file-list');
-      var maxFiles = 20;
-      var maxTotal = 100 * 1024 * 1024;
+      var messages = [];
 
       Array.from(fileList).forEach(function (file) {
-        if (self.uploadedFiles.length >= maxFiles) return;
+        var ext = self.fileExtension(file.name);
+        if (UPLOAD_ALLOWED_EXTENSIONS.indexOf(ext) === -1) {
+          messages.push(file.name + ' is not an allowed type. Use PDF, DOC, XLS, PPT, PNG, JPG, SVG, FIG, or ZIP.');
+          return;
+        }
+        if (file.size > UPLOAD_MAX_FILE_BYTES) {
+          messages.push(file.name + ' is larger than 10MB.');
+          return;
+        }
+        if (self.uploadedFiles.length >= UPLOAD_MAX_FILES) {
+          messages.push('Maximum ' + UPLOAD_MAX_FILES + ' files. ' + file.name + ' was not added.');
+          return;
+        }
         var totalSize = self.uploadedFiles.reduce(function (sum, f) { return sum + f.size; }, 0);
-        if (totalSize + file.size > maxTotal) return;
+        if (totalSize + file.size > UPLOAD_MAX_TOTAL_BYTES) {
+          messages.push('Maximum 100MB total. ' + file.name + ' was not added.');
+          return;
+        }
 
         var id = 'file_' + Date.now() + '_' + Math.random().toString(36).substr(2, 5);
         self.uploadedFiles.push({ id: id, name: file.name, size: file.size, file: file, url: null, status: 'pending' });
         self.renderFileItem(id, file.name, file.size);
         self.uploadFile(id, file);
       });
+
+      this.showUploadMessages(messages);
+      this.save();
     }
 
-    renderFileItem(id, name, size) {
+    renderFileItem(id, name, size, opts) {
       var list = document.getElementById('upload-file-list');
+      if (!list) return;
+      opts = opts || {};
+      var attached = opts.status === 'uploaded';
       var div = document.createElement('div');
-      div.className = 'upload-file-item';
+      div.className = 'upload-file-item' + (attached ? ' is-attached' : '');
       div.id = 'ufi-' + id;
       var sizeStr = size < 1024 * 1024 ? (size / 1024).toFixed(0) + ' KB' : (size / (1024 * 1024)).toFixed(1) + ' MB';
-      div.innerHTML = '<div class="upload-file-top"><span class="upload-file-name">' + escapeHtml(name) + '</span><span class="upload-file-size">' + sizeStr + '</span><button type="button" class="upload-file-remove" data-id="' + id + '">&times;</button></div><div class="upload-file-progress"><div class="upload-file-progress-fill" style="width:0%"></div></div>';
+      var statusHtml = attached ? '<span class="upload-file-status">Attached</span>' : '';
+      var progressHtml = attached ? '' : '<div class="upload-file-progress"><div class="upload-file-progress-fill" style="width:0%"></div></div>';
+      div.innerHTML = '<div class="upload-file-top"><span class="upload-file-name">' + escapeHtml(name) + '</span><span class="upload-file-size">' + sizeStr + '</span>' + statusHtml + '<button type="button" class="upload-file-remove" data-id="' + id + '" aria-label="Remove ' + escapeHtml(name) + '">&times;</button></div>' + progressHtml;
       var self = this;
       div.querySelector('.upload-file-remove').addEventListener('click', function () {
         self.uploadedFiles = self.uploadedFiles.filter(function (f) { return f.id !== id; });
@@ -607,6 +681,24 @@
         self.save();
       });
       list.appendChild(div);
+    }
+
+    markFileFailed(id, message) {
+      var entry = this.uploadedFiles.find(function (f) { return f.id === id; });
+      if (entry) entry.status = 'error';
+      var item = document.getElementById('ufi-' + id);
+      if (item) {
+        var top = item.querySelector('.upload-file-top');
+        if (top && !top.querySelector('.upload-file-error')) {
+          var errSpan = document.createElement('span');
+          errSpan.className = 'upload-file-error';
+          errSpan.textContent = message || 'Upload failed — file will not be attached';
+          top.appendChild(errSpan);
+        }
+        var prog = item.querySelector('.upload-file-progress');
+        if (prog) prog.style.display = 'none';
+      }
+      this.save();
     }
 
     async uploadFile(id, file) {
@@ -619,8 +711,9 @@
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ filename: file.name, contentType: file.type || 'application/octet-stream', size: file.size, clientName: this.form.querySelector('[name="company"]').value || this.form.querySelector('[name="name"]').value || '' })
         });
-        if (!presignRes.ok) throw new Error('Presign failed');
-        var presignData = await presignRes.json();
+        var presignData = {};
+        try { presignData = await presignRes.json(); } catch (e) { /* ignore */ }
+        if (!presignRes.ok) throw new Error(presignData.error || 'Upload was rejected');
 
         var xhr = new XMLHttpRequest();
         xhr.open('PUT', presignData.uploadUrl, true);
@@ -639,23 +732,22 @@
         if (entry) { entry.url = presignData.fileUrl; entry.status = 'uploaded'; }
         if (progressFill) progressFill.style.width = '100%';
         if (item) {
+          item.classList.add('is-attached');
+          var top = item.querySelector('.upload-file-top');
+          if (top && !top.querySelector('.upload-file-status')) {
+            var status = document.createElement('span');
+            status.className = 'upload-file-status';
+            status.textContent = 'Attached';
+            var removeBtn = top.querySelector('.upload-file-remove');
+            top.insertBefore(status, removeBtn);
+          }
           var prog = item.querySelector('.upload-file-progress');
           if (prog) setTimeout(function () { prog.style.display = 'none'; }, 500);
         }
+        this.save();
       } catch (err) {
         console.error('File upload error:', err);
-        if (entry) entry.status = 'error';
-        if (item) {
-          var top = item.querySelector('.upload-file-top');
-          if (top) {
-            var errSpan = document.createElement('span');
-            errSpan.className = 'upload-file-error';
-            errSpan.textContent = 'Upload failed - file will not be attached';
-            top.appendChild(errSpan);
-          }
-          var prog = item.querySelector('.upload-file-progress');
-          if (prog) prog.style.display = 'none';
-        }
+        this.markFileFailed(id, err.message || 'Upload failed — file will not be attached');
       }
     }
 
@@ -731,6 +823,56 @@
       if (hint && anyApplied) hint.hidden = false;
     }
 
+    applyFieldPreselections(fieldName) {
+      var priority = this.form.querySelector('input[name="priority_metric"]:checked');
+      if (!priority) return;
+      var preset = PRESELECTIONS[priority.value];
+      if (!preset || !preset[fieldName]) return;
+      var self = this;
+      preset[fieldName].forEach(function (value) {
+        var key = fieldName + ':' + value;
+        var cb = self.form.querySelector('input[name="' + fieldName + '"][value="' + value + '"]');
+        if (cb && !cb.checked && !self.preselectedFeatures.has(key)) {
+          cb.checked = true;
+          self.preselectedFeatures.add(key);
+        }
+      });
+    }
+
+    updateDetailSuggestions(areaId, key) {
+      var area = document.getElementById(areaId);
+      if (!area) return;
+      area.innerHTML = '';
+      var selected = this.getSelectedServices();
+      var rules = DETAIL_SUGGESTIONS[key] || [];
+      var self = this;
+      rules.forEach(function (rule) {
+        if (rule.not && selected.indexOf(rule.not) !== -1) return;
+        var card = document.createElement('div');
+        card.className = 'suggestion-card';
+        var p = document.createElement('p');
+        p.textContent = rule.msg;
+        card.appendChild(p);
+        if (rule.add) {
+          var btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'suggestion-add-btn';
+          btn.textContent = '+ Add';
+          btn.addEventListener('click', function () {
+            var cb = self.form.querySelector('input[name="services"][value="' + rule.add + '"]');
+            if (cb && !cb.checked) {
+              cb.checked = true;
+              card.remove();
+              self.updateDetailSuggestions(areaId, key);
+              self.save();
+            }
+          });
+          card.appendChild(btn);
+        }
+        area.appendChild(card);
+      });
+    }
+
     /* --- Smart Warnings (Website) --- */
     checkWebsiteWarnings() {
       var warningEl = document.getElementById('ws-warning');
@@ -795,9 +937,11 @@
           }
         });
         obj._currentIndex = this.currentIndex;
-        obj._uploadedFiles = this.uploadedFiles.map(function (f) {
-          return { id: f.id, name: f.name, size: f.size, url: f.url, status: f.status };
-        });
+        obj._uploadedFiles = this.uploadedFiles
+          .filter(function (f) { return f.status === 'uploaded' && f.url; })
+          .map(function (f) {
+            return { id: f.id, name: f.name, size: f.size, url: f.url, status: f.status };
+          });
         localStorage.setItem(STORAGE_KEY, JSON.stringify(obj));
       } catch (e) { /* quota exceeded or private browsing */ }
     }
@@ -866,9 +1010,28 @@
         this.restoreRepeater('rep-competitors', 'tpl-competitor', obj, ['competitors_url[]', 'competitors_good[]', 'competitors_bad[]']);
         this.restoreRepeater('rep-references', 'tpl-reference', obj, ['references_url[]', 'references_like[]']);
 
-        if (obj._uploadedFiles) {
-          this.uploadedFiles = obj._uploadedFiles;
-          this.uploadedFiles.forEach(function (f) { self.renderFileItem(f.id, f.name, f.size); });
+        if (obj._uploadedFiles && obj._uploadedFiles.length) {
+          var list = document.getElementById('upload-file-list');
+          if (list) list.innerHTML = '';
+          var kept = [];
+          var dropped = 0;
+          obj._uploadedFiles.forEach(function (f) {
+            if (f && f.status === 'uploaded' && f.url) {
+              kept.push({ id: f.id, name: f.name, size: f.size, url: f.url, status: 'uploaded', file: null });
+              self.renderFileItem(f.id, f.name, f.size, { status: 'uploaded' });
+            } else {
+              dropped++;
+            }
+          });
+          this.uploadedFiles = kept;
+          if (dropped > 0) {
+            self.showUploadMessages([
+              dropped === 1
+                ? '1 file from your last session had not finished uploading. Add it again if you still need it.'
+                : dropped + ' files from your last session had not finished uploading. Add them again if you still need them.'
+            ]);
+          }
+          this.verifyRestoredFiles();
         }
 
         if (typeof obj._currentIndex === 'number') {
@@ -876,6 +1039,23 @@
           this.currentIndex = Math.min(obj._currentIndex, maxValid);
         }
       } catch (e) { /* corrupt data */ }
+    }
+
+    verifyRestoredFiles() {
+      var self = this;
+      this.uploadedFiles.slice().forEach(function (f) {
+        if (!f.url) return;
+        fetch(f.url, { method: 'HEAD', mode: 'cors' }).then(function (res) {
+          if (res.ok) return;
+          self.uploadedFiles = self.uploadedFiles.filter(function (item) { return item.id !== f.id; });
+          var item = document.getElementById('ufi-' + f.id);
+          if (item) item.remove();
+          self.showUploadMessages([(f.name || 'A file') + ' from your last session is no longer available. Add it again if you still need it.'], true);
+          self.save();
+        }).catch(function () {
+          /* CORS or network — keep the public URL; it may still open when submitted */
+        });
+      });
     }
 
     restoreRepeater(repeaterId, templateId, obj, fieldNames) {

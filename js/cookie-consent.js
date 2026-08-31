@@ -51,8 +51,25 @@
     document.getElementById('cookie-decline').addEventListener('click', function () { setConsent(false); });
   }
 
+  function injectManageLink() {
+    if (document.querySelector('.footer-link-wrap [data-manage-cookies]')) return;
+    var cookiesLink = document.querySelector('.footer-bottom a[href="/cookie-policy"], .footer-bottom a[href="/cookie-policy.html"]');
+    if (!cookiesLink) {
+      cookiesLink = document.querySelector('a[href="/cookie-policy"], a[href="/cookie-policy.html"]');
+    }
+    if (!cookiesLink || !cookiesLink.parentElement) return;
+    var link = document.createElement('a');
+    link.href = '/cookie-policy';
+    link.className = cookiesLink.className;
+    link.setAttribute('data-manage-cookies', '');
+    link.textContent = 'Manage cookies';
+    cookiesLink.insertAdjacentElement('afterend', link);
+  }
+
   function bindManageButton() {
     document.querySelectorAll('[data-manage-cookies]').forEach(function (link) {
+      if (link.getAttribute('data-cookie-bound')) return;
+      link.setAttribute('data-cookie-bound', 'true');
       link.addEventListener('click', function (e) {
         e.preventDefault();
         showBanner();
@@ -62,6 +79,7 @@
 
   document.addEventListener('DOMContentLoaded', function () {
     buildBanner();
+    injectManageLink();
     bindManageButton();
     if (stored === 'granted') {
       if (typeof gtag === 'function') {

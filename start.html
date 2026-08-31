@@ -868,16 +868,17 @@
                   <div class="wz-field">
                     <label class="wz-label">Upload relevant files</label>
                     <p class="wz-hint">Logo, brand guide, mockups, briefs, screenshots &ndash; anything that helps.</p>
-                    <div class="upload-zone" id="upload-zone" role="button" tabindex="0" aria-label="Upload relevant files. Drag files here or click to browse. Maximum 20 files, 100MB total.">
+                    <div class="upload-zone" id="upload-zone" role="button" tabindex="0" aria-label="Upload relevant files. Drag files here or click to browse. Maximum 20 files, 10MB each, 100MB total.">
                       <div class="upload-zone-content">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
                         <p class="upload-zone-text">Drag files here or <button type="button" class="upload-browse-btn" aria-label="Browse files to upload">browse</button></p>
-                        <p class="upload-zone-hint">Max 20 files, 100MB total. PDF, DOC, PNG, JPG, SVG, ZIP, etc.</p>
+                        <p class="upload-zone-hint">Max 20 files, 10MB each (100MB total). PDF, DOC, XLS, PPT, PNG, JPG, SVG, FIG, ZIP.</p>
                       </div>
                       <label class="sr-only" for="file-input">Upload project files</label>
                       <input type="file" id="file-input" multiple accept=".pdf,.doc,.docx,.ppt,.pptx,.png,.jpg,.jpeg,.webp,.svg,.fig,.zip,.xls,.xlsx" hidden>
                     </div>
                     <div class="upload-file-list" id="upload-file-list"></div>
+                    <div class="upload-feedback" id="upload-feedback" role="status" aria-live="polite" hidden></div>
                   </div>
                   <div class="wz-field"><label class="wz-label" for="f-wt-notes">Anything else I should know?</label><textarea id="f-wt-notes" name="wt_additional_notes" class="wz-textarea" rows="4" placeholder="Any additional context, special requirements, or things I should know before preparing your proposal..."></textarea></div>
                 </div>
