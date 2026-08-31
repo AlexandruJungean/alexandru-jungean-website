@@ -97,11 +97,4 @@
       showBanner();
     }
   });
-
-  if (!document.querySelector('script[src*="seen-catalog.js"]')) {
-    var seenScript = document.createElement('script');
-    seenScript.src = '/js/seen-catalog.js';
-    seenScript.defer = true;
-    (document.body || document.head).appendChild(seenScript);
-  }
 })();
