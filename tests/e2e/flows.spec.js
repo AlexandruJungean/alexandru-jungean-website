@@ -30,6 +30,14 @@ test("footer manage cookies reopens the banner", async ({ page }) => {
   await expect(page.locator("#cookie-banner")).toBeVisible();
 });
 
+test("nav shows unseen project and tool counts", async ({ page }) => {
+  await page.goto("/");
+  await page.evaluate(() => localStorage.removeItem("seen_catalog_v1"));
+  await page.reload();
+  await expect(page.locator('a.nav-link[href="/projects"] .nav-unseen-count')).toHaveText("13");
+  await expect(page.locator('a.nav-link[href="/tools"] .nav-unseen-count')).toHaveText("5");
+});
+
 test("wizard starts and lists intake services", async ({ page }) => {
   await page.goto("/start");
   await expect(page.locator("h1").first()).toBeVisible();
