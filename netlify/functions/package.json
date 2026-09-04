@@ -4,7 +4,7 @@
   "type": "module",
   "dependencies": {
     "nodemailer": "^9.0.6",
-    "@aws-sdk/client-s3": "^3.1121.0",
+    "@aws-sdk/client-s3": "^3.1124.0",
     "@aws-sdk/s3-request-presigner": "^3.1121.0"
   }
 }
