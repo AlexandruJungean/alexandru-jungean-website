@@ -24,6 +24,7 @@ Public browser-local tools at [https://alexjungean.com/tools](https://alexjungea
 - [QR Generator](https://qr.alexjungean.com): Static QR codes with PNG/SVG export
 - [Password Generator](https://password.alexjungean.com): Strong passwords and passphrases, generated locally
 - [One Time Secret](https://secret.alexjungean.com): Encrypted one-time secret sharing
+- [Internet Speed Test](https://speed.alexjungean.com): Browser download, upload, and latency to a Cloudflare edge
 
 File Transfer and Invoicing are private / by request, not self-serve.
 
@@ -31,7 +32,6 @@ Planned (documentation only, not on /tools yet):
 
 - Audit (audit.alexjungean.com): website diagnostic from a single URL
 - Extract (scrapper.alexjungean.com): page data extractor
-- Internet Speed Test (speed.alexjungean.com): public browser speed test
 - Project Management (work.alexjungean.com): invite-only; later by request
 
 ## Portfolio
