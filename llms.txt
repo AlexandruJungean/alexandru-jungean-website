@@ -31,14 +31,16 @@ Planned (documentation only, not on /tools yet):
 
 - Audit (audit.alexjungean.com): website diagnostic from a single URL
 - Extract (scrapper.alexjungean.com): page data extractor
+- Internet Speed Test (speed.alexjungean.com): public browser speed test
+- Project Management (work.alexjungean.com): invite-only; later by request
 
 ## Portfolio
 
 Featured projects demonstrating expertise across web, mobile, and design:
 
 - [Salonta City Hall](https://alexjungean.com/projects/primaria-salonta): Trilingual municipal website with admin panel, Supabase, and public transparency features
-- [City Xperience](https://alexjungean.com/projects/oradea-experience): Multi-city franchise platform (Oradea + Cluj) with 9,700+ registered users, 200+ local businesses, 700+ listed events, independent websites, and a shared mobile app
-- [Tool Connect](https://alexjungean.com/projects/tool): Service provider marketplace with 250+ registered users and 190+ service providers, native mobile apps (iOS + Android), website, and branding
+- [City Xperience](https://alexjungean.com/projects/oradea-experience): Multi-city franchise platform (Oradea + Cluj) with 12,140+ registered users, 206+ local businesses, 820+ listed events, independent websites, and a shared mobile app
+- [Tool Connect](https://alexjungean.com/projects/tool): Service provider marketplace with 326+ registered service providers, native mobile apps (iOS + Android), website, and branding
 - [FleetKeeper](https://alexjungean.com/projects/fleetkeeper): B2B SaaS fleet management app with AI document scanning, 12 languages, and automated notifications
 - [Radical Football](https://alexjungean.com/projects/radical-football): Educational platform supporting 3 conference editions, 26 featured speakers, and 200+ participants, with Stripe payments, a Konva diagram builder, and a 14-tab admin dashboard
 - [Amidamaru](https://alexjungean.com/projects/amidamaru): Corporate transport website with 9 language translations and static site generation
