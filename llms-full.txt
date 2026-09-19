@@ -232,17 +232,17 @@ Public tools are listed at https://alexjungean.com/tools. They are free to use, 
 - **QR Generator** - https://qr.alexjungean.com - Static QR codes for URLs, Wi-Fi, vCards, and more. PNG or SVG export. No account.
 - **Password Generator** - https://password.alexjungean.com - Strong passwords and passphrases generated locally. No account, nothing stored.
 - **One Time Secret** - https://secret.alexjungean.com - Encrypted one-time secret sharing. Ciphertext is deleted after the first reveal.
+- **Internet Speed Test** - https://speed.alexjungean.com - Browser download, upload, and HTTP latency to one Cloudflare edge. No account.
 
 Two additional products are not self-serve:
 
 - **File Transfer** - https://transfer.alexjungean.com - Expiring file links. Uploads are operator-gated (by request).
 - **Invoicing** - https://facturare.alexjungean.com - Romanian invoicing software (e-Factura, bank import, audit archives). By request, not self-serve.
 
-Two more tools exist as planning repositories only (no application code yet; not listed on /tools):
+Three more tools exist as planning repositories only (no application code yet; not listed on /tools):
 
 - **Audit** - https://audit.alexjungean.com - `tool-audit-web` - Website diagnostic from one URL (SEO, performance, visibility, security headers).
 - **Extract** - https://scrapper.alexjungean.com - `tool-scrapper` - Page-data extractor (tables, lists, cards) with CSV/JSON export.
-- **Internet Speed Test** - https://speed.alexjungean.com - `tool-internet-speed` - Public browser download/upload/latency test. List as Open when live.
 - **Project Management** - https://work.alexjungean.com - `web-project-management` - Invite-only projects and tasks. Later By request on /tools, like File Transfer and Invoicing.
 
 ---
