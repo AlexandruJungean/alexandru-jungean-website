@@ -1,5 +1,6 @@
 [build]
-  publish = "."
+  command = "npm run build"
+  publish = "dist"
   functions = "netlify/functions"
 
 [functions]
@@ -9,17 +10,18 @@
 [[plugins]]
   package = "@netlify/plugin-functions-install-core"
 
-# Enable Netlify's Pretty URLs - removes .html from URLs for SEO
+# The build creates clean URL directories and hashes inline scripts for CSP.
+# Do not rewrite/minify HTML or JS after hashing.
 [build.processing]
-  skip_processing = false
+  skip_processing = true
 [build.processing.html]
-  pretty_urls = true
+  pretty_urls = false
 [build.processing.css]
-  bundle = true
-  minify = true
+  bundle = false
+  minify = false
 [build.processing.js]
-  bundle = true
-  minify = true
+  bundle = false
+  minify = false
 
 # 301 redirects: Redirect .html URLs to clean URLs to consolidate SEO signals
 # Main pages - redirect .html to clean URL
@@ -74,6 +76,12 @@
 [[redirects]]
   from = "/terms.html"
   to = "/terms"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/collaboration-policy.html"
+  to = "/collaboration-policy"
   status = 301
   force = true
 
@@ -203,27 +211,27 @@
 [[headers]]
   for = "/fonts/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=604800, must-revalidate"
 
 [[headers]]
   for = "*.woff2"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=604800, must-revalidate"
 
 [[headers]]
   for = "/images/*"
   [headers.values]
-    Cache-Control = "public, max-age=2592000, stale-while-revalidate=604800"
+    Cache-Control = "public, max-age=86400, must-revalidate"
 
 [[headers]]
   for = "/css/*"
   [headers.values]
-    Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"
+    Cache-Control = "public, max-age=0, must-revalidate"
 
 [[headers]]
   for = "/js/*"
   [headers.values]
-    Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"
+    Cache-Control = "public, max-age=0, must-revalidate"
 
 # Security headers
 [[headers]]
@@ -233,5 +241,5 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
-    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://www.google.com https://www.gstatic.com https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com https://*.r2.cloudflarestorage.com https://*.r2.dev; frame-src https://www.youtube.com https://www.google.com; object-src 'none'; base-uri 'self'; form-action 'self'"
+    Strict-Transport-Security = "max-age=31536000"
+    # CSP is generated in dist/_headers with hashes matching each build.

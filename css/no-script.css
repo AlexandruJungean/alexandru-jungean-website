@@ -1,0 +1,4 @@
+/* Basic navigation and both translations remain available without JavaScript. */
+.mobile-hamburger,.legal-language-switch{display:none!important}
+[data-legal-panel][hidden]{display:block!important;margin-top:4rem}
+@media(max-width:991px){.nav-component{position:relative}.nav-container{flex-wrap:wrap}.nav-menu-wrapper{position:static;display:block;width:100%;padding:12px 0;max-height:none}.nav-link-wrapper{flex-direction:row;flex-wrap:wrap;gap:12px 20px}.nav-button-wrapper.is-mobile{display:none}}

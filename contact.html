@@ -90,21 +90,24 @@
     }
   }
   </script>
+<link rel="stylesheet" href="/css/requested-adjustments.css">
+<noscript><link rel="stylesheet" href="/css/no-script.css"></noscript>
+<link rel="stylesheet" href="/css/navigation.css">
 </head>
 <body>
   <a href="#main-content" class="skip-to-content">Skip to main content</a>
   <div class="page-wrapper">
-    <div role="banner" class="nav-component">
+    <div role="banner" class="nav-component" data-nav-mega-header>
       <div class="padding-global">
         <div class="nav-container">
-          <a href="/" class="brand-logo-link"><img src="images/Logo.webp" loading="eager" decoding="sync" fetchpriority="high" width="3210" height="600" sizes="(max-width: 767px) 128px, 160px" srcset="images/Logo-p-500.webp 500w, images/Logo-p-800.webp 800w, images/Logo-p-1080.webp 1080w, images/Logo-p-1600.webp 1600w, images/Logo-p-2000.webp 2000w, images/Logo-p-2600.webp 2600w, images/Logo.webp 3210w" alt="Alexandru Jungean Logo" class="brand-logo"></a>
+          <a href="/" class="brand-logo-link"><img src="/images/Logo.webp" loading="eager" decoding="sync" fetchpriority="high" width="3210" height="600" sizes="(max-width: 767px) 128px, 160px" srcset="/images/Logo-p-500.webp 500w, /images/Logo-p-800.webp 800w, /images/Logo-p-1080.webp 1080w, /images/Logo-p-1600.webp 1600w, /images/Logo-p-2000.webp 2000w, /images/Logo-p-2600.webp 2600w, /images/Logo.webp 3210w" alt="Alexandru Jungean Logo" class="brand-logo"></a>
           <nav role="navigation" class="nav-menu-wrapper" aria-label="Main navigation">
             <div class="nav-link-wrapper">
               <a href="/" class="nav-link">Home</a>
               <a href="/services" class="nav-link">Services</a>
-              <a href="/projects" class="nav-link">Projects</a>
-              <a href="/tools" class="nav-link">Tools</a>
-              <a href="/contact" aria-current="page" class="nav-link">Contact</a>
+              <div class="nav-mega-disclosure" data-nav-mega="nav-mega-projects"><a href="/projects" class="nav-link">Projects</a><button type="button" class="nav-mega-disclosure-button" aria-label="Explore projects" aria-expanded="false" aria-controls="nav-mega-projects" hidden><svg viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="m1 1 4 4 4-4" stroke="currentColor" stroke-width="1.2"/></svg></button></div>
+              <div class="nav-mega-disclosure" data-nav-mega="nav-mega-tools"><a href="/tools" class="nav-link">Tools</a><button type="button" class="nav-mega-disclosure-button" aria-label="Explore tools" aria-expanded="false" aria-controls="nav-mega-tools" hidden><svg viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="m1 1 4 4 4-4" stroke="currentColor" stroke-width="1.2"/></svg></button></div>
+              <a href="/contact" class="nav-link" aria-current="page">Contact</a>
               <div class="nav-button-wrapper is-mobile">
                 <a href="/start" class="nav-button w-inline-block">
                   <div class="nav-button-text">Start a Project</div>
@@ -126,7 +129,50 @@
           </button>
         </div>
       </div>
+    <section id="nav-mega-projects" class="nav-mega-panel" aria-labelledby="nav-mega-projects-heading" data-project-carousel hidden>
+  <div class="padding-global"><div class="nav-mega-panel-inner">
+    <div class="nav-mega-panel-heading"><h2 id="nav-mega-projects-heading" class="nav-mega-panel-title">Explore the work</h2><a class="nav-mega-panel-all" href="/projects">View all projects</a></div>
+    <div role="region" aria-roledescription="carousel" aria-label="Portfolio projects" aria-describedby="nav-mega-project-help">
+      <p id="nav-mega-project-help" class="nav-mega-panel-sr-only">Hover over a project or focus a link to pause automatic rotation. Swipe or use the left and right arrow keys to browse.</p>
+      <div class="nav-mega-project-track" id="nav-mega-project-track" role="group" aria-label="Browse projects" tabindex="0" aria-live="off">
+<div class="nav-mega-project-card" role="group" aria-roledescription="slide" aria-label="1 of 13"><a href="/projects/primaria-salonta"><img src="/images/Web-Primaria-Salonta-p-500.webp" width="500" height="250" srcset="/images/Web-Primaria-Salonta-p-500.webp 500w, /images/Web-Primaria-Salonta-p-800.webp 800w, /images/Web-Primaria-Salonta-p-1080.webp 1080w" sizes="(max-width: 479px) calc(100vw - 16px), (max-width: 767px) calc(100vw - 32px), (max-width: 991px) calc(100vw - 64px), (min-width: 1900px) 594px, calc((100vw - 120px) / 3)" loading="lazy" decoding="async" alt=""><div class="nav-mega-project-caption"><span class="nav-mega-project-name">Salonta City Hall</span></div><span class="nav-mega-project-type">Website Creation + Database Solutions</span></a></div>
+<div class="nav-mega-project-card" role="group" aria-roledescription="slide" aria-label="2 of 13"><a href="/projects/oradea-experience"><img src="/images/App-Xperience-p-500.webp" width="500" height="250" srcset="/images/App-Xperience-p-500.webp 500w, /images/App-Xperience-p-800.webp 800w, /images/App-Xperience-p-1080.webp 1080w" sizes="(max-width: 479px) calc(100vw - 16px), (max-width: 767px) calc(100vw - 32px), (max-width: 991px) calc(100vw - 64px), (min-width: 1900px) 594px, calc((100vw - 120px) / 3)" loading="lazy" decoding="async" alt=""><div class="nav-mega-project-caption"><span class="nav-mega-project-name">City Xperience</span></div><span class="nav-mega-project-type">Website Creation + Mobile App Development</span></a></div>
+<div class="nav-mega-project-card" role="group" aria-roledescription="slide" aria-label="3 of 13"><a href="/projects/nuestra"><img src="/images/Web-Nuestra-p-500.webp" width="500" height="250" srcset="/images/Web-Nuestra-p-500.webp 500w, /images/Web-Nuestra-p-800.webp 800w, /images/Web-Nuestra-p-1080.webp 1080w" sizes="(max-width: 479px) calc(100vw - 16px), (max-width: 767px) calc(100vw - 32px), (max-width: 991px) calc(100vw - 64px), (min-width: 1900px) 594px, calc((100vw - 120px) / 3)" loading="lazy" decoding="async" alt=""><div class="nav-mega-project-caption"><span class="nav-mega-project-name">NUESTRA</span></div><span class="nav-mega-project-type">Website Creation</span></a></div>
+<div class="nav-mega-project-card" role="group" aria-roledescription="slide" aria-label="4 of 13"><a href="/projects/fleetkeeper"><img src="/images/App-FleetKeeper-p-500.webp" width="500" height="250" srcset="/images/App-FleetKeeper-p-500.webp 500w, /images/App-FleetKeeper-p-800.webp 800w, /images/App-FleetKeeper-p-1080.webp 1080w" sizes="(max-width: 479px) calc(100vw - 16px), (max-width: 767px) calc(100vw - 32px), (max-width: 991px) calc(100vw - 64px), (min-width: 1900px) 594px, calc((100vw - 120px) / 3)" loading="lazy" decoding="async" alt=""><div class="nav-mega-project-caption"><span class="nav-mega-project-name">FleetKeeper</span></div><span class="nav-mega-project-type">Mobile App Development + Website Creation</span></a></div>
+<div class="nav-mega-project-card" role="group" aria-roledescription="slide" aria-label="5 of 13"><a href="/projects/radical-football"><img src="/images/Web-Radical-Football-p-500.webp" width="500" height="250" srcset="/images/Web-Radical-Football-p-500.webp 500w, /images/Web-Radical-Football-p-800.webp 800w, /images/Web-Radical-Football-p-1080.webp 1080w" sizes="(max-width: 479px) calc(100vw - 16px), (max-width: 767px) calc(100vw - 32px), (max-width: 991px) calc(100vw - 64px), (min-width: 1900px) 594px, calc((100vw - 120px) / 3)" loading="lazy" decoding="async" alt=""><div class="nav-mega-project-caption"><span class="nav-mega-project-name">Radical Football</span></div><span class="nav-mega-project-type">Website Creation + Database Solutions</span></a></div>
+<div class="nav-mega-project-card" role="group" aria-roledescription="slide" aria-label="6 of 13"><a href="/projects/ymiyba"><img src="/images/Web-YMIYBA-p-500.webp" width="500" height="250" srcset="/images/Web-YMIYBA-p-500.webp 500w, /images/Web-YMIYBA-p-800.webp 800w, /images/Web-YMIYBA-p-1080.webp 1080w" sizes="(max-width: 479px) calc(100vw - 16px), (max-width: 767px) calc(100vw - 32px), (max-width: 991px) calc(100vw - 64px), (min-width: 1900px) 594px, calc((100vw - 120px) / 3)" loading="lazy" decoding="async" alt=""><div class="nav-mega-project-caption"><span class="nav-mega-project-name">YMIYBA</span></div><span class="nav-mega-project-type">Website Creation + Database Solutions</span></a></div>
+<div class="nav-mega-project-card" role="group" aria-roledescription="slide" aria-label="7 of 13"><a href="/projects/tool"><img src="/images/App-Tool-p-500.webp" width="500" height="250" srcset="/images/App-Tool-p-500.webp 500w, /images/App-Tool-p-800.webp 800w, /images/App-Tool-p-1080.webp 1080w" sizes="(max-width: 479px) calc(100vw - 16px), (max-width: 767px) calc(100vw - 32px), (max-width: 991px) calc(100vw - 64px), (min-width: 1900px) 594px, calc((100vw - 120px) / 3)" loading="lazy" decoding="async" alt=""><div class="nav-mega-project-caption"><span class="nav-mega-project-name">Tool Connect</span></div><span class="nav-mega-project-type">Mobile App Development + Website Creation + Design</span></a></div>
+<div class="nav-mega-project-card" role="group" aria-roledescription="slide" aria-label="8 of 13"><a href="/projects/amidamaru"><img src="/images/Web-Amidamaru-p-500.webp" width="500" height="250" srcset="/images/Web-Amidamaru-p-500.webp 500w, /images/Web-Amidamaru-p-800.webp 800w, /images/Web-Amidamaru-p-1080.webp 1080w" sizes="(max-width: 479px) calc(100vw - 16px), (max-width: 767px) calc(100vw - 32px), (max-width: 991px) calc(100vw - 64px), (min-width: 1900px) 594px, calc((100vw - 120px) / 3)" loading="lazy" decoding="async" alt=""><div class="nav-mega-project-caption"><span class="nav-mega-project-name">Amidamaru</span></div><span class="nav-mega-project-type">Website Creation</span></a></div>
+<div class="nav-mega-project-card" role="group" aria-roledescription="slide" aria-label="9 of 13"><a href="/projects/service-24-bdd"><img src="/images/img-Service-24-BDD-p-500.webp" width="500" height="250" srcset="/images/img-Service-24-BDD-p-500.webp 500w, /images/img-Service-24-BDD-p-800.webp 800w, /images/img-Service-24-BDD-p-1080.webp 1080w" sizes="(max-width: 479px) calc(100vw - 16px), (max-width: 767px) calc(100vw - 32px), (max-width: 991px) calc(100vw - 64px), (min-width: 1900px) 594px, calc((100vw - 120px) / 3)" loading="lazy" decoding="async" alt=""><div class="nav-mega-project-caption"><span class="nav-mega-project-name">Service 24 BDD</span></div><span class="nav-mega-project-type">Website Creation</span></a></div>
+<div class="nav-mega-project-card" role="group" aria-roledescription="slide" aria-label="10 of 13"><a href="/projects/ardt"><img src="/images/ARDT-p-500.webp" width="500" height="250" srcset="/images/ARDT-p-500.webp 500w, /images/ARDT-p-800.webp 800w, /images/ARDT-p-1080.webp 1080w" sizes="(max-width: 479px) calc(100vw - 16px), (max-width: 767px) calc(100vw - 32px), (max-width: 991px) calc(100vw - 64px), (min-width: 1900px) 594px, calc((100vw - 120px) / 3)" loading="lazy" decoding="async" alt=""><div class="nav-mega-project-caption"><span class="nav-mega-project-name">ARDT Oradea</span></div><span class="nav-mega-project-type">Design, Branding and Planning</span></a></div>
+<div class="nav-mega-project-card" role="group" aria-roledescription="slide" aria-label="11 of 13"><a href="/projects/edu-events"><img src="/images/EDU-Events-p-500.webp" width="500" height="250" srcset="/images/EDU-Events-p-500.webp 500w, /images/EDU-Events-p-800.webp 800w, /images/EDU-Events-p-1080.webp 1080w" sizes="(max-width: 479px) calc(100vw - 16px), (max-width: 767px) calc(100vw - 32px), (max-width: 991px) calc(100vw - 64px), (min-width: 1900px) 594px, calc((100vw - 120px) / 3)" loading="lazy" decoding="async" alt=""><div class="nav-mega-project-caption"><span class="nav-mega-project-name">EDU Events</span></div><span class="nav-mega-project-type">Mobile App Development + Design</span></a></div>
+<div class="nav-mega-project-card" role="group" aria-roledescription="slide" aria-label="12 of 13"><a href="/projects/nexus-learning-lab"><img src="/images/Nexus---Database-Solutions-p-500.webp" width="500" height="250" srcset="/images/Nexus---Database-Solutions-p-500.webp 500w, /images/Nexus---Database-Solutions-p-800.webp 800w, /images/Nexus---Database-Solutions-p-1080.webp 1080w" sizes="(max-width: 479px) calc(100vw - 16px), (max-width: 767px) calc(100vw - 32px), (max-width: 991px) calc(100vw - 64px), (min-width: 1900px) 594px, calc((100vw - 120px) / 3)" loading="lazy" decoding="async" alt=""><div class="nav-mega-project-caption"><span class="nav-mega-project-name">Nexus Learning Lab</span></div><span class="nav-mega-project-type">Database Solutions</span></a></div>
+<div class="nav-mega-project-card" role="group" aria-roledescription="slide" aria-label="13 of 13"><a href="/projects/bdd-logspeed"><img src="/images/BDD-Logspeed-p-500.webp" width="500" height="250" srcset="/images/BDD-Logspeed-p-500.webp 500w, /images/BDD-Logspeed-p-800.webp 800w, /images/BDD-Logspeed-p-1080.webp 1080w" sizes="(max-width: 479px) calc(100vw - 16px), (max-width: 767px) calc(100vw - 32px), (max-width: 991px) calc(100vw - 64px), (min-width: 1900px) 594px, calc((100vw - 120px) / 3)" loading="lazy" decoding="async" alt=""><div class="nav-mega-project-caption"><span class="nav-mega-project-name">BDD Logspeed</span></div><span class="nav-mega-project-type">Website Creation + UI/UX Design</span></a></div>
+      </div>
     </div>
+  </div></div>
+</section>
+<section id="nav-mega-tools" class="nav-mega-panel" aria-labelledby="nav-mega-tools-heading" hidden>
+  <div class="padding-global"><div class="nav-mega-panel-inner">
+    <div class="nav-mega-panel-heading"><h2 id="nav-mega-tools-heading" class="nav-mega-panel-title">Tools, ready when you need them</h2><a class="nav-mega-panel-all" href="/tools">All tools &amp; access</a></div>
+    <div class="nav-mega-tools-layout">
+      <section class="nav-mega-tools-group" aria-labelledby="nav-mega-open-tools"><h3 class="nav-mega-tools-group-title" id="nav-mega-open-tools">Open tools</h3><div class="nav-mega-tools-grid">
+<a class="nav-mega-tool" href="https://compress.alexjungean.com" target="_blank" rel="noopener noreferrer"><span class="nav-mega-tool-name">File Compression</span><span class="nav-mega-tool-description">Compress JPEG, PNG, and WebP in the browser. Files stay on your device.</span><span class="nav-mega-tool-action">Open</span></a>
+<a class="nav-mega-tool" href="https://convert.alexjungean.com" target="_blank" rel="noopener noreferrer"><span class="nav-mega-tool-name">File Conversion</span><span class="nav-mega-tool-description">Convert between JPEG, PNG, and WebP locally, with batch support.</span><span class="nav-mega-tool-action">Open</span></a>
+<a class="nav-mega-tool" href="https://qr.alexjungean.com" target="_blank" rel="noopener noreferrer"><span class="nav-mega-tool-name">QR Generator</span><span class="nav-mega-tool-description">Static QR codes for URLs, Wi-Fi, vCards, and more. PNG or SVG, no account.</span><span class="nav-mega-tool-action">Open</span></a>
+<a class="nav-mega-tool" href="https://password.alexjungean.com" target="_blank" rel="noopener noreferrer"><span class="nav-mega-tool-name">Password Generator</span><span class="nav-mega-tool-description">Generate a strong password or passphrase in the browser. No account, nothing stored.</span><span class="nav-mega-tool-action">Open</span></a>
+<a class="nav-mega-tool" href="https://secret.alexjungean.com" target="_blank" rel="noopener noreferrer"><span class="nav-mega-tool-name">One Time Secret</span><span class="nav-mega-tool-description">Share a secret once. Encrypted in the browser; gone after the first reveal.</span><span class="nav-mega-tool-action">Open</span></a>
+<a class="nav-mega-tool" href="https://speed.alexjungean.com" target="_blank" rel="noopener noreferrer"><span class="nav-mega-tool-name">Internet Speed Test</span><span class="nav-mega-tool-description">Measure download, upload, and latency to a Cloudflare edge. No account.</span><span class="nav-mega-tool-action">Open</span></a>
+      </div></section>
+      <section class="nav-mega-tools-group nav-mega-tools-group--request" aria-labelledby="nav-mega-request-tools"><h3 class="nav-mega-tools-group-title" id="nav-mega-request-tools">By request</h3><div class="nav-mega-tools-grid">
+<a class="nav-mega-tool" href="https://transfer.alexjungean.com" target="_blank" rel="noopener noreferrer"><span class="nav-mega-tool-name">File Transfer</span><span class="nav-mega-tool-description">Expiring file links. Transfers are prepared by request.</span><span class="nav-mega-tool-action">By request</span></a>
+<a class="nav-mega-tool" href="https://facturare.alexjungean.com" target="_blank" rel="noopener noreferrer"><span class="nav-mega-tool-name">Invoicing</span><span class="nav-mega-tool-description">Romanian invoicing, e-Factura, bank imports and audit archives.</span><span class="nav-mega-tool-action">By request</span></a>
+      </div></section>
+    </div>
+  </div></div>
+</section>
+</div>
+<noscript><style>@media(max-width:991px){.nav-component[data-nav-mega-header] .nav-container{flex-wrap:wrap;gap:16px}.nav-component[data-nav-mega-header] .nav-menu-wrapper{position:static;order:3;width:100%;max-height:none;opacity:1;visibility:visible;pointer-events:auto;transform:none}.nav-component[data-nav-mega-header] .mobile-hamburger{display:none}}</style></noscript>
     <main id="main-content" class="main-wrapper">
       <section class="section-template-header">
         <div class="padding-global">
@@ -260,9 +306,9 @@
                 <div class="contact-form-block w-form">
                   <form id="contact-form" name="contact-form" class="contact-form">
                     <label class="sr-only" for="Full-Name-4">Full Name</label>
-                    <input class="contact-form-field-two is-two w-input" maxlength="256" name="name" data-name="Full Name" placeholder="Full Name" type="text" id="Full-Name-4" required="">
+                    <input class="contact-form-field-two is-two w-input" maxlength="120" name="name" data-name="Full Name" placeholder="Full Name" type="text" id="Full-Name-4" required="">
                     <label class="sr-only" for="Email-Address">Email Address</label>
-                    <input class="contact-form-field-two is-two w-input" maxlength="256" name="email" data-name="Email Address" placeholder="Email Address" type="email" id="Email-Address" required="">
+                    <input class="contact-form-field-two is-two w-input" maxlength="254" name="email" data-name="Email Address" placeholder="Email Address" type="email" id="Email-Address" required="">
                     <label class="sr-only" for="Services">Service</label>
                     <select id="Services" name="service" data-name="Services" class="contact-form-field-two is-select w-select" required="">
                       <option value="">Select a Service</option>
@@ -275,11 +321,12 @@
                       <option value="Other">Other</option>
                     </select>
                     <label class="sr-only" for="contact-message">Message</label>
-                    <textarea class="contact-form-field-two textarea" name="message" placeholder="Message" rows="5" required="" id="contact-message"></textarea>
+                    <textarea class="contact-form-field-two textarea" name="message" maxlength="5000" placeholder="Message" rows="5" required="" id="contact-message"></textarea>
                     
                     <input type="submit" data-wait="Please wait..." class="submit-button w-button" value="Submit Now" id="submit-btn">
                     <p class="recaptcha-notice">Protected by reCAPTCHA. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy</a> · <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Terms</a></p>
-                  </form>
+                  <p class="contact-privacy-note">Your details are used to answer this inquiry. See the <a href="/privacy-policy">Privacy Policy</a>. Sending an inquiry does not create a contract or subscribe you to marketing.</p>
+</form>
                   <div class="success-message w-form-done" role="status" aria-live="polite">
                     <div class="success-message-text">Thank you! Your submission has been received!</div>
                   </div>
@@ -357,145 +404,28 @@
         <div class="container-medium">
           <div class="footer-bottom">
             <div class="footer-copyright-wrapper">
-              <div class="paragraph-large copyright">© <span id="copyright-year">2026</span> Alex Jungean. All rights reserved.</div>
+              <div class="paragraph-large copyright">© <span id="copyright-year">2026</span> Alexandru Jungean. All rights reserved.</div>
             <script>document.getElementById('copyright-year').textContent = new Date().getFullYear();</script>
             </div>
             <div class="footer-link-wrap">
               <a href="/privacy-policy" class="paragraph-large footer-link-wrap">Privacy</a>
               <a href="/cookie-policy" class="paragraph-large footer-link-wrap">Cookies</a>
               <a href="/terms" class="paragraph-large footer-link-wrap">Terms</a>
+<a href="/collaboration-policy" class="paragraph-large footer-link-wrap">Working together</a>
             </div>
           </div>
           <div class="footer-company-info">EDU BOOST SRL &middot; CUI: 50079362 &middot; Nr. Reg. Com.: J2024001347052 &middot; EUID: ROONRC.J2024001347052<span class="footer-contact-line">Cluj-Napoca, Romania &middot; <a href="tel:+40757673677">+40 757 673 677</a> &middot; <a href="mailto:alex.jungean@gmail.com">alex.jungean@gmail.com</a></span></div>
         </div>
       </div><img src="images/Vector_1Vector.webp" width="1920" height="471" loading="lazy" decoding="async" sizes="100vw" srcset="images/Vector_1Vector.webp 1920w" alt="Decorative footer background" class="footer-bg">
-    </footer>
+    <div class="consumer-dispute-links" aria-label="Consumer dispute resolution">
+<a href="https://reclamatiisal.anpc.ro/" target="_blank" rel="noopener noreferrer"><img src="/images/sal-anpc-official.png" width="250" height="50" loading="lazy" decoding="async" alt="ANPC – Soluționarea alternativă a litigiilor"></a>
+
+</div>
+</footer>
   </div>
   
   <!-- Contact Form with reCAPTCHA v3 (lazy loaded) -->
-  <script>
-    const RECAPTCHA_SITE_KEY = '6LdLBEwsAAAAAFNoPxIwGfSA-vYornPZmn5JC2OQ';
-
-    // Lazy load reCAPTCHA only when user interacts with the form (saves ~250KB on page load)
-    let recaptchaLoadPromise = null;
-    function loadRecaptcha() {
-      if (recaptchaLoadPromise) return recaptchaLoadPromise;
-      recaptchaLoadPromise = new Promise((resolve, reject) => {
-        const script = document.createElement('script');
-        script.src = 'https://www.google.com/recaptcha/api.js?render=' + RECAPTCHA_SITE_KEY;
-        script.async = true;
-        script.defer = true;
-        script.onload = function () {
-          if (typeof grecaptcha !== 'undefined') {
-            grecaptcha.ready(resolve);
-          } else {
-            reject(new Error('reCAPTCHA unavailable'));
-          }
-        };
-        script.onerror = function () { reject(new Error('Failed to load reCAPTCHA script')); };
-        document.head.appendChild(script);
-      });
-      return recaptchaLoadPromise;
-    }
-
-    // Email validation function
-    function isValidEmail(email) {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      return emailRegex.test(email);
-    }
-    
-    document.addEventListener('DOMContentLoaded', function() {
-      const form = document.getElementById('contact-form');
-      const submitButton = document.getElementById('submit-btn');
-      const successMessage = document.querySelector('.success-message');
-      const errorMessage = document.querySelector('.error-message');
-      const emailInput = form.querySelector('[name="email"]');
-
-      // Trigger reCAPTCHA lazy load on first interaction (focus or typing)
-      const triggerRecaptchaLazyLoad = function () {
-        loadRecaptcha().catch(function (err) { console.warn('reCAPTCHA load error:', err); });
-      };
-      form.addEventListener('focusin', triggerRecaptchaLazyLoad, { once: true });
-      form.addEventListener('input', triggerRecaptchaLazyLoad, { once: true });
-      
-      // Real-time email validation
-      emailInput.addEventListener('blur', function() {
-        if (this.value && !isValidEmail(this.value)) {
-          this.style.borderColor = '#ff4444';
-        } else {
-          this.style.borderColor = '';
-        }
-      });
-      
-      form.addEventListener('submit', async function(e) {
-        e.preventDefault();
-        
-        const email = form.querySelector('[name="email"]').value.trim();
-        
-        // Validate email before submit
-        if (!isValidEmail(email)) {
-          errorMessage.querySelector('div').textContent = 'Please enter a valid email address.';
-          errorMessage.style.display = 'block';
-          emailInput.style.borderColor = '#ff4444';
-          emailInput.focus();
-          return;
-        }
-        
-        // Show loading state
-        const originalText = submitButton.value;
-        submitButton.value = 'Sending...';
-        submitButton.disabled = true;
-        errorMessage.style.display = 'none';
-        
-        try {
-          // Ensure reCAPTCHA is loaded (covers the "submit without interaction" edge case)
-          await loadRecaptcha();
-          // Get reCAPTCHA v3 token
-          const recaptchaToken = await grecaptcha.execute(RECAPTCHA_SITE_KEY, { action: 'contact' });
-          
-          // Prepare form data
-          const formData = {
-            name: form.querySelector('[name="name"]').value.trim(),
-            email: email,
-            subject: form.querySelector('[name="service"]').value,
-            message: form.querySelector('[name="message"]').value.trim(),
-            recaptchaToken: recaptchaToken
-          };
-          
-          // Submit to Netlify Function
-          const response = await fetch('/.netlify/functions/contact', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(formData)
-          });
-          
-          const result = await response.json();
-          
-          if (response.ok) {
-            // Success
-            successMessage.querySelector('div').textContent = 'Thank you! Your message has been sent. Check your email for confirmation.';
-            successMessage.style.display = 'block';
-            errorMessage.style.display = 'none';
-            form.reset();
-          } else {
-            throw new Error(result.error || 'Failed to send message');
-          }
-        } catch (error) {
-          // Error
-          console.error('Form submission error:', error);
-          errorMessage.querySelector('div').textContent = error.message || 'Oops! Something went wrong. Please try again.';
-          errorMessage.style.display = 'block';
-          successMessage.style.display = 'none';
-        } finally {
-          // Reset button
-          submitButton.value = originalText;
-          submitButton.disabled = false;
-        }
-      });
-    });
-  </script>
+  <script src="/js/contact.js" defer></script>
   
   <!-- Mobile Navigation Toggle -->
   <script>
@@ -534,35 +464,9 @@
   </script>
   
   <!-- Google Analytics - loaded at end for performance -->
-  <script>
-    (function () {
-      var loaded = false;
-      function loadGtag() {
-        if (loaded) return;
-        loaded = true;
-        var s = document.createElement('script');
-        s.async = true;
-        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-XC8SSPPMLV';
-        document.head.appendChild(s);
-        ['scroll', 'pointerdown', 'keydown', 'touchstart'].forEach(function (e) { removeEventListener(e, loadGtag); });
-      }
-      ['scroll', 'pointerdown', 'keydown', 'touchstart'].forEach(function (e) { addEventListener(e, loadGtag, { passive: true }); });
-      setTimeout(loadGtag, 4000);
-    })();
-  </script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('consent', 'default', {
-      ad_storage: 'denied',
-      ad_user_data: 'denied',
-      ad_personalization: 'denied',
-      analytics_storage: 'denied',
-      wait_for_update: 500
-    });
-    gtag('js', new Date());
-    gtag('config', 'G-XC8SSPPMLV');
-  </script>
+  
+  
   <script src="/js/cookie-consent.js" defer></script>
+<script src="/js/navigation.js" defer></script>
 </body>
 </html>

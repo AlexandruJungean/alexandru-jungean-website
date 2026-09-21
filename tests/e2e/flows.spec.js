@@ -18,15 +18,22 @@ test("404 page offers a way back home", async ({ page }) => {
 test("projects index lists case studies", async ({ page }) => {
   await page.goto("/projects");
   await expect(page.locator("h1").first()).toBeVisible();
-  await expect(page.locator("a[href*='/projects/']").first()).toBeVisible();
+  await expect(page.locator("main a[href*='/projects/']").first()).toBeVisible();
 });
 
-test("footer manage cookies reopens the banner", async ({ page }) => {
+test("footer Cookies leads to working preference controls without a Manage cookies link", async ({ page }) => {
   await page.goto("/");
   const decline = page.locator("#cookie-decline");
   if (await decline.isVisible()) await decline.click();
   await expect(page.locator("#cookie-banner")).toBeHidden();
-  await page.getByRole("link", { name: /manage cookies/i }).first().click();
+  await expect(page.locator('footer [data-manage-cookies]')).toHaveCount(0);
+  await page.locator('footer a[href="/cookie-policy"]').click();
+  await expect(page.locator('#cookie-banner')).toBeHidden();
+  await page.getByRole('button',{name:'Manage cookie preferences',exact:true}).click();
+  await expect(page.locator("#cookie-banner")).toBeVisible();
+  await page.locator('#cookie-decline').click();
+  await page.locator('[data-legal-language="ro"]').click();
+  await page.getByRole('button',{name:'Gestionează preferințele cookies',exact:true}).click();
   await expect(page.locator("#cookie-banner")).toBeVisible();
 });
 

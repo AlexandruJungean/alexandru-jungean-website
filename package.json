@@ -3,6 +3,9 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "build": "node scripts/build-static.mjs",
+    "test:security": "node --experimental-vm-modules --test tests/security-contact.test.mjs tests/security-consent.test.mjs tests/security-build.test.mjs",
+    "test:security:browser": "npm run build && node tests/security-browser.mjs",
     "dev": "npx --yes serve -l 8888 .",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",

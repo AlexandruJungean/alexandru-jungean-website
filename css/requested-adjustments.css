@@ -1,0 +1,24 @@
+/* Only the explicitly requested portfolio layout and consumer information. */
+[hidden]{display:none!important}
+.consumer-dispute-links{position:relative;z-index:2;display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:16px;padding:16px 24px 32px}
+.consumer-dispute-links>a{display:block;flex:0 0 250px;width:250px;height:50px}
+.consumer-dispute-links img{display:block;width:250px;height:50px;object-fit:contain}
+.contact-privacy-note{font-size:.8rem;line-height:1.6;margin-top:16px;color:var(--color--body-font-2)}
+.project-link:focus-visible{opacity:1;pointer-events:auto;outline:2px solid white;outline-offset:-5px}
+@media(min-width:992px){
+ .portfolio-listing .section-all-project .project-component{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:start}
+ .portfolio-listing .project-single-item.all{top:auto;min-width:0}
+ .portfolio-listing .project-content{inset:auto 24px 24px;pointer-events:none}
+ .portfolio-listing .project-item-title{font-size:clamp(1.4rem,2.2vw,2rem);line-height:1.2;margin-bottom:8px}
+ .portfolio-listing .project-item-subtitle{font-size:clamp(.85rem,1.15vw,1rem);line-height:1.5}
+}
+/* Leave room for the additional collaboration policy and consent link on phones. */
+@media(max-width:767px){.footer-bottom>div.footer-link-wrap{width:100%;padding-inline:24px;box-sizing:border-box;flex-wrap:wrap;justify-content:center;gap:12px 20px}.footer-bottom>div.footer-link-wrap>a{white-space:nowrap}}
+
+/* Keep the full image composition and a lighter cursor target in the portfolio list. */
+.portfolio-listing .project-thumb-wrap{aspect-ratio:auto}
+.portfolio-listing .project-thumb{display:block;width:100%;height:auto;object-fit:contain}
+.portfolio-listing .project-link{width:84px;height:84px}
+.portfolio-listing .project-link-text{font-size:.8rem;line-height:1.15rem}
+.footer-component a[href="/collaboration-policy"]{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px;text-decoration-color:var(--color--brand);font-weight:600}
+@media(max-width:767px){.portfolio-listing .project-link{width:64px;height:64px}.portfolio-listing .project-link-text{font-size:.7rem;line-height:1rem}}
